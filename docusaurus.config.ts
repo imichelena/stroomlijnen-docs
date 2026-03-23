@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   future: {
-    v4: true,
+    v4: false,
   },
 
   url: 'https://docs.stroomlijnen.nl',
@@ -19,6 +19,11 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   headTags: [
     {
@@ -135,7 +140,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: '/blog/rss.xml',
+          href: 'https://docs.stroomlijnen.nl/blog/rss.xml',
           label: '📡 RSS',
           position: 'right',
         },
@@ -163,7 +168,7 @@ const config: Config = {
           items: [
             { label: 'FAQ', to: '/docs/faq' },
             { label: 'Blog', to: '/blog' },
-            { label: 'RSS Feed', href: '/blog/rss.xml' },
+            { label: 'RSS Feed', href: 'https://docs.stroomlijnen.nl/blog/rss.xml' },
           ],
         },
         {
