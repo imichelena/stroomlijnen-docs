@@ -1,0 +1,114 @@
+/**
+ * Stroomlijnen Brand Theme
+ * Navy #0C2340 | Tech Blue #00B0E4 | Eco Green #84BD00
+ */
+
+:root {
+  --ifm-color-primary: #00B0E4;
+  --ifm-color-primary-dark: #009fd0;
+  --ifm-color-primary-darker: #0096c4;
+  --ifm-color-primary-darkest: #007ba3;
+  --ifm-color-primary-light: #11b9eb;
+  --ifm-color-primary-lighter: #1dbcec;
+  --ifm-color-primary-lightest: #3ec4ee;
+  --ifm-background-color: #f8f9fa;
+  --ifm-navbar-background-color: #0C2340;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #00B0E4;
+  --ifm-footer-background-color: #0C2340;
+  --ifm-footer-color: #e0e0e0;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-code-font-size: 95%;
+  --stroomlijnen-green: #84BD00;
+  --stroomlijnen-navy: #0C2340;
+  --stroomlijnen-blue: #00B0E4;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #0a1628;
+  --ifm-background-surface-color: #0f1f3d;
+  --ifm-color-primary: #00B0E4;
+  --ifm-color-primary-dark: #009fd0;
+  --ifm-color-primary-darker: #0096c4;
+  --ifm-color-primary-darkest: #007ba3;
+  --ifm-color-primary-light: #11b9eb;
+  --ifm-color-primary-lighter: #1dbcec;
+  --ifm-color-primary-lightest: #3ec4ee;
+  --ifm-navbar-background-color: #0C2340;
+  --ifm-footer-background-color: #0C2340;
+}
+
+/* Navbar brand */
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Hero/landing tweaks */
+.hero {
+  background: linear-gradient(135deg, #0C2340 0%, #0f1f3d 50%, #0C2340 100%);
+}
+
+.hero__title {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.hero__subtitle {
+  color: #b0c4de;
+  font-size: 1.4rem;
+}
+
+/* Green accent for important callouts */
+.alert--success {
+  --ifm-alert-background-color: rgba(132, 189, 0, 0.1);
+  --ifm-alert-border-color: #84BD00;
+}
+
+/* Blog post cards */
+.blog-post-item {
+  border-left: 3px solid var(--stroomlijnen-blue);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th {
+  background-color: var(--stroomlijnen-navy);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+[data-theme='light'] table th {
+  background-color: #e8ecf0;
+  color: var(--stroomlijnen-navy);
+}
+
+/* Mermaid diagram background fix for dark mode */
+[data-theme='dark'] .docusaurus-mermaid-container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Footer links */
+.footer__link-item:hover {
+  color: var(--stroomlijnen-blue);
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  font-size: 0.85rem;
+}
+
+/* Sidebar */
+.menu__link--active:not(.menu__link--sublist) {
+  border-left: 3px solid var(--stroomlijnen-green);
+}
