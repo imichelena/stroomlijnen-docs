@@ -47,9 +47,9 @@ Stroomlijnen B.V. is a Dutch CPO (Charge Point Operator) and eMSP (e-Mobility Se
 - [Frequently Asked Questions](https://docs.stroomlijnen.nl/docs/faq) — Top 20 questions about fleet charging
 
 ## Blog
-- [Why Plug & Charge Matters for Fleets](https://docs.stroomlijnen.nl/blog/why-plug-and-charge-matters-for-fleets)
-- [Why Theaters Are the Hidden Gem of EV Charging](https://docs.stroomlijnen.nl/blog/theater-ev-charging)
-- [Dutch EV Charging Regulations in 2026](https://docs.stroomlijnen.nl/blog/dutch-ev-charging-regulations)
+- [Why Plug & Charge Is a Game Changer for Electric Truck Fleets](https://docs.stroomlijnen.nl/blog/plug-and-charge-for-fleets)
+- [Why Theaters Are Ideal for High-Power EV Charging](https://docs.stroomlijnen.nl/blog/theaters-ev-charging)
+- [Dutch Fleet EV Charging Regulations in 2026](https://docs.stroomlijnen.nl/blog/dutch-fleet-ev-regulations)
 
 ## Contact
 - Website: https://stroomlijnen.nu
