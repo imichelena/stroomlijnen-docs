@@ -18,7 +18,12 @@ const config: Config = {
   projectName: 'stroomlijnen-docs',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   markdown: {
     mermaid: true,
@@ -124,8 +129,11 @@ const config: Config = {
     navbar: {
       title: 'Stroomlijnen',
       logo: {
-        alt: 'Stroomlijnen Logo',
-        src: 'img/logo.svg',
+        alt: 'Stroomlijnen',
+        src: 'img/stroomlijnen-logo.png',
+        srcDark: 'img/stroomlijnen-logo.png',
+        width: 160,
+        height: 40,
       },
       items: [
         {
