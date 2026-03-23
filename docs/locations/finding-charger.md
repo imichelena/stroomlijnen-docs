@@ -13,7 +13,7 @@ Stroomlijnen operates high-power DC charging stations at strategic locations acr
 
 The quickest way to find a charger:
 
-1. Visit **map.stroomlijnen.nu** or open the Stroomlijnen app
+1. Visit **map.stroomlijnen.nl** or open the Stroomlijnen app
 2. The map shows all Stroomlijnen locations with real-time status:
    - 🟢 **Available** — At least one connector free
    - 🟡 **Partially available** — Some connectors in use

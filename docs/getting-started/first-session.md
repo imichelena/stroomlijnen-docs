@@ -13,7 +13,7 @@ Whether you're a fleet manager setting things up or a driver at the charger for 
 
 ### As a Fleet Manager
 
-1. **Register** on the Stroomlijnen portal at [portal.stroomlijnen.nu](https://portal.stroomlijnen.nu)
+1. **Register** on the Stroomlijnen portal at [portal.stroomlijnen.nl](https://portal.stroomlijnen.nl)
 2. **Add your vehicles** — VIN numbers and license plates
 3. **Choose your authentication method:**
    - **RFID cards** — we'll ship them to you (see [RFID Cards](/docs/getting-started/rfid-cards))

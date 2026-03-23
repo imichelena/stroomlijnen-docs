@@ -50,7 +50,7 @@ Fleet customers receive a contracted €/kWh rate. There are no session fees or 
 Monthly invoices with per-session breakdowns, available as PDF, CSV, or UBL XML. Invoices are generated on the 1st of each month. See [Invoicing](./fleet-management/invoicing) for details.
 
 ### 13. Do you offer volume discounts?
-Yes. Fleets exceeding monthly energy thresholds qualify for tiered pricing. Contact your account manager or email [sales@stroomlijnen.nu](mailto:sales@stroomlijnen.nu) for details.
+Yes. Fleets exceeding monthly energy thresholds qualify for tiered pricing. Contact your account manager or email [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl) for details.
 
 ### 14. Can roaming users charge at Stroomlijnen?
 Yes, through our Hubject and OCPI roaming connections. Users with charging cards from other providers can tap and charge. Roaming rates may differ from direct fleet rates.
@@ -82,11 +82,11 @@ Yes. We offer a REST API with real-time webhooks for session data, vehicle manag
 ### How do I report a broken charger?
 - **App:** Help → Report Issue → select the charger
 - **Phone:** Support number printed on each charger
-- **Email:** [support@stroomlijnen.nu](mailto:support@stroomlijnen.nu)
+- **Email:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
 - **Include:** Charger ID (format: `NL*STM*E...`), time, and description of the issue
 
 ### How do I contact Stroomlijnen?
-- **General inquiries:** [info@stroomlijnen.nu](mailto:info@stroomlijnen.nu)
-- **Fleet sales:** [sales@stroomlijnen.nu](mailto:sales@stroomlijnen.nu)
-- **Technical support:** [support@stroomlijnen.nu](mailto:support@stroomlijnen.nu)
-- **Technical integration:** [technical@stroomlijnen.nu](mailto:technical@stroomlijnen.nu)
+- **General inquiries:** [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl)
+- **Fleet sales:** [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl)
+- **Technical support:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
+- **Technical integration:** [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl)

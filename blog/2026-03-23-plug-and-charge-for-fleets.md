@@ -78,4 +78,4 @@ The future of fleet charging isn't apps and cards. It's invisible. Connect the c
 
 ---
 
-*Want to enable Plug & Charge for your fleet? [Get started here](/docs/plug-and-charge/setup-guide) or contact us at [sales@stroomlijnen.nu](mailto:sales@stroomlijnen.nu).*
+*Want to enable Plug & Charge for your fleet? [Get started here](/docs/plug-and-charge/setup-guide) or contact us at [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl).*

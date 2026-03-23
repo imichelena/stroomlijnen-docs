@@ -124,4 +124,4 @@ If you're a charger manufacturer or installer working with Stroomlijnen:
 - We provide CSMS endpoints and credentials during the onboarding process
 - Interoperability testing is required before deployment
 
-Contact [technical@stroomlijnen.nu](mailto:technical@stroomlijnen.nu) for integration documentation.
+Contact [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl) for integration documentation.

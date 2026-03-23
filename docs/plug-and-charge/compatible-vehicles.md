@@ -10,7 +10,7 @@ keywords: [compatible vehicles, Plug and Charge, electric trucks, ISO 15118, Vol
 Plug & Charge compatibility depends on the vehicle's support for **ISO 15118-2** with contract certificate handling. Below is the current status for vehicles commonly seen at Stroomlijnen locations.
 
 :::info Updated March 2026
-Compatibility is evolving rapidly. We update this page as OEMs release new firmware and models. If your vehicle isn't listed, [contact us](mailto:info@stroomlijnen.nu).
+Compatibility is evolving rapidly. We update this page as OEMs release new firmware and models. If your vehicle isn't listed, [contact us](mailto:info@stroomlijnen.nl).
 :::
 
 ## Electric Trucks
@@ -85,7 +85,7 @@ Even without PnC, all vehicles with a **CCS Combo 2** connector can charge at St
 
 ## Missing Your Vehicle?
 
-If your truck or van isn't listed, it may still work. New models and firmware updates are released regularly. Contact us at [info@stroomlijnen.nu](mailto:info@stroomlijnen.nu) with your vehicle make, model, and VIN, and we'll investigate.
+If your truck or van isn't listed, it may still work. New models and firmware updates are released regularly. Contact us at [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl) with your vehicle make, model, and VIN, and we'll investigate.
 
 ---
 

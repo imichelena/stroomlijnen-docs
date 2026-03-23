@@ -29,9 +29,9 @@ If the site network has a firewall, the following must be allowed **outbound** f
 
 | Destination | Port | Protocol | Purpose |
 |-------------|------|----------|---------|
-| csms.stroomlijnen.nu | 443 | TCP (WSS) | OCPP communication |
-| firmware.stroomlijnen.nu | 443 | TCP (HTTPS) | Firmware updates |
-| ntp.stroomlijnen.nu | 123 | UDP (NTP) | Time synchronization |
+| csms.stroomlijnen.nl | 443 | TCP (WSS) | OCPP communication |
+| firmware.stroomlijnen.nl | 443 | TCP (HTTPS) | Firmware updates |
+| ntp.stroomlijnen.nl | 123 | UDP (NTP) | Time synchronization |
 | hubject.com | 443 | TCP (HTTPS) | PnC certificate validation |
 | *.sentry.io | 443 | TCP (HTTPS) | Error reporting (optional) |
 
@@ -96,7 +96,7 @@ Before installation, Stroomlijnen performs a network assessment:
 1. Check physical Ethernet connection (link lights on charger and switch)
 2. Verify DHCP is assigning an IP (check DHCP server logs)
 3. Test DNS resolution from the charger's subnet
-4. Verify firewall allows outbound 443 to csms.stroomlijnen.nu
+4. Verify firewall allows outbound 443 to csms.stroomlijnen.nl
 5. If wired fails, check 4G signal and SIM status
 
 ### Intermittent disconnections

@@ -90,4 +90,4 @@ If something isn't right at a site:
 - **Charger malfunction** — Report via the app (Help → Report Issue) or call the support number on the charger
 - **Safety concern** — Use the emergency stop button if immediate, then call support
 - **Cleanliness/access** — Report via the app
-- **Suggested improvement** — Email [feedback@stroomlijnen.nu](mailto:feedback@stroomlijnen.nu)
+- **Suggested improvement** — Email [feedback@stroomlijnen.nl](mailto:feedback@stroomlijnen.nl)

@@ -86,4 +86,4 @@ If you're interested in the research and standards behind EV charging:
 - Visit [elaad.nl](https://elaad.nl) for publications and events
 - Follow ElaadNL on [LinkedIn](https://www.linkedin.com/company/elaadnl/) for updates
 - Attend ElaadNL's annual Knowledge Day (typically in November)
-- For collaboration inquiries with Stroomlijnen, contact [partnerships@stroomlijnen.nu](mailto:partnerships@stroomlijnen.nu)
+- For collaboration inquiries with Stroomlijnen, contact [partnerships@stroomlijnen.nl](mailto:partnerships@stroomlijnen.nl)

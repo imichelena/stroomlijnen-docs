@@ -10,9 +10,11 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary')} style={{minHeight: '60vh', display: 'flex', alignItems: 'center'}}>
       <div className="container" style={{textAlign: 'center'}}>
-        <Heading as="h1" className="hero__title">
-          ⚡ {siteConfig.title}
-        </Heading>
+        <div style={{marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap'}}>
+          <img src="/img/stroomlijnen-logo.png" alt="Stroomlijnen" style={{height: '52px', width: 'auto'}} />
+          <span style={{fontSize: '2rem', fontWeight: 300, color: 'rgba(255,255,255,0.4)'}}>|</span>
+          <span style={{fontSize: '2rem', fontWeight: 700, color: '#fff', letterSpacing: '-0.02em'}}>docs</span>
+        </div>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <p style={{color: '#84BD00', fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '2rem'}}>
           "The Show Must Go On" — Theater-grade reliability for EV charging

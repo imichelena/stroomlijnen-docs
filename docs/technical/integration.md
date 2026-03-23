@@ -13,7 +13,7 @@ For fleets that want to integrate Stroomlijnen charging data into their own mana
 
 Our API provides programmatic access to all fleet management features:
 
-**Base URL:** `https://api.stroomlijnen.nu/v1`
+**Base URL:** `https://api.stroomlijnen.nl/v1`
 **Authentication:** Bearer token (API key from portal → Settings → API)
 **Format:** JSON
 **Rate limit:** 100 requests/minute
@@ -156,7 +156,7 @@ We provide examples in common languages:
 import requests
 
 API_KEY = "your_api_key_here"
-BASE = "https://api.stroomlijnen.nu/v1"
+BASE = "https://api.stroomlijnen.nl/v1"
 headers = {"Authorization": f"Bearer {API_KEY}"}
 
 # Get last 10 sessions
@@ -175,6 +175,6 @@ for s in sessions.json()["data"]:
 
 ## Support
 
-- **API issues:** [api-support@stroomlijnen.nu](mailto:api-support@stroomlijnen.nu)
-- **Status page:** [status.stroomlijnen.nu](https://status.stroomlijnen.nu)
+- **API issues:** [api-support@stroomlijnen.nl](mailto:api-support@stroomlijnen.nl)
+- **Status page:** [status.stroomlijnen.nl](https://status.stroomlijnen.nl)
 - **Changelog:** API changes are announced 30 days in advance via email

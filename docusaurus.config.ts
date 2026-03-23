@@ -127,13 +127,13 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Stroomlijnen',
+      title: '',
       logo: {
         alt: 'Stroomlijnen',
         src: 'img/stroomlijnen-logo.png',
         srcDark: 'img/stroomlijnen-logo.png',
-        width: 160,
-        height: 40,
+        width: 180,
+        height: 30,
       },
       items: [
         {
@@ -153,8 +153,8 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://stroomlijnen.nu',
-          label: 'stroomlijnen.nu',
+          href: 'https://stroomlijnen.nl',
+          label: 'stroomlijnen.nl',
           position: 'right',
         },
       ],
@@ -182,9 +182,9 @@ const config: Config = {
         {
           title: 'Company',
           items: [
-            { label: 'Stroomlijnen.nu', href: 'https://stroomlijnen.nu' },
+            { label: 'Stroomlijnen.nu', href: 'https://stroomlijnen.nl' },
             { label: 'LinkedIn', href: 'https://www.linkedin.com/company/stroomlijnen' },
-            { label: 'Contact', href: 'mailto:info@stroomlijnen.nu' },
+            { label: 'Contact', href: 'mailto:info@stroomlijnen.nl' },
           ],
         },
       ],

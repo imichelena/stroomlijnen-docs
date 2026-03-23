@@ -81,4 +81,4 @@ The insight isn't "theaters are magic." It's that high-power EV charging should 
 
 ---
 
-*Interested in hosting Stroomlijnen chargers at your venue? Contact us at [partnerships@stroomlijnen.nu](mailto:partnerships@stroomlijnen.nu).*
+*Interested in hosting Stroomlijnen chargers at your venue? Contact us at [partnerships@stroomlijnen.nl](mailto:partnerships@stroomlijnen.nl).*

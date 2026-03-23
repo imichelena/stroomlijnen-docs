@@ -13,14 +13,14 @@ Setting up Plug & Charge for your fleet takes about 15 minutes of portal work. O
 
 Before you begin:
 
-- [ ] A **Stroomlijnen fleet account** (sign up at [stroomlijnen.nu](https://stroomlijnen.nu) or contact your account manager)
+- [ ] A **Stroomlijnen fleet account** (sign up at [stroomlijnen.nl](https://stroomlijnen.nl) or contact your account manager)
 - [ ] Your trucks' **VIN numbers** (Vehicle Identification Numbers)
 - [ ] Access to your OEM fleet portal (Volvo Connect, DAF Connect, Fleetboard, etc.)
 - [ ] A **compatible vehicle** (see [Compatible Vehicles](./compatible-vehicles))
 
 ## Step 1: Log In to My Fleet
 
-Navigate to **my.stroomlijnen.nu** and log in with your fleet manager credentials.
+Navigate to **my.stroomlijnen.nl** and log in with your fleet manager credentials.
 
 If you don't have an account yet:
 1. Click **Register** and fill in your company details (KVK number, billing address)

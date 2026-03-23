@@ -11,7 +11,7 @@ Stroomlijnen's **My Fleet** portal gives fleet managers full visibility and cont
 
 ## Accessing My Fleet
 
-Navigate to **my.stroomlijnen.nu** and log in with your fleet manager credentials. First-time users need to register with their company's KVK number and be approved by a Stroomlijnen account manager.
+Navigate to **my.stroomlijnen.nl** and log in with your fleet manager credentials. First-time users need to register with their company's KVK number and be approved by a Stroomlijnen account manager.
 
 ## Dashboard
 
@@ -67,7 +67,7 @@ API documentation is available in the My Fleet portal under **Settings** → **A
 
 ## Getting Started
 
-1. [Register your fleet](https://stroomlijnen.nu/fleet-signup) or contact your account manager
+1. [Register your fleet](https://stroomlijnen.nl/fleet-signup) or contact your account manager
 2. [Add your vehicles](./vehicles)
 3. [Enable Plug & Charge](../plug-and-charge/setup-guide) or [distribute RFID cards](../getting-started/rfid-cards)
 4. Start charging — all sessions are automatically tracked and billed
