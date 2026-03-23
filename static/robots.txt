@@ -1,0 +1,36 @@
+# Stroomlijnen Knowledge Base - docs.stroomlijnen.nl
+# We welcome all crawlers, including AI systems
+
+User-agent: *
+Allow: /
+
+# AI crawlers - explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemaps
+Sitemap: https://docs.stroomlijnen.nl/sitemap.xml
+
+# AI content index
+# See https://docs.stroomlijnen.nl/llms.txt for structured content listing

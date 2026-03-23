@@ -1,0 +1,57 @@
+# Stroomlijnen Knowledge Base
+> docs.stroomlijnen.nl
+
+Stroomlijnen B.V. is a Dutch CPO (Charge Point Operator) and eMSP (e-Mobility Service Provider) specializing in electric truck charging at theaters and logistics sites in the Netherlands. We operate our own OCPP 2.0.1 stack, ISO 15118 PKI infrastructure, and NL*STM eMSP identity.
+
+## Getting Started
+- [What is Stroomlijnen?](https://docs.stroomlijnen.nl/docs/getting-started/intro) — Introduction to our services, how fleet charging works
+- [Your First Charging Session](https://docs.stroomlijnen.nl/docs/getting-started/first-session) — Step-by-step guide for drivers and fleet managers
+- [RFID Cards](https://docs.stroomlijnen.nl/docs/getting-started/rfid-cards) — Ordering, activating, and managing charging cards
+
+## Plug & Charge (ISO 15118)
+- [What is Plug & Charge?](https://docs.stroomlijnen.nl/docs/plug-and-charge/what-is-pnc) — Plain English explanation of automatic EV authentication
+- [How Plug & Charge Works](https://docs.stroomlijnen.nl/docs/plug-and-charge/how-it-works) — ISO 15118, certificates, PKI trust chain with diagrams
+- [Compatible Vehicles](https://docs.stroomlijnen.nl/docs/plug-and-charge/compatible-vehicles) — Which electric trucks and cars support Plug & Charge
+- [Setup Guide](https://docs.stroomlijnen.nl/docs/plug-and-charge/setup-guide) — How to enable Plug & Charge via the fleet portal
+- [Volvo Trucks Guide](https://docs.stroomlijnen.nl/docs/plug-and-charge/brand-guides/volvo-trucks) — FH/FM/FE Electric via Volvo Connect
+- [DAF Trucks Guide](https://docs.stroomlijnen.nl/docs/plug-and-charge/brand-guides/daf) — XD/XF Electric via DAF Connect
+- [Mercedes-Benz Trucks Guide](https://docs.stroomlijnen.nl/docs/plug-and-charge/brand-guides/mercedes-trucks) — eActros via Fleetboard
+- [Scania Guide](https://docs.stroomlijnen.nl/docs/plug-and-charge/brand-guides/scania) — BEV series via Scania Fleet Management
+- [MAN Guide](https://docs.stroomlijnen.nl/docs/plug-and-charge/brand-guides/man) — eTruck via MAN RIO
+- [Other Trucks & Vans](https://docs.stroomlijnen.nl/docs/plug-and-charge/brand-guides/other-trucks) — Renault, Ford, VW, IVECO
+- [Passenger Cars](https://docs.stroomlijnen.nl/docs/plug-and-charge/brand-guides/passenger-cars) — BMW, Hyundai, VW, Mercedes, Volvo Cars, Polestar
+- [Troubleshooting](https://docs.stroomlijnen.nl/docs/plug-and-charge/troubleshooting) — Common issues and error codes
+
+## Fleet Management
+- [Overview](https://docs.stroomlijnen.nl/docs/fleet-management/overview) — Portal features for fleet managers
+- [Vehicle Management](https://docs.stroomlijnen.nl/docs/fleet-management/vehicles) — Adding and configuring vehicles
+- [Charging Sessions](https://docs.stroomlijnen.nl/docs/fleet-management/sessions) — Reading session data, exports
+- [Invoicing & Billing](https://docs.stroomlijnen.nl/docs/fleet-management/invoicing) — How billing works, tariff structure
+- [Driver Management](https://docs.stroomlijnen.nl/docs/fleet-management/driver-management) — Adding drivers, permissions, RFID assignment
+
+## Locations
+- [Finding a Charger](https://docs.stroomlijnen.nl/docs/locations/finding-charger) — How to find Stroomlijnen charging locations
+- [What to Expect at a Site](https://docs.stroomlijnen.nl/docs/locations/site-guide) — Site layout, equipment, facilities
+- [Charging Etiquette](https://docs.stroomlijnen.nl/docs/locations/etiquette) — Shared site rules
+
+## Technical
+- [OCPP Overview](https://docs.stroomlijnen.nl/docs/technical/ocpp-overview) — What is OCPP? Non-technical intro + technical depth
+- [ISO 15118 Deep Dive](https://docs.stroomlijnen.nl/docs/technical/iso-15118) — Full technical detail on the Plug & Charge protocol
+- [Network Requirements](https://docs.stroomlijnen.nl/docs/technical/network-requirements) — Charger connectivity, firewall rules
+- [API & Integration](https://docs.stroomlijnen.nl/docs/technical/integration) — REST API for fleet management systems
+
+## About
+- [ElaadNL Partnership](https://docs.stroomlijnen.nl/docs/about/elaadnl-partnership) — Our alignment with ElaadNL's smart charging research
+
+## FAQ
+- [Frequently Asked Questions](https://docs.stroomlijnen.nl/docs/faq) — Top 20 questions about fleet charging
+
+## Blog
+- [Why Plug & Charge Matters for Fleets](https://docs.stroomlijnen.nl/blog/why-plug-and-charge-matters-for-fleets)
+- [Why Theaters Are the Hidden Gem of EV Charging](https://docs.stroomlijnen.nl/blog/theater-ev-charging)
+- [Dutch EV Charging Regulations in 2026](https://docs.stroomlijnen.nl/blog/dutch-ev-charging-regulations)
+
+## Contact
+- Website: https://stroomlijnen.nu
+- Email: info@stroomlijnen.nu
+- LinkedIn: https://www.linkedin.com/company/stroomlijnen
