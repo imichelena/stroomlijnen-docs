@@ -1,29 +1,29 @@
 ---
 sidebar_position: 3
 title: Mercedes-Benz Trucks — Plug & Charge Instellen
-description: Stapsgewijze handleiding voor het activeren van Plug & Charge op Mercedes-Benz eActros en eEconic vrachtwagens via Fleetboard.
+description: Stapsgewijze handleiding voor het inschakelen van Plug & Charge op Mercedes-Benz eActros en eEconic-vrachtwagens via Fleetboard.
 keywords: [Mercedes-Benz, eActros, eEconic, Fleetboard, Plug and Charge, ISO 15118, Daimler Truck]
 ---
 
 # Mercedes-Benz Trucks — Plug & Charge Instellen
 
-Mercedes-Benz (Daimler Truck) ondersteunt ISO 15118-2 Plug & Charge op de eActros 600 en eActros 300. De eEconic krijgt naar verwachting PnC-ondersteuning via OTA-update in Q2 2026. Configuratie verloopt via het Fleetboard-platform.
+Mercedes-Benz (Daimler Truck) ondersteunt ISO 15118-2 Plug & Charge op de eActros 600 en eActros 300. De eEconic zal naar verwachting PnC-ondersteuning ontvangen via een OTA-update in Q2 2026. De configuratie wordt beheerd via het Fleetboard-platform.
 
 ## Ondersteunde Modellen
 
-| Model | Accu-opties | Max DC-laden | PnC-gereed |
-|-------|----------------|-----------------|:---------:|
+| Model | Accuopties | Max. DC-laden | PnC Klaar |
+|-------|-----------|---------------|:---------:|
 | eActros 600 | Tot 621 kWh | 400 kW (MCS/CCS) | ✅ |
 | eActros 300 | Tot 336 kWh | 160 kW (CCS) | ✅ |
 | eEconic | Tot 336 kWh | 160 kW (CCS) | ⚠️ Q2 2026 |
 
 ## Vereisten
 
-- Fleetboard-account met vlootbeheerdersrechten
-- eActros-firmware met eMobility-module (standaard geleverd sinds Q4 2025)
+- Fleetboard-account met beheerderstoegang voor vlootbeheer
+- eActros-firmware met eMobility-module (standaard meegeleverd sinds Q4 2025)
 - Stroomlijnen-vlootaccount met PnC ingeschakeld ([Installatiehandleiding](../setup-guide))
 
-## Stapsgewijze Handleiding: Fleetboard
+## Stap voor Stap: Fleetboard
 
 ### 1. Toegang tot eMobility-instellingen
 
@@ -31,70 +31,70 @@ Mercedes-Benz (Daimler Truck) ondersteunt ISO 15118-2 Plug & Charge op de eActro
 2. Navigeer naar **eMobility** → **Laadbeheer**
 3. Als u het nieuwe **Daimler Truck Digital**-portaal gebruikt, ga naar **Diensten** → **Laadbeheer**
 
-### 2. Stroomlijnen als Aanbieder Toevoegen
+### 2. Stroomlijnen Toevoegen als Aanbieder
 
 1. Klik in Laadbeheer op **Laadaanbieders**
 2. Klik op **Aanbieder toevoegen**
-3. Zoek naar **"Stroomlijnen B.V."** (of gebruik EMSP-ID `NL-STM`)
+3. Zoek op **"Stroomlijnen B.V."** (of gebruik eMSP-ID `NL-STM`)
 4. Klik op **Verbinden**
-5. Accepteer de voorwaarden voor gegevensdeling (voertuig-ID en certificaatuitwisseling)
+5. Accepteer de gegevensdeling-voorwaarden (voertuig-ID en certificaatuitwisseling)
 
 ### 3. Voertuigen Registreren voor PnC
 
 1. Ga naar **Laadbeheer** → **Voertuig PnC-instellingen**
-2. Voor elke eActros die u wilt inschakelen:
+2. Doe het volgende voor elke eActros die u wilt inschakelen:
    - Klik op de voertuigrij
    - Zet **Plug & Charge** op AAN
-   - Selecteer **Stroomlijnen** als voorkeurs-laadaanbieder (of één van meerdere)
+   - Selecteer **Stroomlijnen** als voorkeurzaadaanbieder (of een van meerdere)
 3. Klik op **Wijzigingen opslaan**
 
 ### 4. Certificaatuitrol
 
-Na het opslaan:
+Na opslaan:
 1. Fleetboard initieert het certificaatverzoek bij Stroomlijnen
 2. Het contractcertificaat wordt gegenereerd door onze backend
-3. Het wordt naar de vrachtwagen gepusht via de Daimler Truck telematica-unit
+3. Het wordt naar de vrachtwagen gepusht via de telematica-eenheid van Daimler Truck
 4. **Typische uitroltijd: 2–6 uur**
 5. De vrachtwagen moet online zijn (contact aan of aangesloten op lader)
 
 ### 5. Verifieer in Beide Portalen
 
-- **Fleetboard** → eMobility → Voertuig → PnC-status: moet "Certificaat actief" tonen
+- **Fleetboard** → eMobility → Voertuig → PnC-status: moet "Certificaat Actief" tonen
 - **Stroomlijnen Mijn Vloot** → Voertuig → Plug & Charge: moet "✅ Actief" tonen
 
 ### 6. Eerste Sessie
 
-Sluit de eActros aan op een Stroomlijnen-lader. Het eActros-dashboard toont de Plug & Charge-authenticatiestatus. Het laden zou automatisch moeten starten binnen 5–10 seconden.
+Verbind de eActros met een Stroomlijnen-lader. Het dashboard van de eActros toont de authenticatiestatus "Plug & Charge". Het laden zou automatisch moeten starten binnen 5–10 seconden.
 
 ## Meerdere Laadaanbieders
 
 Mercedes-Benz ondersteunt meerdere PnC-aanbieders tegelijkertijd. U kunt Stroomlijnen-certificaten naast certificaten van andere aanbieders op hetzelfde voertuig hebben. De vrachtwagen gebruikt het juiste certificaat op basis van het netwerk van de lader.
 
-## Fleetboard vs. Daimler Truck Digital
+## Fleetboard versus Daimler Truck Digital
 
-Daimler Truck maakt de overgang van Fleetboard naar het nieuwe **Daimler Truck Digital**-platform. Beide portalen ondersteunen momenteel PnC-beheer:
+Daimler Truck stapt over van Fleetboard naar het nieuwe **Daimler Truck Digital**-platform. Beide portalen ondersteunen momenteel PnC-beheer:
 
 - **Fleetboard (legacy):** Volledige PnC-ondersteuning, goed gedocumenteerd
 - **Daimler Truck Digital (nieuw):** PnC beschikbaar onder Diensten → Laadbeheer
 
-Als u migreert tussen platformen, worden PnC-instellingen automatisch overgenomen.
+Als u tussen platforms migreert, worden PnC-instellingen automatisch overgedragen.
 
 ## Probleemoplossing
 
 ### Sectie "eMobility" niet beschikbaar in Fleetboard
-- Controleer of uw Fleetboard-abonnement de eMobility-module bevat
-- De eMobility-module is inbegrepen bij Fleetboard Premium voor elektrische voertuigen
+- Zorg dat uw Fleetboard-abonnement de eMobility-module bevat
+- De eMobility-module is inbegrepen in Fleetboard Premium voor elektrische voertuigen
 - Neem contact op met uw Mercedes-Benz-dealer ter verificatie
 
-### Certificaat toont "In behandeling" voor langere periode
-1. Zorg dat de vrachtwagen ten minste 2 uur online is geweest
+### Certificaat toont gedurende langere periode "In behandeling"
+1. Zorg dat de vrachtwagen minimaal 2 uur online is geweest
 2. Controleer Fleetboard → Meldingen op eventuele wachtende goedkeuringen
-3. Controleer of de Daimler Truck telematica-unit mobiele netwerkverdekking heeft (controleer antenne in de vrachtwagen)
-4. Neem contact op met Stroomlijnen-ondersteuning voor backend-verificatie
+3. Verifieer dat de telematica-eenheid van Daimler Truck mobiele netwerkverbinding heeft (controleer antenne in vrachtwagen)
+4. Neem contact op met Stroomlijnen-support voor backendverificatie
 
 ### eActros 600 met MCS-connector
-De eActros 600 ondersteunt zowel CCS als MCS (Megawatt Charging System). PnC werkt op beide connectortypes bij Stroomlijnen-locaties. MCS-laders worden in 2026 uitgerold op geselecteerde locaties.
+De eActros 600 ondersteunt zowel CCS als MCS (Megawatt Charging System). PnC werkt op beide connectortypen op Stroomlijnen-locaties. MCS-laders worden in 2026 ingezet op geselecteerde locaties.
 
 ---
 
-**Volgende:** [Overige Vrachtwagens →](./other-trucks)
+**Volgende:** [Andere Vrachtwagens →](./other-trucks)

@@ -1,41 +1,41 @@
 ---
 sidebar_position: 4
-title: API & Integration
-description: Stroomlijnen REST API overview for fleet management system integration — sessions, vehicles, webhooks.
+title: API & Integratie
+description: Overzicht van de Stroomlijnen REST API voor integratie met vlootbeheersystemen — sessies, voertuigen, webhooks.
 keywords: [charging API, fleet API, integration, REST API, webhooks, OCPI, fleet management integration]
 ---
 
-# API & Integration
+# API & Integratie
 
-For fleets that want to integrate Stroomlijnen charging data into their own management systems.
+Voor vloten die Stroomlijnen-laadgegevens willen integreren in hun eigen beheersystemen.
 
-## REST API Overview
+## REST API Overzicht
 
-Our API provides programmatic access to all fleet management features:
+Onze API biedt programmatische toegang tot alle vlootbeheerfuncties:
 
-**Base URL:** `https://api.stroomlijnen.nl/v1`
-**Authentication:** Bearer token (API key from portal → Settings → API)
-**Format:** JSON
-**Rate limit:** 100 requests/minute
+**Basis-URL:** `https://api.stroomlijnen.nl/v1`
+**Authenticatie:** Bearer token (API-sleutel via portaal → Instellingen → API)
+**Formaat:** JSON
+**Limiet:** 100 verzoeken per minuut
 
-## Endpoints
+## Eindpunten
 
-### Sessions
+### Sessies
 
 ```
-GET /sessions                    — List sessions (paginated, filterable)
-GET /sessions/{id}               — Get session detail
-GET /sessions/{id}/meter-values  — Get detailed meter readings
+GET /sessions                    — Sessies opvragen (gepagineerd, filterbaar)
+GET /sessions/{id}               — Sessiedetail opvragen
+GET /sessions/{id}/meter-values  — Gedetailleerde meterwaarden opvragen
 ```
 
 **Filters:**
-- `?from=2026-03-01&to=2026-03-31` — date range
-- `?vehicle=XX-123-YY` — by license plate
-- `?location=theater-carre` — by location slug
-- `?status=completed` — by status (active, completed, failed)
-- `?auth_method=plug_and_charge` — by auth method
+- `?from=2026-03-01&to=2026-03-31` — datumbereik
+- `?vehicle=XX-123-YY` — op kenteken
+- `?location=theater-carre` — op locatieslug
+- `?status=completed` — op status (active, completed, failed)
+- `?auth_method=plug_and_charge` — op authenticatiemethode
 
-**Response:**
+**Antwoord:**
 ```json
 {
   "id": "STM-2026-03-001234",
@@ -68,113 +68,113 @@ GET /sessions/{id}/meter-values  — Get detailed meter readings
 }
 ```
 
-### Vehicles
+### Voertuigen
 
 ```
-GET    /vehicles         — List fleet vehicles
-POST   /vehicles         — Add vehicle
-GET    /vehicles/{vin}   — Get vehicle detail
-PATCH  /vehicles/{vin}   — Update vehicle
-DELETE /vehicles/{vin}   — Remove vehicle
+GET    /vehicles         — Vlootvoertuigen opvragen
+POST   /vehicles         — Voertuig toevoegen
+GET    /vehicles/{vin}   — Voertuigdetail opvragen
+PATCH  /vehicles/{vin}   — Voertuig bijwerken
+DELETE /vehicles/{vin}   — Voertuig verwijderen
 ```
 
-### Drivers
+### Bestuurders
 
 ```
-GET    /drivers          — List drivers
-POST   /drivers          — Add driver
-GET    /drivers/{id}     — Get driver detail
-PATCH  /drivers/{id}     — Update driver
-DELETE /drivers/{id}     — Deactivate driver
+GET    /drivers          — Bestuurders opvragen
+POST   /drivers          — Bestuurder toevoegen
+GET    /drivers/{id}     — Bestuurdersdetail opvragen
+PATCH  /drivers/{id}     — Bestuurder bijwerken
+DELETE /drivers/{id}     — Bestuurder deactiveren
 ```
 
-### Locations
+### Locaties
 
 ```
-GET /locations           — List all available locations
-GET /locations/{id}      — Location detail with charger status
+GET /locations           — Alle beschikbare locaties opvragen
+GET /locations/{id}      — Locatiedetail met laderstatus
 ```
 
-### Invoices
+### Facturen
 
 ```
-GET /invoices            — List invoices
-GET /invoices/{id}       — Invoice detail
-GET /invoices/{id}/pdf   — Download PDF
-GET /invoices/{id}/csv   — Download CSV (session data)
+GET /invoices            — Facturen opvragen
+GET /invoices/{id}       — Factuurdetail opvragen
+GET /invoices/{id}/pdf   — PDF downloaden
+GET /invoices/{id}/csv   — CSV downloaden (sessiegegevens)
 ```
 
 ## Webhooks
 
-Receive real-time notifications for events:
+Ontvang realtime meldingen voor gebeurtenissen:
 
-### Setup
-1. Go to **Portal → Settings → Webhooks**
-2. Add your endpoint URL
-3. Select events to receive
-4. We'll send a test event for verification
+### Instellen
+1. Ga naar **Portaal → Instellingen → Webhooks**
+2. Voeg uw eindpunt-URL toe
+3. Selecteer de te ontvangen gebeurtenissen
+4. Wij sturen een testgebeurtenis ter verificatie
 
-### Available Events
+### Beschikbare Gebeurtenissen
 
-| Event | Trigger | Payload |
-|-------|---------|---------|
-| `session.started` | New charging session begins | Session object |
-| `session.updated` | Session data updated (every 60s during charge) | Session object |
-| `session.completed` | Session ends normally | Session object with final data |
-| `session.failed` | Session failed (auth, power, error) | Session object with error |
-| `vehicle.alert` | Certificate expiring, card issue, etc. | Alert object |
-| `invoice.created` | New invoice ready | Invoice summary |
+| Gebeurtenis | Trigger | Payload |
+|-------------|---------|---------|
+| `session.started` | Nieuwe laadsessie begint | Sessieobject |
+| `session.updated` | Sessiegegevens bijgewerkt (elke 60s tijdens laden) | Sessieobject |
+| `session.completed` | Sessie eindigt normaal | Sessieobject met eindgegevens |
+| `session.failed` | Sessie mislukt (auth, vermogen, fout) | Sessieobject met fout |
+| `vehicle.alert` | Certificaat verloopt, pasprobleem, enz. | Meldingsobject |
+| `invoice.created` | Nieuwe factuur beschikbaar | Factuuroverzicht |
 
-### Webhook Format
+### Webhookformaat
 ```json
 {
   "event": "session.completed",
   "timestamp": "2026-03-23T10:47:00Z",
-  "data": { /* event-specific payload */ }
+  "data": { /* gebeurtenisspecifieke payload */ }
 }
 ```
 
-**Retry policy:** 3 retries with exponential backoff (10s, 60s, 300s). If all fail, event is logged and available via API for manual retrieval.
+**Herhaalprocedure:** 3 herhalingen met exponentieel uitstel (10s, 60s, 300s). Als alle mislukkingen, wordt de gebeurtenis gelogd en beschikbaar gesteld via de API voor handmatige opvraging.
 
-## OCPI Integration
+## OCPI-integratie
 
-For eMSP/CPO-to-CPO integration, we support **OCPI 2.2.1**:
-- **Locations module** — real-time charger availability
-- **Sessions module** — live session data
-- **CDRs module** — Charge Detail Records
-- **Tariffs module** — current pricing
-- **Commands module** — remote start/stop
+Voor eMSP/CPO-naar-CPO-integratie ondersteunen wij **OCPI 2.2.1**:
+- **Locatiesmodule** — realtime laderbeschikbaarheid
+- **Sessiesmodule** — live sessiegegevens
+- **CDR's-module** — Charge Detail Records
+- **Tariefmodule** — actuele prijzen
+- **Commandomodule** — op afstand starten/stoppen
 
-Contact us for OCPI endpoint credentials and integration testing.
+Neem contact op voor OCPI-eindpuntgegevens en integratietests.
 
-## SDKs & Examples
+## SDK's & Voorbeelden
 
-We provide examples in common languages:
+We bieden voorbeelden in gangbare programmeertalen:
 
 ```python
-# Python example
+# Python-voorbeeld
 import requests
 
-API_KEY = "your_api_key_here"
+API_KEY = "uw_api_sleutel_hier"
 BASE = "https://api.stroomlijnen.nl/v1"
 headers = {"Authorization": f"Bearer {API_KEY}"}
 
-# Get last 10 sessions
+# Laatste 10 sessies opvragen
 sessions = requests.get(f"{BASE}/sessions?limit=10", headers=headers)
 for s in sessions.json()["data"]:
-    print(f"{s['vehicle']['nickname']}: {s['energy_kwh']} kWh at {s['location']['name']}")
+    print(f"{s['vehicle']['nickname']}: {s['energy_kwh']} kWh bij {s['location']['name']}")
 ```
 
-## Rate Limits & Quotas
+## Limieten & Quota
 
-| Plan | Rate Limit | Webhook Events | Data Retention |
-|------|-----------|----------------|----------------|
-| Standard | 100 req/min | 1,000/day | 12 months |
-| Professional | 500 req/min | 10,000/day | 24 months |
-| Enterprise | 2,000 req/min | Unlimited | 36 months |
+| Plan | Limiet | Webhookgebeurtenissen | Gegevensretentie |
+|------|--------|----------------------|-----------------|
+| Standaard | 100 req/min | 1.000/dag | 12 maanden |
+| Professioneel | 500 req/min | 10.000/dag | 24 maanden |
+| Enterprise | 2.000 req/min | Onbeperkt | 36 maanden |
 
-## Support
+## Ondersteuning
 
-- **API issues:** [api-support@stroomlijnen.nl](mailto:api-support@stroomlijnen.nl)
-- **Status page:** [status.stroomlijnen.nl](https://status.stroomlijnen.nl)
-- **Changelog:** API changes are announced 30 days in advance via email
+- **API-problemen:** [api-support@stroomlijnen.nl](mailto:api-support@stroomlijnen.nl)
+- **Statuspagina:** [status.stroomlijnen.nl](https://status.stroomlijnen.nl)
+- **Wijzigingslog:** API-wijzigingen worden 30 dagen van tevoren aangekondigd via e-mail
