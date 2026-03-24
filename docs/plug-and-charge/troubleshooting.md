@@ -1,122 +1,122 @@
 ---
 sidebar_position: 10
-title: Plug & Charge Troubleshooting
-description: Common Plug & Charge issues and solutions — from certificate errors to communication failures at the charger.
+title: Plug & Charge Probleemoplossing
+description: Veelvoorkomende Plug & Charge-problemen en oplossingen — van certificaatfouten tot communicatiestoringen bij de lader.
 keywords: [Plug and Charge troubleshooting, PnC errors, ISO 15118 problems, charging fails, certificate error]
 ---
 
-# Plug & Charge Troubleshooting
+# Plug & Charge Probleemoplossing
 
-When Plug & Charge doesn't work as expected, the issue usually falls into one of a few categories: certificate problems, communication failures, or configuration gaps. This guide walks through the most common issues.
+Wanneer Plug & Charge niet werkt zoals verwacht, valt het probleem meestal in een van de volgende categorieën: certificaatproblemen, communicatiestoringen of configuratielacunes. Deze handleiding behandelt de meest voorkomende problemen.
 
-## Quick Diagnostic Checklist
+## Snelle Diagnostische Checklist
 
-Before diving into specifics, run through this checklist:
+Voordat u dieper ingaat, loop deze checklist door:
 
-- [ ] Is the vehicle [PnC compatible](./compatible-vehicles)?
-- [ ] Is the vehicle firmware up to date?
-- [ ] Is PnC enabled in the Stroomlijnen My Fleet portal?
-- [ ] Does the certificate status show "Active" in both portals (OEM + Stroomlijnen)?
-- [ ] Is the vehicle's ignition on or accessory mode active?
-- [ ] Is the CCS cable fully seated in the vehicle's inlet?
+- [ ] Is het voertuig [PnC-compatibel](./compatible-vehicles)?
+- [ ] Is de firmware van het voertuig up-to-date?
+- [ ] Is PnC ingeschakeld in het Stroomlijnen Mijn Vloot-portaal?
+- [ ] Toont de certificaatstatus "Actief" in beide portalen (OEM + Stroomlijnen)?
+- [ ] Staat het contact van het voertuig aan of staat het in accessoiremodus?
+- [ ] Zit de CCS-kabel volledig in de aansluiting van het voertuig?
 
-## Common Issues
+## Veelvoorkomende Problemen
 
-### 1. Charger shows "Authentication Failed"
+### 1. Lader toont "Authenticatie mislukt"
 
-**Symptoms:** Cable connected, charger attempts PnC but displays an authentication error.
+**Symptomen:** Kabel aangesloten, lader probeert PnC maar toont een authenticatiefout.
 
-**Causes & Solutions:**
+**Oorzaken en oplossingen:**
 
-| Cause | Solution |
+| Oorzaak | Oplossing |
 |-------|----------|
-| Certificate expired | Check expiry in My Fleet → Vehicle → PnC tab. Renew if expired. |
-| Certificate not yet installed | Status may show "Pending". Ensure truck is online. Wait up to 24 hours. |
-| Certificate revoked | If intentionally revoked, re-enable PnC in the portal. |
-| EMAID not synchronized | Contact Stroomlijnen support — our backend may need to sync with Hubject. |
-| Wrong certificate presented | If multiple eMSP certificates are installed, the truck may present the wrong one. Check OEM portal. |
+| Certificaat verlopen | Controleer vervaldatum via Mijn Vloot → Voertuig → PnC-tabblad. Verleng indien verlopen. |
+| Certificaat nog niet geïnstalleerd | Status kan "In behandeling" tonen. Zorg dat de vrachtwagen online is. Wacht maximaal 24 uur. |
+| Certificaat ingetrokken | Als bewust ingetrokken, schakel PnC opnieuw in via het portaal. |
+| EMAID niet gesynchroniseerd | Neem contact op met Stroomlijnen-ondersteuning — onze backend moet mogelijk synchroniseren met Hubject. |
+| Verkeerd certificaat gepresenteerd | Als meerdere eMSP-certificaten zijn geïnstalleerd, presenteert de vrachtwagen mogelijk het verkeerde. Controleer OEM-portaal. |
 
-### 2. Charger Falls Back to RFID
+### 2. Lader Valt Terug op RFID
 
-**Symptoms:** Instead of PnC, the charger prompts "Please tap your RFID card."
+**Symptomen:** In plaats van PnC vraagt de lader "Tik uw RFID-pas a.u.b."
 
-**Causes & Solutions:**
+**Oorzaken en oplossingen:**
 
-- **Vehicle doesn't initiate ISO 15118-2:** The truck's communication module may not be offering PnC. Restart the vehicle and try again.
-- **PLC communication failed:** Power Line Communication between cable and vehicle isn't establishing. Try a different cable or connector (if available). Clean the CCS connector contacts.
-- **Charger PnC temporarily disabled:** Rarely, a charger may have PnC disabled for maintenance. Try another charger at the same site.
+- **Voertuig initieert ISO 15118-2 niet:** De communicatiemodule van de vrachtwagen biedt mogelijk geen PnC aan. Herstart het voertuig en probeer opnieuw.
+- **PLC-communicatie mislukt:** Power Line Communication tussen kabel en voertuig komt niet tot stand. Probeer een andere kabel of connector (indien beschikbaar). Reinig de CCS-connectorcontacten.
+- **Lader PnC tijdelijk uitgeschakeld:** Soms is PnC op een lader uitgeschakeld voor onderhoud. Probeer een andere lader op dezelfde locatie.
 
-### 3. Certificate Status Stuck on "Pending"
+### 3. Certificaatstatus Blijft op "In behandeling"
 
-**Symptoms:** You enabled PnC days ago but the certificate hasn't been installed.
+**Symptomen:** U heeft PnC dagen geleden ingeschakeld maar het certificaat is niet geïnstalleerd.
 
-**Solutions:**
-1. **Ensure the truck has been online** — The truck needs to be turned on (ignition or accessory mode) with cellular connectivity for the certificate to be delivered
-2. **Check OEM portal** — There may be a pending authorization request you need to approve
-3. **Check fleet portal permissions** — Ensure your account has admin-level access for PnC management
-4. **Re-trigger installation** — In My Fleet → Vehicle → PnC tab, click **Re-send Certificate Request**
-5. **Contact support** — If stuck for more than 48 hours, contact both Stroomlijnen and your OEM dealer
+**Oplossingen:**
+1. **Zorg dat de vrachtwagen online is geweest** — De vrachtwagen moet aan staan (contact of accessoiremodus) met mobiele verbinding voor de levering van het certificaat
+2. **Controleer OEM-portaal** — Er kan een wachtend autorisatieverzoek zijn dat u moet goedkeuren
+3. **Controleer portaalrechten** — Zorg dat uw account beheerdersrechten heeft voor PnC-beheer
+4. **Trigger installatie opnieuw** — In Mijn Vloot → Voertuig → PnC-tabblad, klik op **Certificaatverzoek opnieuw verzenden**
+5. **Neem contact op met ondersteuning** — Als het langer dan 48 uur vastzit, neem contact op met zowel Stroomlijnen als uw OEM-dealer
 
-### 4. PnC Works Intermittently
+### 4. PnC Werkt Wisselvallig
 
-**Symptoms:** PnC works at some chargers or some times, but fails randomly.
+**Symptomen:** PnC werkt bij sommige laders of op sommige momenten, maar mislukt willekeurig.
 
-**Possible causes:**
+**Mogelijke oorzaken:**
 
-- **Weak PLC signal:** The Power Line Communication signal can be affected by cable condition, connector wear, or electromagnetic interference. Try fully unplugging and reconnecting.
-- **Vehicle software glitch:** Restart the truck (full ignition cycle: off → wait 30 seconds → on).
-- **Backend timeout:** If our backend is slow to respond, the charger may time out. Usually resolves on retry.
-- **Certificate nearing expiry:** Some systems have stricter validation when certificates are close to expiry. Check remaining validity.
+- **Zwak PLC-signaal:** Het Power Line Communication-signaal kan worden beïnvloed door kabelconditie, connectorslijtage of elektromagnetische interferentie. Probeer volledig los te koppelen en opnieuw aan te sluiten.
+- **Softwareprobleem voertuig:** Herstart de vrachtwagen (volledige contactcyclus: uit → 30 seconden wachten → aan).
+- **Backend-timeout:** Als onze backend langzaam reageert, kan de lader een timeout geven. Lost zich meestal op bij een nieuwe poging.
+- **Certificaat nadert vervaldatum:** Sommige systemen valideren strenger als certificaten bijna verlopen. Controleer resterende geldigheid.
 
-### 5. "Contract Certificate Invalid" Error
+### 5. "Contractcertificaat ongeldig" Fout
 
-**Symptoms:** The charger specifically reports the contract certificate as invalid.
+**Symptomen:** De lader meldt specifiek dat het contractcertificaat ongeldig is.
 
-**Solutions:**
-1. **Check certificate chain:** In My Fleet, verify the certificate details. If the chain is broken (e.g., intermediate CA expired), contact Stroomlijnen support.
-2. **Time synchronization:** If the vehicle's clock is significantly wrong, certificate validation can fail. This is rare on modern trucks but possible after long storage periods.
-3. **Root CA update needed:** The charger may need an updated root certificate. Stroomlijnen manages this automatically, but during rollouts there can be temporary gaps. Report the specific charger ID to support.
+**Oplossingen:**
+1. **Controleer certificaatketen:** Controleer in Mijn Vloot de certificaatdetails. Als de keten gebroken is (bijv. tussenliggende CA verlopen), neem contact op met Stroomlijnen-ondersteuning.
+2. **Tijdsynchronisatie:** Als de klok van het voertuig significant verkeerd staat, kan certificaatvalidatie mislukken. Zeldzaam bij moderne vrachtwagens, maar mogelijk na langdurige stalling.
+3. **Root CA-update nodig:** De lader heeft mogelijk een bijgewerkt rootcertificaat nodig. Stroomlijnen beheert dit automatisch, maar tijdens uitrolperioden kunnen er tijdelijke lacunes zijn. Meld het specifieke lader-ID bij de ondersteuning.
 
-### 6. Session Starts But Stops Immediately
+### 6. Sessie Start Maar Stopt Direct
 
-**Symptoms:** PnC authenticates successfully, charging starts, then stops within seconds.
+**Symptomen:** PnC authenticeert succesvol, laden begint, dan stopt het binnen seconden.
 
-**This is usually not a PnC problem.** The authentication worked — the issue is in the charging session itself:
+**Dit is meestal geen PnC-probleem.** De authenticatie werkte — het probleem zit in de laadsessie zelf:
 
-- **Battery management system (BMS) intervention:** The truck's BMS may be limiting charge acceptance (temperature, SoC, cell balancing)
-- **Power negotiation failure:** The charger and vehicle couldn't agree on charging parameters. Try again — dynamic power allocation can vary.
-- **Ground fault detection:** Safety system detected an issue. Unplug, inspect cable and connector for moisture or debris, try again.
+- **Batteriemanagementsysteem (BMS) interventie:** Het BMS van de vrachtwagen beperkt mogelijk de laadacceptatie (temperatuur, SoC, celbalancering)
+- **Vermogensonderhandeling mislukt:** De lader en het voertuig konden niet overeenstemmen over laadparameters. Probeer opnieuw — dynamische vermogenstoewijzing kan variëren.
+- **Aardlekdetectie:** Het veiligheidssysteem heeft een probleem gedetecteerd. Ontkoppel, inspecteer kabel en connector op vocht of vuil, probeer opnieuw.
 
-## Error Codes
+## Foutcodes
 
-If the charger displays a specific error code, note it and contact support. Common codes:
+Als de lader een specifieke foutcode toont, noteer deze en neem contact op met de ondersteuning. Veelvoorkomende codes:
 
-| Code | Meaning | Action |
+| Code | Betekenis | Actie |
 |------|---------|--------|
-| AUTH-001 | No valid contract certificate found | Check certificate installation |
-| AUTH-002 | Certificate chain validation failed | Contact support |
-| AUTH-003 | EMAID not authorized | Check My Fleet PnC status |
-| AUTH-004 | Backend communication timeout | Wait 2 minutes, retry |
-| COMM-001 | PLC link failed | Reconnect cable, clean contacts |
-| COMM-002 | ISO 15118 protocol version mismatch | Update vehicle firmware |
-| COMM-003 | TLS handshake failed | Contact support |
+| AUTH-001 | Geen geldig contractcertificaat gevonden | Controleer certificaatinstallatie |
+| AUTH-002 | Certificaatketen validatie mislukt | Neem contact op met ondersteuning |
+| AUTH-003 | EMAID niet geautoriseerd | Controleer Mijn Vloot PnC-status |
+| AUTH-004 | Backend-communicatie timeout | Wacht 2 minuten, probeer opnieuw |
+| COMM-001 | PLC-verbinding mislukt | Kabel opnieuw aansluiten, contacten reinigen |
+| COMM-002 | ISO 15118 protocolversie mismatch | Firmware van voertuig bijwerken |
+| COMM-003 | TLS-handshake mislukt | Neem contact op met ondersteuning |
 
-## Collecting Diagnostic Information
+## Diagnostische Informatie Verzamelen
 
-When contacting support, please provide:
+Geef bij contact met de ondersteuning het volgende door:
 
-1. **Vehicle details:** Make, model, VIN, firmware version
-2. **Charger details:** Location name, charger ID (printed on the unit, format: `NL*STM*E...`)
-3. **Date and time** of the failed attempt
-4. **Error message** or code shown on the charger
-5. **Screenshots** from the charger display and/or vehicle dashboard (if safe to capture)
+1. **Voertuigdetails:** Merk, model, VIN, firmwareversie
+2. **Laderdetails:** Locatienaam, lader-ID (gedrukt op het apparaat, formaat: `NL*STM*E...`)
+3. **Datum en tijd** van de mislukte poging
+4. **Foutmelding** of code getoond op de lader
+5. **Screenshots** van het laderdisplay en/of voertuigdashboard (indien veilig vast te leggen)
 
-## Contact Support
+## Contact Ondersteuning
 
-- **Email:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
-- **Phone:** Available to fleet customers (see your contract for the support number)
-- **My Fleet portal:** Submit a support ticket via the Help section
+- **E-mail:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
+- **Telefoon:** Beschikbaar voor vlootklanten (zie uw contract voor het ondersteuningsnummer)
+- **Mijn Vloot-portaal:** Dien een supportticket in via de Help-sectie
 
 ---
 
-**Still stuck?** Check the [FAQ](../faq) for more common questions, or reach out to your Stroomlijnen account manager.
+**Vastgelopen?** Bekijk de [FAQ](../faq) voor meer veelgestelde vragen, of neem contact op met uw Stroomlijnen-accountmanager.

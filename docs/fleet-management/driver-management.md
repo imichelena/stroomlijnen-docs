@@ -1,93 +1,93 @@
 ---
 sidebar_position: 5
-title: Driver Management
-description: Manage drivers in your electric fleet — assign vehicles, issue RFID cards, set charging limits, and track driver activity.
+title: Bestuurderbeheer
+description: Bestuurders beheren in uw elektrische vloot — voertuigen toewijzen, RFID-passen verstrekken, laadlimieten instellen en bestuurdersactiviteit bijhouden.
 keywords: [driver management, fleet drivers, RFID assignment, charging limits, driver app]
 ---
 
-# Driver Management
+# Bestuurderbeheer
 
-The Driver Management section lets fleet administrators manage who can charge, on which vehicles, and with what limits.
+De sectie Bestuurderbeheer stelt vlootbeheerders in staat te bepalen wie mag laden, op welke voertuigen en met welke limieten.
 
-## Adding Drivers
+## Bestuurders Toevoegen
 
-1. Go to **Drivers** → **Add Driver**
-2. Enter driver details:
-   - **Name** — First and last name
-   - **Email** — For account access and notifications
-   - **Phone** — For app authentication (optional)
-   - **Employee ID** — For internal reference
-   - **Department/Group** — For organizational filtering
-3. Click **Save**
+1. Ga naar **Bestuurders** → **Bestuurder toevoegen**
+2. Vul de bestuurdersgegevens in:
+   - **Naam** — Voor- en achternaam
+   - **E-mail** — Voor accounttoegang en meldingen
+   - **Telefoon** — Voor app-authenticatie (optioneel)
+   - **Personeelsnummer** — Voor interne referentie
+   - **Afdeling/Groep** — Voor organisatorisch filteren
+3. Klik op **Opslaan**
 
-The driver receives an email invitation to set up their Stroomlijnen account and download the mobile app.
+De bestuurder ontvangt een e-mailuitnodiging om zijn/haar Stroomlijnen-account in te stellen en de mobiele app te downloaden.
 
-## Assigning Vehicles
+## Voertuigen Toewijzen
 
-Drivers can be assigned to one or more vehicles:
+Bestuurders kunnen aan één of meerdere voertuigen worden toegewezen:
 
-1. Go to **Drivers** → select a driver → **Vehicles**
-2. Click **Assign Vehicle** and select from your fleet
-3. A driver can only start sessions on their assigned vehicles (if vehicle-driver linking is enforced in your fleet settings)
+1. Ga naar **Bestuurders** → selecteer een bestuurder → **Voertuigen**
+2. Klik op **Voertuig toewijzen** en selecteer uit uw vloot
+3. Een bestuurder kan alleen sessies starten op toegewezen voertuigen (als voertuig-bestuurderkoppeling is ingeschakeld in uw vlootinstellingen)
 
-### Flexible Assignment
-For fleets where drivers share vehicles:
-- Set **Vehicle-Driver Linking** to "Flexible" in fleet settings
-- Any registered driver can charge any fleet vehicle
-- Sessions still track which driver initiated them (via RFID card or app)
+### Flexibele Toewijzing
+Voor vloten waarbij bestuurders voertuigen delen:
+- Stel **Voertuig-bestuurderkoppeling** in op "Flexibel" in de vlootinstellingen
+- Elke geregistreerde bestuurder kan elk vlootvoertuig laden
+- Sessies worden nog steeds bijgehouden per bestuurder (via RFID-pas of app)
 
-## RFID Cards for Drivers
+## RFID-passen voor Bestuurders
 
-Each driver can have a personal RFID card:
+Elke bestuurder kan een persoonlijke RFID-pas krijgen:
 
-1. Go to **Drivers** → select a driver → **RFID Cards**
-2. Click **Assign Card** and enter the card's UID (printed on the card)
-3. The card is now linked to this driver and their assigned vehicles
+1. Ga naar **Bestuurders** → selecteer een bestuurder → **RFID-passen**
+2. Klik op **Pas toewijzen** en voer de UID van de pas in (gedrukt op de pas)
+3. De pas is nu gekoppeld aan deze bestuurder en zijn/haar toegewezen voertuigen
 
-When a driver taps their personal card at a charger, the session is attributed to them specifically — useful for reporting and per-driver cost tracking.
+Wanneer een bestuurder zijn/haar persoonlijke pas tikt bij een lader, wordt de sessie specifiek aan hem/haar toegeschreven — handig voor rapportage en kostentoedeling per bestuurder.
 
-See also: [RFID Cards](../getting-started/rfid-cards) for ordering and activation.
+Zie ook: [RFID-passen](../getting-started/rfid-cards) voor bestellen en activeren.
 
-## Charging Limits
+## Laadlimieten
 
-Set per-driver limits to control costs:
+Stel limieten per bestuurder in om kosten te beheersen:
 
-### Monthly Energy Limit
-Maximum kWh a driver can charge per month. When the limit is reached:
-- The driver is notified via email/app
-- Further charging requires fleet manager approval (or the limit resets next month)
+### Maandelijkse Energielimiet
+Maximaal kWh dat een bestuurder per maand mag laden. Als de limiet is bereikt:
+- Wordt de bestuurder per e-mail/app op de hoogte gesteld
+- Is verder laden onderhevig aan goedkeuring door de vlootbeheerder (of de limiet wordt volgende maand gereset)
 
-### Per-Session Limit
-Maximum kWh per individual session. Useful for preventing overnight charges when not intended.
+### Limiet per Sessie
+Maximaal kWh per individuele sessie. Handig om onbedoeld nachtladen te voorkomen.
 
-### Location Restrictions
-Limit which locations a driver can charge at. For example, only Stroomlijnen locations on their assigned route.
+### Locatiebeperkingen
+Beperk op welke locaties een bestuurder mag laden. Bijvoorbeeld alleen Stroomlijnen-locaties op de toegewezen route.
 
-## Driver App
+## Bestuurdersapp
 
-Drivers can download the Stroomlijnen app to:
+Bestuurders kunnen de Stroomlijnen-app downloaden om:
 
-- **Find chargers** — Map of all Stroomlijnen locations with real-time availability
-- **Start sessions** — Scan QR code or use Bluetooth to start charging (alternative to RFID)
-- **Monitor sessions** — See current charging power, energy delivered, estimated time to target SoC
-- **View history** — Past sessions with energy and cost details
-- **Receive notifications** — Session complete, charger available, PnC events
+- **Laders te vinden** — Kaart van alle Stroomlijnen-locaties met realtime beschikbaarheid
+- **Sessies te starten** — QR-code scannen of Bluetooth gebruiken om laden te starten (alternatief voor RFID)
+- **Sessies te bewaken** — Huidig laadvermogen, geleverde energie, geschatte tijd tot gewenste SoC
+- **Geschiedenis te bekijken** — Afgelopen sessies met energie- en kostendetails
+- **Meldingen te ontvangen** — Sessie voltooid, lader beschikbaar, PnC-gebeurtenissen
 
-The app is available for iOS and Android. Drivers log in with the email address registered in My Fleet.
+De app is beschikbaar voor iOS en Android. Bestuurders loggen in met het e-mailadres dat is geregistreerd in Mijn Vloot.
 
-## Reporting
+## Rapportage
 
-### Per-Driver Reports
-- Total kWh per driver per month
-- Number of sessions
-- Average session duration
-- Most-used locations
-- Cost attribution
+### Rapporten per Bestuurder
+- Totaal kWh per bestuurder per maand
+- Aantal sessies
+- Gemiddelde sessieduur
+- Meest gebruikte locaties
+- Kostentoedeling
 
-### Driver Comparison
-Compare driver charging patterns to identify:
-- Efficient vs. inefficient charging behavior
-- Route optimization opportunities
-- Cost outliers
+### Bestuurdervergelijking
+Vergelijk laadpatronen van bestuurders om te herkennen:
+- Efficiënt versus inefficiënt laadgedrag
+- Mogelijkheden voor routeoptimalisatie
+- Kostenuitschieters
 
-Reports are available in **Reports** → **Driver Analysis** and can be exported as CSV or PDF.
+Rapporten zijn beschikbaar via **Rapporten** → **Bestuurdersanalyse** en kunnen worden geëxporteerd als CSV of PDF.

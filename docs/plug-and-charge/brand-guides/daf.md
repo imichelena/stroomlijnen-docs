@@ -1,93 +1,93 @@
 ---
 sidebar_position: 2
-title: DAF Trucks — Plug & Charge Setup
-description: Step-by-step guide to enabling Plug & Charge on DAF XF, XD, and XB Electric trucks via DAF Connect.
+title: DAF Trucks — Plug & Charge Instellen
+description: Stapsgewijze handleiding voor het activeren van Plug & Charge op DAF XF, XD en XB Electric vrachtwagens via DAF Connect.
 keywords: [DAF, XF Electric, XD Electric, XB Electric, DAF Connect, Plug and Charge, ISO 15118]
 ---
 
-# DAF Trucks — Plug & Charge Setup
+# DAF Trucks — Plug & Charge Instellen
 
-DAF's electric truck lineup — part of the PACCAR group — supports ISO 15118-2 Plug & Charge across all current BEV models. Configuration is managed through DAF Connect, the fleet management platform.
+Het elektrische vrachtwagenassortiment van DAF — onderdeel van de PACCAR-groep — ondersteunt ISO 15118-2 Plug & Charge op alle huidige BEV-modellen. Configuratie wordt beheerd via DAF Connect, het vlootbeheerplatform.
 
-## Supported Models
+## Ondersteunde Modellen
 
-| Model | Battery Options | Max DC Charging | PnC Ready |
+| Model | Accu-opties | Max DC-laden | PnC-gereed |
 |-------|----------------|-----------------|:---------:|
-| XF Electric | Up to 525 kWh | 350 kW (CCS) | ✅ |
-| XD Electric | Up to 350 kWh | 250 kW (CCS) | ✅ |
-| XB Electric | Up to 210 kWh | 175 kW (CCS) | ✅ |
+| XF Electric | Tot 525 kWh | 350 kW (CCS) | ✅ |
+| XD Electric | Tot 350 kWh | 250 kW (CCS) | ✅ |
+| XB Electric | Tot 210 kWh | 175 kW (CCS) | ✅ |
 
-## Prerequisites
+## Vereisten
 
-- DAF Connect fleet management account with admin access
-- Latest vehicle software (check in DAF Connect → Vehicle → Diagnostics)
-- Stroomlijnen fleet account with PnC enabled ([Setup Guide](../setup-guide))
+- DAF Connect vlootbeheeraccount met beheerdersrechten
+- Nieuwste voertuigsoftware (controleer via DAF Connect → Voertuig → Diagnostiek)
+- Stroomlijnen-vlootaccount met PnC ingeschakeld ([Installatiehandleiding](../setup-guide))
 
-## Step-by-Step: DAF Connect
+## Stapsgewijze Handleiding: DAF Connect
 
-### 1. Access Charging Settings
+### 1. Toegang tot Laadinstellingen
 
-1. Log in to [DAF Connect](https://dafconnect.paccar.com)
-2. Navigate to **Fleet Management** → **Electromobility**
-3. If you don't see the Electromobility section, contact DAF Connect support to enable it for your account
+1. Log in op [DAF Connect](https://dafconnect.paccar.com)
+2. Navigeer naar **Vlootbeheer** → **Elektromobiliteit**
+3. Als u de sectie Elektromobiliteit niet ziet, neem contact op met DAF Connect-ondersteuning om deze voor uw account te activeren
 
-### 2. Configure Charging Partners
+### 2. Laadpartners Configureren
 
-1. Go to **Electromobility** → **Charging Partners**
-2. Click **Add Charging Partner**
-3. Search for **"Stroomlijnen"** or enter partner ID `NL-STM`
-4. Click **Add and Authorize**
+1. Ga naar **Elektromobiliteit** → **Laadpartners**
+2. Klik op **Laadpartner toevoegen**
+3. Zoek naar **"Stroomlijnen"** of voer partner-ID `NL-STM` in
+4. Klik op **Toevoegen en autoriseren**
 
-### 3. Assign Vehicles
+### 3. Voertuigen Toewijzen
 
-1. After adding Stroomlijnen, go to **Charging Partners** → **Stroomlijnen B.V.**
-2. Click **Manage Vehicles**
-3. Select the trucks that should use PnC
-4. Click **Save**
+1. Ga na het toevoegen van Stroomlijnen naar **Laadpartners** → **Stroomlijnen B.V.**
+2. Klik op **Voertuigen beheren**
+3. Selecteer de vrachtwagens die PnC moeten gebruiken
+4. Klik op **Opslaan**
 
-### 4. Approve Certificate Installation
+### 4. Certificaatinstallatie Goedkeuren
 
-1. DAF Connect will show a notification requesting certificate installation approval
-2. Review the request details (vehicles, permissions)
-3. Click **Approve**
-4. The contract certificates will be pushed to the selected trucks
+1. DAF Connect toont een melding met het verzoek om goedkeuring voor certificaatinstallatie
+2. Bekijk de verzoekdetails (voertuigen, rechten)
+3. Klik op **Goedkeuren**
+4. De contractcertificaten worden naar de geselecteerde vrachtwagens gepusht
 
-### 5. Wait for Installation
+### 5. Wacht op Installatie
 
-- Certificate delivery typically takes **4–8 hours**
-- The truck must be online (ignition on or connected to power)
-- Track status in DAF Connect → **Electromobility** → **Certificate Status**
+- Certificaatlevering duurt doorgaans **4–8 uur**
+- De vrachtwagen moet online zijn (contact aan of aangesloten op stroom)
+- Volg de status via DAF Connect → **Elektromobiliteit** → **Certificaatstatus**
 
-### 6. Verify and Test
+### 6. Verifieer en Test
 
-1. Check status in both DAF Connect and Stroomlijnen My Fleet
-2. Plug into a Stroomlijnen charger to verify automatic authentication
-3. The first PnC session confirms everything is working
+1. Controleer de status in zowel DAF Connect als Stroomlijnen Mijn Vloot
+2. Plug in bij een Stroomlijnen-lader om automatische authenticatie te verifiëren
+3. De eerste PnC-sessie bevestigt dat alles werkt
 
-## Fleet Manager Activation Note
+## Opmerking over Vlootbeheerderactivatie
 
-DAF requires the **fleet manager** (not individual drivers) to activate PnC for each vehicle. This is a security feature — only authorized fleet administrators can enable automatic billing on company vehicles.
+DAF vereist dat de **vlootbeheerder** (niet individuele bestuurders) PnC activeert voor elk voertuig. Dit is een beveiligingsfunctie — alleen geautoriseerde vlootbeheerders kunnen automatische facturering op bedrijfsvoertuigen inschakelen.
 
-If your organization has multiple fleet managers:
-- Each can activate PnC for vehicles under their management
-- A super-admin can delegate Electromobility permissions
+Als uw organisatie meerdere vlootbeheerders heeft:
+- Elk kan PnC activeren voor voertuigen onder hun beheer
+- Een superbeheerder kan Elektromobiliteit-rechten delegeren
 
-## Troubleshooting
+## Probleemoplossing
 
-### "Electromobility" section not visible
-This feature requires a DAF Connect Premium subscription. Contact your DAF dealer to verify your subscription level.
+### Sectie "Elektromobiliteit" niet zichtbaar
+Deze functie vereist een DAF Connect Premium-abonnement. Neem contact op met uw DAF-dealer om uw abonnementsniveau te verifiëren.
 
-### Certificate installation takes longer than 24 hours
-1. Verify the truck has been online for at least 1 hour since approval
-2. Check DAF Connect for any error messages under Electromobility → Notifications
-3. Contact Stroomlijnen support to verify the request was received on our end
+### Certificaatinstallatie duurt langer dan 24 uur
+1. Controleer of de vrachtwagen ten minste 1 uur online is geweest sinds goedkeuring
+2. Controleer DAF Connect op foutmeldingen onder Elektromobiliteit → Meldingen
+3. Neem contact op met Stroomlijnen-ondersteuning om te verifiëren of het verzoek aan onze kant is ontvangen
 
-### Authentication fails at charger
-1. In DAF Connect, verify the certificate status is "Active"
-2. Check if the vehicle's software is up to date
-3. Restart the vehicle (full ignition cycle)
-4. See the general [Troubleshooting Guide](../troubleshooting)
+### Authenticatie mislukt bij lader
+1. Controleer in DAF Connect of de certificaatstatus "Actief" is
+2. Controleer of de software van het voertuig up-to-date is
+3. Herstart het voertuig (volledige contactcyclus)
+4. Zie de algemene [Probleemoplossing](../troubleshooting)
 
 ---
 
-**Next:** [Mercedes-Benz Setup →](./mercedes-trucks)
+**Volgende:** [Mercedes-Benz Instellen →](./mercedes-trucks)

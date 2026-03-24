@@ -1,107 +1,107 @@
 ---
 sidebar_position: 99
-title: Launch & Seeding Plan
-description: Internal documentation — launch strategy for docs.stroomlijnen.nl discoverability and SEO.
-keywords: [SEO, launch plan, content marketing, knowledge base seeding]
+title: Lancering & Seeding Plan
+description: Interne documentatie — lanceringsstrategie voor de vindbaarheid en SEO van docs.stroomlijnen.nl.
+keywords: [SEO, lanceerplan, contentmarketing, kennisbank seeding]
 unlisted: true
 ---
 
-# Launch & Seeding Plan (Internal)
+# Lancering & Seeding Plan (Intern)
 
-:::caution Internal Document
-This page is unlisted and not linked from the public navigation. It documents our SEO and discoverability strategy.
+:::caution Intern Document
+Deze pagina is niet gelinkt vanuit de publieke navigatie. Het beschrijft onze SEO- en vindbaarsheidsstrategie.
 :::
 
-## Search Engine Submission
+## Zoekmachine-indiening
 
 ### Google Search Console
-1. Verify `docs.stroomlijnen.nl` in Google Search Console
-2. Submit `sitemap.xml` → `https://docs.stroomlijnen.nl/sitemap.xml`
-3. Request indexing for key pages (getting started, Plug & Charge, FAQ)
-4. Monitor crawl status and fix any issues
+1. Verifieer `docs.stroomlijnen.nl` in Google Search Console
+2. Dien `sitemap.xml` in → `https://docs.stroomlijnen.nl/sitemap.xml`
+3. Vraag indexering aan voor sleutelpagina's (aan de slag, Plug & Charge, FAQ)
+4. Bewaak crawlstatus en verhelp eventuele problemen
 
 ### Bing Webmaster Tools
-1. Verify domain
-2. Submit sitemap
-3. Bing also powers DuckDuckGo — two engines from one submission
+1. Verifieer domein
+2. Dien sitemap in
+3. Bing drijft ook DuckDuckGo — twee zoekmachines met één indiening
 
-## AI Discoverability
+## AI-vindbaarheid
 
 ### llms.txt
-Published at `https://docs.stroomlijnen.nl/llms.txt` — structured content listing for AI systems. This is the emerging standard for AI-friendly content discovery.
+Gepubliceerd op `https://docs.stroomlijnen.nl/llms.txt` — gestructureerde inhoudslijst voor AI-systemen. Dit is de opkomende standaard voor AI-vriendelijke contentontdekking.
 
 ### robots.txt
-Explicitly allows AI crawlers: GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, Google-Extended. We WANT AI systems to index our content — it drives discoverability.
+Staat AI-crawlers expliciet toe: GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, Google-Extended. We WILLEN dat AI-systemen onze content indexeren — het vergroot de vindbaarheid.
 
-## Industry Directory Submissions
+## Branche-directoryindieningen
 
 ### ElaadNL
-- Submit to ElaadNL's partner/knowledge resource listing
-- Propose content partnership — cross-linking between ElaadNL research and our practical implementation articles
-- Contact: via elaad.nl contact form, reference our ElaadNL partnership page
+- Dien in bij ElaadNL's partner-/kennisbronnenlijst
+- Stel een contentpartnerschap voor — kruislinks tussen ElaadNL-onderzoek en onze praktische implementatieartikelen
+- Contact: via het contactformulier op elaad.nl, refereer aan onze ElaadNL-partnerpagina
 
 ### TLN (Transport en Logistiek Nederland)
-- Submit to TLN's resource directory for fleet operators
-- TLN is the major industry association for transport and logistics in NL
-- Their members are our exact target audience
-- URL: tln.nl → look for partner/resource submission
+- Dien in bij TLN's bronnengids voor vlootbeheerders
+- TLN is de belangrijkste branchevereniging voor transport en logistiek in NL
+- Hun leden zijn precies onze doelgroep
+- URL: tln.nl → zoek naar partner-/bronnenindiening
 
-### EV Sector Directories
-- **EVConsult** (evconsult.nl) — Dutch EV consultancy, resource section
-- **EV-rijders.nl** — Dutch EV driver community, knowledge section
-- **Laadwijzer.nl** — Dutch charging guide, operator listings
-- **CharIN** (charin.global) — CCS/ISO 15118 industry association, member directory
-- **Open Charge Alliance** (openchargealliance.org) — OCPP ecosystem directory
+### EV-sectordirectories
+- **EVConsult** (evconsult.nl) — Nederlandse EV-consultancy, bronnensectie
+- **EV-rijders.nl** — Nederlandse EV-rijdersgemeenschap, kennissectie
+- **Laadwijzer.nl** — Nederlandse laadgids, exploitantenvermeldingen
+- **CharIN** (charin.global) — CCS/ISO 15118-branchevereniging, ledendirectory
+- **Open Charge Alliance** (openchargealliance.org) — OCPP-ecosysteemdirectory
 
-### European Directories
-- **ACEA** (acea.auto) — European Automobile Manufacturers Association
-- **Transport & Environment** (transportenvironment.org) — clean transport advocacy
-- **AVERE** (avere.org) — European Association for Electromobility
+### Europese Directories
+- **ACEA** (acea.auto) — Europese Automobielproducentenvereniging
+- **Transport & Environment** (transportenvironment.org) — pleitbezorging voor schoon transport
+- **AVERE** (avere.org) — Europese Vereniging voor Elektromobiliteit
 
-## Content Seeding
+## Contentseeding
 
-### LinkedIn Strategy
-**Week 1 (Launch):**
-- Post from Stroomlijnen company page: "We've launched our knowledge base — everything fleet managers need to know about electric truck charging" + link to intro page
-- Ignacio personal post: thought leadership angle on Plug & Charge for trucks
-- Jacco personal post: theater-charging angle (the hidden gem article)
+### LinkedIn-strategie
+**Week 1 (lancering):**
+- Bericht van Stroomlijnen-bedrijfspagina: "We hebben onze kennisbank gelanceerd — alles wat vlootbeheerders moeten weten over elektrisch vrachtwagenopladen" + link naar intro-pagina
+- Persoonlijk bericht Ignacio: thought leadership over Plug & Charge voor vrachtwagens
+- Persoonlijk bericht Jacco: theater-laadhoek (het verborgen juweel artikel)
 
-**Ongoing (2-3x/week):**
-- Share each new blog article from company page
-- Tag relevant industry contacts (ElaadNL, CharIN, OEM contacts)
-- Engage in EV fleet LinkedIn groups with links to relevant articles
+**Doorlopend (2-3x/week):**
+- Deel elk nieuw blogartikel vanuit de bedrijfspagina
+- Tag relevante branchecontacten (ElaadNL, CharIN, OEM-contacten)
+- Neem deel aan EV-vloot LinkedIn-groepen met links naar relevante artikelen
 
-### Blog Cross-posting
-- Summarize key articles on LinkedIn with "read more" links
-- Consider Medium cross-post for broader reach (with canonical URL pointing to docs.stroomlijnen.nl)
+### Blog cross-posting
+- Vat sleutelartikelen samen op LinkedIn met "lees meer"-links
+- Overweeg cross-posting op Medium voor breder bereik (met canonical URL naar docs.stroomlijnen.nl)
 
-## Technical SEO Checklist
+## Technische SEO-checklist
 
-- [x] Sitemap.xml generated automatically by Docusaurus
-- [x] robots.txt with AI bot permissions
-- [x] llms.txt for AI content discovery
-- [x] Open Graph meta tags on all pages
-- [x] Canonical URLs
-- [x] Meta descriptions on every page
-- [x] Structured data (JSON-LD) for organization
-- [x] RSS/Atom/JSON feeds for blog
-- [x] Dark mode default (doesn't affect SEO)
-- [x] Mobile responsive (Docusaurus default)
-- [ ] Google Search Console verified
-- [ ] Bing Webmaster verified
-- [ ] Core Web Vitals checked
-- [ ] Page speed tested
+- [x] Sitemap.xml automatisch gegenereerd door Docusaurus
+- [x] robots.txt met AI-botrechten
+- [x] llms.txt voor AI-contentontdekking
+- [x] Open Graph meta-tags op alle pagina's
+- [x] Canonical URL's
+- [x] Metabeschrijvingen op elke pagina
+- [x] Gestructureerde data (JSON-LD) voor organisatie
+- [x] RSS/Atom/JSON-feeds voor blog
+- [x] Donkere modus standaard (heeft geen invloed op SEO)
+- [x] Mobielvriendelijk (Docusaurus standaard)
+- [ ] Google Search Console geverifieerd
+- [ ] Bing Webmaster geverifieerd
+- [ ] Core Web Vitals gecontroleerd
+- [ ] Paginasnelheid getest
 
 ## Monitoring
 
-### Metrics to Track
-- Google Search Console: impressions, clicks, position for target keywords
-- Direct traffic to docs.stroomlijnen.nl
-- Blog RSS subscribers
-- Referral traffic from LinkedIn, industry sites
-- AI citation tracking (when available)
+### Te Volgen Statistieken
+- Google Search Console: vertoningen, klikken, positie voor doelzoekwoorden
+- Direct verkeer naar docs.stroomlijnen.nl
+- Blog RSS-abonnees
+- Verwijzingsverkeer van LinkedIn, branchesites
+- AI-citatiebeheer (zodra beschikbaar)
 
-### Target Keywords
+### Doelzoekwoorden
 - "electric truck charging Netherlands"
 - "Plug and Charge fleet"
 - "ISO 15118 truck"
@@ -109,5 +109,5 @@ Explicitly allows AI crawlers: GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, G
 - "theater EV charging"
 - "fleet charging management"
 - "electric truck compatible Plug and Charge"
-- "laadpaal elektrische vrachtwagen" (Dutch)
-- "vlootladen Nederland" (Dutch)
+- "laadpaal elektrische vrachtwagen" (Nederlands)
+- "vlootladen Nederland" (Nederlands)

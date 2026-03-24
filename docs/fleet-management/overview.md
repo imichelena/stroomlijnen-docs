@@ -1,73 +1,73 @@
 ---
 sidebar_position: 1
-title: Fleet Management Overview
-description: Manage your electric fleet charging with Stroomlijnen's My Fleet portal — vehicles, sessions, billing, and driver management.
+title: Overzicht Vlootbeheer
+description: Beheer het laden van uw elektrische vloot met het Mijn Vloot-portaal van Stroomlijnen — voertuigen, sessies, facturering en bestuurderbeheer.
 keywords: [fleet management, My Fleet portal, electric fleet, charging management, fleet dashboard]
 ---
 
-# Fleet Management Overview
+# Overzicht Vlootbeheer
 
-Stroomlijnen's **My Fleet** portal gives fleet managers full visibility and control over their electric vehicle charging operations. From a single dashboard, you can manage vehicles, monitor charging sessions in real time, control costs, and generate reports.
+Het **Mijn Vloot**-portaal van Stroomlijnen geeft vlootbeheerders volledig inzicht en controle over hun elektrische voertuiglaadactiviteiten. Vanuit één dashboard kunt u voertuigen beheren, laadsessies realtime bewaken, kosten beheersen en rapporten genereren.
 
-## Accessing My Fleet
+## Toegang tot Mijn Vloot
 
-Navigate to **my.stroomlijnen.nl** and log in with your fleet manager credentials. First-time users need to register with their company's KVK number and be approved by a Stroomlijnen account manager.
+Ga naar **my.stroomlijnen.nl** en log in met uw vlootbeheerdergegevens. Nieuwe gebruikers moeten zich registreren met het KVK-nummer van hun bedrijf en worden goedgekeurd door een Stroomlijnen-accountmanager.
 
 ## Dashboard
 
-The main dashboard shows:
+Het hoofddashboard toont:
 
-- **Fleet status** — How many vehicles are currently charging, idle, or en route
-- **Today's energy** — Total kWh delivered across your fleet today
-- **Active sessions** — Real-time view of all ongoing charging sessions with power curves
-- **Alerts** — Certificate expirations, failed sessions, or unusual charging patterns
-- **Monthly summary** — Running cost total and comparison with previous month
+- **Vlootstatus** — Hoeveel voertuigen momenteel laden, stilstaan of onderweg zijn
+- **Energie van vandaag** — Totaal kWh geleverd aan uw vloot vandaag
+- **Actieve sessies** — Realtime overzicht van alle lopende laadsessies met vermogenscurven
+- **Meldingen** — Verlopen certificaten, mislukte sessies of ongebruikelijke laadpatronen
+- **Maandoverzicht** — Lopend kostentotaal en vergelijking met vorige maand
 
-## Key Features
+## Belangrijkste Functies
 
-### Vehicle Management
-Register, configure, and monitor all your electric vehicles in one place. Enable Plug & Charge, assign RFID cards, set charging policies per vehicle or group.
+### Voertuigbeheer
+Registreer, configureer en bewaak al uw elektrische voertuigen op één plek. Activeer Plug & Charge, wijs RFID-passen toe en stel laadbeleid in per voertuig of groep.
 
-→ [Vehicle Management details](./vehicles)
+→ [Details Voertuigbeheer](./vehicles)
 
-### Session Monitoring
-Track every charging session — past and present. See energy delivered, duration, cost, authentication method, and charger location. Export to CSV or integrate via API.
+### Sessiebewaking
+Volg elke laadsessie — verleden en heden. Bekijk geleverde energie, duur, kosten, authenticatiemethode en laderlocatie. Exporteer naar CSV of integreer via API.
 
-→ [Session details](./sessions)
+→ [Details Sessies](./sessions)
 
-### Invoicing & Billing
-Monthly invoices with detailed breakdowns by vehicle, location, and date. Download invoices as PDF, get cost-per-km analysis, and set up automated billing.
+### Facturering
+Maandelijkse facturen met gedetailleerde uitsplitsingen per voertuig, locatie en datum. Download facturen als PDF, ontvang kosten-per-km-analyse en stel automatische facturering in.
 
-→ [Invoicing details](./invoicing)
+→ [Details Facturering](./invoicing)
 
-### Driver Management
-Assign drivers to vehicles, issue personal RFID cards, and set per-driver charging limits. Drivers can use the Stroomlijnen app to find chargers and start sessions.
+### Bestuurderbeheer
+Wijs bestuurders toe aan voertuigen, verstrek persoonlijke RFID-passen en stel laadlimieten per bestuurder in. Bestuurders kunnen de Stroomlijnen-app gebruiken om laders te vinden en sessies te starten.
 
-→ [Driver Management details](./driver-management)
+→ [Details Bestuurderbeheer](./driver-management)
 
-## User Roles
+## Gebruikersrollen
 
-| Role | Capabilities |
+| Rol | Bevoegdheden |
 |------|-------------|
-| **Fleet Admin** | Full access: vehicles, billing, PnC, users, API keys |
-| **Fleet Manager** | Vehicle management, session monitoring, reports |
-| **Billing Manager** | Invoice access, payment methods, cost reports |
-| **Driver** | View own sessions, find chargers, start/stop sessions |
+| **Vlootbeheerder** | Volledige toegang: voertuigen, facturering, PnC, gebruikers, API-sleutels |
+| **Vlootmanager** | Voertuigbeheer, sessiebewaking, rapporten |
+| **Factuurbeheerder** | Toegang tot facturen, betaalmethoden, kostenrapporten |
+| **Bestuurder** | Eigen sessies bekijken, laders zoeken, sessies starten/stoppen |
 
-## API Access
+## API-toegang
 
-For enterprises that want to integrate charging data into their own fleet management or ERP systems, we offer a REST API:
+Voor bedrijven die laadgegevens willen integreren in hun eigen vlootbeheer- of ERP-systemen bieden we een REST API:
 
-- Real-time session webhooks
-- Historical session data
-- Vehicle and driver management
-- Invoice retrieval
+- Realtime sessie-webhooks
+- Historische sessiegegevens
+- Voertuig- en bestuurderbeheer
+- Factuuropvraag
 
-API documentation is available in the My Fleet portal under **Settings** → **API**.
+API-documentatie is beschikbaar in het Mijn Vloot-portaal onder **Instellingen** → **API**.
 
-## Getting Started
+## Aan de Slag
 
-1. [Register your fleet](https://stroomlijnen.nl/fleet-signup) or contact your account manager
-2. [Add your vehicles](./vehicles)
-3. [Enable Plug & Charge](../plug-and-charge/setup-guide) or [distribute RFID cards](../getting-started/rfid-cards)
-4. Start charging — all sessions are automatically tracked and billed
+1. [Registreer uw vloot](https://stroomlijnen.nl/fleet-signup) of neem contact op met uw accountmanager
+2. [Voeg uw voertuigen toe](./vehicles)
+3. [Activeer Plug & Charge](../plug-and-charge/setup-guide) of [verstrek RFID-passen](../getting-started/rfid-cards)
+4. Begin met laden — alle sessies worden automatisch bijgehouden en gefactureerd

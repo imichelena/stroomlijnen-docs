@@ -1,116 +1,116 @@
 ---
 sidebar_position: 2
-title: Vehicle Management
-description: How to register, configure, and manage electric vehicles in the Stroomlijnen My Fleet portal.
+title: Voertuigbeheer
+description: Hoe u elektrische voertuigen registreert, configureert en beheert in het Stroomlijnen Mijn Vloot-portaal.
 keywords: [vehicle management, fleet registration, electric truck, VIN, RFID assignment, charging policy]
 ---
 
-# Vehicle Management
+# Voertuigbeheer
 
-The Vehicles section of My Fleet is where you register trucks and vans, configure their charging settings, and monitor their status.
+De sectie Voertuigen van Mijn Vloot is de plek waar u vrachtwagens en bestelwagens registreert, hun laadinstellingen configureert en hun status bewaakt.
 
-## Adding Vehicles
+## Voertuigen Toevoegen
 
-### Single Vehicle
+### Enkel Voertuig
 
-1. Go to **Vehicles** → **Add Vehicle**
-2. Fill in the required fields:
-   - **VIN** — 17-character Vehicle Identification Number
-   - **License Plate** — Dutch or EU format
-   - **Make & Model** — Select from dropdown
-   - **Year** — Model year
-   - **Battery Capacity** — In kWh (auto-filled for known models)
-3. Optional fields:
-   - **Nickname** — For easy identification (e.g., "Amsterdam 014")
-   - **Department/Group** — For organizational filtering
-   - **Cost Center** — For billing allocation
-4. Click **Save**
+1. Ga naar **Voertuigen** → **Voertuig toevoegen**
+2. Vul de verplichte velden in:
+   - **VIN** — 17-tekens Voertuig Identificatie Nummer
+   - **Kenteken** — Nederlands of EU-formaat
+   - **Merk & Model** — Selecteer uit het keuzemenu
+   - **Bouwjaar** — Modeljaar
+   - **Accucapaciteit** — In kWh (automatisch ingevuld voor bekende modellen)
+3. Optionele velden:
+   - **Bijnaam** — Voor makkelijke herkenning (bijv. "Amsterdam 014")
+   - **Afdeling/Groep** — Voor organisatorisch filteren
+   - **Kostenplaats** — Voor factuurtoedeling
+4. Klik op **Opslaan**
 
-### Bulk Import
+### Bulkimport
 
-For fleets with many vehicles:
+Voor vloten met veel voertuigen:
 
-1. Go to **Vehicles** → **Import**
-2. Download the CSV template
-3. Fill in your vehicle data
-4. Upload the completed CSV
-5. Review the import preview — correct any validation errors
-6. Click **Confirm Import**
+1. Ga naar **Voertuigen** → **Importeren**
+2. Download het CSV-sjabloon
+3. Vul uw voertuiggegevens in
+4. Upload het ingevulde CSV-bestand
+5. Controleer het importoverzicht — corrigeer eventuele validatiefouten
+6. Klik op **Import bevestigen**
 
-## Vehicle Details
+## Voertuigdetails
 
-Each vehicle's detail page shows:
+De detailpagina van elk voertuig toont:
 
 ### Status
-- **Current state** — Charging / Idle / Offline
-- **Last seen** — When the vehicle last communicated with a charger
-- **Battery level** — If reported by the vehicle during the last session
+- **Huidige staat** — Laden / Inactief / Offline
+- **Laatst gezien** — Wanneer het voertuig voor het laatst met een lader communiceerde
+- **Accuniveau** — Indien gerapporteerd door het voertuig tijdens de laatste sessie
 
-### Charging Configuration
-- **Authentication method** — PnC, RFID, or both
-- **Plug & Charge status** — Enabled/Disabled, certificate status
-- **Assigned RFID cards** — Which cards are linked to this vehicle
-- **Charging policy** — Maximum charge rate, preferred SoC target, scheduled charging windows
+### Laadconfiguratie
+- **Authenticatiemethode** — PnC, RFID of beide
+- **Plug & Charge-status** — Ingeschakeld/Uitgeschakeld, certificaatstatus
+- **Toegewezen RFID-passen** — Welke passen aan dit voertuig zijn gekoppeld
+- **Laadbeleid** — Maximum laadsnelheid, gewenst SoC-doel, geplande laadvensters
 
-### Session History
-- List of all past charging sessions for this vehicle
-- Filter by date range, location, or authentication method
-- Total energy, total cost, and average session duration
+### Sessiehistorie
+- Lijst van alle afgelopen laadsessies voor dit voertuig
+- Filteren op datumbereik, locatie of authenticatiemethode
+- Totaal energie, totale kosten en gemiddelde sessieduur
 
-### Documents
-- Vehicle registration (optional upload)
-- Insurance certificate (optional upload)
-- Maintenance records
+### Documenten
+- Kentekenbewijs (optioneel uploaden)
+- Verzekeringscertificaat (optioneel uploaden)
+- Onderhoudsgegevens
 
-## Charging Policies
+## Laadbeleid
 
-You can set per-vehicle or per-group charging policies:
+U kunt per voertuig of per groep laadbeleid instellen:
 
-### Power Limit
-Set a maximum charging power. Useful for:
-- Battery longevity (limiting to 80% of max rate)
-- Cost control (lower power = lower demand charges at some locations)
+### Vermogenslimiet
+Stel een maximaal laadvermogen in. Handig voor:
+- Accuduurzaamheid (beperken tot 80% van het maximale vermogen)
+- Kostenbeheersing (lager vermogen = lagere capaciteitskosten op sommige locaties)
 
-### SoC Target
-Set a target State of Charge. When reached, the charger will reduce power or stop. This extends battery life and frees up chargers for other vehicles.
+### SoC-doel
+Stel een gewenst laadniveau (State of Charge) in. Wanneer bereikt, verlaagt de lader het vermogen of stopt. Dit verlengt de acculevensduur en maakt laders vrij voor andere voertuigen.
 
-### Scheduled Charging
-Define time windows when charging should occur. Useful for:
-- Off-peak electricity pricing
-- Grid load management
-- Departure-time optimization (charge to 90% by 06:00)
+### Gepland Laden
+Definieer tijdvensters wanneer geladen mag worden. Handig voor:
+- Daluurprijzen voor elektriciteit
+- Beheer van netbelasting
+- Optimalisatie op vertrektijd (laden tot 90% voor 06:00)
 
-### Priority
-When multiple fleet vehicles are at the same location and power is limited, priority settings determine which vehicles get full power first.
+### Prioriteit
+Wanneer meerdere vlootvoertuigen op dezelfde locatie staan en het vermogen beperkt is, bepalen prioriteitsinstellingen welke voertuigen als eerste volledig vermogen krijgen.
 
-## Vehicle Groups
+## Voertuiggroepen
 
-Organize vehicles into groups for easier management:
+Organiseer voertuigen in groepen voor eenvoudiger beheer:
 
-- **By route** — Amsterdam routes, Rotterdam routes
-- **By type** — Long-haul, regional delivery, last-mile
-- **By department** — Operations, customer delivery
+- **Per route** — Amsterdam-routes, Rotterdam-routes
+- **Per type** — Langeafstand, regionale bezorging, last-mile
+- **Per afdeling** — Operaties, klantbezorging
 
-Groups can have shared charging policies and billing settings.
+Groepen kunnen gedeeld laadbeleid en factureringsinstellingen hebben.
 
-## Decommissioning a Vehicle
+## Een Voertuig Uitfaseren
 
-When a vehicle leaves your fleet:
+Wanneer een voertuig uw vloot verlaat:
 
-1. Go to **Vehicles** → select vehicle → **Settings**
-2. Click **Decommission Vehicle**
-3. This will:
-   - Revoke any active PnC certificates
-   - Unlink all RFID cards
-   - Archive the vehicle's session history (still accessible for reporting)
-   - Stop billing for this vehicle
+1. Ga naar **Voertuigen** → selecteer voertuig → **Instellingen**
+2. Klik op **Voertuig uitfaseren**
+3. Dit zal:
+   - Alle actieve PnC-certificaten intrekken
+   - Alle RFID-passen ontkoppelen
+   - De sessiehistorie van het voertuig archiveren (nog steeds toegankelijk voor rapportage)
+   - Facturering voor dit voertuig stoppen
 
-The vehicle can be reactivated if it returns to the fleet.
+Het voertuig kan opnieuw worden geactiveerd als het terugkeert in de vloot.
 
-## Data Export
+## Gegevensexport
 
-Export vehicle data for integration with your own systems:
+Exporteer voertuiggegevens voor integratie met uw eigen systemen:
 
-- **Vehicle list** — CSV with all vehicle details
-- **Session history** — CSV per vehicle or for all vehicles
-- **API** — Programmatic access to vehicle data (see Fleet Management Overview → API)
+- **Voertuigenlijst** — CSV met alle voertuigdetails
+- **Sessiehistorie** — CSV per voertuig of voor alle voertuigen
+- **API** — Programmatische toegang tot voertuiggegevens (zie Overzicht Vlootbeheer → API)

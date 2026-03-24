@@ -1,78 +1,78 @@
 ---
 sidebar_position: 1
-title: Finding a Charger
-description: How to find Stroomlijnen charging locations — map, app, and roaming network coverage for electric trucks.
+title: Een Lader Vinden
+description: Hoe u Stroomlijnen-laadlocaties vindt — kaart, app en dekkingsgebied van het roamingnetwerk voor elektrische vrachtwagens.
 keywords: [find charger, charging locations, charger map, electric truck charging, Netherlands]
 ---
 
-# Finding a Charger
+# Een Lader Vinden
 
-Stroomlijnen operates high-power DC charging stations at strategic locations across the Netherlands, with expansion into Belgium and Germany. Here's how to find one.
+Stroomlijnen exploiteert hoogvermogen DC-laadstations op strategische locaties door heel Nederland, met uitbreiding naar België en Duitsland. Zo vindt u er een.
 
-## Stroomlijnen Map
+## Stroomlijnen-kaart
 
-The quickest way to find a charger:
+De snelste manier om een lader te vinden:
 
-1. Visit **map.stroomlijnen.nl** or open the Stroomlijnen app
-2. The map shows all Stroomlijnen locations with real-time status:
-   - 🟢 **Available** — At least one connector free
-   - 🟡 **Partially available** — Some connectors in use
-   - 🔴 **Occupied** — All connectors in use
-   - ⚫ **Offline** — Temporarily unavailable
-3. Click a location for details: address, number of chargers, max power, connector types, and amenities
+1. Ga naar **map.stroomlijnen.nl** of open de Stroomlijnen-app
+2. De kaart toont alle Stroomlijnen-locaties met realtime status:
+   - 🟢 **Beschikbaar** — Minimaal één connector vrij
+   - 🟡 **Gedeeltelijk beschikbaar** — Sommige connectoren in gebruik
+   - 🔴 **Bezet** — Alle connectoren in gebruik
+   - ⚫ **Offline** — Tijdelijk niet beschikbaar
+3. Klik op een locatie voor details: adres, aantal laders, maximaal vermogen, connectortypes en voorzieningen
 
-## Location Types
+## Locatietypes
 
-### Theater Sites
-Our signature locations — charging stations installed at performing arts venues. These offer:
-- Ample parking for trucks (theaters have large vehicle access for stage equipment)
-- Grid capacity (theaters have substantial electrical connections for lighting/sound)
-- Overnight charging alignment (performances are in the evening, trucks charge overnight)
-- Driver amenities — theaters often have cafés or are located in town centers
+### Theaterlocaties
+Onze kenmerkende locaties — laadstations geïnstalleerd bij podiumkunstlocaties. Deze bieden:
+- Ruime parkeerplaats voor vrachtwagens (theaters hebben grote voertuigtoegang voor toneelequipment)
+- Netcapaciteit (theaters beschikken over substantiële elektriciteitsaansluitingen voor belichting/geluid)
+- Afstemming op nachtladen (voorstellingen zijn 's avonds, vrachtwagens laden 's nachts)
+- Voorzieningen voor bestuurders — theaters hebben vaak een café of liggen in het centrum
 
-### Logistics Hubs
-Charging stations at distribution centers and logistics parks, optimized for fleet operations:
-- High-power charging (up to 400 kW)
-- Multiple connectors for simultaneous fleet charging
-- 24/7 access
-- On-site facilities
+### Logistieke Hubs
+Laadstations bij distributiecentra en logistieke parken, geoptimaliseerd voor vlootoperaties:
+- Hoogvermogen laden (tot 400 kW)
+- Meerdere connectoren voor gelijktijdig vlootladen
+- 24/7 toegang
+- Voorzieningen ter plaatse
 
-### Highway Adjacent
-Locations near major highways for en-route opportunity charging:
-- Positioned within 2 km of highway exits
-- Fast charging focus (150–350 kW)
-- Suitable for 30–45 minute charge stops
+### Nabij Snelwegen
+Locaties nabij grote snelwegen voor tussenstops:
+- Gepositioneerd binnen 2 km van snelwegafritten
+- Focus op snelladen (150–350 kW)
+- Geschikt voor laadstops van 30–45 minuten
 
 ## Roaming
 
-Stroomlijnen chargers are accessible through roaming networks. If you have a charging card or app from another provider, you can likely use our chargers:
+Stroomlijnen-laders zijn toegankelijk via roamingnetwerken. Als u een laadpas of app van een andere aanbieder heeft, kunt u waarschijnlijk bij onze laders terecht:
 
-- **Hubject** — Intercharge roaming
-- **OCPI** — Open Charge Point Interface connections with major eMSPs
-- **Specific partners** — Check with your charging provider
+- **Hubject** — Intercharge-roaming
+- **OCPI** — Open Charge Point Interface-verbindingen met grote eMSP's
+- **Specifieke partners** — Informeer bij uw laadaanbieder
 
-Note: Roaming rates may differ from direct Stroomlijnen fleet rates. For the best pricing, sign up for a direct fleet account.
+Let op: Roamingtarieven kunnen afwijken van directe Stroomlijnen-vloottarieven. Voor de beste prijzen kunt u zich aanmelden voor een direct vlootaccount.
 
-## Route Planning
+## Routeplanning
 
-For fleet managers planning multi-stop routes:
+Voor vlootbeheerders die routes met meerdere stops plannen:
 
-1. In the **My Fleet** portal, go to **Routes** → **Plan Route**
-2. Enter start, end, and waypoints
-3. The system suggests optimal charging stops based on:
-   - Vehicle range and current SoC
-   - Charger availability predictions
-   - Time windows and delivery schedules
-   - Charging speed at each location
+1. Ga in het **Mijn Vloot**-portaal naar **Routes** → **Route plannen**
+2. Voer start-, eind- en tussenpunten in
+3. Het systeem stelt optimale laadstops voor op basis van:
+   - Actieradius van het voertuig en huidig SoC
+   - Voorspellingen van laderbeschikbaarheid
+   - Tijdvensters en leveringsschema's
+   - Laadsnelheid per locatie
 
-## Accessibility
+## Toegankelijkheid
 
-All Stroomlijnen locations are designed for commercial vehicles:
-- **Truck-accessible parking** — Pull-through or large turning radius bays
-- **Cable reach** — Cables long enough for truck CCS inlet positions
-- **Height clearance** — No low barriers restricting truck access
-- **Lighting** — Well-lit 24/7 for safe nighttime operations
+Alle Stroomlijnen-locaties zijn ontworpen voor bedrijfsvoertuigen:
+- **Vrachtwagen-toegankelijk parkeren** — Doorrijopstellingen of ruime draaicirkels
+- **Kabelbereik** — Kabels lang genoeg voor CCS-aansluitposities van vrachtwagens
+- **Hoogtevrijgave** — Geen lage barrières die vrachtwagentoegang beperken
+- **Verlichting** — 24/7 goed verlicht voor veilige nachtoperaties
 
-## Coming Soon
+## Binnenkort Beschikbaar
 
-We're continuously expanding our network. Check our [blog](/blog) for announcements about new locations, or contact your account manager for our expansion roadmap.
+We breiden ons netwerk voortdurend uit. Bekijk onze [blog](/blog) voor aankondigingen van nieuwe locaties, of neem contact op met uw accountmanager voor onze uitbreidingsplannen.

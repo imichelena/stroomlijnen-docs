@@ -1,51 +1,51 @@
 ---
 sidebar_position: 3
-title: Charging Etiquette
-description: Best practices for shared charging locations — be a good neighbor at Stroomlijnen sites.
+title: Laadetiquette
+description: Best practices voor gedeelde laadlocaties — wees een goede buur op Stroomlijnen-locaties.
 keywords: [charging etiquette, shared charging, EV courtesy, parking rules, fleet charging]
 ---
 
-# Charging Etiquette
+# Laadetiquette
 
-Stroomlijnen chargers are shared resources. Following a few simple courtesies keeps the experience good for everyone.
+Stroomlijnen-laders zijn gedeelde voorzieningen. Door een paar eenvoudige omgangsvormen in acht te nemen, blijft de ervaring goed voor iedereen.
 
-## The Golden Rules
+## De Gouden Regels
 
-### 1. Don't Block the Charger
-Once your vehicle is sufficiently charged, move it. Other vehicles may be waiting. If you're charging overnight, that's fine — the bays are designed for it. But during peak hours, be mindful.
+### 1. Blokkeer de Lader Niet
+Zodra uw voertuig voldoende is opgeladen, verplaats het. Andere voertuigen staan mogelijk te wachten. Laadt u 's nachts, dan is dat prima — de vakken zijn daarvoor ontworpen. Maar wees op piekuren alert.
 
-### 2. Disconnect When Done
-When your session completes (target SoC reached or you need to leave):
-1. End the session
-2. Return the cable to the holster neatly
-3. Move your vehicle out of the charging bay
+### 2. Koppel Los Wanneer Klaar
+Als uw sessie is voltooid (doel-SoC bereikt of u moet vertrekken):
+1. Beëindig de sessie
+2. Hang de kabel netjes terug in de houder
+3. Rijd uw voertuig uit het laadvak
 
-### 3. One Vehicle Per Bay
-Don't park multiple vehicles in a charging bay, even if only one is charging. Each bay is designed for one vehicle.
+### 3. Eén Voertuig Per Vak
+Parkeer niet meerdere voertuigen in een laadvak, ook niet als er maar één laadt. Elk vak is ontworpen voor één voertuig.
 
-### 4. Don't Unplug Others
-Never disconnect another vehicle's charging cable. If you need a charger and all are occupied, wait or use the app to check when a session is expected to complete.
+### 4. Koppel Anderen Niet Los
+Ontkoppel nooit de laadkabel van een ander voertuig. Als u een lader nodig heeft en alle bezet zijn, wacht dan of gebruik de app om te zien wanneer een sessie naar verwachting eindigt.
 
-### 5. Keep It Clean
-- Don't leave trash in the charging area
-- Report spills or hazards
-- Return cables to their holsters — don't leave them on the ground
+### 5. Houd Het Schoon
+- Laat geen afval achter in het laadgebied
+- Meld gemorste vloeistoffen of gevaren
+- Hang kabels terug in hun houders — laat ze niet op de grond liggen
 
-## For Fleet Drivers
+## Voor Vlootbestuurders
 
-### Communicate with Dispatch
-If you'll be at a charger for an extended time, let dispatch know so they can route other vehicles to alternative locations if needed.
+### Communiceer met de Planning
+Als u langere tijd bij een lader blijft, laat het de planning weten zodat ze andere voertuigen naar alternatieve locaties kunnen sturen indien nodig.
 
-### Log Issues
-If you encounter a broken charger, dirty site, or safety concern — report it. Your feedback helps us maintain the network for everyone.
+### Meld Problemen
+Als u een defecte lader, vuile locatie of veiligheidsprobleem tegenkomt — meld het. Uw feedback helpt ons het netwerk voor iedereen te onderhouden.
 
-### Respect the Site
-At theater locations, you're a guest on someone else's property. Be respectful of theater staff, patrons, and the surroundings. Stroomlijnen's reputation depends on positive relationships with site hosts.
+### Respecteer de Locatie
+Op theaterlocaties bent u te gast op andermans terrein. Wees respectvol naar theaterpersoneel, bezoekers en de omgeving. De reputatie van Stroomlijnen hangt af van goede relaties met locatie-eigenaren.
 
-## Peak Hours
+## Piekuren
 
-Our busiest times are typically:
-- **Morning: 06:00–09:00** — Fleet vehicles charging before departure
-- **Evening: 18:00–22:00** — Vehicles returning from routes
+Onze drukste momenten zijn doorgaans:
+- **Ochtend: 06:00–09:00** — Vlootvoertuigen laden vóór vertrek
+- **Avond: 18:00–22:00** — Voertuigen keren terug van routes
 
-If you can schedule charging outside these windows, you'll help reduce congestion and may benefit from lower electricity rates.
+Als u het laden buiten deze tijden kunt plannen, helpt u drukte te verminderen en profiteert u mogelijk van lagere elektriciteitstarieven.

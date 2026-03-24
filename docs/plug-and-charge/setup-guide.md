@@ -1,143 +1,143 @@
 ---
 sidebar_position: 4
-title: Plug & Charge Setup Guide
-description: How to enable Plug & Charge for your fleet through the Stroomlijnen portal — from registration to first automated session.
-keywords: [Plug and Charge setup, fleet registration, contract certificate, My Fleet portal, PnC activation]
+title: Installatiehandleiding Plug & Charge
+description: Hoe u Plug & Charge voor uw vloot instelt via het Stroomlijnen-portaal — van registratie tot de eerste geautomatiseerde sessie.
+keywords: [Plug and Charge instellen, vlootregistratie, contractcertificaat, Mijn Vloot-portaal, PnC-activering]
 ---
 
-# Plug & Charge Setup Guide
+# Installatiehandleiding Plug & Charge
 
-Setting up Plug & Charge for your fleet takes about 15 minutes of portal work. Once configured, every registered truck will authenticate and charge automatically at any Stroomlijnen location — no cards, no apps.
+Plug & Charge instellen voor uw vloot kost ongeveer 15 minuten portaalwerk. Eenmaal geconfigureerd authenticeert elke geregistreerde vrachtwagen automatisch en laadt hij op elke Stroomlijnen-locatie — geen passen, geen apps.
 
-## Prerequisites
+## Vereisten
 
-Before you begin:
+Voordat u begint:
 
-- [ ] A **Stroomlijnen fleet account** (sign up at [stroomlijnen.nl](https://stroomlijnen.nl) or contact your account manager)
-- [ ] Your trucks' **VIN numbers** (Vehicle Identification Numbers)
-- [ ] Access to your OEM fleet portal (Volvo Connect, DAF Connect, Fleetboard, etc.)
-- [ ] A **compatible vehicle** (see [Compatible Vehicles](./compatible-vehicles))
+- [ ] Een **Stroomlijnen-vlootaccount** (registreer via [stroomlijnen.nl](https://stroomlijnen.nl) of neem contact op met uw accountmanager)
+- [ ] De **VIN-nummers** van uw vrachtwagens (Vehicle Identification Numbers)
+- [ ] Toegang tot uw OEM-vlootportaal (Volvo Connect, DAF Connect, Fleetboard, enz.)
+- [ ] Een **compatibel voertuig** (zie [Compatibele Voertuigen](./compatible-vehicles))
 
-## Step 1: Log In to My Fleet
+## Stap 1: Inloggen op Mijn Vloot
 
-Navigate to **my.stroomlijnen.nl** and log in with your fleet manager credentials.
+Navigeer naar **my.stroomlijnen.nl** en log in met uw vlootbeheerdergegevens.
 
-If you don't have an account yet:
-1. Click **Register** and fill in your company details (KVK number, billing address)
-2. You'll receive a verification email — click the link
-3. Your account will be reviewed and activated within one business day
+Als u nog geen account heeft:
+1. Klik op **Registreren** en vul uw bedrijfsgegevens in (KVK-nummer, factuuradres)
+2. U ontvangt een verificatie-e-mail — klik op de link
+3. Uw account wordt beoordeeld en geactiveerd binnen één werkdag
 
-## Step 2: Add Your Vehicles
+## Stap 2: Uw Voertuigen Toevoegen
 
-In the My Fleet dashboard:
+In het Mijn Vloot-dashboard:
 
-1. Go to **Vehicles** → **Add Vehicle**
-2. Enter the vehicle details:
-   - **VIN** — 17-character Vehicle Identification Number (on the driver's door frame or registration document)
-   - **License plate** — For identification and reporting
-   - **Make/Model** — Select from the dropdown (e.g., Volvo FH Electric)
-   - **Nickname** — Optional, for easy recognition (e.g., "Truck 014 — Amsterdam route")
-3. Click **Save & Continue**
+1. Ga naar **Voertuigen** → **Voertuig toevoegen**
+2. Voer de voertuiggegevens in:
+   - **VIN** — 17-tekens Voertuig Identificatie Nummer (op het deurkozijn van de bestuurder of op het kentekenbewijs)
+   - **Kenteken** — Voor identificatie en rapportage
+   - **Merk/Model** — Selecteer uit het keuzemenu (bijv. Volvo FH Electric)
+   - **Bijnaam** — Optioneel, voor eenvoudige herkenning (bijv. "Truck 014 — Amsterdam route")
+3. Klik op **Opslaan & Doorgaan**
 
-Repeat for each truck in your fleet. You can also **bulk import** via CSV upload.
+Herhaal dit voor elke vrachtwagen in uw vloot. U kunt ook **bulksgewijs importeren** via CSV-upload.
 
-### CSV Format
+### CSV-formaat
 
 ```csv
-vin,license_plate,make,model,nickname
+vin,kenteken,merk,model,bijnaam
 YV2RT60A1PB123456,AB-123-C,Volvo,FH Electric,Truck 014
 XLRAE75PC0H987654,DE-456-F,DAF,XF Electric,Truck 022
 ```
 
-## Step 3: Enable Plug & Charge
+## Stap 3: Plug & Charge Inschakelen
 
-For each vehicle:
+Voor elk voertuig:
 
-1. Go to **Vehicles** → select a vehicle → **Plug & Charge** tab
-2. Toggle **Enable Plug & Charge** to ON
-3. The system will:
-   - Generate a **Contract Certificate** for this vehicle
-   - Request installation via the OEM's Certificate Provisioning Service
-   - Display status: `Pending → Installing → Active`
+1. Ga naar **Voertuigen** → selecteer een voertuig → tabblad **Plug & Charge**
+2. Zet **Plug & Charge inschakelen** op AAN
+3. Het systeem zal:
+   - Een **Contractcertificaat** genereren voor dit voertuig
+   - Installatie aanvragen via de Certificate Provisioning Service van de OEM
+   - Status weergeven: `In afwachting → Installeren → Actief`
 
-:::note Certificate Installation Time
-Certificate installation typically takes **1–24 hours**, depending on the OEM:
-- **Volvo**: Usually within 2 hours via Volvo Connect
-- **DAF**: 4–8 hours via DAF Connect
-- **Mercedes-Benz**: 2–6 hours via Fleetboard
-- **Scania**: 4–12 hours via Scania Fleet Management
-- **MAN**: 6–24 hours via RIO platform
+:::note Installatietijd Certificaat
+Certificaatinstallatie duurt doorgaans **1–24 uur**, afhankelijk van de OEM:
+- **Volvo**: Doorgaans binnen 2 uur via Volvo Connect
+- **DAF**: 4–8 uur via DAF Connect
+- **Mercedes-Benz**: 2–6 uur via Fleetboard
+- **Scania**: 4–12 uur via Scania Fleet Management
+- **MAN**: 6–24 uur via het RIO-platform
 
-The truck must be **online** (ignition on or connected to charging) for the certificate to be delivered.
+De vrachtwagen moet **online** zijn (contact aan of aangesloten op lading) voor het certificaat te worden afgeleverd.
 :::
 
-## Step 4: Authorize via OEM Portal
+## Stap 4: Autoriseren via OEM-portaal
 
-Some OEMs require you to approve third-party PnC services in their fleet portal:
+Sommige OEM's vereisen dat u diensten van derden voor PnC goedkeurt in hun vlootportaal:
 
 ### Volvo Connect
-1. Log in to Volvo Connect → **Services** → **Charging Services**
-2. Find "Stroomlijnen B.V." in the partner list and click **Authorize**
-3. Confirm the vehicles to include
-4. See [Volvo brand guide](./brand-guides/volvo-trucks) for detailed steps
+1. Log in op Volvo Connect → **Diensten** → **Laaddiensten**
+2. Zoek "Stroomlijnen B.V." in de partnerlijst en klik op **Autoriseren**
+3. Bevestig de op te nemen voertuigen
+4. Zie de [Volvo-merkhandleiding](./brand-guides/volvo-trucks) voor gedetailleerde stappen
 
 ### DAF Connect
-1. Log in to DAF Connect → **Settings** → **Charging Partners**
-2. Enable Stroomlijnen and select vehicles
-3. See [DAF brand guide](./brand-guides/daf) for detailed steps
+1. Log in op DAF Connect → **Instellingen** → **Laadpartners**
+2. Schakel Stroomlijnen in en selecteer voertuigen
+3. Zie de [DAF-merkhandleiding](./brand-guides/daf) voor gedetailleerde stappen
 
 ### Mercedes-Benz Fleetboard
-1. Log in to Fleetboard → **eMobility** → **Charging Management**
-2. Add Stroomlijnen as a charging provider
-3. See [Mercedes brand guide](./brand-guides/mercedes-trucks) for detailed steps
+1. Log in op Fleetboard → **eMobility** → **Laadmanagement**
+2. Voeg Stroomlijnen toe als laadaanbieder
+3. Zie de [Mercedes-merkhandleiding](./brand-guides/mercedes-trucks) voor gedetailleerde stappen
 
-## Step 5: Verify Activation
+## Stap 5: Activering Verifiëren
 
-Once the certificate is installed:
+Zodra het certificaat is geïnstalleerd:
 
-1. In My Fleet → **Vehicles** → select vehicle → **Plug & Charge** tab
-2. Status should show: **✅ Active**
-3. Certificate details will display:
+1. In Mijn Vloot → **Voertuigen** → selecteer voertuig → tabblad **Plug & Charge**
+2. Status moet weergeven: **✅ Actief**
+3. Certificaatdetails worden getoond:
    - EMAID (e-Mobility Account Identifier)
-   - Certificate expiry date
-   - Last successful PnC session (if any)
+   - Vervaldatum certificaat
+   - Laatste succesvolle PnC-sessie (indien aanwezig)
 
-## Step 6: Test It
+## Stap 6: Testen
 
-Drive to any Stroomlijnen location and plug in. The charging session should start within 5–10 seconds without any manual action.
+Rijd naar een Stroomlijnen-locatie en sluit de kabel aan. De laadsessie moet binnen 5–10 seconden starten zonder handmatige actie.
 
-**What to look for:**
-- Charger display shows "Plug & Charge — Authenticated" (or similar)
-- Session appears in My Fleet → **Sessions** within 1 minute
-- No RFID tap or app action was needed
+**Waar op te letten:**
+- Het laderdisplay toont "Plug & Charge — Geverifieerd" (of vergelijkbaar)
+- Sessie verschijnt in Mijn Vloot → **Sessies** binnen 1 minuut
+- Geen RFID-tik of app-actie was nodig
 
-## Troubleshooting Setup
+## Probleemoplossing Instelling
 
-| Issue | Solution |
-|-------|----------|
-| Certificate status stuck on "Pending" | Ensure the truck is online (ignition on). Check OEM portal for pending authorizations. |
-| OEM portal doesn't show Stroomlijnen | Contact us — we may need to establish the backend connection for your specific OEM account. |
-| Certificate installed but PnC fails | See [Troubleshooting Guide](./troubleshooting) for detailed diagnostics. |
-| "EMAID not found" error on charger | The certificate may not have propagated to our backend yet. Wait 1 hour and retry. |
-| Bulk import errors | Verify VIN format (17 chars, no O/I/Q), check CSV encoding is UTF-8. |
+| Probleem | Oplossing |
+|---------|----------|
+| Certificaatstatus blijft op "In afwachting" | Zorg dat de vrachtwagen online is (contact aan). Controleer OEM-portaal op openstaande autorisaties. |
+| OEM-portaal toont Stroomlijnen niet | Neem contact met ons op — mogelijk moeten we de backendverbinding voor uw specifieke OEM-account tot stand brengen. |
+| Certificaat geïnstalleerd maar PnC mislukt | Zie de [Probleemoplossingshandleiding](./troubleshooting) voor gedetailleerde diagnostiek. |
+| Fout "EMAID niet gevonden" op lader | Het certificaat is mogelijk nog niet doorgegeven aan onze backend. Wacht 1 uur en probeer opnieuw. |
+| Bulkimportfouten | Controleer VIN-formaat (17 tekens, geen O/I/Q), controleer of CSV-codering UTF-8 is. |
 
-## Managing Certificates
+## Certificaten Beheren
 
-### Renewal
-Contract certificates expire after **2 years**. The My Fleet portal sends email notifications 60, 30, and 7 days before expiry. Renewal is automatic if your fleet subscription is active.
+### Verlenging
+Contractcertificaten verlopen na **2 jaar**. Het Mijn Vloot-portaal stuurt e-mailmeldingen 60, 30 en 7 dagen voor het verlopen. Verlenging is automatisch als uw vlootabonnement actief is.
 
-### Revocation
-If a truck is sold, stolen, or decommissioned:
-1. Go to **Vehicles** → select vehicle → **Plug & Charge** tab
-2. Click **Revoke Certificate**
-3. The certificate is immediately invalidated across all connected charging networks
+### Intrekking
+Als een vrachtwagen wordt verkocht, gestolen of buiten gebruik gesteld:
+1. Ga naar **Voertuigen** → selecteer voertuig → tabblad **Plug & Charge**
+2. Klik op **Certificaat intrekken**
+3. Het certificaat wordt onmiddellijk ongeldig gemaakt op alle verbonden laadnetwerken
 
-### Transfer
-When a truck changes to a different billing entity within your organization:
-1. Revoke the current certificate
-2. Re-register the vehicle under the new billing entity
-3. A new certificate will be issued
+### Overdracht
+Wanneer een vrachtwagen naar een andere factureringsentiteit binnen uw organisatie overgaat:
+1. Trek het huidige certificaat in
+2. Registreer het voertuig opnieuw onder de nieuwe factureringsentiteit
+3. Een nieuw certificaat wordt verstrekt
 
 ---
 
-**Next:** [Brand Guides →](./brand-guides/volvo-trucks)
+**Volgende:** [Merkhandleidingen →](./brand-guides/volvo-trucks)

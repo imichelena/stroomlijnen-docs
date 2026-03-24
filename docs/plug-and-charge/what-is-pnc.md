@@ -1,94 +1,94 @@
 ---
 sidebar_position: 1
-title: What is Plug & Charge?
-description: "When a Plug & Charge compatible truck connects to our charger, billing starts automatically — no card, no app, no driver action needed."
+title: Wat is Plug & Charge?
+description: "Wanneer een Plug & Charge-compatibele vrachtwagen aansluit op onze lader, start de facturering automatisch — geen pas, geen app, geen actie van de bestuurder nodig."
 keywords: [Plug and Charge, ISO 15118, automatic charging, electric truck, fleet charging, PnC]
 ---
 
-# What is Plug & Charge?
+# Wat is Plug & Charge?
 
-**When a Plug & Charge compatible truck connects to our charger, billing starts automatically — no card, no app, no driver action needed.**
+**Wanneer een Plug & Charge-compatibele vrachtwagen aansluit op onze lader, start de facturering automatisch — geen pas, geen app, geen actie van de bestuurder nodig.**
 
-That's it. Plug in, walk away, come back to a charged truck. The charger and truck handle authentication, authorization, and billing between themselves.
+Dat is alles. Insteken, weglopen, terugkomen bij een opgeladen vrachtwagen. De lader en vrachtwagen regelen authenticatie, autorisatie en facturering onderling.
 
-## The Problem Plug & Charge Solves
+## Het Probleem dat Plug & Charge Oplost
 
-Today, most charging sessions require the driver to:
-1. Have the right card or app
-2. Know which network operates this charger
-3. Tap a card, scan a QR code, or start a session in an app
-4. Wait for authorization
-5. Then plug in
+Op dit moment vereisen de meeste laadsessies dat de bestuurder:
+1. De juiste pas of app bij zich heeft
+2. Weet welk netwerk deze lader beheert
+3. Een pas tikt, een QR-code scant of een sessie start in een app
+4. Wacht op autorisatie
+5. Dan pas insteekt
 
-For a passenger car driver charging once a week, this is mild friction. For a fleet running 20 trucks with multiple drivers across shifts, it's an operational headache:
+Voor een personenautobezitter die één keer per week laadt, is dit lichte wrijving. Voor een vloot met 20 vrachtwagens met meerdere bestuurders over diensten heen is het een operationele last:
 
-- Drivers forget cards
-- Cards get lost or damaged
-- New drivers need onboarding
-- Different charger networks need different apps
-- Shared vehicles need shared cards (security risk)
-- Every failed authentication is lost charging time
+- Bestuurders vergeten passen
+- Passen raken kwijt of beschadigd
+- Nieuwe bestuurders moeten worden ingewerkt
+- Verschillende ladernetwerken vereisen verschillende apps
+- Gedeelde voertuigen vereisen gedeelde passen (veiligheidsrisico)
+- Elke mislukte authenticatie is verloren laadtijd
 
-### The Real Cost of Friction
+### De Werkelijke Kosten van Wrijving
 
-For a fleet of 20 electric trucks:
-- Average **3 minutes** per session on authentication fiddling
-- Average **2 charging sessions** per truck per day
-- That's **120 minutes per day** — two hours of driver time wasted on tapping cards
-- At €35/hour fully loaded driver cost: **€1,225/month** in lost productivity
-- Plus failed sessions, support calls, and frustrated drivers
+Voor een vloot van 20 elektrische vrachtwagens:
+- Gemiddeld **3 minuten** per sessie aan authenticatiegedoe
+- Gemiddeld **2 laadsessies** per vrachtwagen per dag
+- Dat is **120 minuten per dag** — twee uur bestuurdersstijd verspild aan passen tikken
+- Bij €35/uur volledig belaste bestuurderkosten: **€1.225/maand** aan verloren productiviteit
+- Plus mislukte sessies, ondersteuningsoproepen en gefrustreerde bestuurders
 
-## How Plug & Charge Fixes This
+## Hoe Plug & Charge Dit Oplost
 
-With Plug & Charge:
-1. Driver plugs in the cable
-2. **Done.**
+Met Plug & Charge:
+1. De bestuurder steekt de kabel in
+2. **Klaar.**
 
-The truck's onboard certificate handles everything. The charger knows who you are, which fleet you belong to, and where to send the bill — all exchanged cryptographically in under 5 seconds.
+Het boordcertificaat van de vrachtwagen regelt alles. De lader weet wie u bent, bij welke vloot u hoort en waar de factuur naartoe moet — alles cryptografisch uitgewisseld in minder dan 5 seconden.
 
-No cards to lose. No apps to install. No training needed. No difference between a day-one driver and a 10-year veteran.
+Geen passen om kwijt te raken. Geen apps om te installeren. Geen training nodig. Geen verschil tussen een bestuurder van dag één en een veteraan van 10 jaar.
 
-## Who Can Use It?
+## Wie Kan Het Gebruiken?
 
-Plug & Charge requires:
+Plug & Charge vereist:
 
-1. **A compatible vehicle** — the truck or van must support ISO 15118-2 or later. See our [Compatible Vehicles](/docs/plug-and-charge/compatible-vehicles) list.
-2. **A compatible charger** — must support ISO 15118 and be connected to a Plug & Charge ecosystem. All Stroomlijnen chargers support this.
-3. **Certificate provisioning** — your vehicle needs a contract certificate installed. We handle this through our portal.
+1. **Een compatibel voertuig** — de vrachtwagen of bestelwagen moet ISO 15118-2 of hoger ondersteunen. Zie onze lijst met [Compatibele voertuigen](/docs/plug-and-charge/compatible-vehicles).
+2. **Een compatibele lader** — moet ISO 15118 ondersteunen en verbonden zijn met een Plug & Charge-ecosysteem. Alle Stroomlijnen-laders ondersteunen dit.
+3. **Certificaatprovisioning** — uw voertuig heeft een contractcertificaat nodig. Wij regelen dit via ons portaal.
 
-## Is It Secure?
+## Is Het Veilig?
 
-Yes. Plug & Charge uses the same type of cryptography that secures online banking:
+Ja. Plug & Charge gebruikt hetzelfde type cryptografie dat internetbankieren beveiligt:
 
-- **X.509 certificates** — each vehicle has a unique digital certificate
-- **PKI (Public Key Infrastructure)** — a chain of trust from the vehicle to the eMSP
-- **TLS encryption** — all communication between vehicle and charger is encrypted
-- **No sensitive data exposed** — the cable carries encrypted certificate data, not account numbers
+- **X.509-certificaten** — elk voertuig heeft een uniek digitaal certificaat
+- **PKI (Public Key Infrastructure)** — een vertrouwensketen van het voertuig tot de eMSP
+- **TLS-versleuteling** — alle communicatie tussen voertuig en lader is versleuteld
+- **Geen gevoelige gegevens blootgesteld** — de kabel draagt versleutelde certificaatgegevens, geen rekeningnummers
 
-A stolen vehicle can be disabled remotely by revoking its certificate. An RFID card, by contrast, works until someone notices it's gone.
+Een gestolen voertuig kan op afstand worden uitgeschakeld door het certificaat in te trekken. Een RFID-pas daarentegen werkt totdat iemand opmerkt dat hij verdwenen is.
 
 :::info
-Plug & Charge is **more secure** than RFID cards. Cards can be cloned (though modern cards make this difficult). Certificates cannot be — they use asymmetric cryptography with 256-bit keys.
+Plug & Charge is **veiliger** dan RFID-passen. Passen kunnen worden gekloond (hoewel moderne passen dit moeilijk maken). Certificaten niet — ze gebruiken asymmetrische cryptografie met 256-bit sleutels.
 :::
 
-## The Business Case
+## De Business Case
 
-For fleet managers, Plug & Charge is not just convenient — it's a cost reduction:
+Voor vlootbeheerders is Plug & Charge niet alleen handig — het is een kostenbesparing:
 
 | Factor | RFID | Plug & Charge |
 |--------|------|---------------|
-| Driver time per session | 2–5 minutes | 0 minutes |
-| Card management overhead | High | None |
-| Lost/stolen card risk | Real | N/A |
-| New driver onboarding | Issue card, explain process | "Just plug in" |
-| Multi-shift vehicles | Share cards (risky) | Automatic per vehicle |
-| Monthly admin time | Hours | Minutes |
+| Bestuurdersstijd per sessie | 2–5 minuten | 0 minuten |
+| Beheeroverhead voor passen | Hoog | Geen |
+| Risico op verlies/diefstal | Reëel | N.v.t. |
+| Inwerkproces nieuwe bestuurder | Pas uitreiken, proces uitleggen | "Gewoon insteken" |
+| Voertuigen met meerdere diensten | Passen delen (risicovol) | Automatisch per voertuig |
+| Maandelijkse beheertijd | Uren | Minuten |
 
-## Getting Started
+## Aan de Slag
 
-Ready to set up Plug & Charge for your fleet?
+Klaar om Plug & Charge in te stellen voor uw vloot?
 
-1. **[Check vehicle compatibility](/docs/plug-and-charge/compatible-vehicles)** — does your truck support it?
-2. **[Understand how it works](/docs/plug-and-charge/how-it-works)** — the technology behind it
-3. **[Set it up](/docs/plug-and-charge/setup-guide)** — step by step in our portal
-4. **[Brand-specific guides](/docs/plug-and-charge/brand-guides/volvo-trucks)** — detailed instructions per manufacturer
+1. **[Controleer voertuigcompatibiliteit](/docs/plug-and-charge/compatible-vehicles)** — ondersteunt uw vrachtwagen het?
+2. **[Begrijp hoe het werkt](/docs/plug-and-charge/how-it-works)** — de technologie erachter
+3. **[Stel het in](/docs/plug-and-charge/setup-guide)** — stap voor stap in ons portaal
+4. **[Merkspecifieke handleidingen](/docs/plug-and-charge/brand-guides/volvo-trucks)** — gedetailleerde instructies per fabrikant

@@ -1,60 +1,60 @@
 ---
 sidebar_position: 1
-title: OCPP Overview
-description: How Stroomlijnen uses OCPP (Open Charge Point Protocol) to manage and monitor charging stations remotely.
+title: OCPP Overzicht
+description: Hoe Stroomlijnen OCPP (Open Charge Point Protocol) gebruikt om laadstations op afstand te beheren en te monitoren.
 keywords: [OCPP, Open Charge Point Protocol, OCPP 2.0.1, charge station management, CSMS, remote management]
 ---
 
-# OCPP Overview
+# OCPP Overzicht
 
-**OCPP (Open Charge Point Protocol)** is the industry-standard communication protocol between charging stations and a central management system. Stroomlijnen uses OCPP to remotely manage, monitor, and control all our chargers.
+**OCPP (Open Charge Point Protocol)** is het industriestandaard communicatieprotocol tussen laadstations en een centraal beheersysteem. Stroomlijnen gebruikt OCPP om al onze laders op afstand te beheren, monitoren en aansturen.
 
-## What is OCPP?
+## Wat is OCPP?
 
-OCPP defines how a charging station (Charge Point) talks to a Charging Station Management System (CSMS — that's us). It covers:
+OCPP bepaalt hoe een laadstation (Charge Point) communiceert met een Charging Station Management System (CSMS — dat zijn wij). Het omvat:
 
-- **Authorization** — Checking if a user/vehicle is allowed to charge
-- **Session management** — Starting, monitoring, and stopping charging sessions
-- **Metering** — Reporting energy consumption in real time
-- **Remote control** — Remotely starting/stopping sessions, adjusting power, rebooting chargers
-- **Diagnostics** — Firmware updates, log retrieval, health monitoring
-- **Smart charging** — Dynamic power management across multiple chargers
+- **Autorisatie** — Controleren of een gebruiker/voertuig mag laden
+- **Sessiebeheer** — Laadsessies starten, bewaken en stoppen
+- **Meting** — Energieverbruik in realtime rapporteren
+- **Bediening op afstand** — Sessies op afstand starten/stoppen, vermogen aanpassen, laders herstarten
+- **Diagnostiek** — Firmware-updates, logopvraging, statusmonitoring
+- **Slim laden** — Dynamisch vermogensbeheer over meerdere laders
 
-## OCPP Versions
+## OCPP-versies
 
-| Version | Status at Stroomlijnen | Key Features |
-|---------|----------------------|--------------|
-| OCPP 1.6-J | ✅ Supported | JSON/WebSocket, smart charging profiles, widely deployed |
-| OCPP 2.0.1 | ✅ Preferred | ISO 15118 integration, device model, improved security, transaction handling |
+| Versie | Status bij Stroomlijnen | Kernfuncties |
+|--------|------------------------|--------------|
+| OCPP 1.6-J | ✅ Ondersteund | JSON/WebSocket, slimme laadprofielen, breed ingezet |
+| OCPP 2.0.1 | ✅ Voorkeur | ISO 15118-integratie, apparaatmodel, verbeterde beveiliging, transactieverwerking |
 
-### Why OCPP 2.0.1 Matters
+### Waarom OCPP 2.0.1 Belangrijk Is
 
-OCPP 2.0.1 is a significant upgrade from 1.6, especially for fleet charging:
+OCPP 2.0.1 is een significante upgrade ten opzichte van 1.6, met name voor vlootladen:
 
-- **ISO 15118 integration** — Native support for Plug & Charge certificate management through OCPP
-- **Improved security** — Secure firmware updates, signed meter values, TLS mandatory
-- **Device model** — Standardized way to query charger capabilities and configuration
-- **Transaction handling** — Better handling of complex transactions (pre-authorization, parking, energy)
-- **Smart charging** — More granular control over charging profiles and power allocation
-- **Display messages** — Send custom messages to the charger's screen
+- **ISO 15118-integratie** — Native ondersteuning voor Plug & Charge-certificaatbeheer via OCPP
+- **Verbeterde beveiliging** — Veilige firmware-updates, ondertekende meterwaarden, TLS verplicht
+- **Apparaatmodel** — Gestandaardiseerde manier om laderkenmerken en -configuratie op te vragen
+- **Transactieverwerking** — Betere afhandeling van complexe transacties (voorautorisatie, parkeren, energie)
+- **Slim laden** — Nauwkeurigere controle over laadprofielen en vermogensverdeling
+- **Displayberichten** — Eigen berichten sturen naar het scherm van de lader
 
-All new Stroomlijnen chargers are deployed with OCPP 2.0.1. Existing 1.6-J chargers continue to work and are upgraded when hardware supports it.
+Alle nieuwe Stroomlijnen-laders worden ingezet met OCPP 2.0.1. Bestaande 1.6-J-laders blijven werken en worden geüpgraded wanneer de hardware dit ondersteunt.
 
-## Architecture
+## Architectuur
 
 ```mermaid
 graph LR
     subgraph Stroomlijnen Cloud
         CSMS[CSMS<br/>Charging Station<br/>Management System]
-        API[Fleet API]
-        Portal[My Fleet Portal]
+        API[Vloot API]
+        Portal[Mijn Vloot Portaal]
     end
 
-    subgraph Charging Site
-        CS1[Charger 1]
-        CS2[Charger 2]
-        CS3[Charger 3]
-        EMS[Energy Management<br/>System]
+    subgraph Laadlocatie
+        CS1[Lader 1]
+        CS2[Lader 2]
+        CS3[Lader 3]
+        EMS[Energiebeheersysteem]
     end
 
     CS1 -->|OCPP 2.0.1<br/>WebSocket/TLS| CSMS
@@ -65,63 +65,63 @@ graph LR
     API --> Portal
 ```
 
-### Communication Flow
+### Communicatiestroom
 
-1. **Charger → CSMS:** The charger connects to our CSMS via a secure WebSocket (wss://) connection
-2. **Heartbeats:** Chargers send periodic heartbeats to confirm they're online
-3. **Authorization:** When a user presents an RFID card or PnC certificate, the charger sends an authorization request to our CSMS
-4. **Metering:** During charging, meter values (energy, power, SoC) are sent at regular intervals
-5. **Remote commands:** Our CSMS can send commands to chargers (start, stop, reset, update firmware)
+1. **Lader → CSMS:** De lader maakt verbinding met ons CSMS via een beveiligde WebSocket-verbinding (wss://)
+2. **Heartbeats:** Laders sturen periodieke heartbeats om te bevestigen dat ze online zijn
+3. **Autorisatie:** Wanneer een gebruiker een RFID-pas tikt of een PnC-certificaat presenteert, stuurt de lader een autorisatieverzoek naar ons CSMS
+4. **Meting:** Tijdens het laden worden meterwaarden (energie, vermogen, SoC) met regelmatige tussenpozen verstuurd
+5. **Opdrachten op afstand:** Ons CSMS kan opdrachten sturen naar laders (start, stop, reset, firmware-update)
 
-## Smart Charging
+## Slim Laden
 
-OCPP's smart charging capabilities are essential for sites with limited grid capacity:
+De slimme laadmogelijkheden van OCPP zijn essentieel voor locaties met beperkte netcapaciteit:
 
-### Charging Profiles
-We set charging profiles that tell each charger how much power it can draw at any given time:
+### Laadprofielen
+We stellen laadprofielen in die elke lader vertellen hoeveel vermogen hij op een bepaald moment mag gebruiken:
 
-- **TxDefaultProfile** — Default power limit for any transaction
-- **TxProfile** — Per-transaction power adjustment
-- **ChargingStationMaxProfile** — Overall site power limit
+- **TxDefaultProfile** — Standaard vermogenslimiet voor elke transactie
+- **TxProfile** — Vermogensaanpassing per transactie
+- **ChargingStationMaxProfile** — Totale vermogenslimiet voor de locatie
 
-### Load Balancing
-When multiple trucks charge simultaneously and the site has limited grid capacity:
+### Taakverdeling
+Wanneer meerdere vrachtwagens gelijktijdig laden en de locatie beperkte netcapaciteit heeft:
 
-1. Our EMS monitors total site load (via Modbus/API)
-2. CSMS calculates available capacity per charger
-3. Charging profiles are dynamically updated via OCPP
-4. Power is distributed fairly or by priority (based on fleet settings)
+1. Ons energiebeheersysteem monitort de totale locatiebelasting (via Modbus/API)
+2. CSMS berekent beschikbaar vermogen per lader
+3. Laadprofielen worden dynamisch bijgewerkt via OCPP
+4. Vermogen wordt eerlijk verdeeld of op basis van prioriteit (conform vlootinstellingen)
 
-Example: A site with 600 kW grid capacity and 3 chargers rated at 350 kW each:
-- 1 truck charging → gets up to 350 kW
-- 2 trucks charging → 300 kW each
-- 3 trucks charging → 200 kW each
-- During peak grid hours → further reduced to stay within contracted capacity
+Voorbeeld: Een locatie met 600 kW netcapaciteit en 3 laders van elk 350 kW:
+- 1 vrachtwagen laadt → krijgt tot 350 kW
+- 2 vrachtwagens laden → 300 kW elk
+- 3 vrachtwagens laden → 200 kW elk
+- Tijdens piekuren op het net → verder verlaagd om binnen de gecontracteerde capaciteit te blijven
 
-### Scheduled Charging
-Fleet managers can set departure times and target SoC. Our system optimizes when to charge:
-- Delays start until electricity is cheapest
-- Ensures target SoC is reached by departure time
-- Balances across all vehicles at the site
+### Gepland Laden
+Vlootbeheerders kunnen vertrektijden en gewenste SoC instellen. Ons systeem optimaliseert wanneer geladen wordt:
+- Stelt de start uit totdat elektriciteit het goedkoopst is
+- Zorgt dat de gewenste SoC bereikt is voor de vertrektijd
+- Verdeelt de belasting over alle voertuigen op de locatie
 
-## Security
+## Beveiliging
 
-OCPP 2.0.1 security features we implement:
+OCPP 2.0.1-beveiligingsfuncties die wij implementeren:
 
-- **TLS 1.3** — All OCPP connections are encrypted
-- **Client certificates** — Chargers authenticate to our CSMS with certificates
-- **Signed meter values** — Tamper-evident energy measurements
-- **Secure firmware updates** — Cryptographically signed firmware images
-- **Access control** — Physical and network access restrictions at each site
+- **TLS 1.3** — Alle OCPP-verbindingen zijn versleuteld
+- **Clientcertificaten** — Laders authenticeren naar ons CSMS met certificaten
+- **Ondertekende meterwaarden** — Manipulatiebestendige energiemetingen
+- **Veilige firmware-updates** — Cryptografisch ondertekende firmware-images
+- **Toegangscontrole** — Fysieke en netwerktoegangsrestricties op elke locatie
 
-## For Hardware Partners
+## Voor Hardwarepartners
 
-If you're a charger manufacturer or installer working with Stroomlijnen:
+Als u een laderfabrikant of installateur bent die met Stroomlijnen samenwerkt:
 
-- We require **OCPP 2.0.1** compliance (1.6-J accepted for existing inventory)
-- Chargers must support **ISO 15118-2** PnC
-- TLS 1.2+ is mandatory
-- We provide CSMS endpoints and credentials during the onboarding process
-- Interoperability testing is required before deployment
+- Wij vereisen **OCPP 2.0.1**-conformiteit (1.6-J geaccepteerd voor bestaande voorraad)
+- Laders moeten **ISO 15118-2** PnC ondersteunen
+- TLS 1.2+ is verplicht
+- Wij verstrekken CSMS-eindpunten en inloggegevens tijdens het onboardingproces
+- Interoperabiliteitstesten zijn vereist voor inzet
 
-Contact [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl) for integration documentation.
+Neem contact op via [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl) voor integratiedocumentatie.

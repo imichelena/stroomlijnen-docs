@@ -1,101 +1,101 @@
 ---
 sidebar_position: 2
-title: Your First Charging Session
-description: Step-by-step guide to your first electric truck charging session at a Stroomlijnen location.
+title: Uw Eerste Laadsessie
+description: Stapsgewijze handleiding voor uw eerste laadsessie voor elektrische vrachtwagens bij een Stroomlijnen-locatie.
 keywords: [first charging session, how to charge, electric truck, RFID, Plug and Charge]
 ---
 
-# Your First Charging Session
+# Uw Eerste Laadsessie
 
-Whether you're a fleet manager setting things up or a driver at the charger for the first time, here's exactly what happens.
+Of u nu een vlootbeheerder bent die alles instelt of een bestuurder die voor het eerst bij de lader staat — hier leest u precies wat er gebeurt.
 
-## Before You Arrive
+## Voordat U Aankomt
 
-### As a Fleet Manager
+### Als Vlootbeheerder
 
-1. **Register** on the Stroomlijnen portal at [portal.stroomlijnen.nl](https://portal.stroomlijnen.nl)
-2. **Add your vehicles** — VIN numbers and license plates
-3. **Choose your authentication method:**
-   - **RFID cards** — we'll ship them to you (see [RFID Cards](/docs/getting-started/rfid-cards))
-   - **Plug & Charge** — set up via the portal (see [Setup Guide](/docs/plug-and-charge/setup-guide))
-4. **Brief your drivers** — share the site address and any access instructions
+1. **Registreer** u op het Stroomlijnen-portaal op [portal.stroomlijnen.nl](https://portal.stroomlijnen.nl)
+2. **Voeg uw voertuigen toe** — VIN-nummers en kentekens
+3. **Kies uw authenticatiemethode:**
+   - **RFID-passen** — we sturen ze naar u op (zie [RFID-passen](/docs/getting-started/rfid-cards))
+   - **Plug & Charge** — instellen via het portaal (zie [Installatiehandleiding](/docs/plug-and-charge/setup-guide))
+4. **Informeer uw bestuurders** — deel het locatieadres en eventuele toegangscodes
 
-### As a Driver
+### Als Bestuurder
 
-- Make sure you have your **RFID card** (or your truck supports Plug & Charge)
-- Know the **site address** and any access gate codes
-- Check your truck's **current battery level** — plan for the charging time you need
+- Zorg dat u uw **RFID-pas** bij u heeft (of dat uw vrachtwagen Plug & Charge ondersteunt)
+- Ken het **locatieadres** en eventuele toegangscodes voor slagbomen
+- Controleer het **huidige accuniveau** van uw vrachtwagen — plan de benodigde laadtijd in
 
-## At the Charger
+## Bij de Lader
 
-### Step 1: Park and Connect
+### Stap 1: Parkeren en Aansluiten
 
-1. Pull up to an available charger
-2. Turn off the vehicle (some trucks require this; others don't — check your brand guide)
-3. Open the charging port
-4. Connect the charging cable:
-   - **CCS2** (Combined Charging System) — the European standard for DC fast charging
-   - The connector only fits one way. Don't force it.
+1. Rijd naar een beschikbare lader
+2. Zet het voertuig uit (sommige vrachtwagens vereisen dit; andere niet — raadpleeg de merkhandleiding)
+3. Open de laadpoort
+4. Sluit de laadkabel aan:
+   - **CCS2** (Combined Charging System) — de Europese standaard voor DC-snelladen
+   - De stekker past maar op één manier. Niet forceren.
 
-### Step 2: Authenticate
+### Stap 2: Authenticeren
 
-**With RFID card:**
-1. Hold your card to the reader on the charger
-2. Wait for the green LED and/or display confirmation
-3. Charging starts automatically
+**Met RFID-pas:**
+1. Houd uw pas voor de kaartlezer op de lader
+2. Wacht op de groene LED en/of bevestiging op het display
+3. Het laden start automatisch
 
-**With Plug & Charge:**
-1. Just plug in. That's it.
-2. The truck and charger exchange certificates over ISO 15118
-3. Charging starts within 5–10 seconds
+**Met Plug & Charge:**
+1. Sluit de kabel aan. Dat is alles.
+2. De vrachtwagen en lader wisselen certificaten uit via ISO 15118
+3. Het laden start binnen 5–10 seconden
 
-**With charging app (roaming):**
-1. Open your eMSP's app
-2. Scan the QR code on the charger or enter the charger ID
-3. Start the session in the app
+**Met laad-app (roaming):**
+1. Open de app van uw eMSP
+2. Scan de QR-code op de lader of voer het lader-ID in
+3. Start de sessie in de app
 
-### Step 3: Monitor
+### Stap 3: Monitoren
 
-- The charger display shows real-time power (kW) and energy delivered (kWh)
-- You can also monitor via the Stroomlijnen portal or your fleet management app
-- Most electric trucks charge from 20% to 80% in 60–90 minutes on our DC chargers
+- Het display van de lader toont het realtime vermogen (kW) en geleverde energie (kWh)
+- U kunt ook monitoren via het Stroomlijnen-portaal of uw vlootbeheer-app
+- De meeste elektrische vrachtwagens laden van 20% naar 80% in 60–90 minuten op onze DC-laders
 
-### Step 4: Disconnect
+### Stap 4: Ontkoppelen
 
-1. Stop the session:
-   - **RFID:** tap the card again
-   - **Plug & Charge:** just unplug (session ends automatically)
-   - **App:** stop in the app, then unplug
-2. Return the cable to the holster
-3. Close your charging port
-4. Drive away
+1. Stop de sessie:
+   - **RFID:** tik de pas opnieuw
+   - **Plug & Charge:** koppel gewoon los (sessie eindigt automatisch)
+   - **App:** stop in de app, daarna loskoppelen
+2. Hang de kabel terug in de houder
+3. Sluit uw laadpoort
+4. Rijden maar
 
-## What If Something Goes Wrong?
+## Wat Als Er Iets Misgaat?
 
-| Issue | What to Do |
+| Probleem | Wat te doen |
 |-------|-----------|
-| Card not recognized | Check if the card is activated in the portal. Try holding it closer/longer. |
-| Plug & Charge not starting | Check your truck's P&C status in the OEM portal. See [Troubleshooting](/docs/plug-and-charge/troubleshooting). |
-| Charger shows error | Note the error code and contact us. See [FAQ](/docs/faq). |
-| Charging slower than expected | Battery temperature, SoC level, and grid capacity all affect speed. Above 80% SoC, charging slows significantly. |
-| Can't remove cable | The cable locks during charging. Make sure the session is fully stopped before pulling. |
+| Pas niet herkend | Controleer of de pas is geactiveerd in het portaal. Probeer de pas dichter bij / langer voor de lezer te houden. |
+| Plug & Charge start niet | Controleer de PnC-status van uw vrachtwagen in het OEM-portaal. Zie [Probleemoplossing](/docs/plug-and-charge/troubleshooting). |
+| Lader toont foutmelding | Noteer de foutcode en neem contact met ons op. Zie [FAQ](/docs/faq). |
+| Langzamer laden dan verwacht | Accutemperatuur, laadniveau (SoC) en netcapaciteit beïnvloeden allemaal de laadsnelheid. Boven 80% SoC vertraagt het laden aanzienlijk. |
+| Kabel niet los te maken | De kabel vergrendelt tijdens het laden. Zorg dat de sessie volledig gestopt is voordat u trekt. |
 
-## Charging Speed Expectations
+## Verwachte Laadsnelheden
 
-Electric trucks have different charging capabilities:
+Elektrische vrachtwagens hebben verschillende laadcapaciteiten:
 
-| Power Level | Typical Use | Time for 200 kWh |
+| Vermogensniveau | Typisch gebruik | Tijd voor 200 kWh |
 |-------------|------------|-------------------|
-| 50 kW DC | Overnight / depot | ~4 hours |
-| 150 kW DC | Opportunity charging | ~1.5 hours |
-| 350 kW DC | Fast turnaround | ~40 minutes |
+| 50 kW DC | Nacht- / depotladen | ~4 uur |
+| 150 kW DC | Gelegenheidsladen | ~1,5 uur |
+| 350 kW DC | Snelle omlooptijd | ~40 minuten |
 
 :::note
-Actual charging speed depends on the vehicle's onboard charger, battery temperature, state of charge, and the charger's available power. The charger will deliver the maximum the vehicle requests, up to the charger's rated power.
+De werkelijke laadsnelheid hangt af van de boordlader van het voertuig, de accutemperatuur, het laadniveau en het beschikbare vermogen van de lader. De lader levert het maximale vermogen dat het voertuig aanvraagt, tot aan het nominale vermogen van de lader.
 :::
 
-## Next Steps
+## Volgende Stappen
 
-- [Set up Plug & Charge](/docs/plug-and-charge/setup-guide) for effortless future sessions
-- [Understand your invoices](/docs/fleet-management/invoicing)
-- [Add more drivers](/docs/fleet-management/driver-management)
+- [Stel Plug & Charge in](/docs/plug-and-charge/setup-guide) voor moeiteloze toekomstige sessies
+- [Begrijp uw facturen](/docs/fleet-management/invoicing)
+- [Voeg meer bestuurders toe](/docs/fleet-management/driver-management)

@@ -1,108 +1,108 @@
 ---
 sidebar_position: 3
-title: RFID Cards
-description: How to order, activate, and manage RFID charging cards for your electric fleet with Stroomlijnen.
+title: RFID-passen
+description: Hoe u RFID-laadpassen bestelt, activeert en beheert voor uw elektrische vloot bij Stroomlijnen.
 keywords: [RFID card, charging card, NL*STM, fleet charging, activate card]
 ---
 
-# RFID Cards
+# RFID-passen
 
-RFID (Radio Frequency Identification) cards are the traditional way to authenticate at a charging station. Tap your card, start charging — simple and reliable.
+RFID (Radio Frequency Identification) passen zijn de traditionele manier om te authenticeren bij een laadstation. Tik uw pas, begin met laden — eenvoudig en betrouwbaar.
 
-## How RFID Charging Cards Work
+## Hoe RFID-laadpassen Werken
 
-Each card contains a unique identifier (called a **token** or **UID**) that's linked to your fleet account. When you tap the card on a charger's reader:
+Elke pas bevat een unieke identificatiecode (een **token** of **UID**) die is gekoppeld aan uw vlootaccount. Wanneer u de pas op de lezer van een lader tikt:
 
-1. The charger reads the card's UID
-2. Sends it to the Stroomlijnen backend via OCPP
-3. Our system checks: is this card valid? Which fleet does it belong to?
-4. If valid → charging starts. The session is billed to the fleet account.
+1. De lader leest de UID van de pas
+2. Stuurt die via OCPP naar de Stroomlijnen-backend
+3. Ons systeem controleert: is deze pas geldig? Bij welke vloot hoort hij?
+4. Als geldig → start het laden. De sessie wordt gefactureerd aan het vlootaccount.
 
-This works at any Stroomlijnen location and at **roaming partner chargers** across Europe — the card carries your NL\*STM eMSP identity.
+Dit werkt op elke Stroomlijnen-locatie en bij **roamingpartner-laders** door heel Europa — de pas draagt uw NL\*STM eMSP-identiteit.
 
-## Ordering Cards
+## Passen Bestellen
 
-### New Fleet Setup
-When you register your fleet, you can order cards directly through the portal:
+### Nieuwe Vlootregistratie
+Wanneer u uw vloot registreert, kunt u passen rechtstreeks via het portaal bestellen:
 
-1. Go to **My Fleet → RFID Cards**
-2. Click **Order Cards**
-3. Specify the number of cards needed
-4. Enter the shipping address
-5. Cards arrive within 3–5 business days
+1. Ga naar **Mijn Vloot → RFID-passen**
+2. Klik op **Passen bestellen**
+3. Geef het benodigde aantal passen op
+4. Voer het verzendadres in
+5. Passen arriveren binnen 3–5 werkdagen
 
-### Additional Cards
-Need more? Same process. You can order additional cards at any time.
+### Extra Passen
+Meer nodig? Zelfde procedure. U kunt op elk moment extra passen bestellen.
 
-### Pricing
-- Cards are provided at no extra charge with your fleet subscription
-- Lost card replacement: free (first two per year), €5 per card after that
+### Prijs
+- Passen worden gratis verstrekt bij uw vlootabonnement
+- Vervanging bij verlies: gratis (eerste twee per jaar), €5 per pas daarna
 
-## Activating a Card
+## Een Pas Activeren
 
-Cards arrive **pre-activated** and linked to your fleet. However, you should:
+Passen worden **voorgeactiveerd** geleverd en zijn al gekoppeld aan uw vloot. U dient echter:
 
-1. Go to **My Fleet → RFID Cards** in the portal
-2. Verify the new cards appear in your list
-3. **Assign each card to a driver** (optional but recommended — helps with session tracking)
-4. Test the card at a charger
+1. Naar **Mijn Vloot → RFID-passen** in het portaal te gaan
+2. Te controleren of de nieuwe passen in uw lijst verschijnen
+3. **Elke pas aan een bestuurder toe te wijzen** (optioneel maar aanbevolen — helpt bij het bijhouden van sessies)
+4. De pas te testen bij een lader
 
 :::tip
-Assign cards to specific drivers. This way, your charging reports show which driver used which card, making fleet cost allocation much easier.
+Wijs passen toe aan specifieke bestuurders. Zo tonen uw laadrapportages welke bestuurder welke pas heeft gebruikt, wat de kostentoedeling per vloot veel eenvoudiger maakt.
 :::
 
-## Managing Cards
+## Passen Beheren
 
-### Deactivating a Card
-If a card is lost or a driver leaves the company:
-1. Go to **My Fleet → RFID Cards**
-2. Find the card (by number or driver name)
-3. Click **Deactivate**
-4. The card stops working immediately at all chargers
+### Een Pas Deactiveren
+Als een pas verloren is of een bestuurder het bedrijf verlaat:
+1. Ga naar **Mijn Vloot → RFID-passen**
+2. Zoek de pas (op nummer of bestuurdernaam)
+3. Klik op **Deactiveren**
+4. De pas werkt onmiddellijk niet meer op alle laders
 
-### Reactivating a Card
-Found that "lost" card? You can reactivate it the same way.
+### Een Pas Opnieuw Activeren
+Die "verloren" pas toch teruggevonden? U kunt hem op dezelfde manier opnieuw activeren.
 
-### Card Groups
-For larger fleets, organize cards into groups:
-- **By vehicle** — one card per truck
-- **By driver** — personal cards that work with any vehicle
-- **By department** — separate billing per business unit
+### Pasgroepen
+Voor grotere vloten kunt u passen in groepen organiseren:
+- **Per voertuig** — één pas per vrachtwagen
+- **Per bestuurder** — persoonlijke passen die op elk voertuig werken
+- **Per afdeling** — aparte facturering per bedrijfseenheid
 
-## Lost or Stolen Cards
+## Verloren of Gestolen Passen
 
-1. **Deactivate immediately** in the portal (or call us)
-2. The card becomes invalid within 60 seconds at all connected chargers
-3. Order a replacement
-4. Any charges made before deactivation appear on your normal invoice
+1. **Deactiveer onmiddellijk** in het portaal (of bel ons)
+2. De pas wordt binnen 60 seconden ongeldig op alle verbonden laders
+3. Bestel een vervanging
+4. Eventuele kosten vóór deactivering verschijnen op uw gebruikelijke factuur
 
 :::caution
-Deactivate lost cards promptly. Until deactivated, anyone with the card can charge on your account. We process deactivation within 60 seconds — but you need to trigger it.
+Deactiveer verloren passen zo snel mogelijk. Tot die tijd kan iedereen met de pas laden op uw account. We verwerken deactivering binnen 60 seconden — maar u moet het initiatief nemen.
 :::
 
-## RFID vs. Plug & Charge
+## RFID versus Plug & Charge
 
-| Feature | RFID Card | Plug & Charge |
+| Functie | RFID-pas | Plug & Charge |
 |---------|-----------|---------------|
-| Setup effort | Order cards, assign to drivers | Register vehicle VIN, install certificate |
-| Driver action | Tap card before/after charging | Just plug in |
-| Works across fleets | Card follows the driver | Certificate follows the vehicle |
-| Loss risk | Card can be lost/stolen | Nothing physical to lose |
-| Roaming | Works everywhere | Growing but not universal yet |
-| Fallback | Always works | RFID needed as fallback |
+| Insteltijd | Passen bestellen, aan bestuurders toewijzen | VIN registreren, certificaat installeren |
+| Actie bestuurder | Pas tikken voor/na laden | Gewoon inpluggen |
+| Werkt bij meerdere vloten | Pas volgt de bestuurder | Certificaat volgt het voertuig |
+| Verliesrisico | Pas kan kwijtraken/gestolen worden | Niets fysiek te verliezen |
+| Roaming | Werkt overal | Groeit, maar nog niet universeel |
+| Terugvaloptie | Werkt altijd | RFID nodig als terugval |
 
-**Our recommendation:** Set up Plug & Charge for convenience, keep RFID cards as a backup. Belt and suspenders.
+**Onze aanbeveling:** Stel Plug & Charge in voor het gemak, houd RFID-passen als reserveoptie. Riem én bretels.
 
-## Technical Details
+## Technische Details
 
-- **Card technology:** MIFARE DESFire EV2 (encrypted, secure)
-- **Frequency:** 13.56 MHz (NFC)
-- **Standard:** ISO 14443
-- **UID format:** 14 hex characters
-- **Branding:** Stroomlijnen logo with NL\*STM identifier
+- **Pastechnologie:** MIFARE DESFire EV2 (versleuteld, veilig)
+- **Frequentie:** 13,56 MHz (NFC)
+- **Standaard:** ISO 14443
+- **UID-formaat:** 14 hexadecimale tekens
+- **Branding:** Stroomlijnen-logo met NL\*STM-identificatie
 
-## Next Steps
+## Volgende Stappen
 
-- [Set up Plug & Charge](/docs/plug-and-charge/setup-guide) alongside your RFID cards
-- [Manage your drivers](/docs/fleet-management/driver-management)
-- [Understanding your invoices](/docs/fleet-management/invoicing)
+- [Stel Plug & Charge in](/docs/plug-and-charge/setup-guide) naast uw RFID-passen
+- [Beheer uw bestuurders](/docs/fleet-management/driver-management)
+- [Uw facturen begrijpen](/docs/fleet-management/invoicing)
