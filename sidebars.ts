@@ -4,13 +4,20 @@ const sidebars: SidebarsConfig = {
   docsSidebar: [
     {
       type: 'category',
-      label: 'Getting Started',
+      label: 'Aan de slag',
       items: [
         'getting-started/intro',
         'getting-started/first-session',
         'getting-started/rfid-cards',
       ],
       collapsed: false,
+    },
+    {
+      type: 'category',
+      label: 'Chauffeurs',
+      items: [
+        'chauffeurs/elektrisch-touren',
+      ],
     },
     {
       type: 'category',
@@ -22,7 +29,7 @@ const sidebars: SidebarsConfig = {
         'plug-and-charge/setup-guide',
         {
           type: 'category',
-          label: 'Brand Guides',
+          label: 'Merkhandleidingen',
           items: [
             'plug-and-charge/brand-guides/volvo-trucks',
             'plug-and-charge/brand-guides/daf',
@@ -38,7 +45,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Fleet Management',
+      label: 'Vlootbeheer',
       items: [
         'fleet-management/overview',
         'fleet-management/vehicles',
@@ -49,7 +56,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Locations',
+      label: 'Locaties',
       items: [
         'locations/finding-charger',
         'locations/site-guide',
@@ -58,7 +65,23 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Technical',
+      label: 'Pandeneigenaren',
+      items: [
+        'pandeneigenaren/overzicht',
+        'pandeneigenaren/verdienmodel',
+        'pandeneigenaren/installatie',
+        'pandeneigenaren/cpo-kiezen',
+        'pandeneigenaren/gemeente-verzekeraar',
+        'pandeneigenaren/vermogensbeheer',
+        'pandeneigenaren/ac-vs-dc-laders',
+        'pandeneigenaren/subsidies',
+        'pandeneigenaren/cpo-roaming-uitgelegd',
+        'pandeneigenaren/toekomst-transport',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Technisch',
       items: [
         'technical/ocpp-overview',
         'technical/iso-15118',
@@ -68,7 +91,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'About',
+      label: 'Over ons',
       items: [
         'about/elaadnl-partnership',
       ],
