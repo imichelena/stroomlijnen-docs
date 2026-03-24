@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Stroomlijnen Knowledge Base',
-  tagline: 'Everything you need to know about electric charging for fleets',
+  tagline: 'Alles over elektrisch laden voor vloten en locaties',
   favicon: 'img/favicon.ico',
 
   future: {
