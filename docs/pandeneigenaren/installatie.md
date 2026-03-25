@@ -33,7 +33,7 @@ Na week 12  Eerste laadsessie — systeem live
 - Aanvraag wordt ingediend bij RVO
 - Let op: de aanvraag moet ingediend zijn vóórdat u kosten maakt
 
-:::waarschuwing
+:::warning
 Teken geen installatieovereenkomst en maak geen kosten voordat de SPRILA-aanvraag is ingediend. Dit is een harde voorwaarde van de subsidie.
 :::
 

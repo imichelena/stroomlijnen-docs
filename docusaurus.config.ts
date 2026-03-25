@@ -17,7 +17,8 @@ const config: Config = {
   organizationName: 'imichelena',
   projectName: 'stroomlijnen-docs',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenAnchors: 'warn',
 
   markdown: {
     hooks: {

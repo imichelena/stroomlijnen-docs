@@ -72,7 +72,7 @@ Ja. RFID-passen zijn gekoppeld aan uw vlootaccount, niet aan een specifiek voert
 Alle nieuwe laders gebruiken **OCPP 2.0.1**. Sommige oudere installaties gebruiken OCPP 1.6-J. Beide worden volledig ondersteund door ons CSMS. Zie [OCPP-overzicht](./technical/ocpp-overview).
 
 ### 19. Ondersteunen jullie slim laden / taakverdeling?
-Ja. Ons CSMS verdeelt het vermogen dynamisch over de laders op elke locatie op basis van netcapaciteit, voertuigprioriteit en optimalisatie op basis van het tijdstip. Zie [OCPP-overzicht → Slim laden](./technical/ocpp-overview#smart-charging).
+Ja. Ons CSMS verdeelt het vermogen dynamisch over de laders op elke locatie op basis van netcapaciteit, voertuigprioriteit en optimalisatie op basis van het tijdstip. Zie [OCPP-overzicht → Slim laden](./technical/ocpp-overview#slim-laden).
 
 ### 20. Kan ik laadgegevens integreren met mijn vlootbeheersysteem?
 Ja. We bieden een REST API met realtime webhooks voor sessiegegevens, voertuigbeheer en facturering. SDK's beschikbaar voor Python, JavaScript en C#. Zie [API & Integratie](./technical/integration).
