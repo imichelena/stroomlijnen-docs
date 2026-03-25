@@ -22,7 +22,7 @@ Na week 12  Eerste laadsessie — systeem live
 ### Week 1–2 — Gesprek en offerte
 
 - Eerste gesprek met Stroomlijnen over uw wensen en locatie
-- Locatieonderzoek: where is the laaddok, wat is uw aansluitcapaciteit, waar loopt de elektrakast?
+- Locatieonderzoek: waar is het laaddok, wat is uw aansluitcapaciteit, waar loopt de elektrakast?
 - Offerte en contractvoorstel
 - Subsidiecheck: kwalificeert uw locatie voor SPRILA?
 
@@ -33,7 +33,7 @@ Na week 12  Eerste laadsessie — systeem live
 - Aanvraag wordt ingediend bij RVO
 - Let op: de aanvraag moet ingediend zijn vóórdat u kosten maakt
 
-:::warning
+:::waarschuwing
 Teken geen installatieovereenkomst en maak geen kosten voordat de SPRILA-aanvraag is ingediend. Dit is een harde voorwaarde van de subsidie.
 :::
 
@@ -73,7 +73,7 @@ De installatie zelf duurt **1 tot 3 werkdagen**:
 
 ## Vereisten voor uw locatie
 
-:::note Minimale vereisten
+:::opmerking Minimale vereisten
 - **3-fase elektra** beschikbaar (standaard in elk theater)
 - **Vrije ruimte** bij laaddok of parkeerplaats voor de paal (minimaal 50×50 cm)
 - **Bereikbare meterkast** voor de installateur
