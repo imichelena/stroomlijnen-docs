@@ -1,109 +1,112 @@
 ---
+---
 sidebar_position: 6
-title: Andere Vrachtwagenmerken — Plug & Charge
-description: Plug & Charge-status en installatieinfo voor Scania, MAN, Renault Trucks, Ford Trucks, IVECO en VW Bedrijfsvoertuigen.
+title: Other Truck Brands — Plug & Charge
+description: Plug & Charge status and installation information for Scania, MAN, Renault Trucks, Ford Trucks, IVECO, and VW Commercial Vehicles.
 keywords: [Scania, MAN, Renault Trucks, IVECO, Plug and Charge, ISO 15118, electric truck]
 ---
 
-# Andere Vrachtwagenmerken — Plug & Charge
+# Other Truck Brands — Plug & Charge
 
-Deze pagina behandelt PnC-installatie voor vrachtwagenmerken die nog geen eigen uitgebreide handleiding hebben. Naarmate de adoptie groeit, splitsen we deze uit in afzonderlijke handleidingen.
+This page covers PnC installation for truck brands that do not yet have their own comprehensive guide. As adoption grows, we will split these out into separate guides.
 
 ## Scania BEV
 
-**Modellen:** R-serie BEV, P-serie BEV
-**PnC-status:** ✅ Ondersteund (firmware 2025.3+)
-**Vlootportaal:** Scania Fleet Management
+**Models:** R-series BEV, P-series BEV
+**PnC status:** ✅ Supported (firmware 2025.3+)
+**Fleet portal:** Scania Fleet Management
 
-### Installatiestappen
+### Installation Steps
 
-1. Log in op [Scania Fleet Management](https://my.scania.com)
-2. Ga naar **Elektrificatie** → **Laaddiensten**
-3. Klik op **Laadpartner toevoegen** → zoek op "Stroomlijnen"
-4. Autoriseer en selecteer voertuigen
-5. Scania pusht certificaten via hun telematicagateway
-6. **Typische installatietijd: 4–12 uur**
+1. Log in to [Scania Fleet Management](https://my.scania.com)
+2. Go to **Electrification** → **Charging services**
+3. Click on **Add charging partner** → search for "Stroomlijnen"
+4. Authorize and select vehicles
+5. Scania pushes certificates via their telematics gateway
+6. **Typical installation time: 4–12 hours**
 
-### Opmerkingen
-- Scania vereist firmwareversie 2025.3 of hoger voor volledige PnC-ondersteuning
-- Oudere firmware ondersteunt ISO 15118-communicatie maar niet de verwerking van contractcertificaten
-- Neem contact op met uw Scania-dealer voor firmware-updates — OTA-updates voor PnC worden geleidelijk uitgerold
-- Het telematicasysteem van Scania gebruikt een aparte mobiele verbinding van het infotainment van het voertuig — zorg dat de telematica-SIM actief is
+### Notes
+- Scania requires firmware version 2025.3 or higher for full PnC support
+- Older firmware supports ISO 15118 communication but not contract certificate processing
+- Contact your Scania dealer for firmware updates — OTA updates for PnC are being rolled out gradually
+- Scania's telematics system uses a separate mobile connection from the vehicle's infotainment — ensure the telematics SIM is active
 
 ## MAN Electric
 
-**Modellen:** eTGX, eTGS, eTGL, eTGM
-**PnC-status:** ✅ Ondersteund op eTGX/eTGS | ⚠️ Wordt uitgerold op eTGL/eTGM
-**Vlootportaal:** RIO-platform
+**Models:** eTGX, eTGS, eTGL, eTGM
+**PnC status:** ✅ Supported on eTGX/eTGS | ⚠️ Being rolled out on eTGL/eTGM
+**Fleet portal:** RIO platform
 
-### Installatiestappen
+### Installation Steps
 
-1. Log in op [RIO](https://rio.cloud)
-2. Navigeer naar **Diensten** → **Laadbeheer**
-3. Klik onder **Externe Laadpartners** op **Partner verbinden**
-4. Zoek **"Stroomlijnen B.V."** en klik op **Autoriseren**
-5. Selecteer voertuigen en bevestig
-6. **Typische installatietijd: 6–24 uur**
+1. Log in to [RIO](https://rio.cloud)
+2. Navigate to **Services** → **Charging management**
+3. Click under **External Charging Partners** on **Connect partner**
+4. Search for **"Stroomlijnen B.V."** and click on **Authorize**
+5. Select vehicles and confirm
+6. **Typical installation time: 6–24 hours**
 
-### Opmerkingen
-- Het RIO-platform is gedeeld door MAN en enkele andere TRATON-merken
-- eTGX en eTGS hebben volledige PnC-ondersteuning sinds eind 2025
-- eTGL en eTGM ontvangen PnC-ondersteuning via gefaseerde firmware-updates gedurende 2026
-- MAN-certificaten gebruiken een hardware security module (HSM) in het voertuig — dit biedt uitstekende beveiliging maar betekent dat certificaten alleen geïnstalleerd kunnen worden wanneer de beveiligingsmodule van de vrachtwagen in "provisioningmodus" staat (eerste 30 minuten na contact aan)
+### Notes
+- The RIO platform is shared by MAN and some other TRATON brands
+- eTGX and eTGS have full PnC support since late 2025
+- eTGL and eTGM are receiving PnC support via phased firmware updates throughout 2026
+- MAN certificates use a hardware security module (HSM) in the vehicle — this provides excellent security but means certificates can only be installed when the truck's security module is in "provisioning mode" (first 30 minutes after contact)
 
 ## Renault Trucks E-Tech
 
-**Modellen:** E-Tech T, E-Tech D, E-Tech Master (bestelwagen)
-**PnC-status:** ⚠️ Komt H1 2026
-**Vlootportaal:** Renault Trucks Fleet Management
+**Models:** E-Tech T, E-Tech D, E-Tech Master (van)
+**PnC status:** ⚠️ Coming H1 2026
+**Fleet portal:** Renault Trucks Fleet Management
 
-### Huidige Status
-- ISO 15118-2-hardware is aanwezig in E-Tech T en E-Tech D
-- PnC-software-activering wordt verwacht via OTA-update in de eerste helft van 2026
-- Renault Trucks voert PnC-interoperabiliteitstests uit met Hubject sinds Q3 2025
-- De E-Tech Master-bestelwagen heeft geen ISO 15118-ondersteuning
+### Current Status
+- ISO 15118-2 hardware is present in E-Tech T and E-Tech D
+- PnC software activation is expected via OTA update in the first half of 2026
+- Renault Trucks is conducting PnC interoperability tests with Hubject since Q3 2025
+- The E-Tech Master van does not have ISO 15118 support
 
-### Wat Nu te Doen
-1. Zorg dat uw vlootportaalaccount is ingesteld met beheerderstoegang
-2. Registreer uw voertuigen in het Stroomlijnen Mijn Vloot-portaal
-3. Gebruik RFID-passen voor laden in de tussentijd
-4. Wij informeren u wanneer PnC beschikbaar wordt voor Renault Trucks
+### What to Do Now
+1. Ensure your fleet portal account is set up with administrator access
+2. Register your vehicles in the Stroomlijnen Fleet Portal
+3. Use RFID passes for charging in the meantime
+4. We will inform you when PnC becomes available for Renault Trucks
 
 ## Ford Trucks
 
-**Modellen:** F-MAX Electric
-**PnC-status:** ❌ Nog niet ondersteund
+**Models:** F-MAX Electric
+**PnC status:** ❌ Not supported yet
 
-### Huidige Status
-- De Ford F-MAX Electric (geproduceerd bij Ford Otosan in Turkije) ondersteunt momenteel geen ISO 15118
-- Ford Otosan heeft ISO 15118-ondersteuning aangekondigd in hun routekaart voor modeljaar 2027
-- Gebruik RFID-passen of de Stroomlijnen-app voor laden
+### Current Status
+- The Ford F-MAX Electric (produced by Ford Otosan in Turkey) currently does not support ISO 15118
+- Ford Otosan has announced ISO 15118 support in their roadmap for model year 2027
+- Use RFID passes or the Stroomlijnen app for charging
 
 ## IVECO
 
-**Modellen:** S-eWay
-**PnC-status:** ⚠️ Aangekondigd voor modellen 2026
+**Models:** S-eWay
+**PnC status:** ⚠️ Announced for 2026 models
 
-### Huidige Status
-- IVECO heeft ISO 15118-2 PnC-ondersteuning aangekondigd voor S-eWay-vrachtwagens van modeljaar 2026
-- Modellen van vóór 2026 beschikken niet over de benodigde ISO 15118-hardware
-- Ombouw is niet beschikbaar — PnC vereist fabriek-geïnstalleerde communicatiemodules
-- Gebruik RFID-passen voor huidige S-eWay-vrachtwagens
+### Current Status
+- IVECO has announced ISO 15118-2 PnC support for S-eWay trucks from model year 2026
+- Pre-2026 models do not have the required ISO 15118 hardware
+- Retrofitting is not available — PnC requires factory-installed communication modules
+- Use RFID passes for current S-eWay trucks
 
-## VW Bedrijfsvoertuigen
+## VW Commercial Vehicles
 
-**Modellen:** ID. Buzz Cargo
-**PnC-status:** ⚠️ Beperkte ondersteuning
+**Models:** ID. Buzz Cargo
+**PnC status:** ⚠️ Limited support
 
-### Huidige Status
-- De ID. Buzz Cargo ondersteunt ISO 15118-2, maar PnC wordt beheerd via het VW We Charge-ecosysteem
-- Cross-provider PnC (Stroomlijnen-certificaten gebruiken met VW-voertuigen) is technisch mogelijk maar vereist aanvullende configuratie
-- Neem contact op met Stroomlijnen-support voor VW-specifieke PnC-configuratie
+### Current Status
+- The ID. Buzz Cargo supports ISO 15118-2, but PnC is managed via the VW We Charge ecosystem
+- Cross-provider PnC (using Stroomlijnen certificates with VW vehicles) is technically possible but requires additional configuration
+- Contact Stroomlijnen support for VW-specific PnC configuration
 
 ---
 
-:::info Uw merk niet gevonden?
-Neem contact op via [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl). We breiden PnC-ondersteuning actief uit naarmate meer OEM's ISO 15118 inschakelen.
+:::info Your brand not found?
+Contact us at [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl). We are actively expanding PnC support as more OEMs enable ISO 15118.
 :::
 
-**Volgende:** [Probleemoplossing →](../troubleshooting)
+**Next:** [Troubleshooting →](../troubleshooting)
+
+---

@@ -1,89 +1,92 @@
 ---
+---
 sidebar_position: 4
-title: Scania BEV — Plug & Charge Instellen
-description: Stapsgewijze handleiding voor het inschakelen van Plug & Charge op Scania R-serie en P-serie BEV-vrachtwagens via Scania Fleet Management.
+title: Scania BEV — Enabling Plug & Charge
+description: Step-by-step guide to enabling Plug & Charge on Scania R-series and P-series BEV trucks via Scania Fleet Management.
 keywords: [Scania, BEV, R-series, P-series, Scania Fleet Management, Plug and Charge, ISO 15118]
 ---
 
-# Scania BEV — Plug & Charge Instellen
+# Scania BEV — Enabling Plug & Charge
 
-De batterij-elektrische vrachtwagens van Scania (R-serie en P-serie BEV) ondersteunen ISO 15118-2 Plug & Charge met firmwareversie 2025.3 of hoger. PnC wordt beheerd via het Scania Fleet Management-portaal.
+Scania's battery-electric trucks (R-series and P-series BEV) support ISO 15118-2 Plug & Charge with firmware version 2025.3 or higher. PnC is managed through the Scania Fleet Management portal.
 
-## Ondersteunde Modellen
+## Supported Models
 
-| Model | Accuopties | Max. DC-laden | PnC Klaar |
+| Model | Battery Options | Max. DC Charging | PnC Ready |
 |-------|-----------|---------------|:---------:|
-| R-serie BEV | Tot 624 kWh | 375 kW (CCS) | ✅ (fw 2025.3+) |
-| P-serie BEV | Tot 416 kWh | 250 kW (CCS) | ✅ (fw 2025.3+) |
+| R-series BEV | Up to 624 kWh | 375 kW (CCS) | ✅ (fw 2025.3+) |
+| P-series BEV | Up to 416 kWh | 250 kW (CCS) | ✅ (fw 2025.3+) |
 
-## Vereisten
+## Requirements
 
-- Scania Fleet Management-account met beheerderstoegang
-- Vrachtwagenfiware versie 2025.3 of hoger
-- Stroomlijnen-vlootaccount met PnC ingeschakeld ([Installatiehandleiding](../setup-guide))
+- Scania Fleet Management account with administrator access
+- Truck firmware version 2025.3 or higher
+- Stroomlijnen fleet account with PnC enabled ([Setup Guide](../setup-guide))
 
-## Stap voor Stap: Scania Fleet Management
+## Step-by-Step: Scania Fleet Management
 
-### 1. Firmware Verifiëren
+### 1. Verify Firmware
 
-1. Log in op [My Scania](https://my.scania.com) (Scania Fleet Management)
-2. Selecteer uw voertuig → **Voertuiginfo** → **Softwareversie**
-3. Bevestig versie 2025.3 of hoger
-4. Als lager, plan een dealerbezoek of controleer op beschikbare OTA-updates onder **Onderhoud** → **Software-updates**
+1. Log in to [My Scania](https://my.scania.com) (Scania Fleet Management)
+2. Select your vehicle → **Vehicle Info** → **Software Version**
+3. Confirm version 2025.3 or higher
+4. If lower, schedule a dealer visit or check for available OTA updates under **Maintenance** → **Software Updates**
 
-### 2. Elektrificatiediensten Inschakelen
+### 2. Enable Electrification Services
 
-1. Ga in Scania Fleet Management naar **Diensten** → **Elektrificatie**
-2. Als dit gedeelte niet zichtbaar is, heeft uw abonnement mogelijk de Elektrificatie-add-on nodig — neem contact op met uw Scania-dealer
-3. Klik op **Laadpartnerbeheer**
+1. Go to Scania Fleet Management → **Services** → **Electrification**
+2. If this section is not visible, your subscription may require the Electrification add-on — contact your Scania dealer
+3. Click on **Charging Partner Management**
 
-### 3. Stroomlijnen Toevoegen
+### 3. Add Stroomlijnen
 
-1. Klik op **Partner toevoegen**
-2. Zoek op **"Stroomlijnen B.V."** of voer eMSP-ID `NL-STM` in
-3. Klik op **Verbinden**
-4. Bekijk en accepteer de gegevensdelingsovereenkomst (voertuigidentificatie voor certificaatkoppeling)
-5. Klik op **Bevestigen**
+1. Click on **Add Partner**
+2. Search for **"Stroomlijnen B.V."** or enter eMSP ID `NL-STM`
+3. Click on **Connect**
+4. Review and accept the data sharing agreement (vehicle identification for certificate linking)
+5. Click on **Confirm**
 
-### 4. Voertuigen Toewijzen
+### 4. Assign Vehicles
 
-1. Klik na het verbinden van Stroomlijnen op **Voertuigen beheren**
-2. Selecteer de vrachtwagens waarvoor PnC ingeschakeld moet worden
-3. Klik op **Toepassen**
+1. After connecting Stroomlijnen, click on **Manage Vehicles**
+2. Select the trucks for which PnC should be enabled
+3. Click on **Apply**
 
-### 5. Certificaatinstallatie
+### 5. Certificate Installation
 
-- De telematicagateway van Scania pusht het contractcertificaat naar het voertuig
-- De vrachtwagen moet online zijn (contact aan of aangesloten op lader)
-- **Typische installatietijd: 4–12 uur**
-- Volg de voortgang in Scania Fleet Management → Elektrificatie → Certificaatstatus
+- Scania's telematics gateway pushes the contract certificate to the vehicle
+- The truck must be online (ignition on or connected to a charger)
+- **Typical installation time: 4–12 hours**
+- Follow progress in Scania Fleet Management → Electrification → Certificate Status
 
-### 6. Verifieer
+### 6. Verify
 
-1. Controleer de status in zowel Scania Fleet Management als Stroomlijnen Mijn Vloot
-2. Plug in bij een Stroomlijnen-lader om te testen
-3. Automatische authenticatie zou binnen 5–10 seconden voltooid moeten zijn
+1. Check status in both Scania Fleet Management and Stroomlijnen Mijn Vloot
+2. Plug in at a Stroomlijnen charger to test
+3. Automatic authentication should complete within 5–10 seconds
 
-## Belangrijke Opmerkingen
+## Important Notes
 
-### Telematica-SIM
-Scania-vrachtwagens hebben een aparte telematicamodule met een eigen mobiele verbinding (onafhankelijk van het infotainmentsysteem). Zorg dat het telematica-SIM-abonnement actief is — certificaatlevering is afhankelijk van deze verbinding, niet van de WiFi van de vrachtwagen.
+### Telematics SIM
+Scania trucks have a separate telematics module with its own mobile connection (independent of the infotainment system). Ensure the telematics SIM subscription is active — certificate delivery depends on this connection, not the truck's WiFi.
 
-### Firmware-updates
-Scania rolt PnC-gerelateerde firmware-updates geleidelijk per regio uit. Als uw vrachtwagen firmware 2025.2 of eerder heeft, is de PnC-update mogelijk nog niet beschikbaar via OTA. Uw dealer kan het handmatig installeren.
+### Firmware Updates
+Scania rolls out PnC-related firmware updates gradually per region. If your truck has firmware 2025.2 or earlier, the PnC update may not be available via OTA yet. Your dealer can install it manually.
 
-### Meerdere Vloten
-Als uw vrachtwagens zijn geregistreerd bij meerdere Scania Fleet Management-accounts (bijv. na overnames), moet elk account Stroomlijnen afzonderlijk autoriseren.
+### Multiple Fleets
+If your trucks are registered with multiple Scania Fleet Management accounts (e.g., after takeovers), each account must authorize Stroomlijnen separately.
 
-## Probleemoplossing
+## Troubleshooting
 
-| Probleem | Oplossing |
+| Issue | Solution |
 |---------|----------|
-| "Elektrificatie" niet in menu | Abonnement heeft mogelijk upgrade nodig — neem contact op met Scania-dealer |
-| Certificaat vastzit op "In behandeling" | Verifieer dat vrachtwagen online is, telematica-SIM actief, firmware ≥ 2025.3 |
-| PnC mislukt bij lader | Herstart vrachtwagen (volledige contactcyclus), probeer opnieuw. Controleer certificaatstatus. |
-| "Partner niet gevonden" bij zoeken | Zorg dat u zoekt met de juiste naam of code (NL-STM) |
+| "Electrification" not in menu | Subscription may require upgrade — contact Scania dealer |
+| Certificate stuck on "In Progress" | Verify truck is online, telematics SIM active, firmware ≥ 2025.3 |
+| PnC fails at charger | Restart truck (full ignition cycle), try again. Check certificate status. |
+| "Partner not found" when searching | Ensure you search with the correct name or code (NL-STM) |
 
 ---
 
-**Volgende:** [MAN Instellen →](./man)
+**Next:** [MAN Setup →](./man)
+
+---

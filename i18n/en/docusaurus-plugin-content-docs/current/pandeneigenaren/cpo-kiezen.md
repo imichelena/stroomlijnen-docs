@@ -1,88 +1,89 @@
 ---
+---
 sidebar_position: 4
-title: Een CPO kiezen
-description: Checklist en aandachtspunten bij het kiezen van een Charge Point Operator voor uw locatie.
-keywords: [CPO kiezen, OCPP, roaming, laadpaal beheer, contractvorm, vendor lock-in]
+title: Choosing a CPO
+description: Checklist and key considerations when selecting a Charge Point Operator for your location.
+keywords: [CPO selection, OCPP, roaming, charge point management, contract type, vendor lock-in]
 ---
 
-# Een CPO kiezen
+# Choosing a CPO
 
-Een **CPO (Charge Point Operator)** beheert uw laadpunt operationeel: autorisatie van gebruikers, facturering, monitoring en storingsdienst. U sluit een contract af voor doorgaans 5 tot 10 jaar — een weloverwogen keuze is dus belangrijk.
+A **CPO (Charge Point Operator)** manages your charging point operationally: user authorization, billing, monitoring, and maintenance services. You enter into a contract for typically 5 to 10 years — making a well-considered choice crucial.
 
-## Wat doet een CPO precies?
+## What does a CPO do exactly?
 
-| Taak | Uitleg |
+| Task | Explanation |
 |---|---|
-| **Autorisatie** | Controleert of een gebruiker mag laden (via laadpas, QR of Plug & Charge) |
-| **Meting** | Registreert exact hoeveel kWh er per sessie is geladen |
-| **Facturering** | Factureert de gebruiker en verrekent uw aandeel |
-| **Monitoring** | Houdt de status van de laadpaal bij (online, storing, in gebruik) |
-| **Storingsdienst** | Lost technische problemen op — op afstand of ter plaatse |
-| **Rapportage** | Levert u maandelijks een overzicht van sessies en opbrengsten |
+| **Authorization** | Checks if a user is allowed to charge (via charging card, QR code, or Plug & Charge) |
+| **Metering** | Records the exact amount of kWh charged per session |
+| **Billing** | Bills the user and settles your share |
+| **Monitoring** | Tracks the status of the charging point (online, offline, in use) |
+| **Maintenance** | Resolves technical issues — remotely or on-site |
+| **Reporting** | Provides you with a monthly overview of sessions and revenue |
 
-## Checklist bij het kiezen van een CPO
+## Checklist for choosing a CPO
 
-### ✅ Open standaard (OCPP)
+### Open standard (OCPP)
 
-Zorg dat uw laadpunt communiceert via **OCPP 2.0.1** (Open Charge Point Protocol). Dit voorkomt vendor lock-in: u kunt van CPO wisselen zonder de hardware te vervangen.
+Ensure your charging point communicates via **OCPP 2.0.1** (Open Charge Point Protocol). This prevents vendor lock-in: you can switch CPOs without replacing the hardware.
 
-**Vraag aan de CPO:** "Is uw systeem OCPP-compliant en kan ik de paal later aan een andere backoffice koppelen?"
-
----
-
-### ✅ Roaming
-
-Controleer of de CPO is aangesloten op roaming-netwerken (OCPI). Zo kunnen chauffeurs met élke Nederlandse of Europese laadpas bij uw laadpunt terecht — niet alleen klanten van één aanbieder.
-
-**Vraag:** "Welke roaming-netwerken zijn aangesloten? Werkt mijn paal met Vattenfall, Shell Recharge, Allego en andere grote aanbieders?"
+**Ask the CPO:** "Is your system OCPP-compliant, and can I connect the charging point to a different backoffice later?"
 
 ---
 
-### ✅ Eigenaarsdashboard
+### Roaming
 
-U moet als eigenaar kunnen zien hoeveel er is geladen, wanneer, door wie (anoniem), en wat u heeft verdiend.
+Check if the CPO is connected to roaming networks (OCPI). This allows drivers with any Dutch or European charging card to use your charging point — not just customers of one provider.
 
-**Vraag:** "Heeft u een eigenaarsdashboard? Kan ik real-time sessiedata inzien?"
-
----
-
-### ✅ Storingsdienst en responstijd
-
-Zeker voor vrachtwagens die 's nachts laden is beschikbaarheid kritisch. Wie handelt een storing af, en hoe snel?
-
-**Vraag:** "Wat is uw gemiddelde responstijd bij een storing? Hebben jullie een 24/7 storingslijn?"
+**Ask:** "Which roaming networks are connected? Does my charging point work with Vattenfall, Shell Recharge, Allego, and other major providers?"
 
 ---
 
-### ✅ Contractvorm en eigendomsvraag
+### Owner dashboard
 
-- Huur, koop of lease? Wie is eigenaar van de hardware na afloop?
-- Wat zijn de opzegtermijnen?
-- Wat gebeurt er als de CPO failliet gaat?
+As the owner, you should be able to see how much has been charged, when, by whom (anonymously), and what you've earned.
 
-**Vraag:** "Als ik het contract beëindig, kan ik de hardware dan meenemen of overzetten naar een andere CPO?"
+**Ask:** "Do you have an owner dashboard? Can I view real-time session data?"
 
 ---
 
-### ✅ Subsidieondersteuning
+### Maintenance and response time
 
-Helpt de CPO met de SPRILA-aanvraag, of laat u dat zelf uitzoeken?
+Especially for trucks that charge at night, availability is critical. Who handles maintenance issues, and how quickly?
+
+**Ask:** "What is your average response time in case of a fault? Do you have a 24/7 maintenance hotline?"
 
 ---
 
-## Vragen om aan iedere CPO te stellen
+### Contract type and ownership
 
-1. Is uw systeem OCPP 2.0.1 compliant?
-2. Welke roaming-netwerken zijn aangesloten?
-3. Kan ik de paal later overzetten naar een andere backoffice?
-4. Wie is eigenaar van de hardware — u of ik?
-5. Wat zijn de opzegtermijnen en contractduur?
-6. Helpt u bij de SPRILA-subsidieaanvraag?
-7. Wat is uw SLA voor storingen (responstijd, beschikbaarheidsgarantie)?
-8. Heeft u referenties van vergelijkbare locaties (theaters, culturele instellingen)?
+- Rental, purchase, or lease? Who owns the hardware after the contract ends?
+- What are the notice periods?
+- What happens if the CPO goes bankrupt?
+
+**Ask:** "If I terminate the contract, can I take the hardware with me or transfer it to another CPO?"
+
+---
+
+### Subsidy support
+
+Does the CPO assist with the SPRILA application, or do you need to figure it out yourself?
+
+---
+
+## Questions to ask every CPO
+
+1. Is your system OCPP 2.0.1 compliant?
+2. Which roaming networks are connected?
+3. Can I transfer the charging point to a different backoffice later?
+4. Who owns the hardware — you or me?
+5. What are the notice periods and contract duration?
+6. Do you assist with the SPRILA subsidy application?
+7. What is your SLA for maintenance (response time, availability guarantee)?
+8. Do you have references from similar locations (theaters, cultural institutions)?
 
 ---
 
 :::note
-\* Stroomlijnen biedt een specifiek pakket voor culturele locaties, inclusief SPRILA-begeleiding, een cultureel tarief, dynamische vermogenssturing op basis van uw gecontracteerd vermogen, en een eigen versleuteld netwerk zonder internetkoppeling van de hardware aan externe servers. Het systeem draait ook door bij internetuitval. Meer informatie: [stroomlijnen.nl](https://stroomlijnen.nl)
+\* Stroomlijnen offers a specific package for cultural locations, including SPRILA support, a cultural rate, dynamic power management based on your contracted capacity, and an encrypted network without internet connection to external servers. The system also continues to operate during internet outages. More information: [stroomlijnen.nl](https://stroomlijnen.nl)
 :::

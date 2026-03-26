@@ -1,83 +1,85 @@
 ---
+---
 sidebar_position: 3
-title: Van beslissing tot eerste laadsessie
-description: Tijdlijn en uitleg van het installatieproces — van eerste gesprek tot operationele laadpaal.
-keywords: [installatie laadpaal, tijdlijn, SPRILA aanvraag, vergunning, CPO]
+title: From Decision to First Charging Session
+description: Timeline and explanation of the installation process — from initial consultation to operational charging station.
+keywords: [charging station installation, timeline, SPRILA application, permit, CPO]
 ---
 
-# Van beslissing tot eerste laadsessie
+# From Decision to First Charging Session
 
-Van het eerste gesprek tot een volledig operationele laadpaal duurt gemiddeld **8 tot 12 weken**. Hieronder vindt u een overzicht van het proces.
+From the initial consultation to a fully operational charging station, it takes an average of **8 to 12 weeks**. Below is an overview of the process.
 
-## Tijdlijn
+## Timeline
 
 ```
-Week 1–2    Gesprek, locatieonderzoek, offerte
-Week 3–6    SPRILA subsidieaanvraag (parallel mogelijk)
-Week 4–8    Vergunning (indien vereist)
-Week 8–12   Installatie (1–3 werkdagen)
-Na week 12  Eerste laadsessie — systeem live
+Week 1–2    Consultation, site investigation, quote
+Week 3–6    SPRILA subsidy application (possible in parallel)
+Week 4–8    Permit (if required)
+Week 8–12   Installation (1–3 working days)
+After week 12  First charging session — system live
 ```
 
-### Week 1–2 — Gesprek en offerte
+### Week 1–2 — Consultation and Quote
 
-- Eerste gesprek met Stroomlijnen over uw wensen en locatie
-- Locatieonderzoek: waar is het laaddok, wat is uw aansluitcapaciteit, waar loopt de elektrakast?
-- Offerte en contractvoorstel
-- Subsidiecheck: kwalificeert uw locatie voor SPRILA?
+- Initial consultation with Stroomlijnen about your wishes and location
+- Site investigation: where is the charging dock, what is your connection capacity, where is the electrical cabinet?
+- Quote and contract proposal
+- Subsidy check: does your location qualify for SPRILA?
 
-### Week 3–6 — SPRILA subsidieaanvraag
+### Week 3–6 — SPRILA Subsidy Application
 
-- Stroomlijnen bereidt de aanvraag voor
-- U tekent de benodigde documenten
-- Aanvraag wordt ingediend bij RVO
-- Let op: de aanvraag moet ingediend zijn vóórdat u kosten maakt
+- Stroomlijnen prepares the application
+- You sign the necessary documents
+- Application is submitted to RVO
+- Note: the application must be submitted before you incur costs
 
 :::warning
-Teken geen installatieovereenkomst en maak geen kosten voordat de SPRILA-aanvraag is ingediend. Dit is een harde voorwaarde van de subsidie.
+Do not sign an installation agreement and do not incur costs until the SPRILA application has been submitted. This is a strict condition of the subsidy.
 :::
 
-### Week 4–8 — Vergunning
+### Week 4–8 — Permit
 
-Afhankelijk van uw situatie kan een vergunning nodig zijn:
+Depending on your situation, a permit may be required:
 
-- **Omgevingsvergunning** (bij buiteninstallatie of wijziging gevel)
-- **Toestemming gebouweigenaar** (indien u huurder bent — doorgaans de gemeente)
-- **Intern akkoord** (bestuur, technische dienst)
+- **Environmental permit** (for outdoor installation or modification of facade)
+- **Building owner's permission** (if you are a tenant — usually the municipality)
+- **Internal agreement** (management, technical department)
 
-In veel gevallen is geen vergunning vereist voor een laadpaal bij een bestaand laaddok.
+In many cases, no permit is required for a charging station at an existing charging dock.
 
-### Week 8–12 — Installatie
+### Week 8–12 — Installation
 
-De installatie zelf duurt **1 tot 3 werkdagen**:
+The installation itself takes **1 to 3 working days**:
 
-1. Elektrotechnisch werk: kabelgoot, extra groep in meterkast
-2. Montage laadpaal
-3. Aansluiting op beheersysteem (backoffice configuratie)
-4. Testlaadsessie en oplevering
+1. Electrical work: cable duct, extra group in meter cabinet
+2. Charging station assembly
+3. Connection to management system (backoffice configuration)
+4. Test charging session and handover
 
-## Wat er fysiek komt
+## What is Physically Installed
 
-| Onderdeel | Omschrijving |
+| Component | Description |
 |---|---|
-| **Laadpaal** | Standaard met connector(s), display en RFID-lezer |
-| **Bekabeling** | Van meterkast naar laadpaal, ondergronds of via kabelgoot |
-| **Lastmanagementsysteem** | Optioneel — voorkomt overschrijding gecontracteerd vermogen |
-| **Aansluitpunt (stopcontact)** | Enkel nodig als er geen geschikte groep beschikbaar is |
+| **Charging Station** | Standard with connector(s), display, and RFID reader |
+| **Cabling** | From meter cabinet to charging station, underground or via cable duct |
+| **Load Management System** | Optional — prevents exceeding contracted power |
+| **Connection Point (Socket)** | Only necessary if no suitable group is available |
 
-## Wat er digitaal achter zit
+## What is Behind it Digitally
 
-- **Backoffice** — beheersysteem dat autorisatie, meting en facturering regelt
-- **Eigenaarsdashboard** — u ziet real-time hoeveel er is geladen en wat u verdient
-- **Chauffeurszijde** — betalen via laadpas, QR-code of app; geen sleutels, geen kassa
+- **Backoffice** — management system that regulates authorization, measurement, and billing
+- **Owner's Dashboard** — you see in real-time how much has been charged and what you earn
+- **Driver's Side** — payment via charging card, QR code, or app; no keys, no cash register
 
-## Vereisten voor uw locatie
+## Requirements for Your Location
 
-:::opmerking Minimale vereisten
-- **3-fase elektra** beschikbaar (standaard in elk theater)
-- **Vrije ruimte** bij laaddok of parkeerplaats voor de paal (minimaal 50×50 cm)
-- **Bereikbare meterkast** voor de installateur
-- **Toegankelijkheid** voor vrachtwagens (vrije rijhoogte ≥4,0 m, wentelruimte)
+:::note Minimum requirements
+- **Three-phase electricity** available (standard in every theater)
+- **Free space** at the charging dock or parking lot for the pole (at least 50×50 cm)
+- **Accessible meter cabinet** for the installer
+- **Accessibility** for trucks (free height ≥4.0 m, turning space)
 :::
 
-Twijfelt u of uw locatie geschikt is? Stroomlijnen voert een gratis locatiecheck uit tijdens het eerste gesprek.
+Are you unsure if your location is suitable? Stroomlijnen performs a free site check during the initial consultation.
+---

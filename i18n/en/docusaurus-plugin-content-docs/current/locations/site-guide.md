@@ -1,93 +1,96 @@
 ---
+---
 sidebar_position: 2
-title: Locatiegids
-description: Wat u kunt verwachten op een Stroomlijnen-laadlocatie — indeling, apparatuur, veiligheidsinformatie en voorzieningen voor bestuurders.
+title: Location Guide
+description: What to expect at a Stroomlijnen charging location — layout, equipment, safety information, and amenities for drivers.
 keywords: [charging site, site layout, charger equipment, driver amenities, safety]
 ---
 
-# Locatiegids
+# Location Guide
 
-Deze gids beschrijft wat u aantreft op een typische Stroomlijnen-laadlocatie en hoe u er uw weg vindt.
+This guide describes what you'll find at a typical Stroomlijnen charging location and how to navigate it.
 
-## Aankomst op een Locatie
+## Arriving at a Location
 
-### Bewegwijzering
-Let op de blauwe Stroomlijnen-borden bij de ingang. EV-laadvakken zijn gemarkeerd met:
-- Vloermarkering (blauwe lijnen of geschilderde EV-symbolen)
-- Vaknummerborden (overeenkomend met de EVSE-ID's in de app)
-- Richtingspijlen voor doorrijvakken
+### Signage
+Look for the blue Stroomlijnen signs at the entrance. EV charging bays are marked with:
+- Floor markings (blue lines or painted EV symbols)
+- Bay number signs (matching the EVSE IDs in the app)
+- Directional arrows for drive-through bays
 
-### Parkeren
-- **Vrachtwagenvakken** zijn duidelijk gescheiden van personenautovakken
-- Doorrijopstellingen waar mogelijk — geen achteruitrijden nodig
-- Als de locatie een slagboom of hek heeft, gebruik uw RFID-pas of app om binnen te komen
+### Parking
+- **Truck bays** are clearly separated from car bays
+- Drive-through setups where possible — no reversing required
+- If the location has a gate or barrier, use your RFID pass or app to enter
 
-## Laderuitrusting
+## Charger Equipment
 
-### DC-snelladers
-Onze primaire laders voor bedrijfsvoertuigen:
-- **Vermogen:** 150 kW – 400 kW per connector
-- **Connector:** CCS Combo 2 (Europese standaard)
-- **Kabel:** Vloeistofgekoeld, 5m+ bereik
-- **Display:** Touchscreen met sessiestatus, vermogen, energie, SoC
+### DC Fast Chargers
+Our primary chargers for commercial vehicles:
+- **Power:** 150 kW – 400 kW per connector
+- **Connector:** CCS Combo 2 (European standard)
+- **Cable:** Liquid-cooled, 5m+ reach
+- **Display:** Touchscreen with session status, power, energy, SoC
 
-### Hoe Aan te Sluiten
+### How to Connect
 
-1. **Parkeer** in het aangewezen EV-vak, bestuurderskant naar de lader
-2. **Open** de CCS-laadklep van het voertuig
-3. **Til** de CCS-connector uit de houder van de lader
-4. **Steek** stevig in de CCS-aansluiting van het voertuig totdat u de klik hoort/voelt
-5. **Authenticeer** — PnC start automatisch; voor RFID, tik uw pas op de lezer; voor de app, scan de QR-code
-6. **Wacht** tot het laderdisplay "Laden..." toont met oplopende kW
+1. **Park** in the designated EV bay, driver's side towards the charger
+2. **Open** the CCS charge port on the vehicle
+3. **Lift** the CCS connector out of the charger's holder
+4. **Plug** firmly into the CCS inlet on the vehicle until you hear/feel the click
+5. **Authenticate** — PnC starts automatically; for RFID, tap your pass on the reader; for the app, scan the QR code
+6. **Wait** until the charger display shows "Charging..." with increasing kW
 
-### Ontkoppelen
+### Disconnecting
 
-1. **Stop** de sessie — tik RFID-pas opnieuw, druk op Stop in de app, of gebruik de stopknop op de lader
-2. **Wacht** tot de lader bevestigt dat de sessie is beëindigd en de connector ontgrendeld is
-3. **Verwijder** de CCS-connector en hang hem terug in de houder
-4. **Sluit** de laadklep van het voertuig
-5. **Verlaat** het vak zodat het vrij is voor andere voertuigen
+1. **Stop** the session — tap RFID pass again, press Stop in the app, or use the stop button on the charger
+2. **Wait** until the charger confirms the session has ended and the connector is unlocked
+3. **Remove** the CCS connector and hang it back in the holder
+4. **Close** the charge port on the vehicle
+5. **Leave** the bay so it's free for other vehicles
 
 :::caution
-Forceer de CCS-connector nooit terwijl de sessie actief is. De connector vergrendelt tijdens het laden voor de veiligheid. Stop altijd eerst de sessie.
+Never force the CCS connector while the session is active. The connector locks during charging for safety. Always stop the session first.
 :::
 
-## Veiligheidsinformatie
+## Safety Information
 
-- **Noodstop** — Rode knop op elke lader, schakelt direct de stroom uit
-- **Brandblusser** — Aanwezig op elke locatie, geschikt voor elektrische branden
-- **Alarmnummer** — Vermeld op elke lader, plus standaard 112
-- **Niet roken** — Het gehele laadgebied is een rookvrije zone
-- **Blijf in het voertuig of de wachtruimte** tijdens onweer
+- **Emergency Stop** — Red button on each charger, directly cuts power
+- **Fire Extinguisher** — Present at every location, suitable for electrical fires
+- **Emergency Number** — Listed on each charger, plus standard 112
+- **No Smoking** — The entire charging area is a smoke-free zone
+- **Stay in the vehicle or waiting area** during thunderstorms
 
-### Kabelveiligheid
-- Laad niet met een zichtbaar beschadigde kabel — meld dit via de app of bel de ondersteuning
-- Houd het laadgebied vrij van struikelgevaar
-- Rij niet over laadkabels
+### Cable Safety
+- Don't charge with a visibly damaged cable — report via the app or call support
+- Keep the charging area clear of tripping hazards
+- Don't drive over charging cables
 
-## Voorzieningen voor Bestuurders
+## Driver Amenities
 
-Voorzieningen variëren per locatietype:
+Amenities vary by location type:
 
-### Theaterlocaties
-- Café of restaurant vaak op de locatie of op loopafstand
-- Openbaar WiFi beschikbaar op de meeste theaterlocaties
-- Openbare toiletten tijdens openingstijden van het theater
+### Theater Locations
+- Café or restaurant often on-site or within walking distance
+- Public WiFi available at most theater locations
+- Public toilets during theater opening hours
 
-### Logistieke Hubs
-- Rustruimten voor bestuurders met zitgelegenheid
-- Toiletten
-- Automaten of eetgelegenheden in de buurt
+### Logistics Hubs
+- Driver rest areas with seating
+- Toilets
+- Vending machines or eating establishments nearby
 
-### Alle Locaties
-- Gratis WiFi (netwerk: "Stroomlijnen-Guest")
-- Overdekte looproute waar mogelijk
-- 24/7 goed verlicht
+### All Locations
+- Free WiFi (network: "Stroomlijnen-Guest")
+- Covered walkway where possible
+- 24/7 good lighting
 
-## Problemen Melden
+## Reporting Issues
 
-Als er iets niet klopt op een locatie:
-- **Laderstoring** — Meld via de app (Help → Probleem melden) of bel het ondersteuningsnummer op de lader
-- **Veiligheidsprobleem** — Gebruik de noodstopknop als het urgent is, bel daarna de ondersteuning
-- **Netheid/toegang** — Meld via de app
-- **Verbetervoorstel** — E-mail [feedback@stroomlijnen.nl](mailto:feedback@stroomlijnen.nl)
+If something's not right at a location:
+- **Charger issue** — Report via the app (Help → Report Issue) or call the support number on the charger
+- **Safety concern** — Use the emergency stop button if urgent, then call support
+- **Cleanliness/access** — Report via the app
+- **Improvement suggestion** — Email [feedback@stroomlijnen.nl](mailto:feedback@stroomlijnen.nl)
+
+---

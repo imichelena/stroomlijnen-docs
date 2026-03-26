@@ -1,109 +1,112 @@
 ---
+---
 sidebar_position: 10
-title: CPO, eMSP en roaming uitgelegd
-description: Wat zijn CPO's en eMSP's, hoe werkt roaming tussen laadnetwerken, en welke protocollen worden gebruikt?
-keywords: [CPO, eMSP, roaming, OCPI, OCPP, laadnetwerk, interoperabiliteit, laadpas]
+title: CPO, eMSP, and Roaming Explained
+description: What are CPOs and eMSPs, how does roaming between charging networks work, and which protocols are used?
+keywords: [CPO, eMSP, roaming, OCPI, OCPP, charging network, interoperability, charging pass]
 ---
 
-# CPO, eMSP en roaming uitgelegd
+# CPO, eMSP, and Roaming Explained
 
-De wereld van elektrisch laden heeft een eigen jargon. Deze pagina legt de belangrijkste begrippen en rollen uit.
+The world of electric vehicle charging has its own jargon. This page explains the key concepts and roles.
 
-## De twee rollen in het laadecosysteem
+## The Two Roles in the Charging Ecosystem
 
 ### CPO — Charge Point Operator
 
-Een **CPO** beheert de fysieke laadinfrastructuur. De CPO is verantwoordelijk voor:
+A **CPO** manages the physical charging infrastructure. The CPO is responsible for:
 
-- Installatie en onderhoud van laadpalen
-- Communicatie tussen laadpaal en backoffice (via OCPP)
-- Autorisatie van laadsessies
-- Meting en facturering van geleverde energie
-- Storingsdienst en monitoring
+- Installation and maintenance of charging stations
+- Communication between charging station and backoffice (via OCPP)
+- Authorization of charging sessions
+- Measurement and billing of delivered energy
+- Breakdown service and monitoring
 
-Een CPO exploiteert laadpunten op een of meer locaties. Als pandeneigenaar heeft u een contract met een CPO.
+A CPO operates charging points at one or more locations. As a property owner, you have a contract with a CPO.
 
 ---
 
 ### eMSP — e-Mobility Service Provider
 
-Een **eMSP** levert diensten aan de eindgebruiker (chauffeur/vlootbeheerder):
+An **eMSP** provides services to the end-user (driver/fleet manager):
 
-- Uitgifte van laadpassen (RFID) of apps
-- Roaming-toegang tot laadpunten van verschillende CPO's
-- Maandelijkse factuur voor alle laadsessies
-- Klantenservice
+- Issuance of charging passes (RFID) or apps
+- Roaming access to charging points from different CPOs
+- Monthly billing for all charging sessions
+- Customer service
 
-Een vlootbeheerder heeft een contract met een eMSP. Zijn chauffeurs kunnen dan laden bij alle laadpunten die via roaming zijn aangesloten.
+A fleet manager has a contract with an eMSP. Their drivers can then charge at all charging points connected via roaming.
 
-:::note Een bedrijf kan beide rollen hebben
-Sommige aanbieders zijn zowel CPO als eMSP. Dat betekent dat zij zowel laadpunten beheren als laadpassen uitgeven. Voorbeelden: Vattenfall, Shell Recharge, Allego, Eneco.
+:::note A company can have both roles
+Some providers are both CPO and eMSP. This means they manage charging points and issue charging passes. Examples: Vattenfall, Shell Recharge, Allego, Eneco.
 :::
 
 ---
 
-## OCPP — het protocol tussen laadpaal en backoffice
+## OCPP — the Protocol between Charging Station and Backoffice
 
-**OCPP (Open Charge Point Protocol)** is de internationale open standaard voor communicatie tussen een laadpaal en het beheersysteem (backoffice) van de CPO.
+**OCPP (Open Charge Point Protocol)** is the international open standard for communication between a charging station and the CPO's backoffice system.
 
-| Versie | Status | Kenmerken |
+| Version | Status | Features |
 |---|---|---|
-| OCPP 1.6 | Wijdverbreid, oudere installaties | Basis functionaliteit |
-| OCPP 2.0.1 | Huidige standaard | Smart charging, V2G, betere beveiliging |
-| OCPP 2.1 | In ontwikkeling | MCS, uitgebreidere V2G |
+| OCPP 1.6 | Widely used, older installations | Basic functionality |
+| OCPP 2.0.1 | Current standard | Smart charging, V2G, improved security |
+| OCPP 2.1 | In development | MCS, extended V2G |
 
-**Waarom OCPP belangrijk is voor pandeneigenaren:** Een laadpaal die OCPP ondersteunt, is niet gebonden aan één CPO. U kunt van CPO wisselen zonder de hardware te vervangen.
+**Why OCPP is important for property owners:** A charging station that supports OCPP is not tied to a single CPO. You can switch CPOs without replacing the hardware.
 
 ---
 
-## OCPI — het protocol voor roaming
+## OCPI — the Protocol for Roaming
 
-**OCPI (Open Charge Point Interface)** is het protocol waarmee CPO's en eMSP's onderling communiceren. Het maakt roaming mogelijk: een chauffeur met een pas van eMSP A kan laden bij een laadpunt van CPO B, en beide partijen verrekenen de sessie automatisch.
+**OCPI (Open Charge Point Interface)** is the protocol used for communication between CPOs and eMSPs. It enables roaming: a driver with an eMSP A pass can charge at a CPO B charging point, and both parties automatically settle the session.
 
 ```
-Chauffeur (eMSP A-pas)
+Driver (eMSP A pass)
         ↓
-Laadpaal (CPO B)
-        ↓ OCPI-koppeling
+Charging station (CPO B)
+        ↓ OCPI connection
 Backoffice CPO B → Backoffice eMSP A
         ↓
-Factuur naar vlootbeheerder
+Invoice to fleet manager
 ```
 
-Hoe meer CPO's en eMSP's via OCPI zijn gekoppeld, hoe groter het netwerk waar een chauffeur toegang toe heeft.
+The more CPOs and eMSPs connected via OCPI, the larger the network a driver has access to.
 
 ---
 
-## Roaming in de praktijk
+## Roaming in Practice
 
-In Nederland zijn de meeste grote CPO's via roaming-hubs verbonden. De grootste hubs zijn:
+In the Netherlands, most major CPOs are connected via roaming hubs. The largest hubs are:
 
-| Hub | Rol |
+| Hub | Role |
 |---|---|
-| **Gireve** | Europese roaming-hub, veel grote netwerken |
+| **Gireve** | European roaming hub, many large networks |
 | **Hubject** | Plug & Charge roaming (ISO 15118) |
-| **e-Laad** | Nederlandse netbeheerders (Nuon, Stedin etc.) |
+| **e-Laad** | Dutch grid operators (Nuon, Stedin etc.) |
 
-Een laadpas van een Nederlandse eMSP werkt doorgaans op 300.000+ laadpunten in Europa via deze hubs.
-
----
-
-## Wat betekent dit voor u als pandeneigenaar?
-
-Als u een laadpunt laat installeren door een CPO die is aangesloten op roaming-netwerken, kunnen **alle chauffeurs met een geldige laadpas** bij uw paal laden — niet alleen klanten van die ene CPO.
-
-**Vraag bij selectie van een CPO:**
-- "Via welke roaming-netwerken zijn uw laadpunten bereikbaar?"
-- "Werken laadpassen van Vattenfall, Shell Recharge en Allego bij uw palen?"
+A charging pass from a Dutch eMSP usually works on 300,000+ charging points in Europe via these hubs.
 
 ---
 
-## Relevante bronnen
+## What Does This Mean for You as a Property Owner?
 
-| Organisatie | Link |
+If you have a charging point installed by a CPO connected to roaming networks, **all drivers with a valid charging pass** can charge at your station — not just customers of that one CPO.
+
+**Ask when selecting a CPO:**
+- "Which roaming networks are your charging points accessible through?"
+- "Do Vattenfall, Shell Recharge, and Allego charging passes work at your stations?"
+
+---
+
+## Relevant Resources
+
+| Organization | Link |
 |---|---|
 | Open Charge Alliance (OCPP/OCPI) | [openchargealliance.org](https://openchargealliance.org) |
-| ElaadNL (technische standaarden NL) | [elaadnl.nl](https://elaadnl.nl) |
+| ElaadNL (technical standards NL) | [elaadnl.nl](https://elaadnl.nl) |
 | Gireve (roaming hub) | [gireve.com](https://gireve.com) |
 | Hubject (Plug & Charge) | [hubject.com](https://hubject.com) |
-| NAL (Nationale Agenda Laadinfrastructuur) | [agendalaadinfrastructuur.nl](https://agendalaadinfrastructuur.nl) |
+| NAL (National Agenda Charging Infrastructure) | [agendalaadinfrastructuur.nl](https://agendalaadinfrastructuur.nl) |
+
+---

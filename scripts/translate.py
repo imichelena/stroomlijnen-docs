@@ -15,7 +15,7 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 
-OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
+OLLAMA_URL = "http://100.84.44.71:11434/api/generate"
 MODEL = "llama3.3:70b-36k"
 
 LOCALES = {
@@ -28,6 +28,7 @@ LOCALES = {
     "pl": "Polish",
     "sv": "Swedish",
     "da": "Danish",
+    "en": "English",
 }
 
 BASE_DIR = Path(__file__).resolve().parent.parent

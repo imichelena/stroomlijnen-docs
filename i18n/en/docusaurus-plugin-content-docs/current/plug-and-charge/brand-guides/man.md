@@ -1,90 +1,93 @@
 ---
+---
 sidebar_position: 5
-title: MAN Electric — Plug & Charge Instellen
-description: Stapsgewijze handleiding voor het inschakelen van Plug & Charge op MAN eTGX en eTGS elektrische vrachtwagens via het RIO-platform.
+title: MAN Electric — Enabling Plug & Charge
+description: Step-by-step guide for enabling Plug & Charge on MAN eTGX and eTGS electric trucks via the RIO platform.
 keywords: [MAN, eTGX, eTGS, RIO, Plug and Charge, ISO 15118, TRATON]
 ---
 
-# MAN Electric — Plug & Charge Instellen
+# MAN Electric — Enabling Plug & Charge
 
-Het elektrische vrachtwagenassortiment van MAN (onderdeel van de TRATON Groep samen met Scania) ondersteunt ISO 15118-2 Plug & Charge op de eTGX- en eTGS-modellen. De eTGL en eTGM ontvangen PnC-ondersteuning via gefaseerde firmware-uitrol gedurende 2026. De configuratie wordt beheerd via het RIO-platform.
+The electric truck range from MAN (part of the TRATON Group along with Scania) supports ISO 15118-2 Plug & Charge on the eTGX and eTGS models. The eTGL and eTGM will receive PnC support through phased firmware rollout during 2026. Configuration is managed via the RIO platform.
 
-## Ondersteunde Modellen
+## Supported Models
 
-| Model | Accuopties | Max. DC-laden | PnC Klaar |
+| Model | Battery Options | Max. DC Charging | PnC Ready |
 |-------|-----------|---------------|:---------:|
-| eTGX | Tot 480 kWh | 375 kW (CCS) | ✅ |
-| eTGS | Tot 400 kWh | 250 kW (CCS) | ✅ |
-| eTGL | Tot 265 kWh | 150 kW (CCS) | ⚠️ Wordt uitgerold |
-| eTGM | Tot 265 kWh | 150 kW (CCS) | ⚠️ Wordt uitgerold |
+| eTGX | Up to 480 kWh | 375 kW (CCS) | ✅ |
+| eTGS | Up to 400 kWh | 250 kW (CCS) | ✅ |
+| eTGL | Up to 265 kWh | 150 kW (CCS) | ⚠️ Being rolled out |
+| eTGM | Up to 265 kWh | 150 kW (CCS) | ⚠️ Being rolled out |
 
-## Vereisten
+## Requirements
 
-- RIO-platformaccount met vlootbeheerderaccess
-- eTGX/eTGS met meest recente firmware (eind 2025+)
-- Stroomlijnen-vlootaccount met PnC ingeschakeld ([Installatiehandleiding](../setup-guide))
+- RIO platform account with fleet manager access
+- eTGX/eTGS with the latest firmware (end of 2025+)
+- Stroomlijnen fleet account with PnC enabled ([Setup Guide](../setup-guide))
 
-## Stap voor Stap: RIO-platform
+## Step by Step: RIO Platform
 
-### 1. Toegang tot Laadbeheer
+### 1. Accessing Charging Management
 
-1. Log in op [RIO](https://rio.cloud)
-2. Navigeer naar **Diensten** → **Laadbeheer**
-3. Als Laadbeheer niet zichtbaar is, moet het mogelijk geactiveerd worden — ga naar **Marketplace** → zoek op "Laadbeheer" → **Activeren**
+1. Log in to [RIO](https://rio.cloud)
+2. Navigate to **Services** → **Charging Management**
+3. If Charging Management is not visible, it may need to be activated — go to **Marketplace** → search for "Charging Management" → **Activate**
 
-### 2. Stroomlijnen Verbinden
+### 2. Connecting Stroomlijnen
 
-1. Ga in Laadbeheer naar **Laadpartners**
-2. Klik op **Nieuwe partner verbinden**
-3. Zoek op **"Stroomlijnen B.V."** (of gebruik eMSP-ID `NL-STM`)
-4. Klik op **Verbinden & Autoriseren**
-5. Accepteer de voorwaarden
+1. In Charging Management, go to **Charging Partners**
+2. Click on **Connect New Partner**
+3. Search for **"Stroomlijnen B.V."** (or use eMSP-ID `NL-STM`)
+4. Click on **Connect & Authorize**
+5. Accept the terms
 
-### 3. Voertuigen Selecteren
+### 3. Selecting Vehicles
 
-1. Na het verbinden toont de partnerpagina uw in aanmerking komende voertuigen
-2. Vink de vakjes aan voor vrachtwagens waarvoor PnC ingeschakeld moet worden
-3. Klik op **Selectie opslaan**
+1. After connecting, the partner page will display your eligible vehicles
+2. Check the boxes for trucks where PnC should be enabled
+3. Click on **Save Selection**
 
-### 4. Wacht op Certificaatinstallatie
+### 4. Waiting for Certificate Installation
 
-- RIO activeert certificaatprovisioning via het telematicasysteem van MAN
-- De vrachtwagen moet online zijn met contact aan
-- **Belangrijk:** MAN gebruikt een Hardware Security Module (HSM) voor certificaatopslag. De HSM gaat in "provisioningmodus" gedurende de eerste 30 minuten na het aanzetten van het contact. Als de vrachtwagen geparkeerd staat met contact aan gedurende meer dan 30 minuten zonder het certificaat te ontvangen, zet het contact dan uit en weer aan om de provisioningmodus opnieuw te activeren.
-- **Typische installatietijd: 6–24 uur**
+- RIO activates certificate provisioning via MAN's telematics system
+- The truck must be online with ignition on
+- **Important:** MAN uses a Hardware Security Module (HSM) for certificate storage. The HSM enters "provisioning mode" for the first 30 minutes after ignition is turned on. If the truck is parked with ignition on for more than 30 minutes without receiving the certificate, turn the ignition off and then back on to reactivate provisioning mode.
+- **Typical installation time: 6–24 hours**
 
-### 5. Verifieer
+### 5. Verify
 
-Controleer de certificaatstatus in zowel RIO als Stroomlijnen Mijn Vloot. Test bij een Stroomlijnen-lader.
+Check the certificate status in both RIO and Stroomlijnen My Fleet. Test at a Stroomlijnen charger.
 
-## HSM Provisioningmodus — Belangrijk
+## HSM Provisioning Mode — Important
 
-De beveiligingsarchitectuur van MAN gebruikt een hardware security module met een specifiek provisioningvenster:
+MAN's security architecture uses a hardware security module with a specific provisioning window:
 
-1. Wanneer het contact van de vrachtwagen wordt aangezet, gaat de HSM gedurende 30 minuten in provisioningmodus
-2. Gedurende dit venster kunnen nieuwe certificaten worden geïnstalleerd
-3. Na 30 minuten vergrendelt de HSM om onbevoegde certificaatwijzigingen te voorkomen
-4. Om het venster opnieuw te openen: contact uitschakelen, 10 seconden wachten, weer aanzetten
+1. When the truck's ignition is turned on, the HSM enters provisioning mode for 30 minutes
+2. During this window, new certificates can be installed
+3. After 30 minutes, the HSM locks to prevent unauthorized certificate changes
+4. To reopen the window: turn off the ignition, wait 10 seconds, and then turn it back on
 
-**Wat dit in de praktijk betekent:** Als u PnC inschakelt in het RIO-portaal terwijl de vrachtwagen een rit rijdt, wordt het certificaat in de wachtrij geplaatst en geïnstalleerd de volgende keer dat de vrachtwagen opstart (binnen het eerste venster van 30 minuten).
+**What this means in practice:** If you enable PnC in the RIO portal while the truck is on a trip, the certificate will be queued and installed the next time the truck starts (within the first 30-minute window).
 
-## TRATON Groep-integratie
+## TRATON Group Integration
 
-MAN en Scania maken allebei deel uit van de TRATON Groep en delen enige backend-infrastructuur. Echter:
+MAN and Scania are both part of the TRATON Group and share some backend infrastructure. However:
 
-- Elk merk heeft zijn eigen vlootportaal (RIO voor MAN, My Scania voor Scania)
-- PnC moet afzonderlijk worden geconfigureerd in elk portaal
-- Certificaten zijn merkspecifiek en niet overdraagbaar
+- Each brand has its own fleet portal (RIO for MAN, My Scania for Scania)
+- PnC must be configured separately in each portal
+- Certificates are brand-specific and not transferable
 
-## Probleemoplossing
+## Troubleshooting
 
-| Probleem | Oplossing |
+| Issue | Solution |
 |---------|----------|
-| "Laadbeheer" niet in RIO | Activeer het vanuit de RIO Marketplace |
-| Certificaat in behandeling > 24 uur | Contactcyclus uitvoeren om HSM-provisioningmodus opnieuw te activeren |
-| eTGL/eTGM toont "PnC niet beschikbaar" | Firmware-update mogelijk in behandeling — controleer bij MAN-dealer |
-| PnC werkt eenmalig dan mislukt | HSM heeft mogelijk een verbindingsprobleem — diagnostiek door dealer vereist |
+| "Charging Management" not in RIO | Activate it from the RIO Marketplace |
+| Certificate pending > 24 hours | Perform an ignition cycle to reactivate HSM provisioning mode |
+| eTGL/eTGM shows "PnC not available" | Firmware update may be in progress — check with MAN dealer |
+| PnC works once then fails | HSM may have a connectivity issue — diagnostics by dealer required |
 
 ---
 
-**Volgende:** [Andere Vrachtwagens →](./other-trucks)
+**Next:** [Other Trucks →](./other-trucks)
+
+---

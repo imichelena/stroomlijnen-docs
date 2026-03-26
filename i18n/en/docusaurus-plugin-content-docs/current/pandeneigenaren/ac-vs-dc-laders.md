@@ -1,76 +1,79 @@
 ---
+---
 sidebar_position: 8
-title: AC- en DC-laders uitgelegd
-description: Verschil tussen wisselstroom (AC) en gelijkstroom (DC) laden — techniek, vermogen, kosten en toepassingen.
-keywords: [AC lader, DC lader, wisselstroom, gelijkstroom, laadvermogen, CCS2, Type 2, laadpaal types]
+title: Explaining AC and DC Chargers
+description: Difference between alternating current (AC) and direct current (DC) charging — technology, power, costs, and applications.
+keywords: [AC charger, DC charger, alternating current, direct current, charging power, CCS2, Type 2, charging station types]
 ---
 
-# AC- en DC-laders uitgelegd
+# Explaining AC and DC Chargers
 
-Er zijn twee fundamenteel verschillende manieren om een elektrisch voertuig op te laden: via wisselstroom (AC) of via gelijkstroom (DC). Het verschil zit in waar de omzetting plaatsvindt.
+There are two fundamentally different ways to charge an electric vehicle: via alternating current (AC) or direct current (DC). The difference lies in where the conversion takes place.
 
-## Het principe
+## The Principle
 
-Elektriciteit in het net is altijd wisselstroom (AC). Batterijen slaan gelijkstroom (DC) op. Er moet dus ergens een omzetting plaatsvinden.
+Electricity in the grid is always alternating current (AC). Batteries store direct current (DC). Therefore, a conversion must take place somewhere.
 
-- **AC-lader:** de omzetting van AC naar DC gebeurt **in het voertuig** (via de boordlader)
-- **DC-lader:** de omzetting vindt plaats **in de laadpaal** — het voertuig ontvangt direct DC
+- **AC charger:** the conversion from AC to DC takes place **in the vehicle** (via the on-board charger)
+- **DC charger:** the conversion takes place **in the charging station** — the vehicle receives direct DC
 
-## Vergelijking
+## Comparison
 
-| Kenmerk | AC-lader | DC-lader |
+| Feature | AC Charger | DC Charger |
 |---|---|---|
-| Omzetting | In voertuig (boordlader) | In laadpaal |
-| Vermogen | 3,7–22 kW | 22–350+ kW |
-| Laadtijd (truck 300 kWh) | 14–80 uur | 1–6 uur |
-| Aanschafprijs paal | €500–€3.000 | €15.000–€80.000 |
-| Installatiekosten | Laag | Hoog |
-| Connector (vrachtwagen) | Type 2 (AC) | CCS2 (DC) |
-| Geschikt voor nachtladen | ✅ Ja | ✅ Ja |
-| Geschikt voor snelladen overdag | ❌ Nee | ✅ Ja |
+| Conversion | In vehicle (on-board charger) | In charging station |
+| Power | 3.7–22 kW | 22–350+ kW |
+| Charging Time (truck 300 kWh) | 14–80 hours | 1–6 hours |
+| Purchase Price of Station | €500–€3,000 | €15,000–€80,000 |
+| Installation Costs | Low | High |
+| Connector (truck) | Type 2 (AC) | CCS2 (DC) |
+| Suitable for Overnight Charging | ✅ Yes | ✅ Yes |
+| Suitable for Fast Charging During the Day | ❌ No | ✅ Yes |
 
-## AC-laders
+## AC Chargers
 
-AC-laders leveren wisselstroom aan het voertuig. De ingebouwde boordlader van het voertuig bepaalt de maximale laadsnelheid — niet de paal. Een paal van 22 kW laadt een voertuig met een boordlader van 11 kW maximaal op 11 kW.
+AC chargers supply alternating current to the vehicle. The built-in on-board charger of the vehicle determines the maximum charging speed — not the station. A 22 kW station will charge a vehicle with an 11 kW on-board charger at a maximum of 11 kW.
 
-**Toepassingen bij theaters:**
-- Personenwagens van medewerkers
-- Bestelwagens die de hele nacht staan
-- Als aanvulling op DC-laders voor langere verblijven
+**Applications in theaters:**
+- Employees' passenger cars
+- Vans that stand overnight
+- As a supplement to DC chargers for longer stays
 
-**Voordeel:** Goedkoop, eenvoudig te installeren, laag vermogensprofiel (minder impact op netaansluiting)
+**Advantage:** Inexpensive, easy to install, low power profile (less impact on grid connection)
 
-**Nadeel:** Te langzaam voor vrachtwagens met beperkte verblijfstijd
+**Disadvantage:** Too slow for trucks with limited dwell time
 
-## DC-laders
+## DC Chargers
 
-DC-laders leveren gelijkstroom direct aan de batterij, waarbij de omzetting in de laadpaal zit. Het maximale laadvermogen wordt bepaald door het minimum van paalvermogen en voertuigcapaciteit.
+DC chargers supply direct current directly to the battery, with the conversion taking place in the charging station. The maximum charging power is determined by the minimum of the station's power and the vehicle's capacity.
 
-**Toepassingen bij theaters:**
-- Elektrische vrachtwagens bij het laaddok
-- Bussen
-- Snelladen van bestelauto's
+**Applications in theaters:**
+- Electric trucks at the loading dock
+- Buses
+- Fast charging of vans
 
-**Voordeel:** Snel, geschikt voor vrachtwagens, professionele betrouwbaarheid
+**Advantage:** Fast, suitable for trucks, professional reliability
 
-**Nadeel:** Hogere aanschaf- en installatiekosten, hoger vermogensprofiel (vraagt om loadmanagement)
+**Disadvantage:** Higher purchase and installation costs, higher power profile (requires load management)
 
-## Aanbevolen vermogen per voertuigtype
+## Recommended Power per Vehicle Type
 
-| Voertuigtype | Verblijfsduur | Aanbevolen ladertype | Vermogen |
+| Vehicle Type | Dwell Time | Recommended Charger Type | Power |
 |---|---|---|---|
-| Personenwagen | 2–8 uur | AC | 11–22 kW |
-| Bestelwagen | 8–12 uur | AC of lichte DC | 22–50 kW |
-| Lichte truck (7,5T) | 8–12 uur | DC | 50–100 kW |
-| Zware truck (40T) | 8–12 uur | DC | 100–150 kW |
-| Snel doorladen (pauze) | 30–90 min | DC snellader | 150–350 kW |
+| Passenger Car | 2–8 hours | AC | 11–22 kW |
+| Van | 8–12 hours | AC or light DC | 22–50 kW |
+| Light Truck (7.5T) | 8–12 hours | DC | 50–100 kW |
+| Heavy Truck (40T) | 8–12 hours | DC | 100–150 kW |
+| Fast Charging (break) | 30–90 minutes | DC fast charger | 150–350 kW |
 
-:::note Verblijfsduur bij theaters
-Trucks bij theaters staan doorgaans **8–12 uur** tijdens opbouw, voorstelling en afbouw. Een DC-lader van 60–100 kW is in de meeste gevallen voldoende voor een volledige laadcyclus.
+:::note Dwell Time in Theaters
+Trucks at theaters usually stand for **8–12 hours** during setup, performance, and teardown. A 60–100 kW DC charger is sufficient in most cases for a full charging cycle.
 :::
 
-## Toekomstige standaard: MCS
+## Future Standard: MCS
 
-Voor de zwaarste vrachtwagens (40T+) wordt het **Megawatt Charging System (MCS)** de nieuwe standaard. Dit levert vermogens tot 3,75 MW, wat een laadtijd van 30–45 minuten mogelijk maakt voor de grootste batterijpakketten. MCS wordt verwacht tussen 2025 en 2028 uitgerold te worden langs Europese hoofdcorridors.
+For the heaviest trucks (40T+), the **Megawatt Charging System (MCS)** will become the new standard. This delivers powers of up to 3.75 MW, making possible charging times of 30–45 minutes for the largest battery packs. MCS is expected to be rolled out between 2025 and 2028 along European main corridors.
 
-Bron: [CharIN MCS specificatie](https://www.charin.global)
+Source: [CharIN MCS specification](https://www.charin.global)
+
+---

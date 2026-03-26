@@ -1,89 +1,90 @@
 ---
+---
 sidebar_position: 2
-title: Verdienmodel en tarieven
-description: Hoe verdient u aan laadpunten bij uw locatie? Drie modellen uitgelegd met rekenvoorbeelden.
-keywords: [verdienmodel, passief inkomen, CPO, SPRILA, kWh tarief, laadpaal opbrengst]
+title: Revenue Model and Tariffs
+description: How do you earn money from charging points at your location? Three models explained with calculation examples.
+keywords: [revenue model, passive income, CPO, SPRILA, kWh tariff, charging point revenue]
 ---
 
-# Verdienmodel en tarieven
+# Revenue Model and Tariffs
 
-Als pandeneigenaar verdient u aan elke kWh die via uw laadpunt wordt geleverd. Er zijn drie gangbare contractvormen — elk met eigen voor- en nadelen.
+As a property owner, you earn money for every kWh delivered through your charging point. There are three common contract forms — each with its own advantages and disadvantages.
 
-## De drie modellen
+## The Three Models
 
-### 1. Passief inkomen (meest gekozen)
+### 1. Passive Income (Most Chosen)
 
-De CPO regelt alles. U ontvangt een vaste vergoeding per geleverde kWh.
+The CPO handles everything. You receive a fixed compensation per delivered kWh.
 
-| Kenmerk | Details |
+| Characteristic | Details |
 |---|---|
-| Opbrengst | €0,05 – €0,12 per kWh |
-| Operationele last | Geen — CPO beheert volledig |
-| Investering | Geen (hardware van CPO of via SPRILA) |
-| Risico | Minimaal |
+| Revenue | €0,05 – €0,12 per kWh |
+| Operational Cost | None — CPO fully manages |
+| Investment | None (hardware from CPO or via SPRILA) |
+| Risk | Minimal |
 
-**Rekenvoorbeeld:** 200 sessies per jaar, 600 kWh per sessie, €0,10/kWh = **€12.000 per jaar**.
+**Calculation Example:** 200 sessions per year, 600 kWh per session, €0,10/kWh = **€12.000 per year**.
 
 ---
 
-### 2. Eigen exploitatie
+### 2. Self-Exploitation
 
-U beheert zelf de tarieven en houdt een grotere marge. Meer werk, meer opbrengst.
+You manage the tariffs yourself and keep a larger margin. More work, more revenue.
 
-| Kenmerk | Details |
+| Characteristic | Details |
 |---|---|
-| Opbrengst | €0,10 – €0,25 per kWh |
-| Operationele last | Matig — tariefbeheer, klantencontact |
-| Investering | Hardware (gedeeltelijk via SPRILA) |
-| Risico | Hoger (u bent verantwoordelijk voor exploitatie) |
+| Revenue | €0,10 – €0,25 per kWh |
+| Operational Cost | Moderate — tariff management, customer contact |
+| Investment | Hardware (partially via SPRILA) |
+| Risk | Higher (you are responsible for exploitation) |
 
 ---
 
-### 3. Capaciteitsverhuur
+### 3. Capacity Rental
 
-U verhuurt uw aansluiting aan een CPO voor een vast maandbedrag, ongeacht gebruik.
+You rent your connection to a CPO for a fixed monthly amount, regardless of usage.
 
-| Kenmerk | Details |
+| Characteristic | Details |
 |---|---|
-| Opbrengst | €200 – €600 per maand per laadpunt |
-| Operationele last | Geen |
-| Investering | Geen |
-| Risico | Geen — vast bedrag, ongeacht gebruik |
+| Revenue | €200 – €600 per month per charging point |
+| Operational Cost | None |
+| Investment | None |
+| Risk | None — fixed amount, regardless of usage |
 
 ---
 
-## Hoe uitbetaling werkt
+## How Payout Works
 
-Bij het passief inkomen model:
+For the passive income model:
 
-1. Elke laadsessie wordt automatisch gemeten en geregistreerd
-2. Aan het einde van de maand berekent de CPO uw aandeel
-3. U ontvangt een overzicht via uw dashboard en een uitbetaling op uw rekening
-4. Geen handmatige actie nodig — alles loopt automatisch
+1. Each charging session is automatically measured and registered
+2. At the end of the month, the CPO calculates your share
+3. You receive an overview via your dashboard and a payout on your account
+4. No manual action required — everything runs automatically
 
 :::note Dashboard
-Via uw eigenaarsdashboard ziet u real-time hoeveel er is geladen, door hoeveel sessies, en wat uw verwachte opbrengst is voor de lopende maand.
+Via your owner's dashboard, you can see in real-time how much has been charged, through how many sessions, and what your expected revenue is for the current month.
 :::
 
-## Wat u zelf betaalt — en wat niet
+## What You Pay Yourself — and What Not
 
-| Post | Betaalt u dit? |
+| Item | Do You Pay This? |
 |---|---|
-| Stroom (kWh) voor de laadsessie | **Nee** — wordt doorbelast aan de gebruiker |
-| Hardware en installatie | **Nee** (via SPRILA of CPO) |
-| Onderhoud en storingen | **Nee** — valt onder CPO-contract |
-| Netkosten (vastrecht aansluiting) | **Ja** — maar dit betaalt u toch al |
-| Eventuele netuitbreiding | **Nee** — alleen indien uw aansluiting te klein is (zeldzaam bij theaters) |
+| Electricity (kWh) for the charging session | **No** — is passed on to the user |
+| Hardware and installation | **No** (via SPRILA or CPO) |
+| Maintenance and malfunctions | **No** — falls under CPO contract |
+| Grid costs (fixed connection fee) | **Yes** — but you already pay this anyway |
+| Possible grid expansion | **No** — only if your connection is too small (rare for theaters) |
 
-## SPRILA — subsidiedetails
+## SPRILA — Subsidy Details
 
-De **SPRILA-regeling** (RVO) subsidieert de aanschaf en installatie van publiek toegankelijke laadinfrastructuur voor zwaar transport.
+The **SPRILA scheme** (RVO) subsidizes the purchase and installation of publicly accessible charging infrastructure for heavy transport.
 
-- **Voor wie:** eigenaren van locaties die laden voor vrachtwagens/bussen mogelijk maken
-- **Wat wordt vergoed:** hardware (laadpaal) + installatiekosten
-- **Voorwaarde:** aanvraag vóór investering indienen
-- **Aanvragen via:** [rvo.nl/subsidies-financiering/sprila](https://www.rvo.nl/subsidies-financiering/sprila)
+- **For whom:** owners of locations that enable charging for trucks/buses
+- **What is reimbursed:** hardware (charging point) + installation costs
+- **Condition:** application must be submitted before investment
+- **Apply via:** [rvo.nl/subsidies-financiering/sprila](https://www.rvo.nl/subsidies-financiering/sprila)
 
 :::tip
-Stroomlijnen begeleidt u bij de SPRILA-aanvraag als onderdeel van het installatiepakket.
+Stroomlijnen guides you through the SPRILA application as part of the installation package.
 :::

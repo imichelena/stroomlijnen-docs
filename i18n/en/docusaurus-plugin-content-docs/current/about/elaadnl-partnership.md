@@ -1,89 +1,92 @@
 ---
+---
 sidebar_position: 1
-title: ElaadNL Partnerschap
-description: Hoe Stroomlijnen aansluit bij het onderzoeks- en standaardisatiewerk van ElaadNL voor de bevordering van elektrisch vrachtwagenopladen in Nederland.
-keywords: [ElaadNL, onderzoek, laadstandaarden, Nederland, interoperabiliteit, V2G, ISO 15118, OCPP]
+title: ElaadNL Partnership
+description: How Stroomlijnen aligns with ElaadNL's research and standardization work to promote electric truck charging in the Netherlands.
+keywords: [ElaadNL, research, charging standards, Netherlands, interoperability, V2G, ISO 15118, OCPP]
 ---
 
-# Onze Samenwerking met ElaadNL
+# Our Collaboration with ElaadNL
 
-[ElaadNL](https://elaad.nl) is het Nederlandse kennis- en innovatiecentrum voor slimme laadinfrastructuur. Opgericht door de Nederlandse netbeheerders, stimuleert ElaadNL de ontwikkeling van standaarden, protocollen en interoperabiliteitstests waarop de gehele EV-laadsector steunt.
+[ElaadNL](https://elaad.nl) is the Dutch knowledge and innovation center for smart charging infrastructure. Founded by the Dutch grid operators, ElaadNL stimulates the development of standards, protocols, and interoperability tests that the entire EV charging sector relies on.
 
-Stroomlijnen sluit actief aan bij het onderzoek van ElaadNL en draagt bij aan de bevordering van elektrisch vrachtwagenopladen in Nederland.
+Stroomlijnen actively contributes to ElaadNL's research and supports the promotion of electric truck charging in the Netherlands.
 
-## Wat ElaadNL Doet
+## What ElaadNL Does
 
-ElaadNL opereert op het snijvlak van onderzoek, standaarden en praktijktests:
+ElaadNL operates at the intersection of research, standards, and practical testing:
 
-- **Interoperabiliteitstests** — Het ElaadNL-testlab verifieert dat laders, voertuigen en backendsystemen correct samenwerken
-- **Protocololntwikkeling** — Bijdragen aan OCPP, OSCP, ISO 15118 en OCPI-standaarden
-- **Netimpactonderzoek** — Bestudeert hoe massaal EV-laden het elektriciteitsnet beïnvloedt en ontwikkelt slimme oplossingen
-- **Kennisdeling** — Publiceert onderzoek, organiseert evenementen en onderwijst de sector
+- **Interoperability tests** — The ElaadNL test lab verifies that chargers, vehicles, and backend systems work together correctly
+- **Protocol development** — Contributing to OCPP, OSCP, ISO 15118, and OCPI standards
+- **Grid impact research** — Studying how mass EV charging affects the electricity grid and developing smart solutions
+- **Knowledge sharing** — Publishing research, organizing events, and educating the sector
 
-## Hoe We Samenwerken
+## How We Collaborate
 
 ### ISO 15118 & Plug & Charge
-ElaadNL heeft een sleutelrol gespeeld bij het bevorderen van ISO 15118-adoptie in Nederland. Hun testfaciliteit was een van de eersten die PnC-interoperabiliteit tussen verschillende lader- en voertuigcombinaties valideerde.
+ElaadNL has played a key role in promoting ISO 15118 adoption in the Netherlands. Their test facility was one of the first to validate PnC interoperability between different charger and vehicle combinations.
 
-De PnC-implementatie van Stroomlijnen volgt de best practices en interoperabiliteitsrichtlijnen van ElaadNL. Onze laders worden getest aan de hand van de ISO 15118-conformiteittestsuite van ElaadNL voordat ze worden ingezet.
+Stroomlijnen's PnC implementation follows ElaadNL's best practices and interoperability guidelines. Our chargers are tested using ElaadNL's ISO 15118 conformance test suite before deployment.
 
 ### OCPP 2.0.1
-ElaadNL is een stichtend bijdrager aan OCPP via de Open Charge Alliance (OCA). Ze hebben bijgedragen aan de ontwikkeling van OCPP 2.0.1, dat Stroomlijnen gebruikt als standaard laderbeheersprotocol.
+ElaadNL is a founding contributor to OCPP via the Open Charge Alliance (OCA). They have contributed to the development of OCPP 2.0.1, which Stroomlijnen uses as its standard charger management protocol.
 
-We implementeren OCPP 2.0.1-functies zoals aanbevolen in de inzetrichtlijnen van ElaadNL, waaronder:
-- ISO 15118-certificaatbeheer via OCPP
-- Slimme laadprofielen
-- Veilige firmware-updates
-- Ondertekende meterwaarden voor factuurnauwkeurigheid
+We implement OCPP 2.0.1 features as recommended in ElaadNL's guidelines, including:
+- ISO 15118 certificate management via OCPP
+- Smart charging profiles
+- Secure firmware updates
+- Signed meter values for billing accuracy
 
-### Slim Laden & Netintegratie
-Het onderzoek van ElaadNL naar netimpact en slim laden informeert direct onze belastingmanagementstrategie:
+### Smart Charging & Grid Integration
+ElaadNL's research on grid impact and smart charging directly informs our load management strategy:
 
-- **OSCP (Open Smart Charging Protocol)** — We gebruiken OSCP-compatibele signalering om netcapaciteitsvoorspellingen te ontvangen van Distributiesysteembeheerders (DSB's)
-- **Dynamische taakverdeling** — Onze algoritmen volgen de aanbevelingen van ElaadNL voor eerlijke vermogensverdeling
-- **Netcongestiebeheer** — Op locaties in netbeperkende gebieden implementeren we de voorgestelde congestiebeheersprofielen van ElaadNL
+- **OSCP (Open Smart Charging Protocol)** — We use OSCP-compliant signaling to receive grid capacity forecasts from Distribution System Operators (DSOs)
+- **Dynamic load allocation** — Our algorithms follow ElaadNL's recommendations for fair power distribution
+- **Grid congestion management** — At locations in grid-constrained areas, we implement the proposed congestion management profiles of ElaadNL
 
 ### Vehicle-to-Grid (V2G)
-ElaadNL heeft een van Europa's meest geavanceerde V2G-onderzoeksprogramma's. Hun bevindingen over bidirectionele laadtechnologie, netwerkdiensten en marktmodellen sturen onze V2G-gereedheid:
+ElaadNL has one of Europe's most advanced V2G research programs. Their findings on bidirectional charging technology, network services, and market models guide our V2G readiness:
 
-- Onze laderhardware ondersteunt bidirectionele vermogensstroom
-- We bereiden ons voor op ISO 15118-20 (dat V2G-signalering toevoegt)
-- Ons businessmodel omvat toekomstige V2G-inkomsten voor vlootbeheerders — een concept gevalideerd door het onderzoek van ElaadNL
+- Our charger hardware supports bidirectional power flow
+- We are preparing for ISO 15118-20 (which adds V2G signaling)
+- Our business model includes future V2G revenue streams for fleet managers — a concept validated by ElaadNL's research
 
-### Onderzoek naar Elektrisch Vrachtwagenopladen
-ElaadNL heeft specifiek onderzoek gepubliceerd over de unieke uitdagingen van elektrisch vrachtwagenopladen:
+### Research on Electric Truck Charging
+ElaadNL has published specific research on the unique challenges of electric truck charging:
 
-- **Hoogvermogen laden** — Netimpact van 150–400 kW-laders en de noodzaak van lokale opslag of vraagbeheer
-- **Megawatt Charging System (MCS)** — Standaardisatieontwikkeling voor de volgende generatie ultrasnelle vrachtwagenlaadstations
-- **Nacht-depotladen** — Optimalisatiestrategieën voor vlootdepots (direct relevant voor ons theaterlaadmodel)
-- **Onderwegsladen** — Netwerkplanning voor snelweglaadstations
+- **High-power charging** — Grid impact of 150–400 kW chargers and the need for local storage or demand management
+- **Megawatt Charging System (MCS)** — Standardization development for the next generation of ultra-fast truck charging stations
+- **Depot charging** — Optimization strategies for fleet depots (directly relevant to our depot charging model)
+- **En-route charging** — Network planning for highway charging stations
 
-Stroomlijnen verwerkt deze bevindingen in ons locatieontwerp, netaansluitingsplanning en laadmanagement.
+Stroomlijnen incorporates these findings into our site design, grid connection planning, and charge management.
 
-## Gedeelde Visie
+## Shared Vision
 
-Zowel ElaadNL als Stroomlijnen geloven in:
+Both ElaadNL and Stroomlijnen believe in:
 
-1. **Open standaarden** — OCPP, OCPI, ISO 15118 boven propriëtaire protocollen
-2. **Interoperabiliteit** — Elk voertuig moet bij elke lader kunnen laden
-3. **Netvriendelijk laden** — Slim laden dat het net helpt in plaats van belast
-4. **Kennisdeling** — Bevindingen publiceren ten behoeve van de sector
-5. **Nederlands leiderschap** — Nederland als wereldleider in EV-laadinfrastructuur
+1. **Open standards** — OCPP, OCPI, ISO 15118 over proprietary protocols
+2. **Interoperability** — Every vehicle should be able to charge at every charger
+3. **Grid-friendly charging** — Smart charging that helps the grid instead of straining it
+4. **Knowledge sharing** — Publishing findings for the benefit of the sector
+5. **Dutch leadership** — The Netherlands as a world leader in EV charging infrastructure
 
-## Publicaties & Bronnen
+## Publications & Resources
 
-Relevante ElaadNL-publicaties:
+Relevant ElaadNL publications:
 
-- [ElaadNL EV Related Protocol Study](https://elaad.nl/research/) — Uitgebreid overzicht van alle EV-laadprotocollen
-- [Dutch EV Charging Outlook](https://elaad.nl/research/) — Jaarlijkse prognose van laadinfrastructuurbehoeften
-- [ISO 15118 Implementation Guide](https://elaad.nl/research/) — Praktische handleiding voor PnC-inzet
-- [OCPP 2.0.1 Application Guide](https://elaad.nl/research/) — Best practices voor CSMS-implementatie
+- [ElaadNL EV Related Protocol Study](https://elaad.nl/research/) — Comprehensive overview of all EV charging protocols
+- [Dutch EV Charging Outlook](https://elaad.nl/research/) — Annual forecast of charging infrastructure needs
+- [ISO 15118 Implementation Guide](https://elaad.nl/research/) — Practical guide for PnC deployment
+- [OCPP 2.0.1 Application Guide](https://elaad.nl/research/) — Best practices for CSMS implementation
 
-## Betrokken Raken
+## Get Involved
 
-Als u geïnteresseerd bent in het onderzoek en de standaarden achter EV-laden:
+If you're interested in the research and standards behind EV charging:
 
-- Bezoek [elaad.nl](https://elaad.nl) voor publicaties en evenementen
-- Volg ElaadNL op [LinkedIn](https://www.linkedin.com/company/elaadnl/) voor updates
-- Woon de jaarlijkse Kennisdag van ElaadNL bij (doorgaans in november)
-- Voor samenwerkingsvragen met Stroomlijnen, neem contact op via [partnerships@stroomlijnen.nl](mailto:partnerships@stroomlijnen.nl)
+- Visit [elaad.nl](https://elaad.nl) for publications and events
+- Follow ElaadNL on [LinkedIn](https://www.linkedin.com/company/elaadnl/) for updates
+- Attend ElaadNL's annual Knowledge Day (usually in November)
+- For collaboration inquiries with Stroomlijnen, contact us via [partnerships@stroomlijnen.nl](mailto:partnerships@stroomlijnen.nl)
+
+---

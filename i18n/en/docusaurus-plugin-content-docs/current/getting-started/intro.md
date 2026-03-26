@@ -1,68 +1,69 @@
 ---
+---
 sidebar_position: 1
-title: Wat is Stroomlijnen?
-description: Introductie tot Stroomlijnen — een Nederlandse CPO en eMSP gespecialiseerd in elektrisch vrachtwagenopladen bij theaters en logistieke locaties.
+title: What is Stroomlijnen?
+description: Introduction to Stroomlijnen — a Dutch CPO and eMSP specializing in electric truck charging at theaters and logistics locations.
 keywords: [Stroomlijnen, CPO, eMSP, electric truck charging, Netherlands, fleet charging]
 ---
 
-# Wat is Stroomlijnen?
+# What is Stroomlijnen?
 
-Stroomlijnen B.V. is een Nederlandse **Charge Point Operator (CPO)** en **e-Mobility Service Provider (eMSP)** die laadinfrastructuur voor elektrische voertuigen bouwt en exploiteert bij **theaters** en **logistieke locaties** door heel Nederland.
+Stroomlijnen B.V. is a Dutch **Charge Point Operator (CPO)** and **e-Mobility Service Provider (eMSP)** that builds and operates electric vehicle charging infrastructure at **theaters** and **logistics locations** throughout the Netherlands.
 
-## Wat We Doen
+## What We Do
 
-We installeren, exploiteren en onderhouden hoogvermogen laadstations die specifiek zijn ontworpen voor **elektrische vrachtwagens en bedrijfsvoertuigen**. Onze laders staan op locaties met grote bestaande netaansluitingen — voornamelijk theaters, evenementenlocaties en logistieke hubs.
+We install, operate, and maintain high-power charging stations specifically designed for **electric trucks and commercial vehicles**. Our chargers are located at sites with large existing grid connections — mainly theaters, event venues, and logistics hubs.
 
-### Waarom Theaters?
+### Why Theaters?
 
-Theaters beschikken over iets wat de meeste locaties niet hebben: **enorme elektriciteitsaansluitingen** (vaak 400–2000 kVA) die overdag onbenut zijn. Voorstellingen zijn 's avonds. Vrachtwagens laden overdag. De infrastructuur is er al — wij zetten hem aan het werk.
+Theaters have something that most locations don't: **enormous electrical connections** (often 400-2000 kVA) that are unused during the day. Performances are in the evenings. Trucks charge during the day. The infrastructure is already there — we put it to work.
 
-### Onze eMSP-identiteit
+### Our eMSP Identity
 
-We opereren onder de **NL\*STM** eMSP-identiteit in het Nederlandse en Europese laadnetwerk. Dat betekent:
+We operate under the **NL\*STM** eMSP identity in the Dutch and European charging network. This means:
 
-- Uw bestuurders kunnen onze RFID-passen of Plug & Charge gebruiken bij **elke** openbare lader in Nederland en Europa (via roaming)
-- Klanten van andere eMSP's kunnen laden op onze locaties
-- Volledige interoperabiliteit via het OCPI-protocol
+- Your drivers can use our RFID passes or Plug & Charge at **any** public charger in the Netherlands and Europe (via roaming)
+- Customers of other eMSPs can charge at our locations
+- Full interoperability via the OCPI protocol
 
-## Hoe Vlootladen Werkt
+## How Fleet Charging Works
 
 ```mermaid
 graph LR
-    A[Vlootbeheerder] -->|Registreert vloot| B[Stroomlijnen Portaal]
-    B -->|Verstrekt RFID / Plug & Charge| C[Bestuurders]
-    C -->|Plug in op locatie| D[Lader]
+    A[Fleet Manager] -->|Registers fleet| B[Stroomlijnen Portal]
+    B -->|Provides RFID / Plug & Charge| C[Drivers]
+    C -->|Plugs in at location| D[Charger]
     D -->|OCPP| E[Stroomlijnen Backend]
-    E -->|Sessiegegevens| B
-    B -->|Maandelijkse factuur| A
+    E -->|Session data| B
+    B -->|Monthly invoice| A
 ```
 
-1. **Registreer** uw vloot op het Stroomlijnen-portaal
-2. **Configureer** uw voertuigen — RFID-passen, Plug & Charge, of beide
-3. **Bestuurders laden** op elke Stroomlijnen-locatie (of bij roamingpartner)
-4. **U ontvangt** gedetailleerde sessiegegevens, energierapportages en één maandelijkse factuur
+1. **Register** your fleet on the Stroomlijnen portal
+2. **Configure** your vehicles — RFID passes, Plug & Charge, or both
+3. **Drivers charge** at any Stroomlijnen location (or at a roaming partner)
+4. **You receive** detailed session data, energy reports, and one monthly invoice
 
-## Belangrijkste Functies
+## Key Features
 
-| Functie | Omschrijving |
+| Feature | Description |
 |---------|-------------|
-| **Plug & Charge** | ISO 15118 automatische authenticatie — geen pas nodig |
-| **RFID-passen** | Traditioneel kaartgebaseerd laden met NL*STM-identiteit |
-| **Vlootportaal** | Realtime sessiegegevens, voertuigbeheer, facturering |
-| **Slim laden** | Taakverdeling voor optimale energiekosten en netimpact |
-| **OCPP 2.0.1** | Nieuwste protocolstandaard voor laderbeheer |
-| **Roaming** | Laden op 300.000+ punten door heel Europa via OCPI |
+| **Plug & Charge** | ISO 15118 automatic authentication — no pass required |
+| **RFID passes** | Traditional card-based charging with NL*STM identity |
+| **Fleet portal** | Real-time session data, vehicle management, invoicing |
+| **Smart charging** | Load balancing for optimal energy costs and grid impact |
+| **OCPP 2.0.1** | Latest protocol standard for charger management |
+| **Roaming** | Charging at 300,000+ points across Europe via OCPI |
 
-## Wat Staat Er in Deze Kennisbank?
+## What's in This Knowledge Base?
 
-Deze site bevat alles wat u moet weten:
+This site contains everything you need to know:
 
-- **[Aan de slag](/docs/getting-started/first-session)** — Uw eerste laadsessie
-- **[Plug & Charge](/docs/plug-and-charge/what-is-pnc)** — De toekomst van moeiteloos laden
-- **[Vlootbeheer](/docs/fleet-management/overview)** — Uw laadvloot beheren
-- **[Technisch](/docs/technical/ocpp-overview)** — Diepgaand inzicht in de technologie
-- **[FAQ](/docs/faq)** — Veelgestelde vragen beantwoord
+- **[Getting Started](/docs/getting-started/first-session)** — Your first charging session
+- **[Plug & Charge](/docs/plug-and-charge/what-is-pnc)** — The future of effortless charging
+- **[Fleet Management](/docs/fleet-management/overview)** — Managing your charging fleet
+- **[Technical](/docs/technical/ocpp-overview)** — In-depth insights into the technology
+- **[FAQ](/docs/faq)** — Frequently asked questions answered
 
 :::tip The Show Must Go On
-Onze slogan is niet zomaar marketing. Het weerspiegelt onze toewijding: als uw vloot moet laden, **moet** de infrastructuur er klaar voor zijn. Betrouwbaarheid op theaterniveau betekent voorbereid zijn op elk scenario.
+Our slogan is not just marketing. It reflects our commitment: if your fleet needs to charge, **must** have infrastructure ready. Reliability at theater level means being prepared for every scenario.
 :::

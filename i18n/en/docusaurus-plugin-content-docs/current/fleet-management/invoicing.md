@@ -1,102 +1,105 @@
 ---
+---
 sidebar_position: 4
-title: Facturering
-description: Hoe de facturering van Stroomlijnen vlootladen werkt — maandelijkse facturen, kostenspecificaties, betaalmethoden en belastingdocumentatie.
-keywords: [invoicing, billing, fleet charging costs, monthly invoice, BTW, kWh pricing, fleet account]
+title: Invoicing
+description: How Stroomlijnen fleet charging invoicing works — monthly invoices, cost specifications, payment methods, and tax documentation.
+keywords: [invoicing, billing, fleet charging costs, monthly invoice, VAT, kWh pricing, fleet account]
 ---
 
-# Facturering
+# Invoicing
 
-Stroomlijnen biedt transparante, gedetailleerde facturering voor alle laadactiviteiten van uw vloot. Facturen worden maandelijks opgesteld en bevatten uitsplitsingen per sessie.
+Stroomlijnen offers transparent, detailed invoicing for all your fleet's charging activities. Invoices are generated monthly and contain session-by-session breakdowns.
 
-## Tariefmodel
+## Pricing Model
 
-Vlootklanten worden gefactureerd op basis van verbruikte energie:
+Fleet customers are invoiced based on consumed energy:
 
-- **Energiekosten** — €/kWh-tarief conform uw vlootcontract
-- **Geen sessiekosten** — In tegenstelling tot publiek laden, rekenen wij geen startkosten per sessie
-- **Geen tijdgebonden kosten** — U betaalt voor energie, niet voor parkeertijd
-- **Volumekortingen** — Beschikbaar voor vloten die maandelijkse energiedrempels overschrijden (zie uw contract)
+- **Energy costs** — €/kWh rate according to your fleet contract
+- **No session fees** — Unlike public charging, we don't charge start fees per session
+- **No time-based fees** — You pay for energy, not parking time
+- **Volume discounts** — Available for fleets exceeding monthly energy thresholds (see your contract)
 
-Uw contracttarief is zichtbaar in **Mijn Vloot** → **Instellingen** → **Facturering** → **Tariefkaart**.
+Your contract rate is visible in **My Fleet** → **Settings** → **Invoicing** → **Rate Card**.
 
-## Maandelijkse Factuur
+## Monthly Invoice
 
-Facturen worden op de **1e van elke maand** gegenereerd voor de laadactiviteiten van de vorige maand.
+Invoices are generated on the **1st of each month** for the previous month's charging activities.
 
-### Factuurinhoud
+### Invoice Content
 
-Elke factuur bevat:
+Each invoice contains:
 
-- **Samenvatting** — Totaal energie (kWh), totale kosten (€), aantal sessies, aantal voertuigen
-- **Uitsplitsing per voertuig** — Energie en kosten per voertuig
-- **Detail per sessie** — Datum, tijd, locatie, EVSE-ID, kWh, kosten, authenticatiemethode
-- **Belastingdetails** — BTW (21%) apart berekend en weergegeven
-- **Betalingsvoorwaarden** — 14 dagen netto
+- **Summary** — Total energy (kWh), total costs (€), number of sessions, number of vehicles
+- **Breakdown per vehicle** — Energy and costs per vehicle
+- **Detail per session** — Date, time, location, EVSE-ID, kWh, costs, authentication method
+- **Tax details** — VAT (21%) calculated and displayed separately
+- **Payment terms** — 14 days net
 
-### Factuurformaten
+### Invoice Formats
 
-- **PDF** — Opgemaakt factuurdocument voor uw administratie
-- **CSV** — Machineleesbaar detail voor import in boekhouding/ERP-systemen
-- **UBL** — Universal Business Language XML voor geautomatiseerde factuurverwerking (Nederlandse standaard)
+- **PDF** — Formatted invoice document for your administration
+- **CSV** — Machine-readable detail for import into accounting/ERP systems
+- **UBL** — Universal Business Language XML for automated invoice processing (Dutch standard)
 
-Alle formaten zijn beschikbaar via **Mijn Vloot** → **Facturering** → **Downloaden**.
+All formats are available via **My Fleet** → **Invoicing** → **Download**.
 
-## Betaalmethoden
+## Payment Methods
 
-### Automatische incasso (SEPA)
-De voorkeursbetaalmethode voor vlootklanten:
-1. Ga naar **Instellingen** → **Facturering** → **Betaalmethode**
-2. Klik op **Automatische incasso instellen**
-3. Voer uw IBAN in en autoriseer het SEPA-mandaat
-4. Facturen worden automatisch 14 dagen na uitgifte geïncasseerd
+### Direct Debit (SEPA)
+The preferred payment method for fleet customers:
+1. Go to **Settings** → **Invoicing** → **Payment Method**
+2. Click on **Set up direct debit**
+3. Enter your IBAN and authorize the SEPA mandate
+4. Invoices are automatically collected 14 days after issuance
 
-### Bankoverschrijving
-Voor klanten die handmatig betalen:
-- Betalingsgegevens staan op elke factuur
-- Referentie: Factuurnummer (formaat: `STM-2026-XXXXX`)
+### Bank Transfer
+For customers paying manually:
+- Payment details are listed on each invoice
+- Reference: Invoice number (format: `STM-2026-XXXXX`)
 - Bank: ING Bank, NL
-- Vervaldatum: 14 dagen na factuurdatum
+- Due date: 14 days after invoice date
 
-## Kostentoewijzing
+## Cost Allocation
 
-### Per Kostenplaats
-Als uw voertuigen zijn toegewezen aan kostenplaatsen in de Voertuigen-sectie, kunnen facturen kostenplaats-uitsplitsingen bevatten. Dit sluit direct aan op uw interne boekhouding.
+### Per Cost Center
+If your vehicles are assigned to cost centers in the Vehicles section, invoices can contain cost center breakdowns. This directly aligns with your internal accounting.
 
-### Per Afdeling/Groep
-Voertuiggroepen worden weerspiegeld in het factuurdetail, waardoor het eenvoudig is om kosten over afdelingen te verdelen.
+### Per Department/Group
+Vehicle groups are reflected in the invoice detail, making it easy to distribute costs across departments.
 
-### Aangepaste Toewijzing
-Heeft u een specifieke toewijzingslogica nodig? We kunnen aangepaste factuurgroeperingen voor uw organisatie configureren. Neem contact op met uw accountmanager.
+### Custom Allocation
+Do you need a specific allocation logic? We can configure custom invoice groupings for your organization. Contact your account manager.
 
-## Belasting en Compliance
+## Tax and Compliance
 
-### BTW
-- Alle prijzen worden vermeld **exclusief BTW**
-- BTW van 21% wordt toegevoegd aan alle facturen
-- Het BTW-nummer staat op elke factuur (Stroomlijnen B.V., KVK 93264526)
+### VAT
+- All prices are listed **excluding VAT**
+- VAT of 21% is added to all invoices
+- The VAT number is listed on each invoice (Stroomlijnen B.V., KVK 93264526)
 
-### Energiebelasting
-- Energiebelasting is opgenomen in het kWh-tarief waar van toepassing
-- Het tarief hangt af van de netaansluitingscategorie van de locatie
-- Dit is transparant — zie uw contract voor de specificatie
+### Energy Tax
+- Energy tax is included in the kWh rate where applicable
+- The rate depends on the grid connection category of the location
+- This is transparent — see your contract for specification
 
-### CSRD / ESG-rapportage
-Voor bedrijven met duurzaamheidsrapportageverplichtingen:
-- We leveren **jaarlijkse energiecertificaten** die het totale verbruik van hernieuwbare energie tonen
-- Berekeningen van vermeden CO₂ zijn opgenomen in het jaarlijkse vlootrapport
-- Dataformaat compatibel met gangbare ESG-rapportageframeworks
+### CSRD / ESG Reporting
+For companies with sustainability reporting obligations:
+- We provide **annual energy certificates** showing total renewable energy consumption
+- Calculations of avoided CO₂ are included in the annual fleet report
+- Data format compatible with common ESG reporting frameworks
 
-## Geschillen en Correcties
+## Disputes and Corrections
 
-Als u denkt dat een factuur een fout bevat:
+If you believe an invoice contains an error:
 
-1. Ga naar **Facturering** → selecteer de factuur → **Betwisten**
-2. Selecteer de betreffende sessie(s)
-3. Beschrijf het probleem
-4. Ons factureringsteam onderzoekt het en reageert binnen 5 werkdagen
-5. Correcties worden verwerkt als tegoed op de volgende factuur
+1. Go to **Invoicing** → select the invoice → **Dispute**
+2. Select the relevant session(s)
+3. Describe the issue
+4. Our invoicing team investigates and responds within 5 working days
+5. Corrections are processed as a credit on the next invoice
 
-## Historische Facturen
+## Historical Invoices
 
-Alle facturen worden **7 jaar** bewaard (Nederlandse wettelijke verplichting) en zijn toegankelijk in het Mijn Vloot-portaal. U kunt ook automatische factuurverzending naar extra e-mailadressen instellen via **Instellingen** → **Facturering** → **Factuurontvangers**.
+All invoices are **retained for 7 years** (Dutch legal requirement) and are accessible in the My Fleet portal. You can also set up automatic invoice sending to additional email addresses via **Settings** → **Invoicing** → **Invoice Recipients**.
+
+---

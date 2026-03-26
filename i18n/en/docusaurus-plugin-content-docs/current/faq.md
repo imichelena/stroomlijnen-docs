@@ -1,92 +1,95 @@
 ---
+---
 sidebar_position: 100
 title: FAQ
-description: Veelgestelde vragen over Stroomlijnen elektrisch vrachtwagenopladen — Plug & Charge, tarieven, RFID, vlootbeheer en meer.
+description: Frequently asked questions about Stroomlijnen electric truck charging — Plug & Charge, rates, RFID, fleet management, and more.
 keywords: [FAQ, frequently asked questions, EV charging, Plug and Charge, fleet charging, RFID, pricing]
 ---
 
-# Veelgestelde Vragen
+# Frequently Asked Questions
 
-## Algemeen
+## General
 
-### 1. Wat is Stroomlijnen?
-Stroomlijnen is een Nederlandse Charge Point Operator (CPO) en e-Mobility Service Provider (eMSP) gespecialiseerd in hoogvermogen DC-laden voor elektrische vrachtwagens. We plaatsen laadinfrastructuur bij theaters, logistieke hubs en strategische locaties door heel Nederland.
+### 1. What is Stroomlijnen?
+Stroomlijnen is a Dutch Charge Point Operator (CPO) and e-Mobility Service Provider (eMSP) specializing in high-power DC charging for electric trucks. We install charging infrastructure at theaters, logistics hubs, and strategic locations throughout the Netherlands.
 
-### 2. Waarom theaters?
-Theaters beschikken over grote elektriciteitsaansluitingen (voor belichting, geluid en toneelinstallaties), parkeerplaatsen die toegankelijk zijn voor vrachtwagens (voor leveringen van toneelsets) en zijn 's nachts beschikbaar wanneer vrachtwagens doorgaans laden. Een logische combinatie — we maken gebruik van bestaande infrastructuur die anders 's nachts onbenut zou blijven.
+### 2. Why theaters?
+Theaters have large electrical connections (for lighting, sound, and stage installations), parking spaces accessible to trucks (for deliveries of stage sets), and are available at night when trucks typically charge. A logical combination — we utilize existing infrastructure that would otherwise remain unused at night.
 
-### 3. Welke voertuigen kunnen laden bij Stroomlijnen?
-Elk voertuig met een **CCS Combo 2**-stekker kan laden bij onze DC-stations. Dat omvat elektrische vrachtwagens, bestelwagens, bussen en personenwagens. Onze laders leveren tot 400 kW, maar passen zich aan het maximale vermogen aan dat het voertuig aankan.
+### 3. Which vehicles can charge at Stroomlijnen?
+Any vehicle with a **CCS Combo 2** plug can charge at our DC stations. This includes electric trucks, vans, buses, and passenger cars. Our chargers deliver up to 400 kW, but adapt to the maximum power the vehicle can handle.
 
-### 4. Waar staan Stroomlijnen-laders?
-Voornamelijk in Nederland, met uitbreiding gepland naar België en Duitsland. Bekijk onze [laderskaart](./locations/finding-charger) voor alle huidige locaties.
+### 4. Where are Stroomlijnen chargers located?
+Primarily in the Netherlands, with expansion planned to Belgium and Germany. View our [charger map](./locations/finding-charger) for all current locations.
 
-### 5. Kunnen personenwagens gebruikmaken van uw laders?
-Ja. Hoewel onze laders zijn ontworpen en gepositioneerd voor bedrijfsvoertuigen, kan elke CCS-uitgeruste auto ook laden. Houd er rekening mee dat vrachtwagenvakken hogere randen of een andere indeling kunnen hebben dan een gewoon laadstation voor personenwagens.
+### 5. Can passenger cars use your chargers?
+Yes. Although our chargers are designed and positioned for commercial vehicles, any CCS-equipped car can also charge. Note that truck bays may have higher curbs or a different layout than a regular charging station for passenger cars.
 
 ## Plug & Charge
 
-### 6. Wat is Plug & Charge?
-Plug & Charge betekent dat uw vrachtwagen automatisch authenticeert en begint met laden zodra u de kabel aansluit — geen pas, geen app, geen actie van de bestuurder. Het maakt gebruik van ISO 15118-digitale certificaten die in het voertuig zijn ingebouwd. Zie [Wat is Plug & Charge?](./plug-and-charge/what-is-pnc) voor meer details.
+### 6. What is Plug & Charge?
+Plug & Charge means your truck automatically authenticates and starts charging as soon as you plug in — no card, no app, no action from the driver. It uses ISO 15118 digital certificates built into the vehicle. See [What is Plug & Charge?](./plug-and-charge/what-is-pnc) for more details.
 
-### 7. Is Plug & Charge veilig?
-Ja — zelfs veiliger dan RFID-passen. PnC gebruikt TLS-wederzijdse authenticatie en digitale certificaten (dezelfde technologie als internetbankieren). Certificaten zijn gekoppeld aan het VIN van het voertuig en opgeslagen in een hardwarebeveiligingsmodule, waardoor klonen uiterst moeilijk is.
+### 7. Is Plug & Charge secure?
+Yes — even safer than RFID cards. PnC uses TLS mutual authentication and digital certificates (the same technology as online banking). Certificates are linked to the vehicle's VIN and stored in a hardware security module, making cloning extremely difficult.
 
-### 8. Welke vrachtwagens ondersteunen Plug & Charge?
-De meeste grote elektrische vrachtwagenfabrikanten ondersteunen nu PnC: Volvo, DAF, Mercedes-Benz, Scania en MAN. Zie onze [lijst met compatibele voertuigen](./plug-and-charge/compatible-vehicles) voor de volledige details.
+### 8. Which trucks support Plug & Charge?
+Most major electric truck manufacturers now support PnC: Volvo, DAF, Mercedes-Benz, Scania, and MAN. See our [list of compatible vehicles](./plug-and-charge/compatible-vehicles) for full details.
 
-### 9. Hoe lang duurt het instellen van Plug & Charge?
-Ongeveer 15 minuten portaalconfiguratie, daarna 1–24 uur voor de installatie van het certificaat in het voertuig (afhankelijk van de fabrikant). Zie de [installatiehandleiding](./plug-and-charge/setup-guide).
+### 9. How long does it take to set up Plug & Charge?
+About 15 minutes of portal configuration, then 1–24 hours for certificate installation in the vehicle (depending on the manufacturer). See the [setup guide](./plug-and-charge/setup-guide).
 
-### 10. Kan ik Plug & Charge EN RFID tegelijk gebruiken?
-Ja. PnC en RFID kunnen naast elkaar bestaan. Als PnC om welke reden dan ook mislukt, kan de bestuurder altijd terugvallen op het tikken van de RFID-pas. De lader probeert eerst PnC; als PnC binnen 15 seconden niet authenticeert, wordt om een RFID-pas gevraagd.
+### 10. Can I use Plug & Charge AND RFID at the same time?
+Yes. PnC and RFID can coexist. If PnC fails for any reason, the driver can always fall back to tapping the RFID card. The charger first attempts PnC; if PnC does not authenticate within 15 seconds, it requests an RFID card.
 
-## Tarieven en facturering
+## Rates and Billing
 
-### 11. Wat kost laden?
-Vlootklanten ontvangen een contractueel €/kWh-tarief. Er zijn geen sessiekosten of tijdgebonden kosten — u betaalt alleen voor verbruikte energie. Neem contact op voor een vlootprijsvoorstel.
+### 11. What does charging cost?
+Fleet customers receive a contractual €/kWh rate. There are no session fees or time-based costs — you only pay for consumed energy. Contact us for a fleet price quote.
 
-### 12. Hoe werkt de facturering?
-Maandelijkse facturen met uitgesplitste sessiegegevens, beschikbaar als PDF, CSV of UBL XML. Facturen worden op de 1e van elke maand gegenereerd. Zie [Facturering](./fleet-management/invoicing) voor details.
+### 12. How does billing work?
+Monthly invoices with detailed session data, available as PDF, CSV, or UBL XML. Invoices are generated on the 1st of each month. See [Billing](./fleet-management/invoicing) for details.
 
-### 13. Biedt u volumekortingen?
-Ja. Vloten die maandelijkse energiedrempels overschrijden, komen in aanmerking voor gestaffelde tarieven. Neem contact op met uw accountmanager of stuur een e-mail naar [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl) voor details.
+### 13. Do you offer volume discounts?
+Yes. Fleets that exceed monthly energy thresholds qualify for tiered rates. Contact your account manager or email [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl) for details.
 
-### 14. Kunnen roaming-gebruikers laden bij Stroomlijnen?
-Ja, via onze Hubject- en OCPI-roamingverbindingen. Gebruikers met laadpassen van andere aanbieders kunnen tikken en laden. Roamingtarieven kunnen afwijken van directe vlooттarieven.
+### 14. Can roaming users charge at Stroomlijnen?
+Yes, via our Hubject and OCPI roaming connections. Users with charging cards from other providers can tap and charge. Roaming rates may differ from direct fleet rates.
 
-## RFID-passen
+## RFID Cards
 
-### 15. Hoe krijg ik RFID-passen?
-Bestel via het [Mijn Vloot-portaal](./getting-started/rfid-cards) of neem contact op met uw accountmanager. Passen worden binnen 3 werkdagen verzonden en vereisen activering.
+### 15. How do I get RFID cards?
+Order through the [My Fleet portal](./getting-started/rfid-cards) or contact your account manager. Cards are shipped within 3 working days and require activation.
 
-### 16. Wat als een RFID-pas verloren of gestolen is?
-Deactiveer de pas onmiddellijk via Mijn Vloot → RFID-passen → selecteer de pas → Deactiveren. De pas wordt binnen seconden geblokkeerd op alle Stroomlijnen-laders. Bestel een vervanging via het portaal.
+### 16. What if an RFID card is lost or stolen?
+Deactivate the card immediately via My Fleet → RFID Cards → select the card → Deactivate. The card is blocked on all Stroomlijnen chargers within seconds. Order a replacement through the portal.
 
-### 17. Kan één RFID-pas op meerdere voertuigen werken?
-Ja. RFID-passen zijn gekoppeld aan uw vlootaccount, niet aan een specifiek voertuig. Elke pas die aan uw vloot is toegewezen, kan een laadsessie starten op elke lader voor elk van uw voertuigen.
+### 17. Can one RFID card work on multiple vehicles?
+Yes. RFID cards are linked to your fleet account, not a specific vehicle. Each card assigned to your fleet can start a charging session on any charger for any of your vehicles.
 
-## Technisch
+## Technical
 
-### 18. Welke OCPP-versie gebruiken uw laders?
-Alle nieuwe laders gebruiken **OCPP 2.0.1**. Sommige oudere installaties gebruiken OCPP 1.6-J. Beide worden volledig ondersteund door ons CSMS. Zie [OCPP-overzicht](./technical/ocpp-overview).
+### 18. Which OCPP version do your chargers use?
+All new chargers use **OCPP 2.0.1**. Some older installations use OCPP 1.6-J. Both are fully supported by our CSMS. See [OCPP Overview](./technical/ocpp-overview).
 
-### 19. Ondersteunen jullie slim laden / taakverdeling?
-Ja. Ons CSMS verdeelt het vermogen dynamisch over de laders op elke locatie op basis van netcapaciteit, voertuigprioriteit en optimalisatie op basis van het tijdstip. Zie [OCPP-overzicht → Slim laden](./technical/ocpp-overview#slim-laden).
+### 19. Do you support smart charging / load balancing?
+Yes. Our CSMS dynamically distributes power across chargers at each location based on grid capacity, vehicle priority, and time-of-day optimization. See [OCPP Overview → Smart Charging](./technical/ocpp-overview#smart-charging).
 
-### 20. Kan ik laadgegevens integreren met mijn vlootbeheersysteem?
-Ja. We bieden een REST API met realtime webhooks voor sessiegegevens, voertuigbeheer en facturering. SDK's beschikbaar voor Python, JavaScript en C#. Zie [API & Integratie](./technical/integration).
+### 20. Can I integrate charging data with my fleet management system?
+Yes. We offer a REST API with real-time webhooks for session data, vehicle management, and billing. SDKs available for Python, JavaScript, and C#. See [API & Integration](./technical/integration).
 
-## Ondersteuning
+## Support
 
-### Hoe meld ik een defecte lader?
-- **App:** Help → Probleem melden → selecteer de lader
-- **Telefoon:** Ondersteuningsnummer staat op elke lader
-- **E-mail:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
-- **Vermeld:** Lader-ID (formaat: `NL*STM*E...`), tijdstip en omschrijving van het probleem
+### How do I report a faulty charger?
+- **App:** Help → Report Issue → select the charger
+- **Phone:** Support number is on each charger
+- **Email:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
+- **Include:** Charger ID (format: `NL*STM*E...`), time, and description of the issue
 
-### Hoe neem ik contact op met Stroomlijnen?
-- **Algemene vragen:** [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl)
-- **Vlootverkoop:** [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl)
-- **Technische ondersteuning:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
-- **Technische integratie:** [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl)
+### How do I contact Stroomlijnen?
+- **General questions:** [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl)
+- **Fleet sales:** [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl)
+- **Technical support:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
+- **Technical integration:** [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl)
+
+---

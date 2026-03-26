@@ -1,99 +1,100 @@
 ---
+---
 sidebar_position: 3
-title: Laadsessies
-description: Laadsessies bewaken en analyseren voor uw elektrische vloot in het Stroomlijnen Mijn Vloot-portaal.
+title: Charging Sessions
+description: Monitor and analyze charging sessions for your electric fleet in the Streamline My Fleet portal.
 keywords: [charging sessions, session monitoring, energy consumption, charging history, fleet analytics]
 ---
 
-# Laadsessies
+# Charging Sessions
 
-Elke keer dat een van uw voertuigen laadt bij een Stroomlijnen-locatie, wordt een sessierecord aangemaakt met volledige gegevens — energie, kosten, duur, vermogenscurve en authenticatiemethode.
+Every time one of your vehicles charges at a Streamline location, a session record is created with full details — energy, costs, duration, power curve, and authentication method.
 
-## Actieve Sessies
+## Active Sessions
 
-De weergave **Actieve sessies** toont alle voertuigen die momenteel laden:
+The **Active Sessions** view displays all vehicles currently charging:
 
-- **Voertuig** — Geïdentificeerd aan de hand van kenteken, bijnaam of VIN
-- **Locatie** — Naam van de laderlocatie en specifiek EVSE-ID
-- **Gestart** — Datum en tijd van sessiestart
-- **Duur** — Lopende timer
-- **Energie** — Tot nu toe geleverde kWh (wordt elke 60 seconden bijgewerkt)
-- **Vermogen** — Huidig laadvermogen in kW
-- **SoC** — Laadniveau van de accu (indien door het voertuig gerapporteerd)
-- **Authenticatiemethode** — Plug & Charge, RFID of app
+- **Vehicle** — Identified by license plate, nickname, or VIN
+- **Location** — Name of the charger location and specific EVSE-ID
+- **Started** — Date and time of session start
+- **Duration** — Ongoing timer
+- **Energy** — Energy delivered so far in kWh (updated every 60 seconds)
+- **Power** — Current charging power in kW
+- **SoC** — Battery charge level (if reported by the vehicle)
+- **Authentication Method** — Plug & Charge, RFID, or app
 
-U kunt op elke actieve sessie klikken voor een **live vermogenscurve** die het laadprofiel in realtime toont.
+You can click on any active session for a **live power curve** showing the charging profile in real-time.
 
-## Sessiehistorie
+## Session History
 
-De historieweergave toont alle voltooide sessies met filtermogelijkheden:
+The history view displays all completed sessions with filtering options:
 
 ### Filters
-- **Datumbereik** — Aangepaste datums of presets (vandaag, deze week, deze maand, laatste 30 dagen)
-- **Voertuig** — Eén voertuig of voertuiggroep
-- **Locatie** — Specifieke locatie of alle locaties
-- **Authenticatiemethode** — PnC, RFID, app of alles
-- **Minimale energie** — Filter heel korte sessies weg
+- **Date Range** — Custom dates or presets (today, this week, this month, last 30 days)
+- **Vehicle** — One vehicle or vehicle group
+- **Location** — Specific location or all locations
+- **Authentication Method** — PnC, RFID, app, or all
+- **Minimum Energy** — Filter out very short sessions
 
-### Sessiedetails
+### Session Details
 
-Klik op een sessie om te zien:
+Click on a session to see:
 
-- **Volledige vermogenscurve** — Grafiek van kW in de tijd, met opstart, plateau en afname
-- **Energie-uitsplitsing** — Totaal kWh, piekvermogen, gemiddeld vermogen
-- **Kostenuitsplitsing** — Energiekosten (€/kWh), eventuele toeslagen, totale kosten
-- **Voertuiggegevens** — SoC bij start en einde (indien gerapporteerd), VIN, kenteken
-- **Ladergegevens** — EVSE-ID, connectortype, firmwareversie
-- **CDR** — Charge Detail Record conform OCPI (downloadbaar)
+- **Full Power Curve** — Graph of kW over time, with startup, plateau, and decline
+- **Energy Breakdown** — Total kWh, peak power, average power
+- **Cost Breakdown** — Energy costs (€/kWh), any surcharges, total costs
+- **Vehicle Details** — SoC at start and end (if reported), VIN, license plate
+- **Charger Details** — EVSE-ID, connector type, firmware version
+- **CDR** — Charge Detail Record conforming to OCPI (downloadable)
 
 ## Analytics
 
-Het analytics-dashboard biedt vlootbrede inzichten:
+The analytics dashboard provides fleet-wide insights:
 
-### Energieverbruik
-- Totaal kWh per dag/week/maand
-- Uitsplitsing per voertuig of voertuiggroep
-- Vergelijking over tijdsperioden
-- Trends in kosten per kWh
+### Energy Consumption
+- Total kWh per day/week/month
+- Breakdown by vehicle or vehicle group
+- Comparison over time periods
+- Trends in costs per kWh
 
-### Efficiëntiecijfers
-- Gemiddelde energie per sessie
-- Gemiddelde kosten per kWh
-- Bezettingsgraad (laadtijd versus stilstandtijd per voertuig)
-- Piekvraagpatronen
+### Efficiency Metrics
+- Average energy per session
+- Average cost per kWh
+- Utilization rate (charging time vs. idle time per vehicle)
+- Peak demand patterns
 
-### Locatieanalyse
-- Welke locaties uw vloot het meest gebruikt
-- Gemiddelde wachttijd voor een vrije lader
-- Energieprijzen per locatie
+### Location Analysis
+- Which locations your fleet uses most
+- Average wait time for a free charger
+- Energy prices per location
 
-## Meldingen
+## Notifications
 
-Configureer meldingen voor:
+Configure notifications for:
 
-- **Mislukte sessies** — Een sessie die is gestart maar abnormaal is beëindigd
-- **Lange sessies** — Een voertuig laadt langer dan een ingestelde duur
-- **Hoge kosten** — Een sessie overschrijdt een kostendrempel
-- **SoC-limiet** — Het laadniveau van een voertuig is onder een minimum gezakt voordat het bij een lader aankwam
+- **Failed Sessions** — A session that started but ended abnormally
+- **Long Sessions** — A vehicle charging longer than a set duration
+- **High Costs** — A session exceeding a cost threshold
+- **SoC Limit** — The charge level of a vehicle dropping below a minimum before arriving at a charger
 
-Meldingen worden verzonden via e-mail en/of getoond in het Mijn Vloot-dashboard.
+Notifications are sent via email and/or displayed in the My Fleet dashboard.
 
-## Export en Integratie
+## Export and Integration
 
-### CSV-export
-Download elke gefilterde weergave als CSV-bestand. Kolommen bevatten alle sessiedetails plus berekende velden zoals kosten per kWh en duur.
+### CSV Export
+Download any filtered view as a CSV file. Columns include all session details plus calculated fields like costs per kWh and duration.
 
 ### API
-Sessiegegevens programmatisch ophalen:
+Retrieve session data programmatically:
 
-```
+```bash
 GET /api/v1/sessions?start_date=2026-03-01&end_date=2026-03-31
 GET /api/v1/sessions/{session_id}
 GET /api/v1/sessions/active
 ```
 
 ### Webhooks
-Ontvang realtime meldingen wanneer sessies starten, bijgewerkt worden of eindigen:
+Receive real-time notifications when sessions start, are updated, or end:
 
 ```json
 {
@@ -107,15 +108,17 @@ Ontvang realtime meldingen wanneer sessies starten, bijgewerkt worden of eindige
 }
 ```
 
-Configureer webhooks via **Instellingen** → **API** → **Webhooks**.
+Configure webhooks via **Settings** → **API** → **Webhooks**.
 
-## De Vermogenscurve Begrijpen
+## Understanding the Power Curve
 
-Een typische DC-laadsessie voor een elektrische vrachtwagen vertoont het volgende patroon:
+A typical DC charging session for an electric truck exhibits the following pattern:
 
-1. **Opstart** (0–3 min) — Het vermogen stijgt terwijl de lader en het voertuig onderhandelen en de accu wordt voorverwarmd
-2. **Plateau** (3 min – 60%+ SoC) — Maximaal laadvermogen, vaak 150–350 kW afhankelijk van het vrachtwagenmodel
-3. **Afname** (60%+ SoC – doel-SoC) — Het vermogen neemt geleidelijk af naarmate de accu voller wordt, ter bescherming van de celgezondheid
-4. **Voltooiing** — De sessie eindigt bij het doel-SoC of wanneer handmatig gestopt
+1. **Startup** (0–3 min) — Power increases as the charger and vehicle negotiate and the battery is preheated
+2. **Plateau** (3 min – 60%+ SoC) — Maximum charging power, often 150–350 kW depending on the truck model
+3. **Decline** (60%+ SoC – target SoC) — Power gradually decreases as the battery becomes fuller, to protect cell health
+4. **Completion** — The session ends at the target SoC or when manually stopped
 
-Inzicht in deze curve helpt bij de planning: als u alleen van 20% naar 80% SoC hoeft te laden, ontvangt u het meeste energie tijdens de snelle plateaufase. Laden van 80–100% duurt onevenredig langer.
+Insight into this curve helps with planning: if you only need to charge from 20% to 80% SoC, you receive the most energy during the fast plateau phase. Charging from 80–100% takes disproportionately longer.
+
+---

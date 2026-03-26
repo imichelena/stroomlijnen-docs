@@ -1,69 +1,72 @@
 ---
+---
 sidebar_position: 7
-title: Personenwagens — Plug & Charge
-description: Hoe Plug & Charge werkt voor personenwagens op Stroomlijnen-laadstations — BMW, Mercedes, Porsche, Audi, VW en meer.
+title: Passenger Cars — Plug & Charge
+description: How Plug & Charge works for passenger cars at Stroomlijnen charging stations — BMW, Mercedes, Porsche, Audi, VW, and more.
 keywords: [passenger cars, Plug and Charge, BMW, Mercedes, Porsche, Audi, VW, CCS, electric car]
 ---
 
-# Personenwagens — Plug & Charge
+# Passenger Cars — Plug & Charge
 
-Hoewel de laadstations van Stroomlijnen zijn ontworpen voor bedrijfsvoertuigen, kunnen personenwagens met CCS-connectoren ook laden bij onze stations. Veel moderne EV's ondersteunen al Plug & Charge.
+Although Stroomlijnen's charging stations are designed for commercial vehicles, passenger cars with CCS connectors can also charge at our stations. Many modern EVs already support Plug & Charge.
 
-## Hoe Het Werkt voor Personenwagens
+## How It Works for Passenger Cars
 
-Plug & Charge voor personenwagens werkt op dezelfde manier als voor vrachtwagens — het voertuig presenteert een digitaal contractcertificaat via ISO 15118, en de lader authenticeert automatisch.
+Plug & Charge for passenger cars works in the same way as for trucks — the vehicle presents a digital contract certificate via ISO 15118, and the charger authenticates automatically.
 
-Het verschil zit in **hoe het certificaat in de auto terechtkomt**:
-- Auto's krijgen PnC-certificaten doorgaans via de eigen laaddienst van de fabrikant (BMW Charging, Mercedes me Charge, enz.)
-- Het PnC-certificaat van de auto kan gekoppeld zijn aan de eMSP van de fabrikant, niet rechtstreeks aan Stroomlijnen
-- Roaming via Hubject maakt cross-netwerk PnC mogelijk — het certificaat van de auto werkt bij Stroomlijnen via roaming
+The difference lies in **how the certificate gets into the car**:
+- Cars typically receive PnC certificates through the manufacturer's own charging service (BMW Charging, Mercedes me Charge, etc.)
+- The car's PnC certificate may be linked to the manufacturer's eMSP, not directly to Stroomlijnen
+- Roaming via Hubject enables cross-network PnC — the car's certificate works at Stroomlijnen via roaming
 
-## Ondersteunde Merken
+## Supported Brands
 
-| Merk | PnC-methode | Werkt bij Stroomlijnen |
+| Brand | PnC Method | Works at Stroomlijnen |
 |------|-------------|:----------------------:|
 | **BMW** | BMW Charging / Hubject | ✅ Via roaming |
 | **Mercedes-Benz** | Mercedes me Charge / Hubject | ✅ Via roaming |
 | **Porsche** | Porsche Charging Service / Hubject | ✅ Via roaming |
 | **Audi** | myAudi / Hubject | ✅ Via roaming |
-| **VW** | Volkswagen We Charge | ⚠️ Uitrol loopt |
-| **Hyundai** | Hyundai Bluelink | ⚠️ Marktafhankelijk |
-| **Kia** | Kia Connect | ⚠️ Marktafhankelijk |
-| **Tesla** | Eigen Supercharger PnC | ❌ Niet via ISO 15118 |
-| **Stellantis** | — | ❌ Nog niet ondersteund |
+| **VW** | Volkswagen We Charge | ⚠️ Rollout in progress |
+| **Hyundai** | Hyundai Bluelink | ⚠️ Market-dependent |
+| **Kia** | Kia Connect | ⚠️ Market-dependent |
+| **Tesla** | Proprietary Supercharger PnC | ❌ Not via ISO 15118 |
+| **Stellantis** | — | ❌ Not yet supported |
 
-### Hoe Roaming PnC Werkt
+### How Roaming PnC Works
 
-1. U activeert PnC in de app van uw autofabrikant (bijv. BMW Charging in de My BMW-app)
-2. De fabrikant installeert een contractcertificaat in uw auto
-3. Wanneer u inplugt bij een Stroomlijnen-lader, presenteert de auto zijn certificaat
-4. Onze lader valideert het via de certificaatpool van Hubject
-5. De sessie wordt geautoriseerd en gefactureerd via de laaddienst van uw fabrikant
-6. U ziet de sessie in de app van uw fabrikant (en wij zien hem in onze backend)
+1. You activate PnC in the app of your car manufacturer (e.g., BMW Charging in the My BMW app)
+2. The manufacturer installs a contract certificate in your car
+3. When you plug in at a Stroomlijnen charger, the car presents its certificate
+4. Our charger validates it via Hubject's certificate pool
+5. The session is authorized and billed through the manufacturer's charging service
+6. You see the session in the manufacturer's app (and we see it in our backend)
 
-**Let op tarieven:** Bij laden via roaming PnC geldt de prijs van uw eMSP (bijv. BMW Charging-tarieven), niet de vlooттarieven van Stroomlijnen. Voor de beste prijzen op Stroomlijnen-locaties kunt u overwegen een direct vlootaccount aan te vragen.
+**Note on rates:** When charging via roaming PnC, the price of your eMSP (e.g., BMW Charging rates) applies, not Stroomlijnen's ad-hoc rates. For the best prices at Stroomlijnen locations, consider requesting a direct fleet account.
 
-## Directe PnC voor Personenwagens
+## Direct PnC for Passenger Cars
 
-Als u een vloot personenwagens beheert (zakelijke auto's, bijvoorbeeld), kunt u directe Stroomlijnen PnC instellen:
+If you manage a fleet of passenger cars (company cars, for example), you can set up direct Stroomlijnen PnC:
 
-1. Registreer de voertuigen in Mijn Vloot (zelfde procedure als voor vrachtwagens)
-2. Schakel PnC in voor elk voertuig
-3. Voor ondersteunde merken (BMW, Mercedes, Audi) pusht ons CPS certificaten via de OEM-backend
-4. U ontvangt de directe vlootprijzen van Stroomlijnen in plaats van roamingtarieven
+1. Register the vehicles in My Fleet (same procedure as for trucks)
+2. Enable PnC for each vehicle
+3. For supported brands (BMW, Mercedes, Audi), our CPS pushes certificates via the OEM backend
+4. You receive direct fleet prices from Stroomlijnen instead of roaming rates
 
-Dit is met name waardevol voor zakelijke wagenparken waarbij kostenbeheer van belang is.
+This is particularly valuable for company car fleets where cost management is important.
 
-## Praktische Opmerkingen
+## Practical Notes
 
-### Fysieke Compatibiliteit
-Stroomlijnen-stations zijn ontworpen voor vrachtwagens. Bij het laden van een personenwagen:
-- Parkeer in een aangewezen autoparkeerplaats als die beschikbaar is
-- De CCS-kabel kan zwaarder zijn dan bij standaard autolaadstations (ontworpen voor vrachtwagenaansluitingen)
-- Het kabelbereik is voldoende — onze kabels zijn 5 m of langer
+### Physical Compatibility
+Stroomlijnen stations are designed for trucks. When charging a passenger car:
+- Park in a designated car parking space if available
+- The CCS cable may be heavier than at standard car charging stations (designed for truck connections)
+- The cable reach is sufficient — our cables are 5 m or longer
 
-### Laadsnelheid
-Onze laders leveren tot 400 kW, maar uw auto neemt alleen af wat hij aankan. Een gemiddelde personenwagen laadt op 50–250 kW afhankelijk van model en accustatus.
+### Charging Speed
+Our chargers deliver up to 400 kW, but your car only takes what it can handle. An average passenger car charges at 50–250 kW depending on the model and battery status.
 
-### Auto-vriendelijke Locaties Vinden
-Zoek in de Stroomlijnen-app of op de kaart naar locaties die zijn aangeduid met zowel een vrachtwagen- als een autopictogram. Sommige locaties hebben speciale autoparkeerplaatsen met lagere kabelhouders.
+### Finding Car-Friendly Locations
+Search in the Stroomlijnen app or on the map for locations marked with both a truck and a car icon. Some locations have special car parking spaces with lower cable holders.
+
+---

@@ -1,109 +1,112 @@
 ---
+---
 sidebar_position: 6
-title: Vermogensbeheer en netaansluiting
-description: Uitleg over aansluitvermogen, gecontracteerd vermogen, peakshaving en smart charging voor pandeneigenaren.
-keywords: [aansluitvermogen, gecontracteerd vermogen, peakshaving, smart charging, netaansluiting, loadmanagement]
+title: Power Management and Grid Connection
+description: Explanation of connection power, contracted power, peak shaving, and smart charging for property owners.
+keywords: [connection power, contracted power, peak shaving, smart charging, grid connection, load management]
 ---
 
-# Vermogensbeheer en netaansluiting
+# Power Management and Grid Connection
 
-Voordat u laadpunten plaatst, is het belangrijk te begrijpen hoe uw elektriciteitsaansluiting werkt en hoe laadinfrastructuur daarmee omgaat.
+Before installing charging points, it's essential to understand how your electricity connection works and how charging infrastructure interacts with it.
 
-## Twee begrippen die u moet kennen
+## Two Concepts You Should Know
 
-### Aansluitvermogen
+### Connection Power
 
-Het **aansluitvermogen** is het fysieke maximum dat uw netaansluiting aankan — bepaald door de kabels en het transformatorstation van uw netbeheerder. Dit is de absolute bovengrens.
+The **connection power** is the physical maximum that your grid connection can handle — determined by the cables and transformer station of your grid operator. This is the absolute upper limit.
 
-**Typisch voor een theater:** 400–2000 kVA (= 400–2000 kW per fase, afhankelijk van grootte)
+**Typical for a theater:** 400–2000 kVA (= 400–2000 kW per phase, depending on size)
 
-### Gecontracteerd vermogen
+### Contracted Power
 
-Het **gecontracteerd vermogen** is het maximale vermogen waarvoor u een contract heeft met uw netbeheerder. U betaalt een vastrecht op basis van dit vermogen. Als u structureel meer afneemt, kunt u boetes krijgen of moet u uw contract aanpassen.
+The **contracted power** is the maximum power for which you have a contract with your grid operator. You pay a fixed fee based on this power. If you structurally consume more, you may face penalties or need to adjust your contract.
 
-Het gecontracteerd vermogen is doorgaans **lager** dan het aansluitvermogen.
+The contracted power is usually **lower** than the connection power.
 
-**Typisch voor een theater:** 150–500 kW
+**Typical for a theater:** 150–500 kW
 
 ---
 
-:::tip Vuistregel
-- **Aansluitvermogen** = wat de kabels aankunnen (ceiling)
-- **Gecontracteerd vermogen** = wat u heeft betaald voor (contract)
-- **Huidig verbruik** = wat u daadwerkelijk gebruikt (varieert per uur)
+:::tip Rule of Thumb
+- **Connection power** = what the cables can handle (ceiling)
+- **Contracted power** = what you've paid for (contract)
+- **Current consumption** = what you actually use (varies per hour)
 
-Overdag heeft u doorgaans veel ruimte tussen uw huidig verbruik en uw gecontracteerd vermogen. Die ruimte kunt u inzetten voor laden.
+During the day, you typically have a lot of room between your current consumption and your contracted power. You can use this space for charging.
 :::
 
 ---
 
-## Hoe een DC-lader zich verhoudt tot uw aansluiting
+## How a DC Charger Relates to Your Connection
 
-Een DC-lader trekt zijn vermogen direct en snel uit uw aansluiting. Een 60 kW DC-lader trekt 60 kW zolang hij actief is. Dat is:
+A DC charger draws its power directly and quickly from your connection. A 60 kW DC charger draws 60 kW as long as it's active. That is:
 
-| Ladertype | Vermogen | % van 270 kW contract |
+| Charger Type | Power | % of 270 kW contract |
 |---|---|---|
-| AC-lader (enkelfasig) | 3,7–7,4 kW | 1–3% |
-| AC-lader (3-fasig) | 11–22 kW | 4–8% |
-| DC-lader | 50–150 kW | 18–55% |
-| DC-snellader (truck) | 100–350 kW | 37–130% |
+| AC charger (single-phase) | 3.7–7.4 kW | 1–3% |
+| AC charger (three-phase) | 11–22 kW | 4–8% |
+| DC charger | 50–150 kW | 18–55% |
+| DC fast charger (truck) | 100–350 kW | 37–130% |
 
-Een enkele DC-lader van 150 kW op een contract van 270 kW neemt dus meer dan de helft van uw contractruimte in. Dat is prima overdag als het theater weinig verbruikt — maar 's avonds tijdens een voorstelling kan dat problemen geven.
+A single 150 kW DC charger on a 270 kW contract takes up more than half of your contract space. That's fine during the day when the theater consumes little — but in the evening during a performance, it can cause problems.
 
-**De oplossing: peakshaving / loadmanagement**
-
----
-
-## Peakshaving en smart charging
-
-**Peakshaving** (ook wel loadmanagement of smart charging) is een systeem dat het laadvermogen automatisch aanpast op basis van het beschikbare vermogen op dat moment.
-
-### Hoe het werkt
-
-1. Het systeem meet continu het actuele stroomverbruik van het gebouw
-2. Het berekent hoeveel ruimte er nog is onder uw gecontracteerd vermogen
-3. De laadpaal krijgt exact zoveel vermogen als beschikbaar is — niet meer
-4. Als de zaal vult en het verbruik stijgt, wordt het laadvermogen automatisch teruggeschroefd
-5. Als het verbruik daalt (bijv. na afloop voorstelling), gaat het laadvermogen weer omhoog
-
-### Resultaat
-
-- **Nooit** overschrijding van uw gecontracteerd vermogen
-- **Maximale laadsnelheid** wanneer het kan
-- **Geen handmatige actie** nodig
-
-```
-Gecontracteerd vermogen:     270 kW
-Theaterverbruik avond:       220 kW
-Beschikbaar voor laden:       50 kW → laadpaal laadt op 50 kW
-
-Theaterverbruik overdag:      40 kW
-Beschikbaar voor laden:      230 kW → laadpaal laadt op 150 kW (max paal)
-```
+**The solution: peak shaving / load management**
 
 ---
 
-## Wanneer is netuitbreiding nodig?
+## Peak Shaving and Smart Charging
 
-In de meeste theaters is netuitbreiding **niet** nodig voor een eerste laadpaal van 60–150 kW, mits peakshaving is geïnstalleerd.
+**Peak shaving** (also known as load management or smart charging) is a system that automatically adjusts the charging power based on the available power at that moment.
 
-Netuitbreiding wordt pas relevant als u:
-- Meerdere laadpunten tegelijk wilt exploiteren (>3 snelladers)
-- Vaste vermogenscapaciteit wilt reserveren voor laden (bijv. voor contractgaranties aan vervoerders)
-- Batterijopslag (BSS) wilt toevoegen voor extra buffercapaciteit
+### How it Works
 
-:::note Netbeheerder
-Wachttijden voor netuitbreiding in Nederland zijn momenteel 5–10 jaar in veel regio's. Batterijopslag (BSS) kan een alternatief zijn om de wachttijd te overbruggen. Zie de [ElaadNL Outlook Logistiek](https://elaadnl.nl) voor actuele cijfers over netcongestie en laadinfrastructuur.
+1. The system continuously measures the actual power consumption of the building
+2. It calculates how much space is left under your contracted power
+3. The charging point receives exactly as much power as is available — no more
+4. If the hall fills and consumption increases, the charging power is automatically reduced
+5. If consumption decreases (e.g., after a performance), the charging power goes back up
+
+### Result
+
+- **Never** exceeding your contracted power
+- **Maximum charging speed** when possible
+- **No manual action** required
+
+```
+Contracted power:     270 kW
+Theater consumption evening:       220 kW
+Available for charging:       50 kW → charging point charges at 50 kW
+
+Theater consumption daytime:      40 kW
+Available for charging:      230 kW → charging point charges at 150 kW (max charger)
+```
+
+---
+
+## When is Grid Expansion Necessary?
+
+In most theaters, grid expansion is **not** necessary for a first charging point of 60–150 kW, as long as peak shaving is installed.
+
+Grid expansion becomes relevant only when you:
+- Want to operate multiple charging points simultaneously (>3 fast chargers)
+- Want to reserve fixed power capacity for charging (e.g., for contract guarantees to carriers)
+- Want to add battery storage (BSS) for extra buffer capacity
+
+:::note Grid Operator
+Waiting times for grid expansion in the Netherlands are currently 5–10 years in many regions. Battery storage (BSS) can be an alternative to bridge the waiting time. See the [ElaadNL Outlook Logistiek](https://elaadnl.nl) for current figures on grid congestion and charging infrastructure.
 :::
 
 ---
 
-## Batterijopslag als buffer
+## Battery Storage as a Buffer
 
-Een Battery Storage System (BSS) laadt op wanneer uw stroomverbruik laag is, en levert die energie terug aan de laadpalen op piekmomenten. Dit maakt hogere laadvermogens mogelijk zonder uw netaansluiting te overschrijden.
+A Battery Storage System (BSS) charges when your power consumption is low and supplies that energy back to the charging points during peak moments. This allows for higher charging powers without exceeding your grid connection.
 
-| Scenario | Zonder BSS | Met BSS |
+| Scenario | Without BSS | With BSS |
 |---|---|---|
-| Beschikbaar overdag | 230 kW | 230 kW + buffer |
-| Beschikbaar avond | 50 kW | 50 kW + buffer uit BSS |
-| Max. laadvermogen avond | 50 kW | 150 kW (uit BSS) |
+| Available daytime | 230 kW | 230 kW + buffer |
+| Available evening | 50 kW | 50 kW + buffer from BSS |
+| Max. charging power evening | 50 kW | 150 kW (from BSS) |
+
+---

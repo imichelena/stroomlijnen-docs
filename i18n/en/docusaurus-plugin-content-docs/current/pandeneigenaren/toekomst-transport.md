@@ -1,96 +1,99 @@
 ---
+---
 sidebar_position: 7
-title: Toekomst van elektrisch vrachtvervoer
-description: Feiten en prognoses over de elektrificatie van het Nederlandse vrachtvervoer — gebaseerd op ElaadNL Outlook Logistiek 2025.
-keywords: [elektrische trucks, elektrificatie, logistiek, prognose, ElaadNL, zero-emissie, vrachtvervoer]
+title: Future of Electric Freight Transport
+description: Facts and forecasts about the electrification of Dutch freight transport — based on ElaadNL Logistics Outlook 2025.
+keywords: [electric trucks, electrification, logistics, forecast, ElaadNL, zero-emission, freight transport]
 ---
 
-# Toekomst van elektrisch vrachtvervoer
+# Future of Electric Freight Transport
 
-Deze pagina geeft een feitelijk overzicht van de verwachte elektrificatie van het Nederlandse vrachtvervoer. Bronnen: ElaadNL Outlook Logistiek (januari 2025), RVO, CBS.
+This page provides a factual overview of the expected electrification of Dutch freight transport. Sources: ElaadNL Logistics Outlook (January 2025), RVO, CBS.
 
-:::note Bron
-De cijfers op deze pagina zijn grotendeels afkomstig uit de **ElaadNL Outlook Logistiek — Update 2025** (januari 2025, Team Marktontwikkeling ElaadNL). Het volledige rapport is beschikbaar op [elaadnl.nl](https://elaadnl.nl).
+:::note Source
+The figures on this page are largely derived from the **ElaadNL Logistics Outlook — Update 2025** (January 2025, Team Market Development ElaadNL). The full report is available at [elaadnl.nl](https://elaadnl.nl).
 :::
 
-## Stand van zaken 2024
+## Current Situation 2024
 
-| Voertuigtype | Aandeel elektrisch (dec. 2024) |
+| Vehicle Type | Electric Share (Dec. 2024) |
 |---|---|
-| Personenauto's | 6,1% |
-| OV-bussen | 36% |
-| Bestelauto's | 3,3% |
-| Trucks | 0,7% |
+| Passenger Cars | 6.1% |
+| Public Transport Buses | 36% |
+| Delivery Vans | 3.3% |
+| Trucks | 0.7% |
 
-Trucks lopen dus achter op andere segmenten. De voornaamste redenen zijn hogere aanschafkosten, beperkte laadinfrastructuur onderweg, en onzekerheid over Total Cost of Ownership (TCO).
+Trucks are thus lagging behind other segments. The main reasons are higher purchase costs, limited charging infrastructure on the road, and uncertainty about Total Cost of Ownership (TCO).
 
-## Prognoses 2035 en 2050
+## Forecasts 2035 and 2050
 
-### Bestelauto's
+### Delivery Vans
 
 | Scenario | 2035 | 2050 |
 |---|---|---|
-| Laag | — | 96% elektrisch |
-| Midden | 54% | 100% elektrisch |
-| Hoog | — | 100% elektrisch |
+| Low | — | 96% electric |
+| Medium | 54% | 100% electric |
+| High | — | 100% electric |
 
 ### Trucks
 
 | Scenario | 2035 | 2050 |
 |---|---|---|
-| Laag | — | 76% elektrisch |
-| Midden | 36% | ~90% elektrisch |
-| Hoog | — | 95% elektrisch |
+| Low | — | 76% electric |
+| Medium | 36% | ~90% electric |
+| High | — | 95% electric |
 
-### Elektriciteitsvraag
+### Electricity Demand
 
-De totale elektriciteitsvraag van logistieke voertuigen loopt op naar **17–20 TWh per jaar in 2050** — meer dan 10% van het huidige jaarlijkse elektriciteitsverbruik van Nederland.
+The total electricity demand of logistics vehicles will increase to **17–20 TWh per year by 2050** — more than 10% of the current annual electricity consumption in the Netherlands.
 
-| Modaliteit | E-vraag 2035 | E-vraag 2050 |
+| Mode | Electricity Demand 2035 | Electricity Demand 2050 |
 |---|---|---|
-| Bestelauto's | 3,7 TWh | 7,3 TWh |
-| Trucks | 4,5 TWh | 11,1 TWh |
-| **Totaal logistiek** | **~8 TWh** | **~18 TWh** |
+| Delivery Vans | 3.7 TWh | 7.3 TWh |
+| Trucks | 4.5 TWh | 11.1 TWh |
+| **Total Logistics** | **~8 TWh** | **~18 TWh** |
 
-## Waar wordt geladen?
+## Where Will Charging Take Place?
 
-Driekwart van de laadvraag van logistieke voertuigen komt terecht op **bedrijventerreinen** (depots). De rest is verdeeld over:
+Three-quarters of the charging demand for logistics vehicles will take place at **business parks** (depots). The rest is divided among:
 
-- Logistieke laadpleinen (snelladen onderweg)
-- Corridorladen (langs snelwegen)
-- Binnenstedelijk snelladen
-- Overige locaties (waaronder **theaters en culturele locaties**)
+- Logistics charging hubs (fast charging on the road)
+- Corridor charging (along highways)
+- Urban fast charging
+- Other locations (including **theaters and cultural venues**)
 
-:::tip Theaters als laadlocatie
-Theaters vallen in de categorie "overige laadlocaties" maar hebben een uniek voordeel: grote bestaande aansluitingen, overdag beschikbare capaciteit, en een netwerk van 500+ locaties verspreid over heel Nederland. Dit maakt ze strategisch interessant voor tourende producties die van locatie naar locatie rijden.
+:::tip Theaters as Charging Locations
+Theaters fall into the category of "other charging locations" but have a unique advantage: large existing connections, available capacity during the day, and a network of 500+ locations spread across the Netherlands. This makes them strategically interesting for touring productions that travel from location to location.
 :::
 
-## Verwachte omslagpunten
+## Expected Turning Points
 
-**TCO-pariteit (Total Cost of Ownership)**
+**TCO Parity (Total Cost of Ownership)**
 
-Elektrische trucks worden steeds goedkoper in gebruik (lagere brandstofkosten, minder onderhoud). ElaadNL verwacht dat de TCO van elektrische trucks de komende jaren de TCO van dieseltrucks gaat onderschrijden, wat de adoptie sterk zal versnellen.
+Electric trucks are becoming increasingly cost-competitive (lower fuel costs, less maintenance). ElaadNL expects that the TCO of electric trucks will soon surpass that of diesel trucks, which will strongly accelerate adoption.
 
-**Zero-emissiezones**
+**Zero-Emission Zones**
 
-Steeds meer Nederlandse gemeenten voeren zero-emissiezones in voor stadslogistiek. Zie het [overzicht van zero-emissiezones](https://www.zero-emissie-stadslogistiek.nl) voor actuele informatie.
+More and more Dutch municipalities are introducing zero-emission zones for urban logistics. See the [overview of zero-emission zones](https://www.zero-emissie-stadslogistiek.nl) for up-to-date information.
 
-**EU-emissienormen**
+**EU Emission Standards**
 
-De Europese CO₂-normen voor trucks worden aangescherpt. Fabrikanten zijn verplicht een toenemend percentage zero-emissievoertuigen te verkopen. Dit dwingt het aanbod richting elektrisch.
+The European CO₂ standards for trucks are being tightened. Manufacturers are required to sell an increasing percentage of zero-emission vehicles. This forces the supply towards electric.
 
-## Laadinfrastructuur: tekort onderweg
+## Charging Infrastructure: Shortage on the Road
 
-Een van de grootste belemmeringen voor de adoptie van elektrische trucks is het **tekort aan publieke laadinfrastructuur** onderweg. Theaters en culturele locaties kunnen bijdragen aan het oplossen van dit tekort door hun bestaande aansluitingen open te stellen.
+One of the biggest obstacles to the adoption of electric trucks is the **shortage of public charging infrastructure** on the road. Theaters and cultural venues can contribute to solving this shortage by opening up their existing connections.
 
-Meer informatie over de infrastructuurbehoefte: [elaadnl.nl/outlook-logistiek](https://elaadnl.nl)
+More information about the infrastructure needs: [elaadnl.nl/outlook-logistiek](https://elaadnl.nl)
 
-## Relevante bronnen
+## Relevant Sources
 
-| Organisatie | Bron | Link |
+| Organization | Source | Link |
 |---|---|---|
-| ElaadNL | Outlook Logistiek 2025 | [elaadnl.nl](https://elaadnl.nl) |
-| RVO | Dashboard Elektrisch Vervoer | [rvo.nl/ev-dashboard](https://www.rvo.nl) |
-| Zero-emissie Stadslogistiek | Overzicht ZE-zones | [zero-emissie-stadslogistiek.nl](https://www.zero-emissie-stadslogistiek.nl) |
-| NAL | Nationale Agenda Laadinfrastructuur | [agendalaadinfrastructuur.nl](https://agendalaadinfrastructuur.nl) |
-| BOVAG/RAI | Verkoopcijfers elektrisch | [bovag.nl](https://bovag.nl) |
+| ElaadNL | Logistics Outlook 2025 | [elaadnl.nl](https://elaadnl.nl) |
+| RVO | Electric Vehicle Dashboard | [rvo.nl/ev-dashboard](https://www.rvo.nl) |
+| Zero-Emission Urban Logistics | Overview of ZE-zones | [zero-emissie-stadslogistiek.nl](https://www.zero-emissie-stadslogistiek.nl) |
+| NAL | National Charging Infrastructure Agenda | [agendalaadinfrastructuur.nl](https://agendalaadinfrastructuur.nl) |
+| BOVAG/RAI | Electric Vehicle Sales Figures | [bovag.nl](https://bovag.nl) |
+
+---

@@ -1,116 +1,119 @@
 ---
+---
 sidebar_position: 2
-title: Voertuigbeheer
-description: Hoe u elektrische voertuigen registreert, configureert en beheert in het Stroomlijnen Mijn Vloot-portaal.
+title: Vehicle Management
+description: How to register, configure, and manage electric vehicles in the Streamline My Fleet portal.
 keywords: [vehicle management, fleet registration, electric truck, VIN, RFID assignment, charging policy]
 ---
 
-# Voertuigbeheer
+# Vehicle Management
 
-De sectie Voertuigen van Mijn Vloot is de plek waar u vrachtwagens en bestelwagens registreert, hun laadinstellingen configureert en hun status bewaakt.
+The Vehicles section of My Fleet is where you register trucks and vans, configure their charging settings, and monitor their status.
 
-## Voertuigen Toevoegen
+## Adding Vehicles
 
-### Enkel Voertuig
+### Single Vehicle
 
-1. Ga naar **Voertuigen** → **Voertuig toevoegen**
-2. Vul de verplichte velden in:
-   - **VIN** — 17-tekens Voertuig Identificatie Nummer
-   - **Kenteken** — Nederlands of EU-formaat
-   - **Merk & Model** — Selecteer uit het keuzemenu
-   - **Bouwjaar** — Modeljaar
-   - **Accucapaciteit** — In kWh (automatisch ingevuld voor bekende modellen)
-3. Optionele velden:
-   - **Bijnaam** — Voor makkelijke herkenning (bijv. "Amsterdam 014")
-   - **Afdeling/Groep** — Voor organisatorisch filteren
-   - **Kostenplaats** — Voor factuurtoedeling
-4. Klik op **Opslaan**
+1. Go to **Vehicles** → **Add Vehicle**
+2. Fill in the required fields:
+   - **VIN** — 17-character Vehicle Identification Number
+   - **License Plate** — Dutch or EU format
+   - **Make & Model** — Select from the dropdown menu
+   - **Model Year** — Year of manufacture
+   - **Battery Capacity** — In kWh (automatically filled in for known models)
+3. Optional fields:
+   - **Nickname** — For easy recognition (e.g., "Amsterdam 014")
+   - **Department/Group** — For organizational filtering
+   - **Cost Center** — For invoice allocation
+4. Click on **Save**
 
-### Bulkimport
+### Bulk Import
 
-Voor vloten met veel voertuigen:
+For fleets with many vehicles:
 
-1. Ga naar **Voertuigen** → **Importeren**
-2. Download het CSV-sjabloon
-3. Vul uw voertuiggegevens in
-4. Upload het ingevulde CSV-bestand
-5. Controleer het importoverzicht — corrigeer eventuele validatiefouten
-6. Klik op **Import bevestigen**
+1. Go to **Vehicles** → **Import**
+2. Download the CSV template
+3. Fill in your vehicle data
+4. Upload the completed CSV file
+5. Review the import summary — correct any validation errors
+6. Click on **Confirm Import**
 
-## Voertuigdetails
+## Vehicle Details
 
-De detailpagina van elk voertuig toont:
+The detail page of each vehicle displays:
 
 ### Status
-- **Huidige staat** — Laden / Inactief / Offline
-- **Laatst gezien** — Wanneer het voertuig voor het laatst met een lader communiceerde
-- **Accuniveau** — Indien gerapporteerd door het voertuig tijdens de laatste sessie
+- **Current State** — Charging / Inactive / Offline
+- **Last Seen** — When the vehicle last communicated with a charger
+- **Battery Level** — If reported by the vehicle during the last session
 
-### Laadconfiguratie
-- **Authenticatiemethode** — PnC, RFID of beide
-- **Plug & Charge-status** — Ingeschakeld/Uitgeschakeld, certificaatstatus
-- **Toegewezen RFID-passen** — Welke passen aan dit voertuig zijn gekoppeld
-- **Laadbeleid** — Maximum laadsnelheid, gewenst SoC-doel, geplande laadvensters
+### Charging Configuration
+- **Authentication Method** — PnC, RFID, or both
+- **Plug & Charge Status** — Enabled/Disabled, certificate status
+- **Assigned RFID Passes** — Which passes are linked to this vehicle
+- **Charging Policy** — Maximum charging power, desired SoC target, scheduled charging windows
 
-### Sessiehistorie
-- Lijst van alle afgelopen laadsessies voor dit voertuig
-- Filteren op datumbereik, locatie of authenticatiemethode
-- Totaal energie, totale kosten en gemiddelde sessieduur
+### Session History
+- List of all past charging sessions for this vehicle
+- Filter by date range, location, or authentication method
+- Total energy, total costs, and average session duration
 
-### Documenten
-- Kentekenbewijs (optioneel uploaden)
-- Verzekeringscertificaat (optioneel uploaden)
-- Onderhoudsgegevens
+### Documents
+- Vehicle registration document (optional upload)
+- Insurance certificate (optional upload)
+- Maintenance data
 
-## Laadbeleid
+## Charging Policy
 
-U kunt per voertuig of per groep laadbeleid instellen:
+You can set charging policy per vehicle or per group:
 
-### Vermogenslimiet
-Stel een maximaal laadvermogen in. Handig voor:
-- Accuduurzaamheid (beperken tot 80% van het maximale vermogen)
-- Kostenbeheersing (lager vermogen = lagere capaciteitskosten op sommige locaties)
+### Power Limit
+Set a maximum charging power. Useful for:
+- Battery durability (limit to 80% of maximum power)
+- Cost management (lower power = lower capacity costs at some locations)
 
-### SoC-doel
-Stel een gewenst laadniveau (State of Charge) in. Wanneer bereikt, verlaagt de lader het vermogen of stopt. Dit verlengt de acculevensduur en maakt laders vrij voor andere voertuigen.
+### SoC Target
+Set a desired State of Charge (SoC) level. When reached, the charger reduces power or stops. This extends battery life and makes chargers available for other vehicles.
 
-### Gepland Laden
-Definieer tijdvensters wanneer geladen mag worden. Handig voor:
-- Daluurprijzen voor elektriciteit
-- Beheer van netbelasting
-- Optimalisatie op vertrektijd (laden tot 90% voor 06:00)
+### Scheduled Charging
+Define time windows when charging is allowed. Useful for:
+- Off-peak electricity prices
+- Grid load management
+- Optimization based on departure time (charge to 90% by 06:00)
 
-### Prioriteit
-Wanneer meerdere vlootvoertuigen op dezelfde locatie staan en het vermogen beperkt is, bepalen prioriteitsinstellingen welke voertuigen als eerste volledig vermogen krijgen.
+### Priority
+When multiple fleet vehicles are at the same location and power is limited, priority settings determine which vehicles get full power first.
 
-## Voertuiggroepen
+## Vehicle Groups
 
-Organiseer voertuigen in groepen voor eenvoudiger beheer:
+Organize vehicles into groups for easier management:
 
-- **Per route** — Amsterdam-routes, Rotterdam-routes
-- **Per type** — Langeafstand, regionale bezorging, last-mile
-- **Per afdeling** — Operaties, klantbezorging
+- **Per Route** — Amsterdam routes, Rotterdam routes
+- **Per Type** — Long-distance, regional delivery, last-mile
+- **Per Department** — Operations, customer delivery
 
-Groepen kunnen gedeeld laadbeleid en factureringsinstellingen hebben.
+Groups can have shared charging policies and billing settings.
 
-## Een Voertuig Uitfaseren
+## Decommissioning a Vehicle
 
-Wanneer een voertuig uw vloot verlaat:
+When a vehicle leaves your fleet:
 
-1. Ga naar **Voertuigen** → selecteer voertuig → **Instellingen**
-2. Klik op **Voertuig uitfaseren**
-3. Dit zal:
-   - Alle actieve PnC-certificaten intrekken
-   - Alle RFID-passen ontkoppelen
-   - De sessiehistorie van het voertuig archiveren (nog steeds toegankelijk voor rapportage)
-   - Facturering voor dit voertuig stoppen
+1. Go to **Vehicles** → select vehicle → **Settings**
+2. Click on **Decommission Vehicle**
+3. This will:
+   - Revoke all active PnC certificates
+   - Unlink all RFID passes
+   - Archive the vehicle's session history (still accessible for reporting)
+   - Stop billing for this vehicle
 
-Het voertuig kan opnieuw worden geactiveerd als het terugkeert in de vloot.
+The vehicle can be reactivated if it returns to the fleet.
 
-## Gegevensexport
+## Data Export
 
-Exporteer voertuiggegevens voor integratie met uw eigen systemen:
+Export vehicle data for integration with your own systems:
 
-- **Voertuigenlijst** — CSV met alle voertuigdetails
-- **Sessiehistorie** — CSV per voertuig of voor alle voertuigen
-- **API** — Programmatische toegang tot voertuiggegevens (zie Overzicht Vlootbeheer → API)
+- **Vehicle List** — CSV with all vehicle details
+- **Session History** — CSV per vehicle or for all vehicles
+- **API** — Programmatic access to vehicle data (see Fleet Management Overview → API)
+
+---

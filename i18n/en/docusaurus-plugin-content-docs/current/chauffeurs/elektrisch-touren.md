@@ -1,157 +1,160 @@
 ---
+---
 sidebar_position: 1
-title: Elektrisch touren — wat je moet weten
-description: Praktische gids voor chauffeurs die met een elektrisch voertuig op tournee gaan. Van rijbereik tot laadbeheer onderweg.
-keywords: [elektrisch touren, chauffeur, range, OBC, laadstrategie, snellader, vrachtwagen, bestelwagen]
+title: Electric Touring — What You Need to Know
+description: Practical guide for drivers going on tour with an electric vehicle. From range to load management on the road.
+keywords: [electric touring, driver, range, OBC, charging strategy, fast charger, truck, van]
 ---
 
-# Elektrisch touren — wat je moet weten
+# Electric Touring — What You Need to Know
 
-Een praktische gids voor chauffeurs die met een elektrisch voertuig op tournee gaan. De kernregel is eenvoudig: **laad als je stilstaat, niet als je rijdt**.
+A practical guide for drivers going on tour with an electric vehicle. The core rule is simple: **charge when you're stationary, not while driving**.
 
 ---
 
-## Het voertuig
+## The Vehicle
 
-### Range bepaalt alles
+### Range Determines Everything
 
-Het rijbereik (range) van je voertuig bepaalt of je van A naar B kunt zonder tussenstop. Enkele vuistregels voor Nederland:
+The range of your vehicle determines whether you can travel from A to B without stopping. Some general rules for the Netherlands:
 
-- **Personenwagen met groot accupakket** (bijv. 77+ kWh): vanuit Utrecht kom je naar vrijwel alle theaters op en terug binnen één lading
-- **Bestelwagen**: dit is met de meeste modellen vrijwel onmogelijk op één lading — laden onderweg is onvermijdelijk
-- **Vrachtwagen**: afhankelijk van route en lading, maar laden in het theater is cruciaal
+- **Passenger car with large battery pack** (e.g., 77+ kWh): from Utrecht, you can reach almost any theater and return on a single charge
+- **Van**: this is virtually impossible with most models on a single charge — charging on the road is unavoidable
+- **Truck**: depends on route and load, but charging at the theater is crucial
 
-### WLTP-range vs. werkelijkheid
+### WLTP Range vs. Reality
 
-De officiële WLTP-range is gebaseerd op gemengd gebruik en is geen goede maatstaf voor constant snelwegrijden.
+The official WLTP range is based on mixed use and is not a good measure for constant highway driving.
 
-| Snelheid | Verbruik t.o.v. WLTP | Effectieve range |
+| Speed | Consumption compared to WLTP | Effective range |
 |---|---|---|
-| 90 km/h | ~100% | WLTP-range haalbaar |
-| 100 km/h | ~110% | ~10% minder range |
-| 120 km/h | ~150% | ~30% minder range |
+| 90 km/h | ~100% | WLTP range achievable |
+| 100 km/h | ~110% | ~10% less range |
+| 120 km/h | ~150% | ~30% less range |
 
-**Praktijkvoorbeeld (Kia e-Soul, WLTP 452 km):**
-- Bij 90 km/h: ~450 km haalbaar
-- Bij 120 km/h: ~300 km in de praktijk
-- Vuistregel bij gemiddeld 100 km/h: reken op ~330 km
+**Practical example (Kia e-Soul, WLTP 452 km):**
+- At 90 km/h: ~450 km achievable
+- At 120 km/h: ~300 km in practice
+- Rule of thumb at average 100 km/h: count on ~330 km
 
-Temperatuur en wind verlagen de range verder. Reken altijd met een marge.
+Temperature and wind reduce the range further. Always calculate with a margin.
 
-### De OBC — on board charger
+### The OBC — On Board Charger
 
-De **OBC (On Board Charger)** is de ingebouwde lader van het voertuig. Deze bepaalt hoe snel je aan een gewone AC-laadpaal kunt laden. Het is het langzaamste onderdeel in de keten.
+The **OBC (On Board Charger)** is the vehicle's built-in charger. This determines how fast you can charge at a regular AC charging pole. It is the slowest part of the chain.
 
-| OBC-vermogen | Tijd om 60 kWh vol te laden |
+| OBC power | Time to fully charge 60 kWh |
 |---|---|
-| 3 kW | ~20 uur |
-| 7 kW | ~8,5 uur |
-| 11 kW | ~5,5 uur |
-| 22 kW | ~2,75 uur |
+| 3 kW | ~20 hours |
+| 7 kW | ~8.5 hours |
+| 11 kW | ~5.5 hours |
+| 22 kW | ~2.75 hours |
 
 :::warning
-Een OBC van 11 kW laadt maximaal op 11 kW, ook als de laadpaal meer kan leveren. De OBC is de beperkende factor bij AC-laden.
+An 11 kW OBC charges at a maximum of 11 kW, even if the charging pole can deliver more. The OBC is the limiting factor when charging with AC.
 :::
 
-Vrijwel alle voertuigen met een B-rijbewijs (personenwagens, bestelwagens) hebben een beperkte OBC — dit was al zo bij diesel (krachtstroom voor opbouw), maar bij elektrisch is het des te relevanter.
+Almost all vehicles with a B driver's license (passenger cars, vans) have a limited OBC — this was already the case with diesel (three-phase power for construction), but it's even more relevant with electric vehicles.
 
 ---
 
-## Laders
+## Chargers
 
-### AC-laders (openbare palen, thuislader)
+### AC Chargers (Public Poles, Home Charger)
 
-AC-laders leveren wisselstroom aan het voertuig — de OBC zet dit om naar DC voor de batterij.
+AC chargers supply alternating current to the vehicle — the OBC converts this to DC for the battery.
 
-- **Vermogen:** 3,7–22 kW (afhankelijk van paal én OBC)
-- **Locaties:** openbare laadpalen op straat, bij bedrijven, in theaters
-- **Prijs:** relatief laag (€0,25–€0,45/kWh)
-- **Nadeel:** langzaam, en steeds meer palen beperken het laadvermogen tijdens avondcongestie (16:00–22:00 uur) of leveren dan helemaal niets
+- **Power:** 3.7–22 kW (depending on pole and OBC)
+- **Locations:** public charging poles on the street, at companies, in theaters
+- **Price:** relatively low (€0.25–€0.45/kWh)
+- **Disadvantage:** slow, and more and more poles limit charging power during evening congestion (16:00–22:00) or don't deliver anything at all
 
-:::warning Avondcongestie
-Veel openbare laadpalen beperken het laadvermogen of stoppen volledig tussen 16:00 en 22:00 uur vanwege netcongestie. Als je rekent op een volle accu 's morgens vroeg, maar de paal heeft 6 uur nauwelijks geladen — dan sta je voor een verrassing.
+:::warning Evening Congestion
+Many public charging poles limit the charging power or stop completely between 16:00 and 22:00 due to grid congestion. If you count on a full battery in the morning, but the pole has hardly charged for 6 hours — you'll be in for a surprise.
 :::
 
-:::note Laadpaalklevers
-Bij veel laadpalen gelden inmiddels boetes als je blijft staan nadat de accu vol is. Zet een melding in je app.
+:::note Charging Pole Blockers
+At many charging poles, fines now apply if you stay parked after the battery is full. Set a notification in your app.
 :::
 
-### DC-laders (snelladers)
+### DC Chargers (Fast Chargers)
 
-DC-laders zetten de stroom zelf om en laden direct op de batterij — zonder OBC. Veel sneller.
+DC chargers convert the power themselves and charge the battery directly — without OBC. Much faster.
 
-- **Vermogen:** 20–350+ kW
-- **Prijs:** tot 4× de prijs van een AC-paal (€0,60–€0,90/kWh op publieke snelladers)
-- **Locaties voor personenwagens/bestelwagens:** Fastned, Shell Recharge, Allego, etc.
-- **Locaties voor vrachtwagens:** ~100 openbare laadpleinen in Nederland (te vinden via [Chargemap](https://chargemap.com) of [Truckcharging van Volvo](https://truckscharging.com))
+- **Power:** 20–350+ kW
+- **Price:** up to 4× the price of an AC pole (€0.60–€0.90/kWh on public fast chargers)
+- **Locations for passenger cars/vans:** Fastned, Shell Recharge, Allego, etc.
+- **Locations for trucks:** ~100 public charging sites in the Netherlands (findable via [Chargemap](https://chargemap.com) or [Truckcharging by Volvo](https://truckscharging.com))
 
-:::warning Vrachtwagens mogen niet bij reguliere snelladers
-Vrachtwagens zijn niet welkom bij Fastned, Shell Recharge en vergelijkbare consumentsnelladers. Zij zijn aangewezen op speciale vrachtwagen-laadpleinen.
+:::warning Trucks Not Allowed at Regular Fast Chargers
+Trucks are not welcome at Fastned, Shell Recharge, and similar consumer fast chargers. They are limited to special truck charging sites.
 :::
 
-### Eigen lader meenemen
+### Bringing Your Own Charger
 
-Een eigen lader meenemen (mobiele laadkabel of wallbox) is een slimme optie — je weet dan zeker dat je kunt laden als er een krachtstroompunt beschikbaar is.
+Bringing your own charger (mobile charging cable or wallbox) is a smart option — you can be sure you can charge if there's a three-phase power point available.
 
-**Let op bij krachtstroomaansluitingen:**
-- Een 32A kabel/stekker kan dat vermogen alleen in de piek aan, maar slechts **25A continu** (netto ~15 kW continu laden)
-- Een 63A kabel geeft de dubbele capaciteit (~30 kW continu)
-- Kabellengte en dikte bepalen of je het volle vermogen kunt halen — zware kabels over grote afstand verliezen vermogen
+**Note when using three-phase power connections:**
+- A 32A cable/plug can only deliver that power in peaks, but only **25A continuously** (net ~15 kW continuous charging)
+- A 63A cable provides double the capacity (~30 kW continuous)
+- Cable length and thickness determine whether you can achieve full power — heavy cables over long distances lose power
 
-Niet alle laad- en losgebieden bij theaters hebben krachtstroom in de buurt. Controleer dit vooraf.
+Not all loading and unloading areas at theaters have three-phase power nearby. Check this in advance.
 
 ---
 
-## Rijgedrag
+## Driving Behavior
 
-### Regeneratief remmen
+### Regenerative Braking
 
-De meeste elektrische voertuigen kunnen energie terugwinnen bij het remmen (regeneratief remmen). De motor werkt als dynamo en laadt de accu bij het afremmen.
+Most electric vehicles can recover energy when braking (regenerative braking). The motor acts as a dynamo and charges the battery when decelerating.
 
-- Je kunt **niet meer uitrollen** — het voertuig remt zodra je gas loslaat
-- Dit is even wennen, maar levert significant rijbereik op bij elke afrit of snelheidsvermindering
-- Je remmen slijten nauwelijks
+- You **can't coast anymore** — the vehicle brakes as soon as you release the gas pedal
+- This takes some getting used to, but it significantly increases your range with every exit or speed reduction
+- Your brake pads wear out much less
 
-**Tip:** Leer rijden met één pedaal. Bij elke afrit of file win je gratis range.
+**Tip:** Learn to drive with one pedal. With every exit or traffic jam, you gain free range.
 
 ---
 
-## Laadstrategie onderweg
+## Charging Strategy on the Road
 
-De ideale strategie voor een tourende chauffeur:
+The ideal strategy for a touring driver:
 
 ```
-Thuisbasis       → Volle accu vertrekken
+Home base       → Depart with a full battery
         ↓
-Theater/locatie  → Laden tijdens opbouw/voorstelling/afbouw
+Theater/location  → Charge during setup/performance/teardown
         ↓
-Thuisbasis       → Eventueel bijladen thuis
+Home base       → Possibly recharge at home
 ```
 
-Als de range voor de enkele reis niet toereikend is:
+If the range for the single trip is not sufficient:
 
-- Kies een voertuig met **hoge DC-laadsnelheid (>100 kW)** — dat maakt een snellaadstop van 15 minuten mogelijk i.p.v. 45 minuten
-- Zoek snelladers op de route via [Chargemap](https://chargemap.com), [ABRP](https://abetterrouteplanner.com) of [PlugShare](https://www.plugshare.com)
-
----
-
-## Vrachtwagens: speciale aandachtspunten
-
-Voor vrachtwagens gelden extra beperkingen:
-
-- **Rijdenwet:** combineren van laden met technikerwerk is wettelijk problematisch als de chauffeur moet wachten bij de lader. Bij theaters die niet kunnen laden is een **dedicated chauffeur** nodig.
-- **Geen toegang tot consumentsnelladers** — zoek specifieke vrachtwagen-laadpleinen
-- **Laden in het theater**: niet altijd mogelijk en niet overal is er een aansluiting in de buurt van het laaddok
+- Choose a vehicle with **high DC charging speed (>100 kW)** — this makes a 15-minute fast charge stop possible instead of 45 minutes
+- Find fast chargers on your route via [Chargemap](https://chargemap.com), [ABRP](https://abetterrouteplanner.com), or [PlugShare](https://www.plugshare.com)
 
 ---
 
-## Conclusies op een rij
+## Trucks: Special Considerations
 
-- **Laad als je stilstaat** — thuis en in het theater. Laden onderweg telt op bij je werkdag.
-- **Range > laadsnelheid** als je overal kunt laden op locatie
-- **Laadsnelheid > range** als je tussenstops onderweg niet kunt vermijden — dan wil je >100 kW DC
-- **Avondcongestie** (16:00–22:00): openbare palen kunnen verrassend weinig leveren
-- **Eigen lader meenemen** is slim — onafhankelijk van beschikbare infrastructuur
-- **Snelladers zijn duur** — gebruik ze alleen als het echt nodig is
-- **Vrachtwagens**: zoek laadpleinen, niet reguliere snelladers
-- **Vrachtwagen + geen theater-lader** = dedicated chauffeur nodig (rijdenwet)
+For trucks, there are additional limitations:
+
+- **Driving regulations:** combining charging with technical work is legally problematic if the driver has to wait at the charger. At theaters that cannot charge, a **dedicated driver** is necessary.
+- **No access to consumer fast chargers** — look for special truck charging sites
+- **Charging at the theater**: not always possible and not everywhere is there a connection near the loading dock
+
+---
+
+## Conclusions at a Glance
+
+- **Charge when you're stationary** — at home and at the theater. Charging on the road counts towards your working day.
+- **Range > charging speed** if you can charge at every location
+- **Charging speed > range** if you can't avoid stops on the road — then you want >100 kW DC
+- **Evening congestion** (16:00–22:00): public poles can surprisingly deliver very little
+- **Bring your own charger** is smart — independent of available infrastructure
+- **Fast chargers are expensive** — use them only when really necessary
+- **Trucks**: look for charging sites, not regular fast chargers
+- **Truck + no theater charger** = dedicated driver needed (driving regulations)
+
+---
