@@ -87,6 +87,7 @@ const sidebars: SidebarsConfig = {
         'technical/iso-15118',
         'technical/network-requirements',
         'technical/integration',
+        'technical/ems-architecture',
       ],
     },
     {
