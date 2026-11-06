@@ -1,104 +1,90 @@
 ---
----
 sidebar_position: 2
-title: Your First Charging Session
-description: Step-by-step guide for your first electric truck charging session at a Stroomlijnen location.
-keywords: [first charging session, how to charge, electric truck, RFID, Plug and Charge]
+title: Your first charging session
+description: Step-by-step explanation of a charging session at a Stroomlijnen charger — from arrival to disconnecting, including what can go wrong.
+keywords: [first charging session, CCS2, RFID, Plug and Charge, charging truck]
 ---
 
-# Your First Charging Session
+# Your first charging session
 
-Whether you're a fleet manager setting everything up or a driver standing in front of the charger for the first time — here's exactly what happens.
+Whether you are a fleet manager setting everything up or a driver standing at the charger for the first time: here is what happens.
 
-## Before You Arrive
+## Before you arrive
 
-### As Fleet Manager
+### As a fleet manager
 
-1. **Register** on the Stroomlijnen portal at [portal.stroomlijnen.nl](https://portal.stroomlijnen.nl)
-2. **Add your vehicles** — VIN numbers and license plates
-3. **Choose your authentication method:**
-   - **RFID passes** — we'll send them to you (see [RFID passes](/docs/getting-started/rfid-cards))
-   - **Plug & Charge** — set up via the portal (see [Setup Guide](/docs/plug-and-charge/setup-guide))
-4. **Inform your drivers** — share the location address and any access codes
+1. **Register your organisation** — via [stroomlijnen.nl](https://stroomlijnen.nl) or your account manager. You get access to the [Customer Portal](/en/docs/klantportaal/overview) (Klantportaal).
+2. **Arrange vehicle enrolment** for automatic recognition: an account-linked card is used on the charger screen to capture the EVCCID (the MAC address of the vehicle communication controller). Have the account owner approve it separately afterwards. Entering a VIN is not activation. See [Setup](/en/docs/plug-and-charge/setup-guide).
+3. **Choose how authentication takes place:**
+   - **Automatic vehicle recognition** — for supported vehicles with valid, approved registration, recognition on connection can replace the card (see [Plug & Charge](/en/docs/plug-and-charge/what-is-pnc))
+   - **RFID card** — see [RFID cards](/en/docs/getting-started/rfid-cards)
+   - **QR code in the app** — for occasional use
+4. **Inform your drivers** about the location, access and the charging tariff.
 
-### As Driver
+### As a driver
 
-- Make sure you have your **RFID pass** with you (or that your truck supports Plug & Charge)
-- Know the **location address** and any access codes for gates
-- Check your truck's **current battery level** — plan the required charging time accordingly
+- Make sure you know **how you may start**: automatically on plugging in, or with a card or QR code
+- Check the **battery level** and plan the charging time
+- Know where the **charging bay** is and whether there is a barrier or gate
 
-## At the Charger
+## At the charger
 
-### Step 1: Parking and Connecting
+These steps are for a normal charging session. **Enrolling a new vehicle?** Open the [enrolment procedure](/en/docs/plug-and-charge/setup-guide) first and connect only when it asks you to.
 
-1. Drive to an available charger
-2. Turn off the vehicle (some trucks require this; others don't — consult the manufacturer's manual)
-3. Open the charge port
-4. Connect the charging cable:
-   - **CCS2** (Combined Charging System) — the European standard for DC fast charging
-   - The plug fits only one way. Do not force it.
+### Step 1 — Park and connect
 
-### Step 2: Authenticate
+1. Drive to a free charging bay.
+2. Switch off the vehicle (some trucks require this, others do not — see the manufacturer's instructions).
+3. Open the charging flap and connect the **CCS Combo 2** cable. The plug only fits one way; do not force it.
 
-**With RFID pass:**
-1. Hold your pass in front of the card reader on the charger
-2. Wait for the green LED and/or confirmation on the display
-3. Charging starts automatically
+### Step 2 — Authenticate
 
-**With Plug & Charge:**
-1. Connect the cable. That's it.
-2. The truck and charger exchange certificates via ISO 15118
-3. Charging starts within 5–10 seconds
+**Automatic recognition:** wait for the display message. The charger checks the EVCCID and permission; a known registration alone does not guarantee a start. If approval is awaited, denied or expired, the account owner needs to check it.
 
-**With charging app (roaming):**
-1. Open your eMSP's app
-2. Scan the QR code on the charger or enter the charger ID
-3. Start the session in the app
+**RFID card:** hold the card against the reader and wait for confirmation on the display.
 
-### Step 3: Monitor
+**QR code (app):** scan the QR code on the display and start the session in the app.
 
-- The charger display shows real-time power (kW) and delivered energy (kWh)
-- You can also monitor via the Stroomlijnen portal or your fleet management app
-- Most electric trucks charge from 20% to 80% in 60–90 minutes on our DC chargers
+### Step 3 — Follow the charging
 
-### Step 4: Disconnect
+The display shows the current power (kW) and the energy delivered (kWh). You will see the same session in the Customer Portal.
 
-1. Stop the session:
-   - **RFID:** tap the pass again
-   - **Plug & Charge:** simply disconnect (session ends automatically)
-   - **App:** stop in the app, then disconnect
-2. Hang the cable back in its holder
-3. Close your charge port
-4. Drive away
+How fast it goes depends on four things:
 
-## What If Something Goes Wrong?
+1. the **power of the charger** (at our sites 120 kW per unit, shared if two vehicles are charging)
+2. what the **vehicle** can handle
+3. the **battery temperature** and the **charge level** (above ~80% the speed drops sharply)
+4. the **power available at that moment** at the location — the EMS reduces charging if the building needs the power itself
 
-| Problem | What to do |
-|-------|-----------|
-| Pass not recognized | Check if the pass is activated in the portal. Try holding the pass closer to / longer in front of the reader. |
-| Plug & Charge doesn't start | Check your truck's PnC status in the OEM portal. See [Troubleshooting](/docs/plug-and-charge/troubleshooting). |
-| Charger displays error message | Note the error code and contact us. See [FAQ](/docs/faq). |
-| Charging slower than expected | Battery temperature, charge level (SoC), and grid capacity all affect charging speed. Above 80% SoC, charging slows down significantly. |
-| Cable not detachable | The cable locks during charging. Ensure the session is fully stopped before pulling. |
+The last one is not a fault. See [Why is my vehicle charging slower than expected?](/en/docs/energie/ems#honestly-slow).
 
-## Expected Charging Speeds
+### Step 4 — Disconnect
 
-Electric trucks have different charging capacities:
+1. **Stop the session** — tap the card again, or stop in the app, or use the stop button on the charger.
+2. **Wait** until the charger confirms that the connector is unlocked.
+3. Take the cable out, put it back in the holder, close the charging flap.
 
-| Power Level | Typical Use | Time for 200 kWh |
-|-------------|------------|-------------------|
-| 50 kW DC | Night / depot charging | ~4 hours |
-| 150 kW DC | Opportunity charging | ~1.5 hours |
-| 350 kW DC | Fast turnaround | ~40 minutes |
-
-:::note
-The actual charging speed depends on the vehicle's onboard charger, battery temperature, charge level, and the charger's available power. The charger delivers the maximum power requested by the vehicle, up to the charger's nominal power.
+:::caution
+The connector is locked while the session is running. Never pull on the cable during charging — stop first.
 :::
 
-## Next Steps
+:::note Session stops, vehicle stays put
+If a session ends while the cable is still connected (battery full, or stopped remotely), a new session does **not** start automatically. You must unplug the cable and plug it in again, or start explicitly with card or QR code. This prevents a car from charging again for hours without anyone knowing.
+:::
 
-- [Set up Plug & Charge](/docs/plug-and-charge/setup-guide) for effortless future sessions
-- [Understand your invoices](/docs/fleet-management/invoicing)
-- [Add more drivers](/docs/fleet-management/driver-management)
+## What if something goes wrong?
 
----
+| Problem | What to do |
+|---|---|
+| Card is not recognised | Check in the Customer Portal whether the card is active. Hold the card longer or closer to the reader. |
+| Automatic recognition does not start | Was the EVCCID recorded and is account-owner permission valid? See [Troubleshooting](/en/docs/plug-and-charge/troubleshooting). |
+| Charger shows an error message | Note the message and the charger ID (on the device) and report it. See [Reporting faults](/en/docs/locations/site-guide#reporting-faults). |
+| Charging is slow | Usually normal: cold battery, high charge level, or little headroom on the connection at that moment. |
+| Cable will not come loose | The session has not stopped completely. Stop again and wait for the unlock. |
+| Session keeps stopping | Session ended while the plug is still inserted → unplug the cable and plug it in again. |
+
+## Next steps
+
+- [RFID cards](/en/docs/getting-started/rfid-cards)
+- [Setting up Plug & Charge](/en/docs/plug-and-charge/setup-guide)
+- [Understanding your invoices](/en/docs/klantportaal/invoicing)

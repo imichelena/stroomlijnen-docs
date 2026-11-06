@@ -1,87 +1,90 @@
 ---
----
 sidebar_position: 5
-title: Convincing the Municipality and Insurer
-description: Concerns and answers for discussions with the municipality as building owner and your insurer.
-keywords: [municipality, insurer, charging pole permit, liability, fire risk, SPRILA]
+title: Municipality and insurer
+description: How to prepare the conversation with the building owner, municipality and insurer — with arguments that hold up and claims you should avoid.
+keywords: [municipality, insurer, permission, liability, fire safety, building owner]
 ---
 
-# Convincing the Municipality and Insurer
+# Municipality and insurer
 
-Many theaters are owned by the municipality. Insurers sometimes have questions about charging infrastructure. On this page, you will find the most common concerns and how to address them.
+Two parties on which a charging project can founder: the **building owner** (often the municipality, if you rent) and the **insurer**. Both conversations go better if you do not make claims you cannot substantiate.
 
-## The Municipality as Building Owner
-
-As a tenant, you need permission from the municipality (or other building owner) for modifications to the building. The arguments below will help you have that conversation.
-
----
-
-**"We need to discuss this internally first."**
-
-> This directly aligns with your municipal climate goals. Every municipality has determined that it wants to promote zero-emission transportation. A charging point at a cultural institution is a visible, concrete implementation of that policy — without municipal investment.
-
----
-
-**"We don't want commercial activities in our building."**
-
-> The charging infrastructure is a public service for artists, companies, and visitors — comparable to bicycle parking or a phone charging point. It's not a commercial business in your building.
-
----
-
-**"Who is responsible in case of damage or accidents?"**
-
-> The operator (CPO) bears the liability for the installation and use. The theater is not liable for damage caused by the charging pole or the charging process. This is stated in the contract.
-
----
-
-**"We are the owner of the building — what are the consequences for the property?"**
-
-> The charging pole is a movable device. The only permanent modification is a cable duct and possibly an extra group in the meter cabinet — comparable to connecting new kitchen appliances. There is no structural change to the building.
-
----
-
-**"Can this be opened up more widely?"**
-
-> Yes — and that's an opportunity for the municipality as owner. The charging point can also be made available to third parties by appointment during the theater's free time slots. Think of a local contractor who needs to charge building materials or equipment, or other companies in the area without their own charging facilities. This way, the charging point also provides the municipality with demonstrable social value.
-
----
-
-:::tip Extra argument for municipalities
-A charging point at a theater provides the municipality with **demonstrable CO₂ reduction** that it can include in its sustainability reporting. Every kWh via the pole is one kWh less diesel.
+:::warning A warning in advance
+This page contains arguments, not guarantees. Whether your insurer agrees depends on your policy, your building and your installation. Never say "this will not lead to a premium increase" on behalf of your insurer — only your insurer knows that.
 :::
 
----
+## The building owner
 
-## The Insurer
+### "We need to align this internally"
 
-Always report the installation of a charging pole **proactively** to your insurer. Below are the most common questions.
+> This aligns with your own sustainability goals, and it costs the municipality no investment. We bear the installation, the management and the operation.
 
----
+### "We do not want commercial activity in our building"
 
-**"A charging pole increases our fire risk."**
+> The charging infrastructure is a facility for your users and visitors, comparable to a bicycle shed or a cash machine. Who operates it is a contractual choice; what is there is a facility.
 
-> The charging pole is certified (CE, IEC 61851) and contains built-in protection against overloading and overheating. There are now theaters that have received permission from their insurer for indoor charging — even in historic buildings. Moreover, the **Association of Insurers** has publicly pledged that insurers will not be a brake on the electric transition. Report the installation proactively and provide the certification documents — in practice, this does not lead to problems.
+### "Who is liable in the event of damage?"
 
----
+> That is set out in the agreement, and you should above all have it assessed. In our standard model, liability for the charging installation and the operation lies with the operator, not with the property owner — but have that confirmed per contract instead of relying on it.
 
-**"Will this change our policy?"**
+### "What changes about the building?"
 
-> Report the installation proactively to your insurer — this is standard for any technical expansion. The operator provides all necessary certification documents. In practice, a certified charging pole does not lead to premium increases.
+> The charger is a device to be installed. What remains: a cable route and possibly an extra circuit in the meter cupboard. With a battery, a placement area is added, and that is a larger intervention — treat that as a separate decision.
 
----
+### "Can it also be opened up to others?"
 
-**"What if someone gets an electric shock?"**
+> Yes, that is a choice. Opening it up does mean you will have to deal with roaming, tariffs and access — and with us, roaming is off by default. See [Roaming](/en/docs/pandeneigenaren/cpo-roaming-uitgelegd).
 
-> Modern charging poles are completely safe when used normally — they meet the same safety requirements as any other electrical appliance in your building. The liability for the device lies with the operator, not with you as the building owner.
+## The insurer
 
----
+Report the installation **proactively**. Not because we require it, but because an unreported change to the electrical installation produces exactly the kind of discussion you do not want in the event of damage.
 
-:::note Providing documentation
-Ask your CPO to provide the following documents for your insurer:
-- CE certification of the charging pole
-- IEC 61851 conformity document
-- Liability statement from the CPO
-- Inspection certificate of the electrical installation
-:::
+### What you provide
 
----
+| Document | Why |
+|---|---|
+| **CE marking / declaration of conformity** of the charging station | Evidence that the product meets the European requirements |
+| **Installation certificate** of the electrical installation | Who installed it and according to which standard |
+| **Interlock with the fire alarm system** | Proof that the charging current is switched off when the fire alarm is triggered |
+| **Liability arrangement** from the agreement | Who carries which risk |
+| **Maintenance and fault regime** | Evidence that the installation is maintained |
+
+### Frequently asked questions
+
+**"Does this increase our fire risk?"**
+
+> Every new electrical installation changes the risk profile. What you can show: the product is CE-marked, the installation was carried out by a recognised installer, there is an interlock with the fire alarm system, and there is a maintenance regime. Let the insurer judge on that basis — not on the basis of an assertion that it "is safe".
+
+**"Does our policy change?"**
+
+> Your insurer determines that. What you can do is report the change in good time with the documents above, so that no discussion arises about whether the installation was known.
+
+**"What about an electric shock?"**
+
+> In normal use, a properly installed charging installation is no more dangerous than other electrical installations in the building. The protection (residual current device, earthing, earth leakage monitoring) is part of the installation and is tested at handover.
+
+### What you should *not* claim
+
+The previous version of this page was full of sentences like this. They have been removed, because they cannot be substantiated:
+
+- ~~"The charging point does not increase the fire risk"~~ — ask your insurer
+- ~~"In practice this does not lead to a premium increase"~~ — that is a statement on behalf of your insurer
+- ~~"The Dutch Association of Insurers has stated that insurers are not the obstacle"~~ — an interpretation of an industry position, not cover for your policy
+- ~~"Completely safe in normal use"~~ — nothing is completely safe; describe the measures
+
+A conversation with an insurer in which you show the measures works better than one in which you reason risks away.
+
+## Checklist for the conversation
+
+- [ ] Agreement with the liability allocation
+- [ ] CE marking and declarations of conformity
+- [ ] Installation certificate for the electrics
+- [ ] Proof of interlock with the fire alarm system
+- [ ] Maintenance and fault regime on paper
+- [ ] If applicable: drawing of the placement area (certainly with a battery)
+
+## Further reading
+
+- [Battery storage and safety](/en/docs/energie/ess)
+- [From decision to first charging session](/en/docs/pandeneigenaren/installatie)
+- [Installing charging points](/en/docs/pandeneigenaren/overzicht)

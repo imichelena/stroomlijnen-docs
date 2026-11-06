@@ -1,143 +1,45 @@
 ---
 sidebar_position: 4
-title: Installatiehandleiding Plug & Charge
-description: Hoe u Plug & Charge voor uw vloot instelt via het Stroomlijnen-portaal — van registratie tot de eerste geautomatiseerde sessie.
-keywords: [Plug and Charge instellen, vlootregistratie, contractcertificaat, Mijn Vloot-portaal, PnC-activering]
+title: Automatische herkenning instellen
+description: Voertuig aanmelden op het laadscherm met een accountgebonden pas, EVCCID uitlezen en afzonderlijke goedkeuring.
+keywords: [automatische herkenning instellen, EVCCID, voertuig aanmelden, koppelen]
 ---
 
-# Installatiehandleiding Plug & Charge
+# Automatische herkenning instellen
 
-Plug & Charge instellen voor uw vloot kost ongeveer 15 minuten portaalwerk. Eenmaal geconfigureerd authenticeert elke geregistreerde vrachtwagen automatisch en laadt hij op elke Stroomlijnen-locatie — geen passen, geen apps.
+Stroomlijnen gebruikt bij ondersteunde DC-laders **EVCCID: het MAC-adres van de voertuigcommunicatiecontroller**. De lader leest dit bij het aansluiten uit. Een VIN of kenteken invoeren in het portaal activeert deze herkenning niet. Dit is geen authenticatie met ISO 15118-contractcertificaten.
 
-## Vereisten
+## Voorbereiden
 
-Voordat u begint:
+Gebruik een lader die de aanmeldfunctie aanbiedt en neem een **pas mee die aan uw account is gekoppeld**. Houd het kenteken en, bij huur, de einddatum bij de hand. Laat de laadkabel nog los: sluit pas aan wanneer het scherm daarom vraagt.
 
-- [ ] Een **Stroomlijnen-vlootaccount** (registreer via [stroomlijnen.nl](https://stroomlijnen.nl) of neem contact op met uw accountmanager)
-- [ ] De **VIN-nummers** van uw vrachtwagens (Vehicle Identification Numbers)
-- [ ] Toegang tot uw OEM-vlootportaal (Volvo Connect, DAF Connect, Fleetboard, enz.)
-- [ ] Een **compatibel voertuig** (zie [Compatibele Voertuigen](./compatible-vehicles))
-
-## Stap 1: Inloggen op Mijn Vloot
-
-Navigeer naar **my.stroomlijnen.nl** en log in met uw vlootbeheerdergegevens.
-
-Als u nog geen account heeft:
-1. Klik op **Registreren** en vul uw bedrijfsgegevens in (KVK-nummer, factuuradres)
-2. U ontvangt een verificatie-e-mail — klik op de link
-3. Uw account wordt beoordeeld en geactiveerd binnen één werkdag
-
-## Stap 2: Uw Voertuigen Toevoegen
-
-In het Mijn Vloot-dashboard:
-
-1. Ga naar **Voertuigen** → **Voertuig toevoegen**
-2. Voer de voertuiggegevens in:
-   - **VIN** — 17-tekens Voertuig Identificatie Nummer (op het deurkozijn van de bestuurder of op het kentekenbewijs)
-   - **Kenteken** — Voor identificatie en rapportage
-   - **Merk/Model** — Selecteer uit het keuzemenu (bijv. Volvo FH Electric)
-   - **Bijnaam** — Optioneel, voor eenvoudige herkenning (bijv. "Truck 014 — Amsterdam route")
-3. Klik op **Opslaan & Doorgaan**
-
-Herhaal dit voor elke vrachtwagen in uw vloot. U kunt ook **bulksgewijs importeren** via CSV-upload.
-
-### CSV-formaat
-
-```csv
-vin,kenteken,merk,model,bijnaam
-YV2RT60A1PB123456,AB-123-C,Volvo,FH Electric,Truck 014
-XLRAE75PC0H987654,DE-456-F,DAF,XF Electric,Truck 022
-```
-
-## Stap 3: Plug & Charge Inschakelen
-
-Voor elk voertuig:
-
-1. Ga naar **Voertuigen** → selecteer een voertuig → tabblad **Plug & Charge**
-2. Zet **Plug & Charge inschakelen** op AAN
-3. Het systeem zal:
-   - Een **Contractcertificaat** genereren voor dit voertuig
-   - Installatie aanvragen via de Certificate Provisioning Service van de OEM
-   - Status weergeven: `In afwachting → Installeren → Actief`
-
-:::note Installatietijd Certificaat
-Certificaatinstallatie duurt doorgaans **1–24 uur**, afhankelijk van de OEM:
-- **Volvo**: Doorgaans binnen 2 uur via Volvo Connect
-- **DAF**: 4–8 uur via DAF Connect
-- **Mercedes-Benz**: 2–6 uur via Fleetboard
-- **Scania**: 4–12 uur via Scania Fleet Management
-- **MAN**: 6–24 uur via het RIO-platform
-
-De vrachtwagen moet **online** zijn (contact aan of aangesloten op lading) voor het certificaat te worden afgeleverd.
+:::note Schermversies
+De schermteksten en beschikbare stappen kunnen per softwareversie en configuratie verschillen. Volg het scherm op uw lader.
 :::
 
-## Stap 4: Autoriseren via OEM-portaal
+## Aanmelden op het laadscherm
 
-Sommige OEM's vereisen dat u diensten van derden voor PnC goedkeurt in hun vlootportaal:
+1. Kies in het menu **“Wilt u een nieuw voertuig toevoegen?”**. Op het welkomstscherm **“Voertuig toevoegen”** kiest u **“Begin”**.
+2. Druk op **“Houd uw pas bij de lezer”** om de kaartlezer te activeren. **Houd daarna de pas bij de lezer.** Alleen dit scherm openen activeert de lezer niet. Na herkenning van een bekende pas gaat de aanmelding verder. Bij een onbekende pas gebruikt u een pas die aan uw account gekoppeld is. Na **“Opnieuw proberen”** drukt u opnieuw op de knop om de lezer te activeren.
+3. Als **“Is dit een huurvoertuig?”** verschijnt, kies **“Ja”** of **“Nee”**. Bij Ja stelt u onder **“Tot wanneer?”** de einddatum in met de dag-, maand- en jaarknoppen. Kies **“Doorgaan”**. Deze stap hangt af van de configuratie.
+4. Als **“Voer het kenteken in”** verschijnt, voer het kenteken in en kies **“Kenteken opzoeken”**. Controleer bij **“Klopt dit voertuig?”** merk, model en kleur. Kies **“Bevestigen”** als het klopt, of **“Wijzigen”** om het kenteken te corrigeren. Zonder RDW-resultaat kunt u met **“Doorgaan”** verder; de registratie krijgt dan geen RDW-bevestiging. Ook deze stap hangt af van de configuratie.
+5. Sluit het voertuig **pas aan bij “Sluit nu uw voertuig aan.”** De lader wacht op de EVCCID en legt de gegevens na ontvangst automatisch vast. Er is geen afzonderlijk toestemmingsvakje of laatste akkoordknop in deze aanmeldprocedure.
+6. Lees het resultaat. **“Klaar!”** met **“Uw voertuig is toegevoegd aan uw account.”** bevestigt het vastleggen. Het scherm kan ook melden dat het voertuig al geregistreerd was. Een verzonden bevestigingsmail wordt alleen gemeld als die is verzonden; een mailfout kan betekenen dat het voertuig **wel** is vastgelegd. Bij **“Niet gelukt”** is de aanmelding niet als geslaagd bevestigd: volg de melding en gebruik zo nodig **“Opnieuw proberen”** of **“Terug naar menu”**.
 
-### Volvo Connect
-1. Log in op Volvo Connect → **Diensten** → **Laaddiensten**
-2. Zoek "Stroomlijnen B.V." in de partnerlijst en klik op **Autoriseren**
-3. Bevestig de op te nemen voertuigen
-4. Zie de [Volvo-merkhandleiding](./brand-guides/volvo-trucks) voor gedetailleerde stappen
+## Twee tijdslimieten
 
-### DAF Connect
-1. Log in op DAF Connect → **Instellingen** → **Laadpartners**
-2. Schakel Stroomlijnen in en selecteer voertuigen
-3. Zie de [DAF-merkhandleiding](./brand-guides/daf) voor gedetailleerde stappen
+Vanaf **Begin** heeft de hele aanmelding **5 minuten**, dus inclusief het lezen van de pas en invoeren van gegevens. In de laatste minuut verschijnt een waarschuwing. Het uitlezen na aansluiten kan **tot 3 minuten** duren, maar alleen binnen de resterende totale tijd: dit zijn geen drie extra minuten. Bij verstreken tijd begint u opnieuw. Dit is niet de timer voor het starten van een gewone laadsessie.
 
-### Mercedes-Benz Fleetboard
-1. Log in op Fleetboard → **eMobility** → **Laadmanagement**
-2. Voeg Stroomlijnen toe als laadaanbieder
-3. Zie de [Mercedes-merkhandleiding](./brand-guides/mercedes-trucks) voor gedetailleerde stappen
+**Terug** of de homeknop op eerdere stappen breekt de poging af; daarmee bladert u niet terug door ingevulde stappen.
 
-## Stap 5: Activering Verifiëren
+## Vastgelegd is nog niet goedgekeurd
 
-Zodra het certificaat is geïnstalleerd:
+De accounthouder moet het voertuig afzonderlijk goedkeuren. Een geslaagde aanmelding of bevestigingsmail is **geen bewijs dat automatisch laden al is toegestaan**. De lader kan aangeven dat goedkeuring nog wordt afgewacht, geweigerd is of verlopen is. Laat de accounthouder dit via het [Klantportaal](https://portal.stroomlijnen.nl) controleren; vraag uw accountmanager om hulp als de beheeropties niet duidelijk zijn.
 
-1. In Mijn Vloot → **Voertuigen** → selecteer voertuig → tabblad **Plug & Charge**
-2. Status moet weergeven: **✅ Actief**
-3. Certificaatdetails worden getoond:
-   - EMAID (e-Mobility Account Identifier)
-   - Vervaldatum certificaat
-   - Laatste succesvolle PnC-sessie (indien aanwezig)
+Na goedkeuring kunt u op een geschikte lader controleren of herkenning en autorisatie slagen. Een start blijft afhankelijk van voertuigcommunicatie, geldige toestemming en de laadvoorwaarden op de locatie. Volg het display; gebruik alleen een aangeboden en toegestane pas- of QR-optie als alternatief.
 
-## Stap 6: Testen
+## Verder lezen
 
-Rijd naar een Stroomlijnen-locatie en sluit de kabel aan. De laadsessie moet binnen 5–10 seconden starten zonder handmatige actie.
-
-**Waar op te letten:**
-- Het laderdisplay toont "Plug & Charge — Geverifieerd" (of vergelijkbaar)
-- Sessie verschijnt in Mijn Vloot → **Sessies** binnen 1 minuut
-- Geen RFID-tik of app-actie was nodig
-
-## Probleemoplossing Instelling
-
-| Probleem | Oplossing |
-|---------|----------|
-| Certificaatstatus blijft op "In afwachting" | Zorg dat de vrachtwagen online is (contact aan). Controleer OEM-portaal op openstaande autorisaties. |
-| OEM-portaal toont Stroomlijnen niet | Neem contact met ons op — mogelijk moeten we de backendverbinding voor uw specifieke OEM-account tot stand brengen. |
-| Certificaat geïnstalleerd maar PnC mislukt | Zie de [Probleemoplossingshandleiding](./troubleshooting) voor gedetailleerde diagnostiek. |
-| Fout "EMAID niet gevonden" op lader | Het certificaat is mogelijk nog niet doorgegeven aan onze backend. Wacht 1 uur en probeer opnieuw. |
-| Bulkimportfouten | Controleer VIN-formaat (17 tekens, geen O/I/Q), controleer of CSV-codering UTF-8 is. |
-
-## Certificaten Beheren
-
-### Verlenging
-Contractcertificaten verlopen na **2 jaar**. Het Mijn Vloot-portaal stuurt e-mailmeldingen 60, 30 en 7 dagen voor het verlopen. Verlenging is automatisch als uw vlootabonnement actief is.
-
-### Intrekking
-Als een vrachtwagen wordt verkocht, gestolen of buiten gebruik gesteld:
-1. Ga naar **Voertuigen** → selecteer voertuig → tabblad **Plug & Charge**
-2. Klik op **Certificaat intrekken**
-3. Het certificaat wordt onmiddellijk ongeldig gemaakt op alle verbonden laadnetwerken
-
-### Overdracht
-Wanneer een vrachtwagen naar een andere factureringsentiteit binnen uw organisatie overgaat:
-1. Trek het huidige certificaat in
-2. Registreer het voertuig opnieuw onder de nieuwe factureringsentiteit
-3. Een nieuw certificaat wordt verstrekt
-
----
-
-**Volgende:** [Merkhandleidingen →](./brand-guides/volvo-trucks)
+- [Wat is Plug & Charge?](/docs/plug-and-charge/what-is-pnc)
+- [Compatibiliteit](/docs/plug-and-charge/compatible-vehicles)
+- [Probleemoplossing](/docs/plug-and-charge/troubleshooting)

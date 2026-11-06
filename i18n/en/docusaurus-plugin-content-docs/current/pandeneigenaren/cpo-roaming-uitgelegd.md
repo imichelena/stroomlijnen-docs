@@ -1,112 +1,123 @@
 ---
+sidebar_position: 9
+title: CPO, eMSP and roaming explained
+description: The roles in the charging sector, the difference between OCPP and OCPI, how roaming works and what Stroomlijnen does and does not do.
+keywords: [CPO, eMSP, roaming, OCPI, OCPP, hub, Gireve, Hubject, IDRO, AFIR]
 ---
-sidebar_position: 10
-title: CPO, eMSP, and Roaming Explained
-description: What are CPOs and eMSPs, how does roaming between charging networks work, and which protocols are used?
-keywords: [CPO, eMSP, roaming, OCPI, OCPP, charging network, interoperability, charging pass]
----
 
-# CPO, eMSP, and Roaming Explained
+# CPO, eMSP and roaming explained
 
-The world of electric vehicle charging has its own jargon. This page explains the key concepts and roles.
+The charging sector has its own jargon. This page sets out the roles and protocols, and then honestly explains what Stroomlijnen does — because there is a lot of confusion about that.
 
-## The Two Roles in the Charging Ecosystem
+## The two roles
 
 ### CPO — Charge Point Operator
 
-A **CPO** manages the physical charging infrastructure. The CPO is responsible for:
+Manages the **physical charging infrastructure**:
 
-- Installation and maintenance of charging stations
-- Communication between charging station and backoffice (via OCPP)
-- Authorization of charging sessions
-- Measurement and billing of delivered energy
-- Breakdown service and monitoring
-
-A CPO operates charging points at one or more locations. As a property owner, you have a contract with a CPO.
-
----
+- installation and maintenance of charging points
+- communication between charging point and backend (via **OCPP**)
+- authorisation of sessions
+- metering of energy delivered
+- monitoring and fault service
 
 ### eMSP — e-Mobility Service Provider
 
-An **eMSP** provides services to the end-user (driver/fleet manager):
+Provides services to the **end user**:
 
-- Issuance of charging passes (RFID) or apps
-- Roaming access to charging points from different CPOs
-- Monthly billing for all charging sessions
-- Customer service
+- issuing charge cards or apps
+- access to charging points of various CPOs
+- one invoice for all sessions
+- customer service
 
-A fleet manager has a contract with an eMSP. Their drivers can then charge at all charging points connected via roaming.
+One company can have both roles. Stroomlijnen is both CPO and eMSP.
 
-:::note A company can have both roles
-Some providers are both CPO and eMSP. This means they manage charging points and issue charging passes. Examples: Vattenfall, Shell Recharge, Allego, Eneco.
-:::
+## Two protocols, two directions
 
----
+This is the distinction that causes the most confusion:
 
-## OCPP — the Protocol between Charging Station and Backoffice
-
-**OCPP (Open Charge Point Protocol)** is the international open standard for communication between a charging station and the CPO's backoffice system.
-
-| Version | Status | Features |
+| Protocol | What it connects | Direction |
 |---|---|---|
-| OCPP 1.6 | Widely used, older installations | Basic functionality |
-| OCPP 2.0.1 | Current standard | Smart charging, V2G, improved security |
-| OCPP 2.1 | In development | MCS, extended V2G |
+| **OCPP** | Charging point ↔ backend of the CPO | Vertical (downwards) |
+| **OCPI** | Backend of CPO ↔ backend of eMSP | Horizontal (sideways) |
 
-**Why OCPP is important for property owners:** A charging station that supports OCPP is not tied to a single CPO. You can switch CPOs without replacing the hardware.
+OCPP is about "how do I control this charger". OCPI is about "how do I settle a session with another party". They are entirely separate: you can have OCPP perfectly and no roaming at all.
 
----
-
-## OCPI — the Protocol for Roaming
-
-**OCPI (Open Charge Point Interface)** is the protocol used for communication between CPOs and eMSPs. It enables roaming: a driver with an eMSP A pass can charge at a CPO B charging point, and both parties automatically settle the session.
+## How roaming works
 
 ```
-Driver (eMSP A pass)
+Driver with a card from eMSP A
         ↓
-Charging station (CPO B)
-        ↓ OCPI connection
-Backoffice CPO B → Backoffice eMSP A
+Charging point operated by CPO B
+        ↓  OCPI link
+Backend CPO B  →  Backend eMSP A
         ↓
-Invoice to fleet manager
+Invoice from eMSP A to the driver
 ```
 
-The more CPOs and eMSPs connected via OCPI, the larger the network a driver has access to.
+The CPO invoices the eMSP, the eMSP invoices the driver. Both sides add something on top: the hub or the direct connection costs money, and the eMSP has to exist too.
 
----
+### Hubs
 
-## Roaming in Practice
-
-In the Netherlands, most major CPOs are connected via roaming hubs. The largest hubs are:
+Instead of dozens of bilateral connections, parties can connect via a **hub**:
 
 | Hub | Role |
 |---|---|
-| **Gireve** | European roaming hub, many large networks |
-| **Hubject** | Plug & Charge roaming (ISO 15118) |
-| **e-Laad** | Dutch grid operators (Nuon, Stedin etc.) |
+| **Gireve** | European roaming hub |
+| **Hubject** | European hub, strong in Plug & Charge |
+| **e-clearing.net** | European neutral hub |
 
-A charging pass from a Dutch eMSP usually works on 300,000+ charging points in Europe via these hubs.
+A hub is a technical and commercial intermediary, not a charity: every session via a hub costs commission.
 
----
+## What "300,000 charging points" means
 
-## What Does This Mean for You as a Property Owner?
+You see that promise everywhere. What it actually says: *a card from a large eMSP works on many networks in Europe*. That is something different from "you can charge anywhere", because:
 
-If you have a charging point installed by a CPO connected to roaming networks, **all drivers with a valid charging pass** can charge at your station — not just customers of that one CPO.
+- the coverage depends on the cards that *you* have, not on the CPO
+- tariffs and conditions may differ per network
+- during busy periods or faults, the coverage does not apply
 
-**Ask when selecting a CPO:**
-- "Which roaming networks are your charging points accessible through?"
-- "Do Vattenfall, Shell Recharge, and Allego charging passes work at your stations?"
+For a fleet it is therefore usually wiser to have **direct accounts** with the networks where you charge a lot, instead of relying on a single roaming card.
 
----
+## What Stroomlijnen does
 
-## Relevant Resources
+This is the honest part.
 
-| Organization | Link |
+### What we have
+
+- **OCPI 2.2.1** is implemented
+- Our party identity **NL\*STM** is registered with the Benelux IDRO (registration IDRO/0274)
+- Charging points can be offered under OCPI
+
+### What we deliberately do not do
+
+:::warning Roaming is off on our charging points
+Roaming is technically present but **disabled**. The reason is cost: every session via a hub or eMSP gives up commission, and that applies both to third-party sessions at our sites and to our users elsewhere. For most of our locations — closed or by appointment — roaming mainly produces costs and little use.
+
+On request, a **direct bilateral connection** with a specific party is possible. That is custom work, not self-service.
+:::
+
+In concrete terms this means:
+
+- A driver with a card from another provider generally **cannot** charge with us
+- Our users charge with us, not "anywhere in Europe" with the same card
+- To charge elsewhere, you need an account with that network
+
+### Publication of charging point data
+
+Under the European **AFIR** regulation, publicly accessible charging points must be registered with the national access point (in the Netherlands the **NDW**). That process is under way; once it is complete, our public charging points will appear in the common maps and apps. See [Finding a charging space](/en/docs/locations/finding-charger).
+
+## Common mistakes when reading offers
+
+| Claim | What is usually meant |
 |---|---|
-| Open Charge Alliance (OCPP/OCPI) | [openchargealliance.org](https://openchargealliance.org) |
-| ElaadNL (technical standards NL) | [elaadnl.nl](https://elaadnl.nl) |
-| Gireve (roaming hub) | [gireve.com](https://gireve.com) |
-| Hubject (Plug & Charge) | [hubject.com](https://hubject.com) |
-| NAL (National Agenda Charging Infrastructure) | [agendalaadinfrastructuur.nl](https://agendalaadinfrastructuur.nl) |
+| "OCPI roaming with 300,000 points" | There is a connection with a hub; the coverage depends on your card |
+| "Plug & Charge throughout Europe" | A certificate variant is in preparation, not operational everywhere |
+| "Open protocol, so freedom" | OCPP/OCPI are open standards, but contracts and certificates can still bind you |
 
----
+## Further reading
+
+- [OCPP overview](/en/docs/technical/ocpp-overview)
+- [Finding a charging space](/en/docs/locations/finding-charger)
+- [Choosing a CPO](/en/docs/pandeneigenaren/cpo-kiezen)
+- [Integrations and data export](/en/docs/technical/integration)

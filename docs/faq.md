@@ -1,92 +1,113 @@
 ---
 sidebar_position: 100
-title: FAQ
-description: Veelgestelde vragen over Stroomlijnen elektrisch vrachtwagenopladen — Plug & Charge, tarieven, RFID, vlootbeheer en meer.
-keywords: [FAQ, frequently asked questions, EV charging, Plug and Charge, fleet charging, RFID, pricing]
+title: Veelgestelde vragen
+description: Antwoorden op de vragen die we het vaakst krijgen over laden bij Stroomlijnen — techniek, kosten, roaming, Plug & Charge en vermogen.
+keywords: [FAQ, veelgestelde vragen, laden, tarieven, roaming, Plug and Charge, netcongestie]
 ---
 
-# Veelgestelde Vragen
+# Veelgestelde vragen
 
 ## Algemeen
 
-### 1. Wat is Stroomlijnen?
-Stroomlijnen is een Nederlandse Charge Point Operator (CPO) en e-Mobility Service Provider (eMSP) gespecialiseerd in hoogvermogen DC-laden voor elektrische vrachtwagens. We plaatsen laadinfrastructuur bij theaters, logistieke hubs en strategische locaties door heel Nederland.
+### Wat is Stroomlijnen?
+Een Nederlandse Charge Point Operator (CPO) en e-Mobility Service Provider (eMSP). We plaatsen laadinfrastructuur bij locaties met een grote elektriciteitsaansluiting — theaters, culturele instellingen, hotels en bedrijven — en beheren het vermogen op die locaties. Zie [Wat is Stroomlijnen?](/docs/getting-started/intro).
 
-### 2. Waarom theaters?
-Theaters beschikken over grote elektriciteitsaansluitingen (voor belichting, geluid en toneelinstallaties), parkeerplaatsen die toegankelijk zijn voor vrachtwagens (voor leveringen van toneelsets) en zijn 's nachts beschikbaar wanneer vrachtwagens doorgaans laden. Een logische combinatie — we maken gebruik van bestaande infrastructuur die anders 's nachts onbenut zou blijven.
+### Waarom juist bij theaters?
+Theaters hebben een grote aansluiting die overdag grotendeels onbenut is, ruimte voor een vrachtwagen, en 's avonds een gebouwpiek — precies het profiel waarin laden past. Bovendien moet de culturele sector als eerste over op elektrisch vanwege de zero-emissiezones.
 
-### 3. Welke voertuigen kunnen laden bij Stroomlijnen?
-Elk voertuig met een **CCS Combo 2**-stekker kan laden bij onze DC-stations. Dat omvat elektrische vrachtwagens, bestelwagens, bussen en personenwagens. Onze laders leveren tot 400 kW, maar passen zich aan het maximale vermogen aan dat het voertuig aankan.
+### Werken jullie alleen met theaters?
+Nee. Dezelfde aanpak werkt voor hotels (laden als kamervoorziening) en bedrijven (wagenpark op eigen terrein, binnen de bestaande aansluiting).
 
-### 4. Waar staan Stroomlijnen-laders?
-Voornamelijk in Nederland, met uitbreiding gepland naar België en Duitsland. Bekijk onze [laderskaart](./locations/finding-charger) voor alle huidige locaties.
+### Kunnen personenauto's bij jullie laden?
+Personenauto’s met CCS Combo 2 kunnen in aanmerking komen voor onze DC-laders; controleer voertuigcompatibiliteit en toegang op de locatie. Onze laadplekken zijn wel op bedrijfsvoertuigen ontworpen: ruimere vakken, hogere kabelhouders.
 
-### 5. Kunnen personenwagens gebruikmaken van uw laders?
-Ja. Hoewel onze laders zijn ontworpen en gepositioneerd voor bedrijfsvoertuigen, kan elke CCS-uitgeruste auto ook laden. Houd er rekening mee dat vrachtwagenvakken hogere randen of een andere indeling kunnen hebben dan een gewoon laadstation voor personenwagens.
+### Hoeveel vermogen levert een lader?
+Onze DC-lader is **120 kW**, configureerbaar als 1×120 kW of 2×60 kW, modulair uitbreidbaar tot 180 kW. Onze AC-lader is 30 kW. Zie [Onze laders](/docs/getting-started/intro#onze-laders).
+
+### Leveren jullie ook 350 of 400 kW?
+Niet als standaardproduct. Voor de meeste tourneedagen is 120 kW ruim voldoende (400 kWh in 10 uur = gemiddeld 40 kW). Bij grotere locaties schalen we op met extra units of modules. Getallen van 350–400 kW die u elders tegenkomt zijn meestal de som van meerdere units of een ander type installatie.
+
+## Laden
+
+### Hoe start ik een sessie?
+Volg het display. Automatisch starten vereist een bruikbare EVCCID, een goedgekeurde registratie en geldige laadrechten. Gebruik een aangeboden en toegestane RFID- of QR-optie als alternatief. Zie [Uw eerste laadsessie](/docs/getting-started/first-session).
+
+### Waarom start mijn sessie niet automatisch?
+Controleer de EVCCID-aanmelding, afzonderlijke goedkeuring door de accounthouder, geldigheid van de toestemming en voertuigcommunicatie. Een VIN invoeren is geen oplossing voor ontbrekende herkenning. Zie [Probleemoplossing](/docs/plug-and-charge/troubleshooting).
+
+### Mijn laadsessie stopt en herstart niet. Is dat een fout?
+Nee. Als een sessie eindigt terwijl de kabel nog zit (accu vol, of op afstand gestopt), start er niet automatisch een nieuwe. Kabel eruit en opnieuw inpluggen, of expliciet starten.
+
+### Waarom laadt mijn voertuig langzamer dan verwacht?
+Koude accu, hoog laadniveau (boven ~80%), een maximum in het voertuig zelf, of weinig beschikbaar vermogen op de locatie op dat moment. Zie [Eerlijk traag](/docs/energie/ems#eerlijk-traag).
+
+### Kan ik met een pas van een andere aanbieder laden?
+In de regel niet: roaming staat bij onze laders bewust uit vanwege de kosten. Zie [Roaming](/docs/pandeneigenaren/cpo-roaming-uitgelegd).
 
 ## Plug & Charge
 
-### 6. Wat is Plug & Charge?
-Plug & Charge betekent dat uw vrachtwagen automatisch authenticeert en begint met laden zodra u de kabel aansluit — geen pas, geen app, geen actie van de bestuurder. Het maakt gebruik van ISO 15118-digitale certificaten die in het voertuig zijn ingebouwd. Zie [Wat is Plug & Charge?](./plug-and-charge/what-is-pnc) voor meer details.
+### Wat is Plug & Charge?
+Inpluggen en laden zonder pas of app. Zie [Wat is Plug & Charge?](/docs/plug-and-charge/what-is-pnc).
 
-### 7. Is Plug & Charge veilig?
-Ja — zelfs veiliger dan RFID-passen. PnC gebruikt TLS-wederzijdse authenticatie en digitale certificaten (dezelfde technologie als internetbankieren). Certificaten zijn gekoppeld aan het VIN van het voertuig en opgeslagen in een hardwarebeveiligingsmodule, waardoor klonen uiterst moeilijk is.
+### Werkt dat met ISO 15118-certificaten?
+De huidige herkenning op ondersteunde DC-laders gebruikt **EVCCID: het MAC-adres van de voertuigcommunicatiecontroller**, niet het VIN en niet een ISO 15118-contractcertificaat. Die technieken zijn niet hetzelfde.
 
-### 8. Welke vrachtwagens ondersteunen Plug & Charge?
-De meeste grote elektrische vrachtwagenfabrikanten ondersteunen nu PnC: Volvo, DAF, Mercedes-Benz, Scania en MAN. Zie onze [lijst met compatibele voertuigen](./plug-and-charge/compatible-vehicles) voor de volledige details.
+### Moet ik iets installeren in het voertuig?
+Voor deze aanmeldprocedure vraagt u geen contractcertificaat aan. Gebruik een accountgebonden pas op het laadscherm en sluit pas aan als daarom wordt gevraagd; de lader leest de EVCCID uit. Het voertuig moet die herkenning wel ondersteunen. Zie [Instellen](/docs/plug-and-charge/setup-guide).
 
-### 9. Hoe lang duurt het instellen van Plug & Charge?
-Ongeveer 15 minuten portaalconfiguratie, daarna 1–24 uur voor de installatie van het certificaat in het voertuig (afhankelijk van de fabrikant). Zie de [installatiehandleiding](./plug-and-charge/setup-guide).
+### Hoe lang duurt het voor een voertuig werkt?
+Vanaf **Begin** op het laadscherm heeft de aanmelding 5 minuten. Het uitlezen kan tot 3 minuten duren, binnen die totale deadline. Vastleggen gebeurt automatisch na uitlezen; de accounthouder moet daarna afzonderlijk goedkeuren. Dit is geen belofte dat laden binnen die tijd mogelijk is.
 
-### 10. Kan ik Plug & Charge EN RFID tegelijk gebruiken?
-Ja. PnC en RFID kunnen naast elkaar bestaan. Als PnC om welke reden dan ook mislukt, kan de bestuurder altijd terugvallen op het tikken van de RFID-pas. De lader probeert eerst PnC; als PnC binnen 15 seconden niet authenticeert, wordt om een RFID-pas gevraagd.
+## Kosten
 
-## Tarieven en facturering
+### Wat kost laden?
+Een vast tarief per kWh per locatie, vastgelegd in uw overeenkomst. Geen startkosten per sessie, geen tijdgebonden kosten. U vindt de tarieven in uw overeenkomst of vraagt ze op bij uw accountmanager — niet in deze kennisbank, omdat ze per locatie en per jaar verschillen.
 
-### 11. Wat kost laden?
-Vlootklanten ontvangen een contractueel €/kWh-tarief. Er zijn geen sessiekosten of tijdgebonden kosten — u betaalt alleen voor verbruikte energie. Neem contact op voor een vlootprijsvoorstel.
+### Hoe werkt de facturering?
+Maandfacturen met sessiedetails, als PDF in het portaal. Zie [Facturering](/docs/klantportaal/invoicing).
 
-### 12. Hoe werkt de facturering?
-Maandelijkse facturen met uitgesplitste sessiegegevens, beschikbaar als PDF, CSV of UBL XML. Facturen worden op de 1e van elke maand gegenereerd. Zie [Facturering](./fleet-management/invoicing) voor details.
+### Kan ik subsidie krijgen?
+Voor laadinfrastructuur bij bedrijven is er SPRILA (RVO). Let op: de aanvraag moet zijn ingediend **vóór** de opdracht bij een investering boven € 25.000. Zie [Subsidies](/docs/pandeneigenaren/subsidies).
 
-### 13. Biedt u volumekortingen?
-Ja. Vloten die maandelijkse energiedrempels overschrijden, komen in aanmerking voor gestaffelde tarieven. Neem contact op met uw accountmanager of stuur een e-mail naar [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl) voor details.
+## Vermogen en energie
 
-### 14. Kunnen roaming-gebruikers laden bij Stroomlijnen?
-Ja, via onze Hubject- en OCPI-roamingverbindingen. Gebruikers met laadpassen van andere aanbieders kunnen tikken en laden. Roamingtarieven kunnen afwijken van directe vlooттarieven.
+### Wat is netcongestie en raakt dat mij?
+Het stroomnet zit in veel gebieden vol, waardoor verzwaren lang duurt of niet kan. Daarom werken we met slimme sturing en waar nodig een batterij. Zie [Netcongestie](/docs/energie/netcongestie).
 
-## RFID-passen
+### Wat doet een EMS?
+Het meet continu het verbruik van het gebouw, berekent de ruimte onder uw aansluiting en verdeelt die over de laadpunten. Zie [Wat doet een EMS?](/docs/energie/ems).
 
-### 15. Hoe krijg ik RFID-passen?
-Bestel via het [Mijn Vloot-portaal](./getting-started/rfid-cards) of neem contact op met uw accountmanager. Passen worden binnen 3 werkdagen verzonden en vereisen activering.
+### Wat is een energiebudget?
+Een afspraak over hoeveel een voertuig, persoon of afdeling mag laden — per dag, week of maand. Zie [Energiebudgetten](/docs/energie/energiebudget).
 
-### 16. Wat als een RFID-pas verloren of gestolen is?
-Deactiveer de pas onmiddellijk via Mijn Vloot → RFID-passen → selecteer de pas → Deactiveren. De pas wordt binnen seconden geblokkeerd op alle Stroomlijnen-laders. Bestel een vervanging via het portaal.
+### Hebben jullie batterijen?
+Ja, als buffer om meer te kunnen laden dan de aansluiting toestaat en om gebouwpieken af te vlakken. Zie [Batterijopslag](/docs/energie/ess).
 
-### 17. Kan één RFID-pas op meerdere voertuigen werken?
-Ja. RFID-passen zijn gekoppeld aan uw vlootaccount, niet aan een specifiek voertuig. Elke pas die aan uw vloot is toegewezen, kan een laadsessie starten op elke lader voor elk van uw voertuigen.
+### Kunnen jullie ook terugleveren aan het net (V2G)?
+Niet vandaag. Bidirectioneel laden is toekomstige functionaliteit; we claimen het niet als iets wat nu kan.
 
-## Technisch
+## Portaal en data
 
-### 18. Welke OCPP-versie gebruiken uw laders?
-Alle nieuwe laders gebruiken **OCPP 2.0.1**. Sommige oudere installaties gebruiken OCPP 1.6-J. Beide worden volledig ondersteund door ons CSMS. Zie [OCPP-overzicht](./technical/ocpp-overview).
+### Waar log ik in?
+Op [portal.stroomlijnen.nl](https://portal.stroomlijnen.nl). Er is geen zelfregistratie; toegang krijgt u tijdens de onboarding. Zie [Klantportaal](/docs/klantportaal/overview).
 
-### 19. Ondersteunen jullie slim laden / taakverdeling?
-Ja. Ons CSMS verdeelt het vermogen dynamisch over de laders op elke locatie op basis van netcapaciteit, voertuigprioriteit en optimalisatie op basis van het tijdstip. Zie [OCPP-overzicht → Slim laden](./technical/ocpp-overview#slim-laden).
+### Is er een app?
+Chauffeurs kunnen starten met een QR-code. Er is geen Stroomlijnen-app in de app stores; als u die ergens genoemd ziet, klopt dat niet meer.
 
-### 20. Kan ik laadgegevens integreren met mijn vlootbeheersysteem?
-Ja. We bieden een REST API met realtime webhooks voor sessiegegevens, voertuigbeheer en facturering. SDK's beschikbaar voor Python, JavaScript en C#. Zie [API & Integratie](./technical/integration).
+### Is er een API?
+Geen openbare API met documentatie en selfservice-sleutels. U kunt wel CSV exporteren, en op aanvraag is een koppeling mogelijk. Zie [Koppelingen en data-export](/docs/technical/integration).
 
-## Ondersteuning
+### Hoe lang worden mijn gegevens bewaard?
+Sessiegegevens blijven beschikbaar voor uw administratie zolang u klant bent, en facturen worden bewaard conform de wettelijke bewaartermijn. Vraag bij vertrek een export aan.
 
-### Hoe meld ik een defecte lader?
-- **App:** Help → Probleem melden → selecteer de lader
-- **Telefoon:** Ondersteuningsnummer staat op elke lader
-- **E-mail:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
-- **Vermeld:** Lader-ID (formaat: `NL*STM*E...`), tijdstip en omschrijving van het probleem
+## Storingen
 
-### Hoe neem ik contact op met Stroomlijnen?
-- **Algemene vragen:** [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl)
-- **Vlootverkoop:** [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl)
-- **Technische ondersteuning:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
-- **Technische integratie:** [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl)
+### Hoe meld ik een storing?
+Met locatie, nummer op de lader, tijdstip, kenteken en de tekst op het display — via uw accountmanager of [stroomlijnen.nl/contact](https://stroomlijnen.nl/contact). Zie [Storingen melden](/docs/locations/site-guide#storingen-melden).
+
+### De lader staat offline. Kunnen jullie dat zien?
+Ja, wij zien of een lader online is en welke fouten er zijn opgetreden. Een melding met tijdstip is daarom vaak genoeg om het op afstand op te lossen.
+
+## Nog iets niet gevonden?
+
+De pagina's hierboven dekken het meeste. Voor specifieke vragen: [stroomlijnen.nl/contact](https://stroomlijnen.nl/contact) of uw accountmanager.

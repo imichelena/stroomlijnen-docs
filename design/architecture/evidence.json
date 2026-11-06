@@ -1,0 +1,23 @@
+{
+  "status": "review draft; no live fleet verification or publication",
+  "sources": [
+    {
+      "id": 517,
+      "updated_at": "2026-11-03T20:12:36.184849+00:00",
+      "sha256": "7281a4480c00a00317caca7c1ab43ccdec5e919883519ebf4635dcce69ba02ae"
+    },
+    {
+      "id": 592,
+      "updated_at": "2026-10-29T09:46:57.105812+00:00",
+      "sha256": "5477dea570c2703a877feb7eea12171ba4c75e1787c5bac91da309737c68d776"
+    }
+  ],
+  "diagram_scope": {
+    "01-security-architecture": "#517 \u00a73.1\u20133.3 and Amendment 2a; #592 G19-9 / security populations",
+    "02-network-protocols": "#517 \u00a73.1\u20133.3, Amendment 2a endpoints table; excludes Modbus/control/EMS"
+  },
+  "excluded_sources": [
+    "#375 historical pending spec",
+    "#382 superseded OCPP design"
+  ]
+}

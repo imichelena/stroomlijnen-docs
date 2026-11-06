@@ -1,83 +1,97 @@
 ---
 sidebar_position: 3
 title: Van beslissing tot eerste laadsessie
-description: Tijdlijn en uitleg van het installatieproces — van eerste gesprek tot operationele laadpaal.
-keywords: [installatie laadpaal, tijdlijn, SPRILA aanvraag, vergunning, CPO]
+description: Het echte traject bij het plaatsen van laadinfrastructuur — wat er gebeurt, in welke volgorde, en waar de tijd in gaat zitten.
+keywords: [installatie, traject, doorlooptijd, SPRILA, vergunning, inbedrijfname, productietijd]
 ---
 
 # Van beslissing tot eerste laadsessie
 
-Van het eerste gesprek tot een volledig operationele laadpaal duurt gemiddeld **8 tot 12 weken**. Hieronder vindt u een overzicht van het proces.
+Een laadpunt plaatsen is geen installatie van een paar dagen; het is een traject met een lange levertijd. Reken realistisch op **vier tot zes maanden** van eerste gesprek tot eerste sessie. Wie hier acht weken belooft, heeft nog nooit een laadpaal uit Azië laten komen.
 
-## Tijdlijn
+## Het traject
 
 ```
-Week 1–2    Gesprek, locatieonderzoek, offerte
-Week 3–6    SPRILA subsidieaanvraag (parallel mogelijk)
-Week 4–8    Vergunning (indien vereist)
-Week 8–12   Installatie (1–3 werkdagen)
-Na week 12  Eerste laadsessie — systeem live
+1. Intake en data-analyse        1–2 weken
+2. Voorstel en overeenkomst      1–3 weken
+3. Subsidieaanvraag              vóór de bestelling (verplicht bij > € 25.000)
+4. Bestelling en productie       6–8 weken
+5. Transport                     ca. 4 weken (zeetransport naar Rotterdam)
+6. Installatie en aansluiting    1–3 dagen (door uw installateur)
+7. Inbedrijfname en test         1–3 dagen
 ```
 
-### Week 1–2 — Gesprek en offerte
+Stappen 3 tot en met 5 lopen deels parallel, maar de levertijd uit Azië is de harde rand: daar zit niets te winnen.
 
-- Eerste gesprek met Stroomlijnen over uw wensen en locatie
-- Locatieonderzoek: waar is het laaddok, wat is uw aansluitcapaciteit, waar loopt de elektrakast?
-- Offerte en contractvoorstel
-- Subsidiecheck: kwalificeert uw locatie voor SPRILA?
+## 1. Intake en data-analyse
 
-### Week 3–6 — SPRILA subsidieaanvraag
+- Gesprek over gebruik: wie laadt, wanneer, hoe vaak, met welke voertuigen
+- **Analyse van uw kwartierdata** — wat is uw werkelijke piek, wanneer is er ruimte
+- Praktische check: waar komt de lader, is de kabelroute haalbaar, hoe is de toegang
 
-- Stroomlijnen bereidt de aanvraag voor
-- U tekent de benodigde documenten
-- Aanvraag wordt ingediend bij RVO
-- Let op: de aanvraag moet ingediend zijn vóórdat u kosten maakt
+Dit is de stap waar het meeste te winnen (en te verliezen) valt. Zonder uw eigen data is elke configuratie een gok.
 
-:::warning
-Teken geen installatieovereenkomst en maak geen kosten voordat de SPRILA-aanvraag is ingediend. Dit is een harde voorwaarde van de subsidie.
+## 2. Voorstel en overeenkomst
+
+- Configuratie op basis van de analyse: vermogen, aantal laadpunten, wel of geen batterij
+- Doorrekening van de businesscase, met de aannames expliciet vermeld
+- Contractvorm: wie exploiteert, wie is eigenaar, wat is de looptijd
+
+## 3. Subsidie
+
+Voor laadinfrastructuur bij bedrijven is er de **SPRILA-regeling**. Twee dingen zijn essentieel:
+
+:::warning Aanvragen vóór de opdracht
+Bij een investering boven **€ 25.000** moet de aanvraag zijn ingediend **voordat u de installatie opdraagt**. Tekent u eerder, dan vervalt het recht op subsidie. Dit is geen formaliteit — hier gaat het in de praktijk mis.
 :::
 
-### Week 4–8 — Vergunning
+Zie [Subsidies](/docs/pandeneigenaren/subsidies) voor bedragen, voorwaarden en de juiste bronlinks.
 
-Afhankelijk van uw situatie kan een vergunning nodig zijn:
+## 4–5. Bestelling, productie en transport
 
-- **Omgevingsvergunning** (bij buiteninstallatie of wijziging gevel)
-- **Toestemming gebouweigenaar** (indien u huurder bent — doorgaans de gemeente)
-- **Intern akkoord** (bestuur, technische dienst)
+Onze DC-laders komen van **Hongjiali (HGL)** uit China. Dat is bewust: het is de reden dat een 120 kW-lader betaalbaar is geworden in plaats van een investering die niet in een cultuurbudget past.
 
-In veel gevallen is geen vergunning vereist voor een laadpaal bij een bestaand laaddok.
+- Productietijd: **6–8 weken**
+- Zeetransport naar Rotterdam: **circa 25 dagen**
+- Daarna: inklaring, transport naar de locatie, ontvangstcontrole
 
-### Week 8–12 — Installatie
+Verwacht in deze fase geen dagelijkse updates — er gebeurt wekenlang niets zichtbaars. Dat is normaal.
 
-De installatie zelf duurt **1 tot 3 werkdagen**:
+## 6. Installatie en aansluiting
 
-1. Elektrotechnisch werk: kabelgoot, extra groep in meterkast
-2. Montage laadpaal
-3. Aansluiting op beheersysteem (backoffice configuratie)
-4. Testlaadsessie en oplevering
+:::caution Wie doet wat
+De **elektrotechnische installatie** — kabelgoot, groep in de meterkast, aansluiting — gebeurt door **uw eigen installateur**, niet door ons. Dat is een bewuste keuze: uw installateur kent het gebouw, de groepenkast en de veiligheidsvoorschriften. Wij leveren de lader, de configuratie en de inbedrijfname, en stemmen vooraf met uw installateur af wat er nodig is.
+:::
 
-## Wat er fysiek komt
+Wat er fysiek komt:
 
-| Onderdeel | Omschrijving |
+| Onderdeel | Toelichting |
 |---|---|
-| **Laadpaal** | Standaard met connector(s), display en RFID-lezer |
-| **Bekabeling** | Van meterkast naar laadpaal, ondergronds of via kabelgoot |
-| **Lastmanagementsysteem** | Optioneel — voorkomt overschrijding gecontracteerd vermogen |
-| **Aansluitpunt (stopcontact)** | Enkel nodig als er geen geschikte groep beschikbaar is |
+| Laadpunt | DC-snellader en/of AC-lader, met connector(en) en display |
+| Bekabeling in het gebouw | Van meterkast naar laadpunt — door uw installateur |
+| Meetpunten | Voor het EMS: meting van het gebouwverbruik |
+| Batterij (optioneel) | Als de analyse uitwijst dat buffering nodig is |
 
-## Wat er digitaal achter zit
+## 7. Inbedrijfname
 
-- **Backoffice** — beheersysteem dat autorisatie, meting en facturering regelt
-- **Eigenaarsdashboard** — u ziet real-time hoeveel er is geladen en wat u verdient
-- **Chauffeurszijde** — betalen via laadpas, QR-code of app; geen sleutels, geen kassa
+1. Lader online brengen (netwerk, OCPP-verbinding met onze backend)
+2. Configuratie: vermogenslimieten, laadprofielen, energiebeheer
+3. Controle van de veiligheidskoppeling met de brandmeldinstallatie
+4. Testsessies met een echt voertuig
+5. Oplevering: toegang tot het Klantportaal, tarieven vastleggen, gebruikers instrueren
 
-## Vereisten voor uw locatie
+Pas na die test noemen we het "live".
 
-:::opmerking Minimale vereisten
-- **3-fase elektra** beschikbaar (standaard in elk theater)
-- **Vrije ruimte** bij laaddok of parkeerplaats voor de paal (minimaal 50×50 cm)
-- **Bereikbare meterkast** voor de installateur
-- **Toegankelijkheid** voor vrachtwagens (vrije rijhoogte ≥4,0 m, wentelruimte)
-:::
+## Wat de doorlooptijd verkort
 
-Twijfelt u of uw locatie geschikt is? Stroomlijnen voert een gratis locatiecheck uit tijdens het eerste gesprek.
+- **Uw kwartierdata vroeg aanleveren** — de analyse is anders de bottleneck
+- **Elektrotechniek vroeg uitzoeken** — als de meterkast moet worden aangepast, komt dat vaak als verrassing
+- **Subsidie vroeg starten** — de aanvraag moet voor de opdracht
+- **Besluitvorming intern afronden** — de meest voorkomende vertraging zit niet bij ons
+
+## Verder lezen
+
+- [Subsidies](/docs/pandeneigenaren/subsidies)
+- [Vermogensbeheer](/docs/pandeneigenaren/vermogensbeheer)
+- [Een CPO kiezen](/docs/pandeneigenaren/cpo-kiezen)
+- [Netwerkvereisten](/docs/technical/network-requirements)

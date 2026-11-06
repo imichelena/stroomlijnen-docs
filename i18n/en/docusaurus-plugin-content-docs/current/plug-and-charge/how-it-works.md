@@ -1,150 +1,87 @@
 ---
----
 sidebar_position: 2
-title: How Plug & Charge Works
-description: Technical explanation of Plug & Charge with ISO 15118, digital certificates, and TLS — how your truck authenticates and starts charging automatically.
-keywords: [Plug and Charge, ISO 15118, TLS, digital certificates, EMAID, contract certificate, EV charging]
+title: How Plug & Charge works technically
+description: The path from cable to kWh — CCS communication, ISO 15118, identification and the role of the backend, in understandable steps.
+keywords: [how Plug and Charge works, ISO 15118, CCS, PLC, identification, authorisation, EMAID]
 ---
 
-# How Plug & Charge Works
+# How Plug & Charge works technically
 
-Plug & Charge (PnC) replaces physical tokens (RFID passes, apps) with **cryptographic certificates** built into the vehicle. When a PnC-compatible truck connects to a PnC-compatible charger, they perform a digital handshake — verifying identity, authorizing the session, and starting energy flow — all within seconds.
+This page explains what happens between plugging in and power. For the deeper protocol explanation: see [ISO 15118 in depth](/en/docs/technical/iso-15118).
 
-## The Protocol: ISO 15118
+## First: the cable does more than carry power
 
-ISO 15118 is the international standard defining how electric vehicles communicate with charging stations via the charging cable. It goes far beyond simple energy delivery:
+A CCS plug has two auxiliary contacts in addition to the power pins. Via the **Control Pilot** (CP), the vehicle reports that it is connected and how much current it can handle. For DC charging, **Power Line Communication (PLC)** is added: data over the same conductors as the power.
 
-- **ISO 15118-2** — The widely adopted version for AC and DC charging with PnC support
-- **ISO 15118-20** — The next generation, with bidirectional energy transfer (V2G) and improved certificate processing
-- **ISO 15118-3** — Physical layer and data link layer (PLC communication over the cable)
+That data layer is what makes Plug & Charge possible. Without PLC there is no conversation, and therefore no automatic identification.
 
-Stroomlijnen chargers now support ISO 15118-2, with ISO 15118-20 readiness built into our hardware.
-
-## The Certificate Chain
-
-PnC security relies on a **Public Key Infrastructure (PKI)** — the same technology securing online banking and HTTPS websites. This is the hierarchy:
-
-```
-V2G Root CA (e.g., Hubject)
-├── CPO Sub-CA (Stroomlijnen)
-│   └── EVSE leaf certificate (individual charger)
-└── eMSP Sub-CA (Stroomlijnen / roaming partner)
-    └── Contract certificate (installed in your truck)
-```
-
-Each certificate is signed by its parent, creating a **trust chain** that both the vehicle and charger can independently verify.
-
-## The Handshake — Step by Step
+## The sequence
 
 ```mermaid
 sequenceDiagram
-    participant Truck as 🚛 Electric Truck
-    participant Charger as ⚡ Stroomlijnen Charger
-    participant Backend as 🖥️ Stroomlijnen Backend
+    participant EV as Voertuig
+    participant EVSE as Lader
+    participant CSMS as Backend
 
-    Truck->>Charger: Cable connected
-    Charger->>Truck: SLAC (Signal Level Attenuation Characterization)
-    Note over Truck,Charger: PLC link established over cable
-
-    Truck->>Charger: supportedAppProtocolReq (ISO 15118-2)
-    Charger->>Truck: supportedAppProtocolRes
-
-    Truck->>Charger: SessionSetupReq
-    Charger->>Truck: SessionSetupRes (EVSE ID: NL*STM*E...)
-
-    Truck->>Charger: ServiceDiscoveryReq
-    Charger->>Truck: ServiceDiscoveryRes (PnC available ✅)
-
-    Truck->>Charger: PaymentServiceSelectionReq (Contract)
-    Charger->>Truck: PaymentServiceSelectionRes
-
-    Truck->>Charger: AuthorizationReq + Contract certificate
-    Note over Charger: Verify certificate chain
-    Charger->>Backend: Authorize.req (EMAID from certificate)
-    Backend->>Charger: Authorize.conf (Accepted ✅)
-    Charger->>Truck: AuthorizationRes (OK)
-
-    Truck->>Charger: ChargeParameterDiscoveryReq
-    Charger->>Truck: ChargeParameterDiscoveryRes (max 400 kW)
-
-    Truck->>Charger: PowerDeliveryReq (Start)
-    Note over Truck,Charger: 🔋 Charging begins!
+    EV->>EVSE: kabel aangesloten (CP-signaal)
+    EVSE->>EV: PLC-verbinding opzetten
+    EVSE->>EV: SLAC — which charger is this?
+    EV->>EVSE: protocolonderhandeling
+    EV->>EVSE: sessie starten
+    EVSE->>EV: which services are available?
+    EV->>EVSE: identification (vehicle or contract certificate)
+    EVSE->>CSMS: autorisatieverzoek
+    CSMS->>EVSE: geaccepteerd + budget/limiet
+    EV->>EVSE: laadparameters
+    EVSE->>EV: stroom loopt
 ```
 
-### What Happens in Plain Language
+In plain language:
 
-1. **Physical connection** — The driver plugs in the CCS cable
-2. **Communication link** — The truck and charger establish a data link via the cable using Power Line Communication (PLC)
-3. **Protocol negotiation** — They agree to use ISO 15118-2
-4. **Identity exchange** — The truck presents its **contract certificate**, which contains the EMAID (e-Mobility Account Identifier) linking it to a billing account
-5. **Certificate verification** — The charger validates the certificate chain up to the trusted root CA
-6. **Backend authorization** — The charger checks with the Stroomlijnen backend if this EMAID is valid and has an active contract
-7. **Charging parameters** — They negotiate power levels (voltage, current, maximum power)
-8. **Energy flows** — Charging starts automatically
+1. **Connecting** — the driver plugs in.
+2. **Linking** — a data connection is established via PLC; SLAC determines which charger is being talked to.
+3. **Negotiating** — vehicle and charger agree which protocol version they use.
+4. **Identifying** — the vehicle identifies itself. At our sites with a vehicle identity; with the certificate variant with a contract certificate.
+5. **Authorising** — the charger asks the backend: is this allowed, and within which budget?
+6. **Parameters** — it is agreed how much power may flow. This is also where the EMS limit comes in.
+7. **Charging** — power starts flowing; meter values are passed on.
 
-The entire process takes **3–8 seconds** from plug-in to energy delivery.
+## Where it usually goes wrong
 
-## Key Concepts
+From practice, in order of frequency:
 
-### Contract Certificate
+| Fault | Cause | What to do |
+|---|---|---|
+| No identification | Vehicle not known to the charging partner | Register the vehicle |
+| Fallback to card/QR | PLC connection or protocol negotiation failed | Reconnect the cable, check the contacts |
+| Authorisation refused | Vehicle blocked, budget exhausted, or wrong link | Check the account |
+| Session stops immediately | Battery too hot/cold, or BMS refuses | See [Troubleshooting](/en/docs/plug-and-charge/troubleshooting) |
+| Restart after session end | Cable remained inserted after the session ended | Unplug the cable and plug it in again |
 
-A digital certificate installed in the vehicle's onboard computer. It contains:
+## The role of the backend
 
-- **EMAID** — Your unique e-Mobility Account Identifier (e.g., `NL-STM-C00001234-5`)
-- **Public key** — Used for TLS authentication
-- **Validity period** — Typically 1–2 years
-- **Issuer** — The eMSP (Stroomlijnen or roaming partner)
+The charger does not decide for itself whether you may charge. It asks. That means the **backend** determines:
 
-The truck securely stores this certificate and presents it automatically to every PnC-compatible charger.
+- whether this vehicle or contract may charge
+- which tariff and which budget apply
+- which limit currently applies (from the EMS)
+- whether a session must stop
 
-### EVSE Certificate
+And that the charger must keep working if that backend is temporarily unreachable. At our sites the control system is on location, in the bastion at the charger, not in a data centre. If the cloud goes down, ongoing sessions continue and data is processed later.
 
-The charger's own certificate, proving it is a legitimate Stroomlijnen charging point. This prevents malicious chargers from intercepting login credentials.
+## Why "just plug in" is so difficult
 
-### Certificate Provisioning Service (CPS)
+Anyone reading this quickly thinks: surely this is simple? The difficulty does not lie in the protocol but in the **agreements**:
 
-The system that installs and updates contract certificates in vehicles. When you register a truck in the Stroomlijnen portal, the CPS:
+- Who gives a vehicle the right to charge? That is a contract, with an invoicing address.
+- Who may revoke that contract? The party that issued it.
+- How does charger A know that a certificate from party B can be trusted? Via a chain of trust that many parties have to maintain together.
+- Who pays the roaming costs if someone from network B charges at network A?
 
-1. Generates a contract certificate for that vehicle
-2. Pushes it to the vehicle via the OEM's backend (Volvo Connect, DAF Connect, etc.)
-3. The vehicle stores it in its secure element
+That is why Plug & Charge should in theory work everywhere and in practice differs per combination of network, manufacturer and country.
 
-### Hubject
+## Further reading
 
-The **trust anchor** for PnC in Europe. Hubject manages the V2G Root CA and the certificate pool enabling cross-operator compatibility. When a Stroomlijnen charger encounters a truck with a certificate from another eMSP, Hubject's infrastructure validates the chain.
-
-## Security
-
-PnC is **more secure** than RFID passes:
-
-| Aspect | RFID | Plug & Charge |
-|--------|------|---------------|
-| Authentication | Static token (can be cloned) | TLS mutual authentication |
-| Encryption | None | AES-256 via PLC |
-| Identity linking | Pass ↔ account (loose) | Certificate ↔ vehicle-VIN (strong) |
-| Revocation | Must physically retrieve pass | Certificate can be remotely revoked |
-| Fraud risk | Pass theft/cloning | Extremely difficult (hardware security module) |
-
-## Requirements
-
-For Plug & Charge, three things are necessary:
-
-1. **Vehicle support** — The truck must have ISO 15118-PnC capability and a valid contract certificate installed
-2. **Charger support** — The EVSE must support ISO 15118-2 with PnC (all Stroomlijnen DC chargers do)
-3. **Backend integration** — The eMSP and CPO must be connected via the certificate ecosystem (Hubject)
-
-## What's Next: Vehicle-to-Grid (V2G)
-
-ISO 15118-20 extends PnC with bidirectional energy transfer. A fleet of electric trucks parked at a theater overnight could:
-
-- Charge when electricity is cheapest (off-peak / high solar supply)
-- Supply energy back to the grid during peak demand
-- Generate revenue for the fleet operator
-
-Stroomlijnen's hardware is V2G-ready. Once truck OEMs enable ISO 15118-20, we will activate bidirectional charging at our locations.
-
----
-
-**Next:** [Compatible Vehicles →](./compatible-vehicles)
-
----
+- [What is Plug & Charge?](/en/docs/plug-and-charge/what-is-pnc)
+- [ISO 15118 in depth](/en/docs/technical/iso-15118)
+- [Compatibility](/en/docs/plug-and-charge/compatible-vehicles)

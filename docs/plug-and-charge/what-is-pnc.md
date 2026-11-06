@@ -1,94 +1,46 @@
 ---
 sidebar_position: 1
 title: Wat is Plug & Charge?
-description: "Wanneer een Plug & Charge-compatibele vrachtwagen aansluit op onze lader, start de facturering automatisch — geen pas, geen app, geen actie van de bestuurder nodig."
-keywords: [Plug and Charge, ISO 15118, automatic charging, electric truck, fleet charging, PnC]
+description: Inpluggen en laden zonder pas of app — wat Plug & Charge is, welke twee varianten er zijn, en wat Stroomlijnen vandaag levert.
+keywords: [Plug and Charge, automatische herkenning, inpluggen, laden zonder pas, EVCCID]
 ---
 
 # Wat is Plug & Charge?
 
-**Wanneer een Plug & Charge-compatibele vrachtwagen aansluit op onze lader, start de facturering automatisch — geen pas, geen app, geen actie van de bestuurder nodig.**
+Automatische herkenning kan laden zonder pas of app bij iedere volgende sessie mogelijk maken. Daarvoor moeten herkenning én autorisatie slagen. Alleen een kabel aansluiten garandeert geen start.
 
-Dat is alles. Insteken, weglopen, terugkomen bij een opgeladen vrachtwagen. De lader en vrachtwagen regelen authenticatie, autorisatie en facturering onderling.
+## Twee verschillende technieken
 
-## Het Probleem dat Plug & Charge Oplost
+| | Automatische voertuigherkenning bij Stroomlijnen | ISO 15118-contractcertificaten |
+|---|---|---|
+| Identiteit | EVCCID: het MAC-adres van de voertuigcommunicatiecontroller | Een contractcertificaat in het voertuig |
+| Aanmelden | Met een accountgebonden pas op het laadscherm; de lader leest de EVCCID uit | Certificaatvoorziening via de ondersteunde contract- en voertuigketen |
+| Toestemming | Afzonderlijke goedkeuring door de accounthouder en geldige laadrechten | Verificatie van certificaat en contractautorisatie |
+| Andere operators | Registratie geeft geen automatisch recht bij andere operators | Alleen bij compatibele systemen met passende vertrouwens- en contractafspraken |
 
-Op dit moment vereisen de meeste laadsessies dat de bestuurder:
-1. De juiste pas of app bij zich heeft
-2. Weet welk netwerk deze lader beheert
-3. Een pas tikt, een QR-code scant of een sessie start in een app
-4. Wacht op autorisatie
-5. Dan pas insteekt
+## Wat Stroomlijnen gebruikt
 
-Voor een personenautobezitter die één keer per week laadt, is dit lichte wrijving. Voor een vloot met 20 vrachtwagens met meerdere bestuurders over diensten heen is het een operationele last:
+De huidige herkenning op ondersteunde DC-laders gebruikt **EVCCID/MAC, niet het VIN** en niet een ISO 15118-contractcertificaat. Kenteken en voertuiggegevens helpen bij de administratie; zij vervangen het uitlezen van de EVCCID niet.
 
-- Bestuurders vergeten passen
-- Passen raken kwijt of beschadigd
-- Nieuwe bestuurders moeten worden ingewerkt
-- Verschillende ladernetwerken vereisen verschillende apps
-- Gedeelde voertuigen vereisen gedeelde passen (veiligheidsrisico)
-- Elke mislukte authenticatie is verloren laadtijd
+De chauffeur meldt het voertuig aan op het laadscherm met een pas die bij het account hoort. De accounthouder keurt het voertuig afzonderlijk goed. Zie [Instellen](/docs/plug-and-charge/setup-guide) voor de stappen. Registratie in het portaal alleen is geen activering.
 
-### De Werkelijke Kosten van Wrijving
+## Wat dit wel en niet bewijst
 
-Voor een vloot van 20 elektrische vrachtwagens:
-- Gemiddeld **3 minuten** per sessie aan authenticatiegedoe
-- Gemiddeld **2 laadsessies** per vrachtwagen per dag
-- Dat is **120 minuten per dag** — twee uur bestuurdersstijd verspild aan passen tikken
-- Bij €35/uur volledig belaste bestuurderkosten: **€1.225/maand** aan verloren productiviteit
-- Plus mislukte sessies, ondersteuningsoproepen en gefrustreerde bestuurders
+Een MAC-adres is een identifier, **geen cryptografisch bewijs van een contract of voertuigidentiteit**. Verwar herkenning daarom niet met certificaatauthenticatie of een garantie tegen nabootsing. De koppeling aan het account en de toestemming bepalen of er geladen mag worden. Wie een goedgekeurd voertuig gebruikt, kan daarmee toegang tot laden op dat account hebben.
 
-## Hoe Plug & Charge Dit Oplost
+Laat bij verkoop, verhuur of ongewenst gebruik de toestemming controleren of intrekken en controleer gekoppelde passen afzonderlijk. Een huurregistratie kan een einddatum hebben.
 
-Met Plug & Charge:
-1. De bestuurder steekt de kabel in
-2. **Klaar.**
+## Voorwaarden en beperkingen
 
-Het boordcertificaat van de vrachtwagen regelt alles. De lader weet wie u bent, bij welke vloot u hoort en waar de factuur naartoe moet — alles cryptografisch uitgewisseld in minder dan 5 seconden.
+- De lader moet deze herkennings- en aanmeldfunctie ondersteunen.
+- Het voertuig moet een bruikbare EVCCID leveren; een CCS-aansluiting alleen bewijst dat niet.
+- De registratie moet aan het juiste account gekoppeld en goedgekeurd zijn; geweigerde of verlopen toestemming is niet voldoende.
+- Voertuig, lader en locatie moeten laden toestaan. Een geregistreerd voertuig start niet onder alle omstandigheden.
 
-Geen passen om kwijt te raken. Geen apps om te installeren. Geen training nodig. Geen verschil tussen een bestuurder van dag één en een veteraan van 10 jaar.
+Raadpleeg [Compatibiliteit](/docs/plug-and-charge/compatible-vehicles) en volg de instructies op het display. Een aangeboden pas- of QR-optie kan een alternatief zijn, maar omzeilt geen laadstoring of ontbrekende rechten.
 
-## Wie Kan Het Gebruiken?
+## Verder lezen
 
-Plug & Charge vereist:
-
-1. **Een compatibel voertuig** — de vrachtwagen of bestelwagen moet ISO 15118-2 of hoger ondersteunen. Zie onze lijst met [Compatibele voertuigen](/docs/plug-and-charge/compatible-vehicles).
-2. **Een compatibele lader** — moet ISO 15118 ondersteunen en verbonden zijn met een Plug & Charge-ecosysteem. Alle Stroomlijnen-laders ondersteunen dit.
-3. **Certificaatprovisioning** — uw voertuig heeft een contractcertificaat nodig. Wij regelen dit via ons portaal.
-
-## Is Het Veilig?
-
-Ja. Plug & Charge gebruikt hetzelfde type cryptografie dat internetbankieren beveiligt:
-
-- **X.509-certificaten** — elk voertuig heeft een uniek digitaal certificaat
-- **PKI (Public Key Infrastructure)** — een vertrouwensketen van het voertuig tot de eMSP
-- **TLS-versleuteling** — alle communicatie tussen voertuig en lader is versleuteld
-- **Geen gevoelige gegevens blootgesteld** — de kabel draagt versleutelde certificaatgegevens, geen rekeningnummers
-
-Een gestolen voertuig kan op afstand worden uitgeschakeld door het certificaat in te trekken. Een RFID-pas daarentegen werkt totdat iemand opmerkt dat hij verdwenen is.
-
-:::info
-Plug & Charge is **veiliger** dan RFID-passen. Passen kunnen worden gekloond (hoewel moderne passen dit moeilijk maken). Certificaten niet — ze gebruiken asymmetrische cryptografie met 256-bit sleutels.
-:::
-
-## De Business Case
-
-Voor vlootbeheerders is Plug & Charge niet alleen handig — het is een kostenbesparing:
-
-| Factor | RFID | Plug & Charge |
-|--------|------|---------------|
-| Bestuurdersstijd per sessie | 2–5 minuten | 0 minuten |
-| Beheeroverhead voor passen | Hoog | Geen |
-| Risico op verlies/diefstal | Reëel | N.v.t. |
-| Inwerkproces nieuwe bestuurder | Pas uitreiken, proces uitleggen | "Gewoon insteken" |
-| Voertuigen met meerdere diensten | Passen delen (risicovol) | Automatisch per voertuig |
-| Maandelijkse beheertijd | Uren | Minuten |
-
-## Aan de Slag
-
-Klaar om Plug & Charge in te stellen voor uw vloot?
-
-1. **[Controleer voertuigcompatibiliteit](/docs/plug-and-charge/compatible-vehicles)** — ondersteunt uw vrachtwagen het?
-2. **[Begrijp hoe het werkt](/docs/plug-and-charge/how-it-works)** — de technologie erachter
-3. **[Stel het in](/docs/plug-and-charge/setup-guide)** — stap voor stap in ons portaal
-4. **[Merkspecifieke handleidingen](/docs/plug-and-charge/brand-guides/volvo-trucks)** — gedetailleerde instructies per fabrikant
+- [Instellen](/docs/plug-and-charge/setup-guide)
+- [Probleemoplossing](/docs/plug-and-charge/troubleshooting)
+- [ISO 15118 verdieping](/docs/technical/iso-15118)

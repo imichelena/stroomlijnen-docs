@@ -1,78 +1,56 @@
 ---
 sidebar_position: 1
-title: Een Lader Vinden
-description: Hoe u Stroomlijnen-laadlocaties vindt — kaart, app en dekkingsgebied van het roamingnetwerk voor elektrische vrachtwagens.
-keywords: [find charger, charging locations, charger map, electric truck charging, Netherlands]
+title: Een laadplek vinden
+description: Hoe u een Stroomlijnen-laadplek vindt, wat u op een locatie aantreft en waarom onze locaties nog niet overal op kaarten staan.
+keywords: [laadplek vinden, locaties, kaart, NDW, roaming, laadpalen]
 ---
 
-# Een Lader Vinden
+# Een laadplek vinden
 
-Stroomlijnen exploiteert hoogvermogen DC-laadstations op strategische locaties door heel Nederland, met uitbreiding naar België en Duitsland. Zo vindt u er een.
+Onze laadplekken staan op locaties waar we ze samen met de eigenaar hebben geplaatst: theaters en culturele instellingen, hotels en bedrijven. Ze zijn niet allemaal openbaar toegankelijk — sommige zijn er voor de eigen vloot of voor gasten.
 
-## Stroomlijnen-kaart
+## Waar u de actuele lijst vindt
 
-De snelste manier om een lader te vinden:
+| Bron | Wat u er vindt |
+|---|---|
+| **[stroomlijnen.nl](https://stroomlijnen.nl)** | De locaties die publiek toegankelijk zijn, met adres |
+| **Het Klantportaal** | Alle locaties waar u toegang toe heeft, met live status per laadpunt |
+| **Uw accountmanager** | Locaties in voorbereiding, en toegang voor specifieke kentekens |
 
-1. Ga naar **map.stroomlijnen.nl** of open de Stroomlijnen-app
-2. De kaart toont alle Stroomlijnen-locaties met realtime status:
-   - 🟢 **Beschikbaar** — Minimaal één connector vrij
-   - 🟡 **Gedeeltelijk beschikbaar** — Sommige connectoren in gebruik
-   - 🔴 **Bezet** — Alle connectoren in gebruik
-   - ⚫ **Offline** — Tijdelijk niet beschikbaar
-3. Klik op een locatie voor details: adres, aantal laders, maximaal vermogen, connectortypes en voorzieningen
+:::note Nog niet op publieke kaarten
+Onze laadpunten zijn nog niet overal zichtbaar in apps als Chargemap of PlugShare. Het aanleveren van laadpuntdata aan de Nationale Databank Wegverkeersgegevens (NDW) — verplicht onder de Europese AFIR-verordening — is in voorbereiding. Tot die tijd: gebruik de lijst op onze site of vraag het na. Er bestaat geen aparte Stroomlijnen-kaart-app; als u die elders genoemd ziet, klopt dat niet meer.
+:::
 
-## Locatietypes
+## Toegang
 
-### Theaterlocaties
-Onze kenmerkende locaties — laadstations geïnstalleerd bij podiumkunstlocaties. Deze bieden:
-- Ruime parkeerplaats voor vrachtwagens (theaters hebben grote voertuigtoegang voor toneelequipment)
-- Netcapaciteit (theaters beschikken over substantiële elektriciteitsaansluitingen voor belichting/geluid)
-- Afstemming op nachtladen (voorstellingen zijn 's avonds, vrachtwagens laden 's nachts)
-- Voorzieningen voor bestuurders — theaters hebben vaak een café of liggen in het centrum
+Afhankelijk van de locatie:
 
-### Logistieke Hubs
-Laadstations bij distributiecentra en logistieke parken, geoptimaliseerd voor vlootoperaties:
-- Hoogvermogen laden (tot 400 kW)
-- Meerdere connectoren voor gelijktijdig vlootladen
-- 24/7 toegang
-- Voorzieningen ter plaatse
+- **Vrij toegankelijk** — u kunt er zonder afspraak laden
+- **Op afspraak of met code** — vooraf geregeld met de locatiebeheerder
+- **Besloten** — alleen voor eigen vloot of gasten; niet bruikbaar voor derden
 
-### Nabij Snelwegen
-Locaties nabij grote snelwegen voor tussenstops:
-- Gepositioneerd binnen 2 km van snelwegafritten
-- Focus op snelladen (150–350 kW)
-- Geschikt voor laadstops van 30–45 minuten
+Twijfelt u? Vraag het na vóór u erheen rijdt, in plaats van er te staan met een volle agenda.
+
+## Wat u op een locatie aantreft
+
+Zie de [Locatiegids](/docs/locations/site-guide) voor de indeling, de bediening en de veiligheidsvoorzieningen.
 
 ## Roaming
 
-Stroomlijnen-laders zijn toegankelijk via roamingnetwerken. Als u een laadpas of app van een andere aanbieder heeft, kunt u waarschijnlijk bij onze laders terecht:
+Met een laadpas van een andere aanbieder kunt u bij ons in de regel **niet** laden: roaming staat bij onze laders bewust uit vanwege de kosten. Op verzoek is een directe koppeling mogelijk. Zie [Roaming uitgelegd](/docs/pandeneigenaren/cpo-roaming-uitgelegd).
 
-- **Hubject** — Intercharge-roaming
-- **OCPI** — Open Charge Point Interface-verbindingen met grote eMSP's
-- **Specifieke partners** — Informeer bij uw laadaanbieder
+Dat betekent niet dat u nergens anders kunt laden — het betekent dat u bij ons een account of een pas van ons nodig heeft.
 
-Let op: Roamingtarieven kunnen afwijken van directe Stroomlijnen-vloottarieven. Voor de beste prijzen kunt u zich aanmelden voor een direct vlootaccount.
+## Onderweg laden (buiten ons netwerk)
 
-## Routeplanning
+Voor ritten die buiten onze locaties vallen, zijn er landelijke en Europese netwerken. Let op twee dingen die vaak verrassend zijn:
 
-Voor vlootbeheerders die routes met meerdere stops plannen:
+- **Vrachtwagens kunnen niet overal terecht.** Veel snelladers zijn ontworpen voor personenauto's: te krap, te lage kabel, geen doorrijdmogelijkheid. Zoek vrachtwagenlaadpleinen, niet de eerste de beste snellader.
+- **Prijzen verschillen sterk** tussen netwerken en tussen betaalmethoden. Wie met een pas van een derde laadt, betaalt vaak meer dan de prijs op de paal.
 
-1. Ga in het **Mijn Vloot**-portaal naar **Routes** → **Route plannen**
-2. Voer start-, eind- en tussenpunten in
-3. Het systeem stelt optimale laadstops voor op basis van:
-   - Actieradius van het voertuig en huidig SoC
-   - Voorspellingen van laderbeschikbaarheid
-   - Tijdvensters en leveringsschema's
-   - Laadsnelheid per locatie
+## Verder lezen
 
-## Toegankelijkheid
-
-Alle Stroomlijnen-locaties zijn ontworpen voor bedrijfsvoertuigen:
-- **Vrachtwagen-toegankelijk parkeren** — Doorrijopstellingen of ruime draaicirkels
-- **Kabelbereik** — Kabels lang genoeg voor CCS-aansluitposities van vrachtwagens
-- **Hoogtevrijgave** — Geen lage barrières die vrachtwagentoegang beperken
-- **Verlichting** — 24/7 goed verlicht voor veilige nachtoperaties
-
-## Binnenkort Beschikbaar
-
-We breiden ons netwerk voortdurend uit. Bekijk onze [blog](/blog) voor aankondigingen van nieuwe locaties, of neem contact op met uw accountmanager voor onze uitbreidingsplannen.
+- [Locatiegids](/docs/locations/site-guide)
+- [Laadetiquette](/docs/locations/etiquette)
+- [Elektrisch touren](/docs/chauffeurs/elektrisch-touren)
+- [Roaming uitgelegd](/docs/pandeneigenaren/cpo-roaming-uitgelegd)

@@ -1,109 +1,123 @@
 ---
-sidebar_position: 10
+sidebar_position: 9
 title: CPO, eMSP en roaming uitgelegd
-description: Wat zijn CPO's en eMSP's, hoe werkt roaming tussen laadnetwerken, en welke protocollen worden gebruikt?
-keywords: [CPO, eMSP, roaming, OCPI, OCPP, laadnetwerk, interoperabiliteit, laadpas]
+description: De rollen in de laadsector, het verschil tussen OCPP en OCPI, hoe roaming werkt en wat Stroomlijnen wel en niet doet.
+keywords: [CPO, eMSP, roaming, OCPI, OCPP, hub, Gireve, Hubject, IDRO, AFIR]
 ---
 
 # CPO, eMSP en roaming uitgelegd
 
-De wereld van elektrisch laden heeft een eigen jargon. Deze pagina legt de belangrijkste begrippen en rollen uit.
+De laadsector heeft zijn eigen jargon. Deze pagina zet de rollen en protocollen op een rij, en vertelt daarna eerlijk wat Stroomlijnen doet — want daarover bestaat veel verwarring.
 
-## De twee rollen in het laadecosysteem
+## De twee rollen
 
 ### CPO — Charge Point Operator
 
-Een **CPO** beheert de fysieke laadinfrastructuur. De CPO is verantwoordelijk voor:
+Beheert de **fysieke laadinfrastructuur**:
 
-- Installatie en onderhoud van laadpalen
-- Communicatie tussen laadpaal en backoffice (via OCPP)
-- Autorisatie van laadsessies
-- Meting en facturering van geleverde energie
-- Storingsdienst en monitoring
-
-Een CPO exploiteert laadpunten op een of meer locaties. Als pandeneigenaar heeft u een contract met een CPO.
-
----
+- installatie en onderhoud van laadpunten
+- communicatie tussen laadpunt en backend (via **OCPP**)
+- autorisatie van sessies
+- meting van geleverde energie
+- monitoring en storingsdienst
 
 ### eMSP — e-Mobility Service Provider
 
-Een **eMSP** levert diensten aan de eindgebruiker (chauffeur/vlootbeheerder):
+Levert diensten aan de **eindgebruiker**:
 
-- Uitgifte van laadpassen (RFID) of apps
-- Roaming-toegang tot laadpunten van verschillende CPO's
-- Maandelijkse factuur voor alle laadsessies
-- Klantenservice
+- uitgifte van laadpassen of apps
+- toegang tot laadpunten van verschillende CPO's
+- één factuur voor alle sessies
+- klantenservice
 
-Een vlootbeheerder heeft een contract met een eMSP. Zijn chauffeurs kunnen dan laden bij alle laadpunten die via roaming zijn aangesloten.
+Eén bedrijf kan beide rollen hebben. Stroomlijnen is zowel CPO als eMSP.
 
-:::note Een bedrijf kan beide rollen hebben
-Sommige aanbieders zijn zowel CPO als eMSP. Dat betekent dat zij zowel laadpunten beheren als laadpassen uitgeven. Voorbeelden: Vattenfall, Shell Recharge, Allego, Eneco.
-:::
+## Twee protocollen, twee richtingen
 
----
+Dit is het onderscheid dat het meeste verwarring geeft:
 
-## OCPP — het protocol tussen laadpaal en backoffice
-
-**OCPP (Open Charge Point Protocol)** is de internationale open standaard voor communicatie tussen een laadpaal en het beheersysteem (backoffice) van de CPO.
-
-| Versie | Status | Kenmerken |
+| Protocol | Wat het verbindt | Richting |
 |---|---|---|
-| OCPP 1.6 | Wijdverbreid, oudere installaties | Basis functionaliteit |
-| OCPP 2.0.1 | Huidige standaard | Smart charging, V2G, betere beveiliging |
-| OCPP 2.1 | In ontwikkeling | MCS, uitgebreidere V2G |
+| **OCPP** | Laadpunt ↔ backend van de CPO | Verticaal (naar beneden) |
+| **OCPI** | Backend van CPO ↔ backend van eMSP | Horizontaal (zijwaarts) |
 
-**Waarom OCPP belangrijk is voor pandeneigenaren:** Een laadpaal die OCPP ondersteunt, is niet gebonden aan één CPO. U kunt van CPO wisselen zonder de hardware te vervangen.
+OCPP gaat over "hoe bestuur ik deze lader". OCPI gaat over "hoe verreken ik een sessie met een andere partij". Ze staan volledig los van elkaar: je kunt OCPP perfect hebben en helemaal geen roaming.
 
----
-
-## OCPI — het protocol voor roaming
-
-**OCPI (Open Charge Point Interface)** is het protocol waarmee CPO's en eMSP's onderling communiceren. Het maakt roaming mogelijk: een chauffeur met een pas van eMSP A kan laden bij een laadpunt van CPO B, en beide partijen verrekenen de sessie automatisch.
+## Hoe roaming werkt
 
 ```
-Chauffeur (eMSP A-pas)
+Chauffeur met pas van eMSP A
         ↓
-Laadpaal (CPO B)
-        ↓ OCPI-koppeling
-Backoffice CPO B → Backoffice eMSP A
+Laadpunt van CPO B
+        ↓  OCPI-koppeling
+Backend CPO B  →  Backend eMSP A
         ↓
-Factuur naar vlootbeheerder
+Factuur van eMSP A aan de chauffeur
 ```
 
-Hoe meer CPO's en eMSP's via OCPI zijn gekoppeld, hoe groter het netwerk waar een chauffeur toegang toe heeft.
+De CPO factureert de eMSP, de eMSP factureert de chauffeur. Beide kanten rekenen iets bovenop: de hub of de directe koppeling kost geld, en de eMSP moet ook bestaan.
 
----
+### Hubs
 
-## Roaming in de praktijk
-
-In Nederland zijn de meeste grote CPO's via roaming-hubs verbonden. De grootste hubs zijn:
+In plaats van tientallen bilaterale koppelingen kunnen partijen via een **hub** koppelen:
 
 | Hub | Rol |
 |---|---|
-| **Gireve** | Europese roaming-hub, veel grote netwerken |
-| **Hubject** | Plug & Charge roaming (ISO 15118) |
-| **e-Laad** | Nederlandse netbeheerders (Nuon, Stedin etc.) |
+| **Gireve** | Europese roaming-hub |
+| **Hubject** | Europese hub, sterk in Plug & Charge |
+| **e-clearing.net** | Europese neutrale hub |
 
-Een laadpas van een Nederlandse eMSP werkt doorgaans op 300.000+ laadpunten in Europa via deze hubs.
+Een hub is een technische en commerciële tussenpartij, geen liefdadigheidsinstelling: elke sessie via een hub kost commissie.
 
----
+## Wat "300.000 laadpunten" betekent
 
-## Wat betekent dit voor u als pandeneigenaar?
+U ziet die belofte overal. Wat er feitelijk staat: *een pas van een grote eMSP werkt op veel netwerken in Europa*. Dat is iets anders dan "u kunt overal laden", want:
 
-Als u een laadpunt laat installeren door een CPO die is aangesloten op roaming-netwerken, kunnen **alle chauffeurs met een geldige laadpas** bij uw paal laden — niet alleen klanten van die ene CPO.
+- de dekking hangt af van de passen die ú heeft, niet van de CPO
+- per netwerk kunnen tarieven en voorwaarden afwijken
+- bij drukte of storingen geldt de dekking niet
 
-**Vraag bij selectie van een CPO:**
-- "Via welke roaming-netwerken zijn uw laadpunten bereikbaar?"
-- "Werken laadpassen van Vattenfall, Shell Recharge en Allego bij uw palen?"
+Voor een vloot is het daarom meestal verstandiger om **directe accounts** te hebben bij de netwerken waar u veel laadt, in plaats van te leunen op één roamingpas.
 
----
+## Wat Stroomlijnen doet
 
-## Relevante bronnen
+Dit is het eerlijke deel.
 
-| Organisatie | Link |
+### Wat we hebben
+
+- **OCPI 2.2.1** is geïmplementeerd
+- Onze partij-identiteit **NL\*STM** is geregistreerd bij de Benelux IDRO (registratie IDRO/0274)
+- Laadpunten kunnen onder OCPI worden aangeboden
+
+### Wat we bewust niet doen
+
+:::warning Roaming staat bij onze laadpunten uit
+Roaming is technisch aanwezig maar **uitgeschakeld**. De reden is kosten: elke sessie via een hub of eMSP geeft commissie af, en dat geldt zowel voor sessies van derden bij ons als voor onze gebruikers elders. Voor de meeste van onze locaties — besloten of op afspraak — levert roaming vooral kosten op en weinig gebruik.
+
+Op verzoek is een **directe bilaterale koppeling** met een specifieke partij mogelijk. Dat is maatwerk en geen selfservice.
+:::
+
+Dat betekent concreet:
+
+- Een chauffeur met een pas van een andere aanbieder kan bij ons in de regel **niet** laden
+- Onze gebruikers laden bij ons, niet "overal in Europa" met dezelfde pas
+- Voor laden elders heeft u een account bij dat netwerk nodig
+
+### Publicatie van laadpuntdata
+
+Onder de Europese **AFIR**-verordening moeten publiek toegankelijke laadpunten worden aangemeld bij het nationale toegangspunt (in Nederland de **NDW**). Dat traject loopt; zodra het rond is, verschijnen onze publieke laadpunten in de gangbare kaarten en apps. Zie [Een laadplek vinden](/docs/locations/finding-charger).
+
+## Veelgemaakte fouten bij het lezen van aanbiedingen
+
+| Claim | Wat er meestal bedoeld wordt |
 |---|---|
-| Open Charge Alliance (OCPP/OCPI) | [openchargealliance.org](https://openchargealliance.org) |
-| ElaadNL (technische standaarden NL) | [elaadnl.nl](https://elaadnl.nl) |
-| Gireve (roaming hub) | [gireve.com](https://gireve.com) |
-| Hubject (Plug & Charge) | [hubject.com](https://hubject.com) |
-| NAL (Nationale Agenda Laadinfrastructuur) | [agendalaadinfrastructuur.nl](https://agendalaadinfrastructuur.nl) |
+| "OCPI-roaming met 300.000 punten" | Er is een koppeling met een hub; de dekking hangt af van uw pas |
+| "Plug & Charge in heel Europa" | Er is een certificaatvariant in voorbereiding, niet operationeel overal |
+| "Open protocol, dus vrijheid" | OCPP/OCPI zijn open standaarden, maar contracten en certificaten kunnen alsnog binden |
+
+## Verder lezen
+
+- [OCPP-overzicht](/docs/technical/ocpp-overview)
+- [Een laadplek vinden](/docs/locations/finding-charger)
+- [Een CPO kiezen](/docs/pandeneigenaren/cpo-kiezen)
+- [Koppelingen en data-export](/docs/technical/integration)

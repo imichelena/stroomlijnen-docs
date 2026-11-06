@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\"name\":\"projects/12350577886359851650\",\"title\":\"Stroomlijnen Knowledge Base \u2014 Reading Experience\",\"visibility\":\"PRIVATE\",\"projectType\":\"PROJECT_DESIGN\",\"origin\":\"STITCH\"}",
+        "type": "text"
+      }
+    ],
+    "structuredContent": {
+      "name": "projects/12350577886359851650",
+      "origin": "STITCH",
+      "projectType": "PROJECT_DESIGN",
+      "title": "Stroomlijnen Knowledge Base \u2014 Reading Experience",
+      "visibility": "PRIVATE"
+    }
+  }
+}

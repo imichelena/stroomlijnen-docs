@@ -1,75 +1,117 @@
 ---
-sidebar_position: 9
+sidebar_position: 7
 title: Subsidies voor laadinfrastructuur
-description: Overzicht van beschikbare subsidies voor pandeneigenaren die laadinfrastructuur willen plaatsen — SPRILA, SDE++, provinciale regelingen.
-keywords: [SPRILA, subsidie, laadinfrastructuur, RVO, SDE++, provinciale subsidie, MOOI]
+description: SPRILA in 2026 — bedragen, voorwaarden, rekenmethodiek en de fouten waardoor aanvragen worden afgewezen. Plus KIA en EIA.
+keywords: [SPRILA, subsidie, RVO, laadinfrastructuur, batterij, KIA, EIA, eHerkenning, AGVV]
 ---
 
 # Subsidies voor laadinfrastructuur
 
-Er zijn meerdere subsidieregelingen die de aanschaf en installatie van laadinfrastructuur kunnen financieren. Hieronder een feitelijk overzicht.
+Voor laadinfrastructuur bij bedrijven is er in Nederland één regeling die er echt toe doet: **SPRILA**. Daarnaast zijn er fiscale regelingen (KIA, EIA) die de investering verlichten.
 
-:::warning
-Subsidieregelingen wijzigen regelmatig en kunnen uitgeput raken. Controleer altijd de actuele informatie op [rvo.nl](https://www.rvo.nl) vóór u een aanvraag indient. Dien een aanvraag **altijd in vóórdat** u kosten maakt of verplichtingen aangaat — dit is een harde voorwaarde bij de meeste regelingen.
+:::warning Controleer altijd de actuele versie
+Subsidiebedragen en voorwaarden veranderen jaarlijks. De cijfers hieronder zijn de stand van **2026** en geverifieerd tegen de RVO-bronnen die onderaan staan. Controleer vóór een aanvraag altijd de actuele RVO-pagina — en dien de aanvraag in **vóórdat** u de opdracht geeft.
 :::
 
 ## SPRILA
 
-**Subsidie Publieke laadinfrastructuur**
+SPRILA staat voor de **Subsidieregeling Private Laadinfrastructuur bij bedrijven**, uitgevoerd door RVO. De regeling subsidieert laadstations (en in combinatie daarmee stationaire batterijen) bij bedrijven, met de eis dat de laadinfrastructuur ten minste 24 maanden voor derden toegankelijk blijft.
 
-De SPRILA-regeling van RVO subsidieert de aanschaf en installatie van publiek toegankelijke laadinfrastructuur voor zwaar wegtransport (vrachtwagens, bussen).
+**Let op de naam:** het is dus géén regeling voor *publieke* laadinfrastructuur. Komt u die formulering ergens tegen, dan is de tekst verouderd.
 
-| Aspect | Details |
+### Bedragen laadstations (2026)
+
+Het vermogen wordt bij AC bepaald door het maximumvermogen van het **laadpunt**, bij DC door het **totale vermogen van het station**. MKB-tarief is het dubbele van grootbedrijf.
+
+| Categorie | Grootbedrijf | MKB |
+|---|---|---|
+| AC ≥ 11 kW (1 laadpunt) | € 400 | € 800 |
+| AC duopaal 2× 11 kW | € 800 | € 1.600 |
+| AC ≥ 43 kW | € 880 | € 1.760 |
+| AC duopaal 2× 43 kW | € 1.760 | € 3.520 |
+| DC ≥ 20 kW | € 1.950 | € 3.900 |
+| DC ≥ 50 kW | € 4.880 | € 9.760 |
+| **DC ≥ 100 kW** | € 8.850 | **€ 17.700** |
+| DC ≥ 150 kW | € 12.200 | € 24.400 |
+| DC ≥ 220 kW | € 15.500 | € 31.000 |
+| DC ≥ 350 kW | € 26.250 | € 52.500 |
+| DC ≥ 550 kW | € 44.000 | € 88.000 |
+
+:::note Onze 120 kW-lader valt in de categorie DC ≥ 100 kW
+Dat betekent € 17.700 subsidie per station voor MKB — mits het totaalbedrag binnen de staatssteunruimte past. Zie de rekenmethodiek hieronder.
+:::
+
+### Bedragen stationaire batterij
+
+| Parameter | Waarde |
 |---|---|
-| **Voor wie** | Eigenaren van locaties die publiek toegankelijke DC-laadpunten voor zwaar transport willen plaatsen |
-| **Wat wordt vergoed** | Hardware (laadpaal) + installatiekosten |
-| **Subsidiepercentage** | Afhankelijk van type aanvrager en locatie |
-| **Aanvragen via** | [rvo.nl/subsidies-financiering/sprila](https://www.rvo.nl/subsidies-financiering/sprila) |
-| **Eherkenning nodig** | Ja, niveau 3 |
-| **Aanvraag vóór investering** | Verplicht |
+| Bedrag | **€ 85/kWh** (MKB), € 60/kWh (grootbedrijf) |
+| Maximum gesubsidieerd | **1.000 kWh** per laadplek |
+| C-waarde (kW/kWh) | **≤ 0,5** |
+| Ontlading naar laadstations | **≥ 70%** van de ontladen energie aantoonbaar naar laadstations |
+| Combinatie | Alleen subsidiabel **samen met** minimaal één subsidiabel laadstation |
 
-**Voorwaarden (indicatief — raadpleeg altijd rvo.nl voor actuele voorwaarden):**
-- Laadpunt moet publiek toegankelijk zijn (of toegankelijk voor specifieke doelgroepen)
-- Minimaal DC-laadpunt (AC-laders vallen buiten de regeling)
-- Locatie in Nederland
+### Algemene voorwaarden
 
----
+| Voorwaarde | Waarde |
+|---|---|
+| Minimum subsidiebedrag | **€ 2.500 per locatie** — daaronder wordt niets uitgekeerd |
+| Staatssteunruimte (AGVV) | Maximaal **40%** van de subsidiabele kosten (MKB), 20% grootbedrijf |
+| Aanvraag vóór aanleg | Verplicht bij een investering **boven € 25.000** |
+| Toegankelijkheid | ≥ 24 maanden na vaststelling, voor derden |
+| Aanvraag | **eHerkenning niveau 3**; mkb-verklaring voor het MKB-tarief |
 
-## SDE++ (voor energieopwekking)
+:::warning Twee dingen die vaak misgaan
+1. **€ 25.000 is niet het minimumbedrag** maar de drempel waarboven u *vóór de opdracht* moet aanvragen. Het minimum is **€ 2.500 subsidie per locatie**.
+2. **DC wordt gesubsidieerd vanaf 20 kW**, niet vanaf 100 kW. Een 50 kW-lader is dus wél subsidiabel.
+:::
 
-De **SDE++** (Stimulering Duurzame Energieproductie en Klimaattransitie) is een productie-incentive voor duurzame energieopwekking. Relevant als u naast laadpunten ook:
-- Zonnepanelen plaatst
-- Batterijopslag combineert met eigen opwek
+### Rekenmethodiek
 
-De SDE++ is geen directe subsidie voor laadpunten, maar kan de businesscase verbeteren als u uw laadpunten voedt met eigen groene opwek.
+```
+per station:  bedrag = staffel(vermogen, categorie)
+bruto         = som van alle bedragen (DC + AC)
+ruimte        = 0,40 × subsidiabele investeringskosten   (MKB)
+subsidie      = min(bruto, ruimte)
+indien subsidie < € 2.500 per locatie  →  geen subsidie
+batterij      = min(kWh, 1000) × € 85, mits C-waarde ≤ 0,5 en ≥ 70% naar laadstations
+```
 
-Meer informatie: [rvo.nl/subsidies-financiering/sde](https://www.rvo.nl/subsidies-financiering/sde)
+De **staatssteungrens** is dus meestal de beperkende factor, niet de staffel. Wie zes laadstations plaatst, zit al snel tegen het 40%-plafond aan.
 
----
+## Fiscale regelingen
 
-## MOOI 2026 (voor R&D-projecten)
+### KIA — kleinschaligheidsinvesteringsaftrek
 
-De **MOOI-regeling** (Missiegedreven Onderzoek, Ontwikkeling en Innovatie) van RVO ondersteunt meerjarige samenwerkingsverbanden voor innovatieve energieoplossingen. Relevant voor organisaties die in consortium willen onderzoeken hoe laadinfrastructuur bij culturele locaties kan bijdragen aan netcongestie-oplossingen.
+Een aftrek over uw totale investeringen in bedrijfsmiddelen per kalenderjaar, met een staffel. Laadinfrastructuur en batterijen kunnen daaronder vallen. Voorwaarden: per bedrijfsmiddel minimaal € 450.
 
-- Minimale subsidiabele kosten: €2 miljoen
-- Minimaal 3 partners in consortium
-- Meer informatie: [rvo.nl/subsidies-financiering/mooi](https://www.rvo.nl/subsidies-financiering/mooi)
+De KIA verlaagt uw winst en daarmee uw belasting; het is geen subsidie die u ontvangt.
 
----
+### EIA — energie-investeringsaftrek
+
+De EIA geeft extra aftrek voor energiebesparende bedrijfsmiddelen die op de **Energielijst** van het jaar staan. Of uw specifieke configuratie erop staat, hangt af van het jaarbestand — controleer dat vóór aanschaf, niet erna.
 
 ## Provinciale en gemeentelijke regelingen
 
-Veel provincies en gemeenten hebben aanvullende subsidies voor laadinfrastructuur. Deze zijn niet centraal gebundeld — raadpleeg:
+Sommige provincies en gemeenten hebben aanvullende regelingen, bijvoorbeeld voor laadinfrastructuur bij maatschappelijke instellingen. Deze zijn niet centraal gebundeld en veranderen vaak. Kijk op de site van uw provincie en gemeente, of vraag het de lokale ondernemersvereniging.
 
-- De website van uw provincie (zoek op "subsidie laadpaal" of "elektrisch vervoer")
-- Uw gemeente (sommige gemeenten hebben specifieke regelingen voor maatschappelijke instellingen)
-- [subsidiewijzer.nl](https://www.subsidiewijzer.nl) voor een overzicht per regio
+## Praktische volgorde
 
----
+1. **Bepaal de configuratie** (vermogen, aantal, wel/geen batterij) op basis van een analyse van uw eigen data
+2. **Controleer de actuele SPRILA-voorwaarden** op rvo.nl
+3. **Dien de aanvraag in** — vóór de opdracht, met eHerkenning niveau 3
+4. **Wacht op de beschikking** — pas daarna definitief bestellen
+5. **Bewaar alle facturen** — de verantwoording vraagt om specificatie per post
+6. **Regel de toegankelijkheid** — 24 maanden, en dat moet aantoonbaar zijn
 
-## Praktische tips
+## Bronnen
 
-1. **Combineren** — SPRILA en SDE++ zijn in bepaalde gevallen combineerbaar. Vraag uw accountant of een subsidieadviseur.
-2. **Aanvragen vóór investering** — dit geldt voor vrijwel alle regelingen. Teken geen installatieopdracht vóór de aanvraag is ingediend.
-3. **Bewaar alle facturen** — subsidieverantwoording vereist gedetailleerde facturen van hardware, installatie en netwerk.
-4. **RVO-adviestelefoon** — RVO biedt gratis advies via 088 042 42 42 en een online projectideeformulier voor vrijblijvend advies.
+- SPRILA, aanschaf: [rvo.nl/subsidies-financiering/laadinfrastructuur/sprila-aanschaf](https://www.rvo.nl/subsidies-financiering/laadinfrastructuur/sprila-aanschaf)
+- SPRILA, rekenvoorbeelden: [rvo.nl/subsidies-financiering/laadinfrastructuur/rekenvoorbeelden-sprila](https://www.rvo.nl/subsidies-financiering/laadinfrastructuur/rekenvoorbeelden-sprila)
+- KIA en EIA: [belastingdienst.nl](https://www.belastingdienst.nl) en [rvo.nl](https://www.rvo.nl)
+
+## Verder lezen
+
+- [Batterijopslag](/docs/energie/ess)
+- [Verdienmodel](/docs/pandeneigenaren/verdienmodel)
+- [Van beslissing tot eerste laadsessie](/docs/pandeneigenaren/installatie)

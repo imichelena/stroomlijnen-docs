@@ -1,96 +1,73 @@
 ---
-sidebar_position: 7
+sidebar_position: 10
 title: Toekomst van elektrisch vrachtvervoer
-description: Feiten en prognoses over de elektrificatie van het Nederlandse vrachtvervoer — gebaseerd op ElaadNL Outlook Logistiek 2025.
-keywords: [elektrische trucks, elektrificatie, logistiek, prognose, ElaadNL, zero-emissie, vrachtvervoer]
+description: Wat de cijfers zeggen over elektrificatie van logistiek in Nederland, en waar de knelpunten zitten — inclusief de bronnen.
+keywords: [elektrische trucks, elektrificatie, prognose, ElaadNL, zero-emissie, laadinfrastructuur]
 ---
 
 # Toekomst van elektrisch vrachtvervoer
 
-Deze pagina geeft een feitelijk overzicht van de verwachte elektrificatie van het Nederlandse vrachtvervoer. Bronnen: ElaadNL Outlook Logistiek (januari 2025), RVO, CBS.
+Deze pagina vat samen wat er bekend is over de elektrificatie van logistiek in Nederland. De cijfers komen uit publiek onderzoek; waar ze een peildatum hebben, staat die erbij.
 
-:::note Bron
-De cijfers op deze pagina zijn grotendeels afkomstig uit de **ElaadNL Outlook Logistiek — Update 2025** (januari 2025, Team Marktontwikkeling ElaadNL). Het volledige rapport is beschikbaar op [elaadnl.nl](https://elaadnl.nl).
+:::note Bron en houdbaarheid
+De onderstaande cijfers zijn ontleend aan de **ElaadNL Outlook Logistiek** (versie 2025) en aan RVO/CBS-publicaties. Dit soort prognoses wordt jaarlijks herzien. Gebruik ze als richting, niet als vaststaand feit, en raadpleeg de actuele publicatie op [elaad.nl](https://elaad.nl) voordat u ze in een businesscase gebruikt.
 :::
 
-## Stand van zaken 2024
+## Waar we staan
 
-| Voertuigtype | Aandeel elektrisch (dec. 2024) |
+Het aandeel elektrisch verschilt sterk per voertuigsegment. Personenauto's lopen voor, trucks achter — door hogere aanschafkosten, beperkte laadinfrastructuur onderweg en onzekerheid over de total cost of ownership.
+
+| Segment | Karakter |
 |---|---|
-| Personenauto's | 6,1% |
-| OV-bussen | 36% |
-| Bestelauto's | 3,3% |
-| Trucks | 0,7% |
+| **Personenauto's** | Klein maar groeiend aandeel van de nieuwverkoop |
+| **OV-bussen** | Veruit het hoogste aandeel; concessies sturen op zero-emissie |
+| **Bestelauto's** | Groeit snel, vooral in stadslogistiek |
+| **Trucks** | Nog klein, maar de eerste grote volumes komen eraan |
 
-Trucks lopen dus achter op andere segmenten. De voornaamste redenen zijn hogere aanschafkosten, beperkte laadinfrastructuur onderweg, en onzekerheid over Total Cost of Ownership (TCO).
+## De drijvers
 
-## Prognoses 2035 en 2050
+Drie ontwikkelingen maken de overstap onomkeerbaar:
 
-### Bestelauto's
+**1. Zero-emissiezones.** Een groot aantal Nederlandse gemeenten heeft per 2025 zero-emissiezones voor stadslogistiek ingevoerd. Dieselvrachtwagens en -bestelbussen mogen daar in principe niet meer in. Voor tournende producties betekent dit dat het materieel dat de binnenstad in moet, elektrisch moet zijn.
 
-| Scenario | 2035 | 2050 |
-|---|---|---|
-| Laag | — | 96% elektrisch |
-| Midden | 54% | 100% elektrisch |
-| Hoog | — | 100% elektrisch |
+**2. Europese CO₂-normen voor trucks.** Fabrikanten zijn verplicht een oplopend aandeel zero-emissievoertuigen te verkopen. Dat dwingt het aanbod — en daarmee de prijs.
 
-### Trucks
+**3. Total cost of ownership.** Elektrische trucks zijn duurder in aanschaf maar goedkoper per kilometer: minder brandstofkosten en minder onderhoud. Zodra de TCO omslaat, versnelt de adoptie zonder dat er beleid voor nodig is.
 
-| Scenario | 2035 | 2050 |
-|---|---|---|
-| Laag | — | 76% elektrisch |
-| Midden | 36% | ~90% elektrisch |
-| Hoog | — | 95% elektrisch |
+## De knelpunten
 
-### Elektriciteitsvraag
+### Laadinfrastructuur onderweg
 
-De totale elektriciteitsvraag van logistieke voertuigen loopt op naar **17–20 TWh per jaar in 2050** — meer dan 10% van het huidige jaarlijkse elektriciteitsverbruik van Nederland.
+Dit is het grootste structurele knelpunt. Laadpleinen langs corridors zijn nog beperkt, en de beschikbaarheid is onvoorspelbaar. Voor een chauffeur met een strak schema is "misschien is er een vrije lader" geen plan.
 
-| Modaliteit | E-vraag 2035 | E-vraag 2050 |
-|---|---|---|
-| Bestelauto's | 3,7 TWh | 7,3 TWh |
-| Trucks | 4,5 TWh | 11,1 TWh |
-| **Totaal logistiek** | **~8 TWh** | **~18 TWh** |
+Daar komt de **rijtijdenwet** bij: laden telt als werktijd. Een laadstop van twee uur is geen pauze maar verloren productieve tijd — en kan de dag niet meer passen.
 
-## Waar wordt geladen?
+### Netcongestie
 
-Driekwart van de laadvraag van logistieke voertuigen komt terecht op **bedrijventerreinen** (depots). De rest is verdeeld over:
+Ook bij depots en locaties is vermogen het probleem. Zie [Netcongestie](/docs/energie/netcongestie). Dit is de reden dat batterijen en slimme sturing onderdeel van het ontwerp zijn geworden in plaats van een extraatje.
 
-- Logistieke laadpleinen (snelladen onderweg)
-- Corridorladen (langs snelwegen)
-- Binnenstedelijk snelladen
-- Overige locaties (waaronder **theaters en culturele locaties**)
+### Investeringsvermogen
 
-:::tip Theaters als laadlocatie
-Theaters vallen in de categorie "overige laadlocaties" maar hebben een uniek voordeel: grote bestaande aansluitingen, overdag beschikbare capaciteit, en een netwerk van 500+ locaties verspreid over heel Nederland. Dit maakt ze strategisch interessant voor tourende producties die van locatie naar locatie rijden.
-:::
+Een elektrische trekker kost een veelvoud van een diesel. Voor veel toeleveranciers en gezelschappen is dat de grootste hobbel — groter dan de laadvraagstuk.
 
-## Verwachte omslagpunten
+## Waarom locaties als theaters interessant zijn
 
-**TCO-pariteit (Total Cost of Ownership)**
+De logica die aan Stroomlijnen ten grondslag ligt:
 
-Elektrische trucks worden steeds goedkoper in gebruik (lagere brandstofkosten, minder onderhoud). ElaadNL verwacht dat de TCO van elektrische trucks de komende jaren de TCO van dieseltrucks gaat onderschrijden, wat de adoptie sterk zal versnellen.
+- Er is **al een grote aansluiting**, gedimensioneerd op de avondpiek
+- Overdag is een groot deel daarvan **onbenut**
+- Voertuigen **staan er uren stil** tijdens opbouw, voorstelling en afbouw
+- De culturele sector moet **als eerste** over, vanwege de zero-emissiezones in binnensteden
 
-**Zero-emissiezones**
+Dat maakt van "laden bij de zaal" geen noodoplossing maar een logische combinatie: het vermogen is er, het voertuig is er, en de tijd is er.
 
-Steeds meer Nederlandse gemeenten voeren zero-emissiezones in voor stadslogistiek. Zie het [overzicht van zero-emissiezones](https://www.zero-emissie-stadslogistiek.nl) voor actuele informatie.
+## Wat dat betekent voor de sector
 
-**EU-emissienormen**
+Zonder laadmogelijkheid op locatie wordt touren elektrisch praktisch onmogelijk. De consequentie is niet dat er minder wordt getourd, maar dat **plaatsen zonder laadmogelijkheid uit het programma verdwijnen**. Dat is de kern van het argument om als locatie nu te investeren: niet omdat het moet van een regeling, maar omdat je anders op termijn niet meer op de route staat.
 
-De Europese CO₂-normen voor trucks worden aangescherpt. Fabrikanten zijn verplicht een toenemend percentage zero-emissievoertuigen te verkopen. Dit dwingt het aanbod richting elektrisch.
+## Verder lezen
 
-## Laadinfrastructuur: tekort onderweg
-
-Een van de grootste belemmeringen voor de adoptie van elektrische trucks is het **tekort aan publieke laadinfrastructuur** onderweg. Theaters en culturele locaties kunnen bijdragen aan het oplossen van dit tekort door hun bestaande aansluitingen open te stellen.
-
-Meer informatie over de infrastructuurbehoefte: [elaadnl.nl/outlook-logistiek](https://elaadnl.nl)
-
-## Relevante bronnen
-
-| Organisatie | Bron | Link |
-|---|---|---|
-| ElaadNL | Outlook Logistiek 2025 | [elaadnl.nl](https://elaadnl.nl) |
-| RVO | Dashboard Elektrisch Vervoer | [rvo.nl/ev-dashboard](https://www.rvo.nl) |
-| Zero-emissie Stadslogistiek | Overzicht ZE-zones | [zero-emissie-stadslogistiek.nl](https://www.zero-emissie-stadslogistiek.nl) |
-| NAL | Nationale Agenda Laadinfrastructuur | [agendalaadinfrastructuur.nl](https://agendalaadinfrastructuur.nl) |
-| BOVAG/RAI | Verkoopcijfers elektrisch | [bovag.nl](https://bovag.nl) |
+- [Netcongestie](/docs/energie/netcongestie)
+- [Laadpunten plaatsen](/docs/pandeneigenaren/overzicht)
+- [Elektrisch touren](/docs/chauffeurs/elektrisch-touren)
+- [Subsidies](/docs/pandeneigenaren/subsidies)

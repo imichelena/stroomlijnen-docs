@@ -1,69 +1,78 @@
 ---
----
 sidebar_position: 1
 title: What is Stroomlijnen?
-description: Introduction to Stroomlijnen — a Dutch CPO and eMSP specializing in electric truck charging at theaters and logistics locations.
-keywords: [Stroomlijnen, CPO, eMSP, electric truck charging, Netherlands, fleet charging]
+description: Introduction to Stroomlijnen — a Dutch CPO and eMSP that installs charging infrastructure at theatres, hotels and businesses, and distributes the available power at those locations intelligently.
+keywords: [Stroomlijnen, CPO, eMSP, electric charging, trucks, grid congestion, energy storage]
 ---
 
 # What is Stroomlijnen?
 
-Stroomlijnen B.V. is a Dutch **Charge Point Operator (CPO)** and **e-Mobility Service Provider (eMSP)** that builds and operates electric vehicle charging infrastructure at **theaters** and **logistics locations** throughout the Netherlands.
+Stroomlijnen B.V. is a Dutch **Charge Point Operator (CPO)** and **e-Mobility Service Provider (eMSP)**. We install charging infrastructure at locations that already have a large electricity connection — theatres, cultural institutions, hotels and businesses — and make sure that connection can also be used to charge vehicles without the building running into problems.
 
-## What We Do
+Our eMSP identity in the European charging network is **NL\*STM**.
 
-We install, operate, and maintain high-power charging stations specifically designed for **electric trucks and commercial vehicles**. Our chargers are located at sites with large existing grid connections — mainly theaters, event venues, and logistics hubs.
+## Charging as part of your building
 
-### Why Theaters?
+A charge point connects a vehicle to your site’s energy system. Power management, access control and cybersecurity therefore belong together: charging must fit the building’s capacity, with clear boundaries around who can control the equipment.
 
-Theaters have something that most locations don't: **enormous electrical connections** (often 400-2000 kVA) that are unused during the day. Performances are in the evenings. Trucks charge during the day. The infrastructure is already there — we put it to work.
+Our approach divides these responsibilities between the cloud, an on-site gateway (the bastion) and charger software. The EMS manages available power; network and access controls protect communication and operation. Capabilities depend on the device and site configuration.
 
-### Our eMSP Identity
+Start with the overall system below. The [architecture and security boundaries](/en/docs/security/architecture) are explained separately, with diagrams.
 
-We operate under the **NL\*STM** eMSP identity in the Dutch and European charging network. This means:
+## Where we come from
 
-- Your drivers can use our RFID passes or Plug & Charge at **any** public charger in the Netherlands and Europe (via roaming)
-- Customers of other eMSPs can charge at our locations
-- Full interoperability via the OCPI protocol
+Stroomlijnen started in 2025 as a pilot in the **cultural sector**. The reason was practical: touring productions drive a truck full of lighting, sound and scenery from theatre to theatre. From 2030, diesel trucks will no longer be allowed into many city centres. Electric trucks already exist — but without charging facilities at the venue, touring electrically is simply not feasible.
 
-## How Fleet Charging Works
+The conclusion was simple: **a charge point at every venue**. Charging during the time the production is there anyway, at a tariff that is clear in advance.
 
-```mermaid
-graph LR
-    A[Fleet Manager] -->|Registers fleet| B[Stroomlijnen Portal]
-    B -->|Provides RFID / Plug & Charge| C[Drivers]
-    C -->|Plugs in at location| D[Charger]
-    D -->|OCPP| E[Stroomlijnen Backend]
-    E -->|Session data| B
-    B -->|Monthly invoice| A
-```
+The same logic applies outside culture: a hotel that wants to let guests charge, or a company electrifying its fleet, usually does not lack ambition but **usable power** on the meter.
 
-1. **Register** your fleet on the Stroomlijnen portal
-2. **Configure** your vehicles — RFID passes, Plug & Charge, or both
-3. **Drivers charge** at any Stroomlijnen location (or at a roaming partner)
-4. **You receive** detailed session data, energy reports, and one monthly invoice
+## Three layers, one system
 
-## Key Features
+What we deliver is not a standalone charge point but a system of three layers:
 
-| Feature | Description |
-|---------|-------------|
-| **Plug & Charge** | ISO 15118 automatic authentication — no pass required |
-| **RFID passes** | Traditional card-based charging with NL*STM identity |
-| **Fleet portal** | Real-time session data, vehicle management, invoicing |
-| **Smart charging** | Load balancing for optimal energy costs and grid impact |
-| **OCPP 2.0.1** | Latest protocol standard for charger management |
-| **Roaming** | Charging at 300,000+ points across Europe via OCPI |
+| Layer | What it is | What it does for you |
+|---|---|---|
+| **Storage** | A battery (ESS) that buffers power when it is quiet and releases it when it is busy | Makes charging possible without you needing to upgrade your connection |
+| **Intelligence** | An energy management system (EMS) that controls the entire building in real time | Keeps you automatically below your connection limit, without unexpected peaks |
+| **Charging** | The charge points themselves, with automatic vehicle recognition | Lets vehicles charge with the power that is actually available at that moment |
 
-## What's in This Knowledge Base?
+The middle layer is where the real work happens. See [Grid congestion and power](/en/docs/energie/netcongestie) and [What does an EMS do?](/en/docs/energie/ems).
 
-This site contains everything you need to know:
+## Our chargers
 
-- **[Getting Started](/docs/getting-started/first-session)** — Your first charging session
-- **[Plug & Charge](/docs/plug-and-charge/what-is-pnc)** — The future of effortless charging
-- **[Fleet Management](/docs/fleet-management/overview)** — Managing your charging fleet
-- **[Technical](/docs/technical/ocpp-overview)** — In-depth insights into the technology
-- **[FAQ](/docs/faq)** — Frequently asked questions answered
+We work with **Hongjiali (HGL)** charging stations, validated by us at the factory:
 
-:::tip The Show Must Go On
-Our slogan is not just marketing. It reflects our commitment: if your fleet needs to charge, **must** have infrastructure ready. Reliability at theater level means being prepared for every scenario.
+| Type | Power | Connector | Protocol |
+|---|---|---|---|
+| DC fast charger (ENC-DCL120B) | **120 kW**, modularly expandable to 180 kW; configurable as 1×120 kW or 2×60 kW | 2× CCS2 | OCPP 2.0.1 |
+| AC charger (ENC-DCX030A) | 30 kW | Type 2 | OCPP 1.6J |
+
+The DC chargers are modularly built: if a power module fails, the others keep working and the module can be replaced on site.
+
+:::note No 400 kW
+Elsewhere in the sector you will come across figures of 350–400 kW. Our standard DC charger is 120 kW, because that is more than enough for an average touring day: charging 400 kWh during a 10-hour stay requires an average of 40 kW, and 120 kW provides margin for a quick start on arrival. At larger locations we scale up with additional units or modules.
 :::
+
+## What you can expect from us
+
+- **One party for the whole process** — installation, management, faults, invoicing and (for the cultural sector) ERE registration
+- **No surprises on the meter** — the EMS continuously monitors how much may still be drawn
+- **Continue charging if the cloud goes down** — the control system is on site, not in a data centre
+- **Insight** — via the [Customer Portal](/en/docs/klantportaal/overview) (Klantportaal) you can see what has been charged, by whom and at what tariff
+
+## What this is not
+
+We do not promise things that do not exist yet. That is why, in this knowledge base, we state in case of doubt what works **today** and what is **in development**. Specifically:
+
+- **Roaming** (charging with a card from another provider at our chargers, or the other way round) is technically available via OCPI, but is deliberately **switched off** on our chargers because of the costs. A direct connection is possible on request. See [Roaming explained](/en/docs/pandeneigenaren/cpo-roaming-uitgelegd).
+- **Plug & Charge** works at our chargers on the basis of automatic vehicle recognition; the certificate variant according to ISO 15118 is in development. See [What is Plug & Charge?](/en/docs/plug-and-charge/what-is-pnc).
+- **Bidirectional charging** (feeding power back from a vehicle) is something for the future, not something we can deliver now.
+
+## Further reading
+
+- [Your first charging session](/en/docs/getting-started/first-session)
+- [Grid congestion: why power is the real problem](/en/docs/energie/netcongestie)
+- [Plug & Charge](/en/docs/plug-and-charge/what-is-pnc)
+- [The Customer Portal](/en/docs/klantportaal/overview)
+- [Frequently asked questions](/en/docs/faq)

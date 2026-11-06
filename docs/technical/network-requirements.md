@@ -1,106 +1,90 @@
 ---
 sidebar_position: 3
-title: Netwerkvereisten
-description: Netwerk- en verbindingsvereisten voor Stroomlijnen-laadstations — bandbreedte, firewallregels en failover.
-keywords: [netwerkvereisten, laderconnectiviteit, firewall, bandbreedte, 4G failover, locatienetwerk]
+title: Netwerkvereisten voor een laadlocatie
+description: Wat een laadpunt nodig heeft aan internet, firewall, DNS en tijd — en hoe u een offline lader herkent en oplost.
+keywords: [netwerkvereisten, firewall, VLAN, DHCP, DNS, NTP, laadpaal offline, connectiviteit]
 ---
 
-# Netwerkvereisten
+# Netwerkvereisten voor een laadlocatie
 
-Elk Stroomlijnen-laadstation heeft een betrouwbare internetverbinding nodig om te communiceren met ons CSMS. Op deze pagina staan de vereisten voor locatie-exploitanten en IT-teams.
+Een laadpunt heeft een internetverbinding nodig om te communiceren met ons beheersysteem. Het verbruikt weinig, maar het moet **betrouwbaar** zijn: een lader die offline staat kan geen pas autoriseren en geen sessie factureren.
 
 ## Connectiviteit
 
-### Primair: Bekabeld Ethernet
-- **Minimale bandbreedte:** 1 Mbps per lader (symmetrisch)
-- **Aanbevolen:** 10 Mbps gedeeld voor tot 10 laders
-- **Latentie:** < 200 ms naar onze CSMS-eindpunten
-- **Protocol:** WebSocket via TLS (wss://)
+- **Bandbreedte:** ruim voldoende met 1 Mbps per lader; 10 Mbps gedeeld voor een tiental laders is comfortabel
+- **Latentie:** minder dan 200 ms naar onze backend is prima
+- **Protocol:** WebSocket over TLS (`wss://`)
+- **Uitgaand only** — de lader initieert zelf de verbinding; er hoeven **geen inkomende poorten** open
 
-### Back-up: 4G/LTE
-- Alle Stroomlijnen-laders hebben een ingebouwde 4G-modem
-- Activeert automatisch als de bekabelde verbinding uitvalt
-- Voldoende voor OCPP-communicatie (lage bandbreedte)
-- Niet geschikt voor firmware-updates (gebruik bekabeld daarvoor)
+:::note Over 4G
+Sommige laders hebben een eigen 4G-modem, andere niet. Reken er niet op tenzij het expliciet is afgesproken en de SIM actief is. Een 4G-verbinding is bruikbaar voor OCPP-verkeer maar ongeschikt voor firmware-updates.
+:::
 
-## Firewallregels
+## Firewall
 
-Als het locatienetwerk een firewall heeft, moet het volgende **uitgaand** zijn toegestaan vanuit het VLAN/subnet van de lader:
+Staat er een firewall tussen het laadnetwerk en internet, dan moet het volgende **uitgaand** zijn toegestaan:
 
-| Bestemming | Poort | Protocol | Doel |
-|-------------|------|----------|---------|
-| csms.stroomlijnen.nl | 443 | TCP (WSS) | OCPP-communicatie |
-| firmware.stroomlijnen.nl | 443 | TCP (HTTPS) | Firmware-updates |
-| ntp.stroomlijnen.nl | 123 | UDP (NTP) | Tijdsynchronisatie |
-| hubject.com | 443 | TCP (HTTPS) | PnC-certificaatvalidatie |
-| *.sentry.io | 443 | TCP (HTTPS) | Foutrapportage (optioneel) |
+| Bestemming | Poort | Protocol | Waarvoor |
+|---|---|---|---|
+| `ocpp.stroomlijnen.nl` | 443 | TCP (WSS) | OCPP-verbinding met de backend |
+| NTP-server (onze of een publieke pool) | 123 | UDP | Tijdsynchronisatie |
+| Firmware-/updatelocatie | 443 | TCP (HTTPS) | Alleen nodig tijdens een update |
 
-**Geen inkomende poorten** hoeven te worden geopend. Laders initiëren alle verbindingen uitgaand.
+Exacte hostnamen en een testendpoint krijgt u bij de inbedrijfname. Wijzigt er iets aan de netwerkinrichting, meld het dan vóór de wijziging — een firewallaanpassing is de meest voorkomende oorzaak van een "spontaan offline" geraakte lader.
 
 ## Netwerkisolatie
 
-We raden aan laders op een **eigen VLAN** te plaatsen, geïsoleerd van het algemene netwerk van de locatie:
+Plaats laders bij voorkeur op een **eigen VLAN**, gescheiden van het kantoornetwerk:
 
-- Voorkomt dat laderverkeer zich mengt met bedrijfsverkeer
-- Vereenvoudigt firewallregels
-- Verkleint het aanvalsoppervlak
-- Maakt QoS (Quality of Service)-prioritering mogelijk indien nodig
+- het laadverkeer mengt zich niet met bedrijfsverkeer
+- firewallregels blijven overzichtelijk
+- het aanvalsoppervlak is kleiner
+- u kunt QoS toepassen als de uplink gedeeld is
 
-## IP-adressering
+Dit is geen luxe: laadinfrastructuur is kritieke infrastructuur, en een compromis op een laptop mag nooit direct bij de laders kunnen.
 
-- **DHCP heeft voorkeur** — Laders vragen een IP aan via DHCP
-- **Statisch IP** — Kan worden geconfigureerd tijdens installatie indien vereist
-- **IPv4** — Vereist (lader-naar-CSMS)
-- **IPv6** — Niet vereist voor CSMS-communicatie (intern gebruikt op de laadkabel voor ISO 15118)
+## IP-adressering en DNS
 
-## DNS
+- **DHCP** heeft de voorkeur; statisch kan als de netwerkbeheerder dat eist
+- **IPv4** is nodig voor de verbinding met de backend
+- **IPv6** wordt intern gebruikt op de laadkabel (ISO 15118), niet voor de backend-koppeling
+- **DNS** moet werken: geef een resolver mee via DHCP, of configureer er een statisch (een publieke resolver als terugval is verstandig)
 
-Laders hebben DNS-omzetting nodig voor onze CSMS-hostnamen. Ofwel:
-- Een DNS-server verstrekken via DHCP, of
-- Statische DNS configureren (we raden 1.1.1.1 / 8.8.8.8 aan als terugval)
+## Tijd
 
-## Tijdsynchronisatie
+Nauwkeurige tijd is geen detail:
 
-Nauwkeurige tijd is essentieel voor:
-- Certificaatvalidatie (vervaldatumcontroles)
-- Sessiemeting (factuurnauwkeurigheid)
-- Logcorrelatie
+- certificaatcontrole hangt op geldigheidsdatums
+- meetwaarden en facturatie hangen op tijdstempels
+- logbestanden zijn waardeloos zonder kloppende tijd
 
-Laders synchroniseren de tijd via:
-1. NTP (primair) — van onze NTP-server of een publieke NTP-pool
-2. OCPP-heartbeat — CSMS bevat tijdstempel in heartbeat-antwoorden (back-up)
+Zorg voor NTP. Wijkt de klok van een lader ver, dan zie je dat terug als sessies die op de verkeerde dag geboekt staan of autorisaties die onverklaarbaar falen.
 
-## Bandbreedteschatting
+## Wat er werkelijk over de lijn gaat
 
-| Activiteit | Bandbreedte | Frequentie |
-|----------|-----------|-----------|
-| OCPP-heartbeat | ~1 KB | Elke 60 seconden |
-| Autorisatieverzoek | ~2 KB | Per sessiestart |
-| Meterwaarden | ~1 KB | Elke 15 seconden tijdens laden |
-| Sessie starten/stoppen | ~3 KB | Per gebeurtenis |
-| Firmware-update | 50–200 MB | Elk kwartaal |
+| Activiteit | Omvang | Frequentie |
+|---|---|---|
+| Heartbeat | ~1 KB | Elke paar minuten |
+| Autorisatie | ~2 KB | Per sessie |
+| Meterwaarden | ~1 KB | Elke 15 seconden tot enkele minuten |
+| Start/stop | ~3 KB | Per gebeurtenis |
+| Firmware-update | tientallen tot honderden MB's | Zeldzaam |
 
-**Typische belasting per lader:** ~50 KB/uur tijdens actief laden, ~1 KB/uur in rust.
+Een lader die staat te wachten verstuurt vrijwel niets. De verbinding is klein maar **continu** — een firewall die langlevende WebSockets na een tijdje kapt, veroorzaakt precies het soort "hij valt elke paar uur weg" dat moeilijk te vinden is.
 
-## Locatiebeoordeling
+## Lader staat offline — wat nu?
 
-Voor installatie voert Stroomlijnen een netwerkbeoordeling uit:
-1. **Connectiviteitstest** — Verifieer dat bekabeld internet de laderlocatie bereikt
-2. **4G-dekking** — Test de sterkte van het mobiele signaal op het installatiepunt
-3. **Firewallbeoordeling** — Bevestig dat vereiste poorten worden geopend
-4. **Bandbreedtetest** — Verifieer voldoende capaciteit voor het geplande aantal laders
+1. Controleer de **link** op de lader en de switchpoort (LED's).
+2. Controleer of DHCP een adres uitdeelt (DHCP-log).
+3. Test **DNS** vanuit hetzelfde subnet — kan de lader onze hostname vinden?
+4. Test of **443 uitgaand** open is naar `ocpp.stroomlijnen.nl`.
+5. Controleer of er recent iets aan de firewall of het VLAN is veranderd.
+6. Pas daarna de lader herstarten.
 
-## Probleemoplossing
+Meld een lader die langer dan een paar minuten offline staat; wij zien het aan onze kant ook en kunnen vaak op afstand vaststellen of het aan de verbinding of aan de lader ligt.
 
-### Lader toont "Offline" in portaal
-1. Controleer de fysieke Ethernet-verbinding (link-LED's op lader en switch)
-2. Verifieer dat DHCP een IP toewijst (raadpleeg DHCP-serverlogboeken)
-3. Test DNS-omzetting vanuit het subnet van de lader
-4. Verifieer dat de firewall uitgaand verkeer naar poort 443 op csms.stroomlijnen.nl toestaat
-5. Als bekabeld mislukt, controleer dan 4G-signaal en SIM-status
+## Verder lezen
 
-### Sporadische verbroken verbindingen
-- Controleer op netwerkcongestie of QoS-problemen
-- Verifieer dat de switchpoort niet in slaapstand gaat (energiebesparing op de poort uitschakelen)
-- Controleer op IP-conflicten (een ander apparaat met hetzelfde IP)
-- Bekijk time-outinstellingen van de firewall-sessie (WebSocket-verbindingen zijn langlevend)
+- [OCPP-overzicht](/docs/technical/ocpp-overview)
+- [Locatiegids](/docs/locations/site-guide)
+- [Storingen melden](/docs/locations/site-guide#storingen-melden)

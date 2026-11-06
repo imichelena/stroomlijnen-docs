@@ -1,127 +1,85 @@
 ---
 sidebar_position: 1
-title: OCPP Overzicht
-description: Hoe Stroomlijnen OCPP (Open Charge Point Protocol) gebruikt om laadstations op afstand te beheren en te bewaken.
-keywords: [OCPP, Open Charge Point Protocol, OCPP 2.0.1, laderstationbeheer, CSMS, extern beheer]
+title: OCPP — het protocol tussen lader en backend
+description: Wat OCPP is, welke versies er zijn, wat het wel en niet kan, en hoe Stroomlijnen het gebruikt.
+keywords: [OCPP, OCPP 1.6, OCPP 2.0.1, CSMS, laadpaal protocol, slim laden, Open Charge Alliance]
 ---
 
-# OCPP Overzicht
+# OCPP — het protocol tussen lader en backend
 
-**OCPP (Open Charge Point Protocol)** is het industriestandaard communicatieprotocol tussen laadstations en een centraal beheersysteem. Stroomlijnen gebruikt OCPP om al onze laders op afstand te beheren, bewaken en besturen.
+**OCPP (Open Charge Point Protocol)** is de open standaard waarmee een laadpunt communiceert met het beheersysteem — het **CSMS** (Charging Station Management System). Het is de reden dat u van beheerder kunt wisselen zonder de laders te vervangen.
 
-## Wat is OCPP?
+OCPP wordt beheerd door de **Open Charge Alliance (OCA)** en is vrij te gebruiken.
 
-OCPP definieert hoe een laadstation (Charge Point) communiceert met een Charging Station Management System (CSMS — dat zijn wij). Het omvat:
+## Wat OCPP regelt
 
-- **Autorisatie** — Controleren of een gebruiker/voertuig mag laden
-- **Sessiebeheer** — Laadsessies starten, bewaken en stoppen
-- **Meting** — Energieverbruik in realtime rapporteren
-- **Bediening op afstand** — Sessies op afstand starten/stoppen, vermogen aanpassen, laders herstarten
-- **Diagnostiek** — Firmware-updates, logopvraging, gezondheidsbewaking
-- **Slim laden** — Dynamisch vermogensbeheer over meerdere laders
+| Functie | Wat het betekent |
+|---|---|
+| **Autorisatie** | De lader vraagt of een pas, voertuig of app-sessie mag laden |
+| **Transacties** | Starten, bijhouden en afsluiten van een laadsessie |
+| **Meting** | Meterwaarden (kWh, vermogen) doorgeven tijdens de sessie |
+| **Aansturing** | Limieten zetten, sessies starten of stoppen, herstarten |
+| **Diagnose** | Status, foutcodes, logbestanden opvragen |
+| **Slim laden** | Laadprofielen die bepalen hoeveel vermogen er wanneer mag vloeien |
+| **Firmware** | Updates uitrollen en volgen |
 
-## OCPP-versies
+## Wat OCPP *niet* doet
 
-| Versie | Status bij Stroomlijnen | Kernfuncties |
-|---------|----------------------|--------------|
-| OCPP 1.6-J | ✅ Ondersteund | JSON/WebSocket, slimme laadprofielen, breed ingezet |
-| OCPP 2.0.1 | ✅ Voorkeur | ISO 15118-integratie, apparaatmodel, verbeterde beveiliging, transactieverwerking |
+Dit is waar het meest wordt overdreven:
 
-### Waarom OCPP 2.0.1 Belangrijk Is
+- **OCPP gaat niet over roaming.** Dat is OCPI. Zie [Roaming uitgelegd](/docs/pandeneigenaren/cpo-roaming-uitgelegd).
+- **OCPP levert geen energiemanagement.** Het kan een limiet *ontvangen*, maar niet beslissen hoeveel ruimte er is. Die beslissing hoort bij een EMS. Zie [Wat doet een EMS?](/docs/energie/ems).
+- **OCPP gaat niet over betalen aan de chauffeur.** Het gaat over autoriseren, niet over afrekenen.
+- **OCPP garandeert geen interoperabiliteit in de praktijk.** Twee partijen kunnen beide "OCPP-compliant" zijn en toch verschillen. Daarom zijn er conformiteitstests en in de praktijk altijd integratiewerk.
 
-OCPP 2.0.1 is een significante upgrade van 1.6, met name voor vlootladen:
+## Versies
 
-- **ISO 15118-integratie** — Ingebouwde ondersteuning voor Plug & Charge-certificaatbeheer via OCPP
-- **Verbeterde beveiliging** — Veilige firmware-updates, ondertekende meterwaarden, TLS verplicht
-- **Apparaatmodel** — Gestandaardiseerde manier om ladermogelijkheden en -configuratie op te vragen
-- **Transactieverwerking** — Betere verwerking van complexe transacties (voorautorisatie, parkeren, energie)
-- **Slim laden** — Meer gedetailleerde controle over laadprofielen en vermogensverdeling
-- **Displayberichten** — Stuur aangepaste berichten naar het scherm van de lader
+| Versie | Status | Waar u het tegenkomt |
+|---|---|---|
+| **1.6J** | Nog steeds de meestgebruikte versie | Bestaande installaties, AC-laders, veel merken |
+| **2.0.1** | Huidige standaard | Nieuwe installaties; ISO 15118-integratie, beter apparaatmodel, sterkere beveiliging |
+| **2.1** | In ontwikkeling | Onder meer MCS en uitgebreidere V2G-ondersteuning |
 
-Alle nieuwe Stroomlijnen-laders worden ingezet met OCPP 2.0.1. Bestaande 1.6-J-laders blijven werken en worden bijgewerkt wanneer de hardware dit ondersteunt.
+Het verschil dat er voor u toe doet:
 
-## Architectuur
+- **1.6J** kan prima autoriseren, meten en een vaste limiet ontvangen. Voor veel toepassingen is dat genoeg.
+- **2.0.1** voegt onder meer een gestandaardiseerd apparaatmodel toe (welke connectoren, welke mogelijkheden), betere ondersteuning voor Plug & Charge-certificaten en meer grip op slim laden.
 
-```mermaid
-graph LR
-    subgraph Stroomlijnen Cloud
-        CSMS[CSMS<br/>Charging Station<br/>Management System]
-        API[Vloot-API]
-        Portal[Mijn Vloot-portaal]
-    end
+:::note Onze situatie
+Onze DC-laders (HGL ENC-DCL120B) draaien **OCPP 2.0.1**. Onze AC-laders draaien **1.6J**. Beide zijn volwaardig; de versie zegt niets over de kwaliteit van de installatie.
+:::
 
-    subgraph Laadlocatie
-        CS1[Lader 1]
-        CS2[Lader 2]
-        CS3[Lader 3]
-        EMS[Energiebeheersysteem]
-    end
+## Laadprofielen: hoe "slim laden" technisch werkt
 
-    CS1 -->|OCPP 2.0.1<br/>WebSocket/TLS| CSMS
-    CS2 -->|OCPP 2.0.1<br/>WebSocket/TLS| CSMS
-    CS3 -->|OCPP 2.0.1<br/>WebSocket/TLS| CSMS
-    EMS -->|Modbus/API| CSMS
-    CSMS --> API
-    API --> Portal
-```
+OCPP kent een paar soorten laadprofielen:
 
-### Communicatiestroom
+- **ChargingStationMaxProfile** — het plafond voor het hele station
+- **TxDefaultProfile** — standaardlimiet voor elke nieuwe sessie
+- **TxProfile** — limiet voor één specifieke lopende sessie
 
-1. **Lader → CSMS:** De lader verbindt met ons CSMS via een beveiligde WebSocket (wss://) verbinding
-2. **Heartbeats:** Laders sturen periodieke heartbeats om te bevestigen dat ze online zijn
-3. **Autorisatie:** Wanneer een gebruiker een RFID-pas of PnC-certificaat presenteert, stuurt de lader een autorisatieverzoek naar ons CSMS
-4. **Meting:** Tijdens het laden worden meterwaarden (energie, vermogen, SoC) met regelmatige intervallen verzonden
-5. **Externe opdrachten:** Ons CSMS kan opdrachten naar laders sturen (starten, stoppen, resetten, firmware bijwerken)
-
-## Slim Laden
-
-De slimme laadmogelijkheden van OCPP zijn essentieel voor locaties met beperkte netcapaciteit:
-
-### Laadprofielen
-We stellen laadprofielen in die elke lader vertellen hoeveel vermogen hij op elk moment mag gebruiken:
-
-- **TxDefaultProfile** — Standaard vermogenslimiet voor elke transactie
-- **TxProfile** — Vermogensaanpassing per transactie
-- **ChargingStationMaxProfile** — Algehele locatie vermogenslimiet
-
-### Taakverdeling
-Wanneer meerdere vrachtwagens gelijktijdig laden en de locatie beperkte netcapaciteit heeft:
-
-1. Ons EMS bewaakt de totale locatiebelasting (via Modbus/API)
-2. CSMS berekent beschikbare capaciteit per lader
-3. Laadprofielen worden dynamisch bijgewerkt via OCPP
-4. Vermogen wordt eerlijk verdeeld of op basis van prioriteit (op basis van vlootinstellingen)
-
-Voorbeeld: Een locatie met 600 kW netcapaciteit en 3 laders van elk 350 kW:
-- 1 vrachtwagen laden → krijgt tot 350 kW
-- 2 vrachtwagens laden → elk 300 kW
-- 3 vrachtwagens laden → elk 200 kW
-- Tijdens piekuren op het net → verder verlaagd om binnen gecontracteerde capaciteit te blijven
-
-### Gepland Laden
-Vlootbeheerders kunnen vertrektijden en doel-SoC instellen. Ons systeem optimaliseert wanneer te laden:
-- Vertraagt de start totdat elektriciteit het goedkoopst is
-- Garandeert dat doel-SoC voor vertrektijd is bereikt
-- Balanceert over alle voertuigen op de locatie
+Een EMS vertaalt "er is nu 50 kW ruimte" naar een profiel en stuurt dat naar de lader. De lader voert het uit. Wie dat profiel zet, is precies één partij — anders vechten twee systemen om dezelfde lader.
 
 ## Beveiliging
 
-OCPP 2.0.1-beveiligingsfuncties die wij implementeren:
+Wat u van een serieuze partij mag verwachten:
 
-- **TLS 1.3** — Alle OCPP-verbindingen zijn versleuteld
-- **Clientcertificaten** — Laders authenticeren bij ons CSMS met certificaten
-- **Ondertekende meterwaarden** — Manipulatiebestendige energiemetingen
-- **Veilige firmware-updates** — Cryptografisch ondertekende firmware-images
-- **Toegangscontrole** — Fysieke en netwerktoegangsbeperkingen op elke locatie
+- **TLS** op de verbinding tussen lader en backend (wss:// in plaats van ws://)
+- **Actualiteit** — OCPP 1.6J staat geen clientcertificaten toe; 2.0.1 wel. Bij 1.6J is de beveiliging dus afhankelijk van het netwerk eromheen. Dat is precies waarom wij een bastion plaatsen: de laders staan niet rechtstreeks aan het internet.
+- **Ondertekende meterwaarden** — alleen in 2.0.1. Nuttig, maar geen vervanging voor een geijkte meter bij formele facturering.
 
-## Voor Hardwarepartners
+## Voor hardwarepartners
 
-Als u een laderfabrikant of installateur bent die met Stroomlijnen werkt:
+Werkt u met ons samen als fabrikant of installateur, dan vragen we:
 
-- We vereisen **OCPP 2.0.1**-conformiteit (1.6-J geaccepteerd voor bestaande voorraad)
-- Laders moeten **ISO 15118-2** PnC ondersteunen
-- TLS 1.2+ is verplicht
-- We verstrekken CSMS-eindpunten en -gegevens tijdens het onboardingproces
-- Interoperabiliteitstests zijn vereist voor inzet
+- OCPP **2.0.1** voor nieuwe DC-laders, 1.6J is bespreekbaar voor bestaande voorraad
+- TLS 1.2 of hoger
+- Werkende `GetConfiguration`/`SetChargingProfile` — in de praktijk de twee calls waar integraties op stuklopen
+- Een testomgeving of testunit voordat we een locatie in bedrijf nemen
 
-Neem contact op via [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl) voor integratiedocumentatie.
+Neem contact op via de kanalen op [stroomlijnen.nl](https://stroomlijnen.nl).
+
+## Verder lezen
+
+- [ISO 15118 verdieping](/docs/technical/iso-15118)
+- [Netwerkvereisten](/docs/technical/network-requirements)
+- [Roaming en OCPI](/docs/pandeneigenaren/cpo-roaming-uitgelegd)

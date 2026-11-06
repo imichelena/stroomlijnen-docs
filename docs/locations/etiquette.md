@@ -24,7 +24,7 @@ Als uw sessie is voltooid (doel-SoC bereikt of u moet vertrekken):
 Parkeer niet meerdere voertuigen in een laadvak, ook niet als er maar één laadt. Elk vak is ontworpen voor één voertuig.
 
 ### 4. Koppel Anderen Niet Los
-Ontkoppel nooit de laadkabel van een ander voertuig. Als u een lader nodig heeft en alle bezet zijn, wacht dan of gebruik de app om te zien wanneer een sessie naar verwachting eindigt.
+Ontkoppel nooit de laadkabel van een ander voertuig. Zijn alle laadpunten bezet, wacht dan of stem af met de locatiebeheerder. Het Klantportaal toont actieve sessies van uw eigen vloot, niet die van anderen.
 
 ### 5. Houd Het Schoon
 - Laat geen afval achter in het laadgebied
@@ -44,8 +44,9 @@ Op theaterlocaties bent u te gast op andermans terrein. Wees respectvol naar the
 
 ## Piekuren
 
-Onze drukste momenten zijn doorgaans:
-- **Ochtend: 06:00–09:00** — Vlootvoertuigen laden vóór vertrek
-- **Avond: 18:00–22:00** — Voertuigen keren terug van routes
+Drukte hangt sterk af van de locatie. Op de meeste plekken geldt:
 
-Als u het laden buiten deze tijden kunt plannen, helpt u drukte te verminderen en profiteert u mogelijk van lagere elektriciteitstarieven.
+- **Ochtend** — voertuigen die vertrekken willen nog bijladen
+- **Eind van de middag / avond** — voertuigen komen terug, en op locaties met een gebouwpiek (theater, hotel, restaurant) is er dan minder vermogen beschikbaar voor laden
+
+Laden buiten die vensters levert vaak meer vermogen op. Op locaties met een energiebudget kan het ook betekenen dat u binnen uw budget blijft zonder dat een sessie trager wordt.

@@ -1,78 +1,117 @@
 ---
+sidebar_position: 7
+title: Subsidies for charging infrastructure
+description: SPRILA in 2026 — amounts, conditions, calculation method and the mistakes that cause applications to be rejected. Plus KIA and EIA.
+keywords: [SPRILA, subsidy, RVO, charging infrastructure, battery, KIA, EIA, eHerkenning, AGVV]
 ---
-sidebar_position: 9
-title: Subsidies for Charging Infrastructure
-description: Overview of available subsidies for property owners who want to install charging infrastructure — SPRILA, SDE++, provincial regulations.
-keywords: [SPRILA, subsidy, charging infrastructure, RVO, SDE++, provincial subsidy, MOOI]
----
 
-# Subsidies for Charging Infrastructure
+# Subsidies for charging infrastructure
 
-There are several subsidy schemes that can finance the purchase and installation of charging infrastructure. Below is a factual overview.
+For charging infrastructure at businesses there is one scheme in the Netherlands that really matters: **SPRILA**. In addition, there are tax schemes (KIA, EIA) that ease the investment.
 
-:::warning
-Subsidy schemes change regularly and can be depleted. Always check the current information on [rvo.nl](https://www.rvo.nl) before submitting an application. **Always** submit an application **before** incurring costs or entering into obligations — this is a strict requirement for most schemes.
+:::warning Always check the current version
+Subsidy amounts and conditions change annually. The figures below reflect the position in **2026** and have been verified against the RVO sources listed at the bottom. Before an application, always check the current RVO page — and submit the application **before** you place the order.
 :::
 
 ## SPRILA
 
-**Subsidy for Public Charging Infrastructure**
+SPRILA stands for the **Subsidieregeling Private Laadinfrastructuur bij bedrijven** (Private Charging Infrastructure at Businesses Subsidy Scheme), administered by RVO. The scheme subsidises charging stations (and, in combination with them, stationary batteries) at businesses, with the requirement that the charging infrastructure remains accessible to third parties for at least 24 months.
 
-The SPRILA scheme from RVO subsidizes the purchase and installation of publicly accessible charging infrastructure for heavy road transport (trucks, buses).
+**Note the name:** it is therefore *not* a scheme for *public* charging infrastructure. If you come across that wording somewhere, the text is outdated.
 
-| Aspect | Details |
+### Amounts for charging stations (2026)
+
+For AC, the capacity is determined by the maximum capacity of the **charging point**; for DC, by the **total capacity of the station**. The SME rate is double the large-enterprise rate.
+
+| Category | Large enterprise | SME |
+|---|---|---|
+| AC ≥ 11 kW (1 charging point) | € 400 | € 800 |
+| AC dual post 2× 11 kW | € 800 | € 1.600 |
+| AC ≥ 43 kW | € 880 | € 1.760 |
+| AC dual post 2× 43 kW | € 1.760 | € 3.520 |
+| DC ≥ 20 kW | € 1.950 | € 3.900 |
+| DC ≥ 50 kW | € 4.880 | € 9.760 |
+| **DC ≥ 100 kW** | € 8.850 | **€ 17.700** |
+| DC ≥ 150 kW | € 12.200 | € 24.400 |
+| DC ≥ 220 kW | € 15.500 | € 31.000 |
+| DC ≥ 350 kW | € 26.250 | € 52.500 |
+| DC ≥ 550 kW | € 44.000 | € 88.000 |
+
+:::note Our 120 kW charger falls in the DC ≥ 100 kW category
+That means € 17.700 subsidy per station for SMEs — provided the total amount fits within the state aid ceiling. See the calculation method below.
+:::
+
+### Amounts for stationary battery
+
+| Parameter | Value |
 |---|---|
-| **For whom** | Owners of locations who want to install publicly accessible DC charging points for heavy transport |
-| **What is reimbursed** | Hardware (charging station) + installation costs |
-| **Subsidy percentage** | Dependent on type of applicant and location |
-| **Applications via** | [rvo.nl/subsidies-financiering/sprila](https://www.rvo.nl/subsidies-financiering/sprila) |
-| **E-identification required** | Yes, level 3 |
-| **Application before investment** | Mandatory |
+| Amount | **€ 85/kWh** (SME), € 60/kWh (large enterprise) |
+| Maximum subsidised | **1,000 kWh** per charging space |
+| C-rate (kW/kWh) | **≤ 0.5** |
+| Discharge to charging stations | **≥ 70%** of discharged energy demonstrably to charging stations |
+| Combination | Only eligible **together with** at least one eligible charging station |
 
-**Conditions (indicative — always consult rvo.nl for current conditions):**
-- Charging point must be publicly accessible (or accessible to specific target groups)
-- Minimum DC charging point (AC chargers are excluded from the scheme)
-- Location in the Netherlands
+### General conditions
 
----
+| Condition | Value |
+|---|---|
+| Minimum subsidy amount | **€ 2.500 per location** — below that nothing is paid out |
+| State aid ceiling (AGVV) | Maximum **40%** of eligible costs (SME), 20% large enterprise |
+| Application before construction | Mandatory for an investment **above € 25.000** |
+| Accessibility | ≥ 24 months after determination, for third parties |
+| Application | **eHerkenning level 3**; SME statement for the SME rate |
 
-## SDE++ (for energy generation)
+:::warning Two things that often go wrong
+1. **€ 25.000 is not the minimum amount** but the threshold above which you must apply *before the commission*. The minimum is **€ 2.500 subsidy per location**.
+2. **DC is subsidised from 20 kW**, not from 100 kW. A 50 kW charger is therefore indeed eligible.
+:::
 
-The **SDE++** (Stimulating Sustainable Energy Production and Climate Transition) is a production incentive for sustainable energy generation. Relevant if you also:
-- Install solar panels
-- Combine battery storage with your own generation
+### Calculation method
 
-The SDE++ is not a direct subsidy for charging points, but can improve the business case if you power your charging points with your own green energy.
+```
+per station:  amount    = tier(power, category)
+gross     = sum of all amounts (DC + AC)
+headroom  = 0.40 × eligible investment costs          (SME)
+subsidy   = min(gross, headroom)
+if subsidy < € 2,500 per location  →  no subsidy
+battery   = min(kWh, 1000) × € 85, provided C-rate ≤ 0.5 and ≥ 70% to charging points
+```
 
-More information: [rvo.nl/subsidies-financiering/sde](https://www.rvo.nl/subsidies-financiering/sde)
+The **state aid ceiling** is therefore usually the limiting factor, not the scale. Anyone installing six charging stations soon runs up against the 40% cap.
 
----
+## Tax schemes
 
-## MOOI 2026 (for R&D projects)
+### KIA — small-scale investment allowance
 
-The **MOOI scheme** (Mission-driven Research, Development and Innovation) from RVO supports multi-year collaborative partnerships for innovative energy solutions. Relevant for organizations that want to research in a consortium how charging infrastructure at cultural locations can contribute to network congestion solutions.
+A deduction on your total investments in business assets per calendar year, with a graduated scale. Charging infrastructure and batteries may fall under it. Conditions: at least € 450 per business asset.
 
-- Minimum eligible costs: €2 million
-- At least 3 partners in the consortium
-- More information: [rvo.nl/subsidies-financiering/mooi](https://www.rvo.nl/subsidies-financiering/mooi)
+The KIA reduces your profit and therefore your tax; it is not a subsidy you receive.
 
----
+### EIA — energy investment allowance
+
+The EIA gives an extra deduction for energy-saving business assets that appear on the year's **Energy List**. Whether your specific configuration is on it depends on the annual list — check that before purchase, not after.
 
 ## Provincial and municipal schemes
 
-Many provinces and municipalities have additional subsidies for charging infrastructure. These are not centrally bundled — consult:
+Some provinces and municipalities have additional schemes, for example for charging infrastructure at non-profit institutions. These are not bundled centrally and change often. Check the website of your province and municipality, or ask the local business association.
 
-- The website of your province (search for "subsidy charging station" or "electric transport")
-- Your municipality (some municipalities have specific schemes for social institutions)
-- [subsidiewijzer.nl](https://www.subsidiewijzer.nl) for an overview per region
+## Practical order
 
----
+1. **Determine the configuration** (capacity, number, battery or not) on the basis of an analysis of your own data
+2. **Check the current SPRILA conditions** on rvo.nl
+3. **Submit the application** — before the commission, with eHerkenning level 3
+4. **Wait for the decision** — only then order definitively
+5. **Keep all invoices** — the accountability requires specification per item
+6. **Arrange accessibility** — 24 months, and that must be demonstrable
 
-## Practical tips
+## Sources
 
-1. **Combining** — SPRILA and SDE++ can be combined in certain cases. Ask your accountant or a subsidy advisor.
-2. **Applying before investment** — this applies to almost all schemes. Do not sign an installation contract before submitting the application.
-3. **Keep all invoices** — subsidy reporting requires detailed invoices for hardware, installation, and network.
-4. **RVO advice hotline** — RVO offers free advice via 088 042 42 42 and an online project idea form for non-binding advice.
+- SPRILA, purchase: [rvo.nl/subsidies-financiering/laadinfrastructuur/sprila-aanschaf](https://www.rvo.nl/subsidies-financiering/laadinfrastructuur/sprila-aanschaf)
+- SPRILA, calculation examples: [rvo.nl/subsidies-financiering/laadinfrastructuur/rekenvoorbeelden-sprila](https://www.rvo.nl/subsidies-financiering/laadinfrastructuur/rekenvoorbeelden-sprila)
+- KIA and EIA: [belastingdienst.nl](https://www.belastingdienst.nl) and [rvo.nl](https://www.rvo.nl)
 
----
+## Further reading
+
+- [Battery storage](/en/docs/energie/ess)
+- [Revenue model](/en/docs/pandeneigenaren/verdienmodel)
+- [From decision to first charging session](/en/docs/pandeneigenaren/installatie)

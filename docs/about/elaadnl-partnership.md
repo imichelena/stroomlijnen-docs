@@ -1,89 +1,57 @@
 ---
 sidebar_position: 1
-title: ElaadNL Partnerschap
-description: Hoe Stroomlijnen aansluit bij het onderzoeks- en standaardisatiewerk van ElaadNL voor de bevordering van elektrisch vrachtwagenopladen in Nederland.
-keywords: [ElaadNL, onderzoek, laadstandaarden, Nederland, interoperabiliteit, V2G, ISO 15118, OCPP]
+title: ElaadNL en open standaarden
+description: Waarom we de standaarden van ElaadNL en de Open Charge Alliance volgen, en wat dat in de praktijk betekent.
+keywords: [ElaadNL, OCPP, OCPI, ISO 15118, standaarden, interoperabiliteit, Open Charge Alliance]
 ---
 
-# Onze Samenwerking met ElaadNL
+# ElaadNL en open standaarden
 
-[ElaadNL](https://elaad.nl) is het Nederlandse kennis- en innovatiecentrum voor slimme laadinfrastructuur. Opgericht door de Nederlandse netbeheerders, stimuleert ElaadNL de ontwikkeling van standaarden, protocollen en interoperabiliteitstests waarop de gehele EV-laadsector steunt.
+De laadsector draait op open standaarden. Wij volgen die standaarden en de richtlijnen die in Nederland door [ElaadNL](https://elaad.nl) en internationaal door de **Open Charge Alliance** worden onderhouden — niet omdat het verplicht is, maar omdat het de enige manier is om niet vast te lopen in een eigen ecosysteem.
 
-Stroomlijnen sluit actief aan bij het onderzoek van ElaadNL en draagt bij aan de bevordering van elektrisch vrachtwagenopladen in Nederland.
+:::note Over "partnerschap"
+Wij zijn geen deelnemer aan ElaadNL-programma's en hebben geen formele partnerschapsovereenkomst met ElaadNL. Wat we doen is hun **publicaties en standaarden volgen** en onze implementaties daaraan toetsen. De vorige versie van deze pagina suggereerde meer dan dat; dat is gecorrigeerd.
+:::
 
-## Wat ElaadNL Doet
+## Wat ElaadNL doet
 
-ElaadNL opereert op het snijvlak van onderzoek, standaarden en praktijktests:
+ElaadNL is het Nederlandse kenniscentrum voor laadinfrastructuur, opgericht door de netbeheerders. Het werk dat voor ons relevant is:
 
-- **Interoperabiliteitstests** — Het ElaadNL-testlab verifieert dat laders, voertuigen en backendsystemen correct samenwerken
-- **Protocololntwikkeling** — Bijdragen aan OCPP, OSCP, ISO 15118 en OCPI-standaarden
-- **Netimpactonderzoek** — Bestudeert hoe massaal EV-laden het elektriciteitsnet beïnvloedt en ontwikkelt slimme oplossingen
-- **Kennisdeling** — Publiceert onderzoek, organiseert evenementen en onderwijst de sector
+- **Interoperabiliteitstests** — vaststellen of laders, voertuigen en backend-systemen samenwerken
+- **Protocolkennis** — bijdragen aan en uitleg over OCPP, OCPI en ISO 15118
+- **Netimpactonderzoek** — wat massaal laden met het net doet, en hoe je dat spreidt
+- **Kennisdeling** — publicaties en de jaarlijkse Kennisdag
 
-## Hoe We Samenwerken
+## Welke standaarden wij volgen
 
-### ISO 15118 & Plug & Charge
-ElaadNL heeft een sleutelrol gespeeld bij het bevorderen van ISO 15118-adoptie in Nederland. Hun testfaciliteit was een van de eersten die PnC-interoperabiliteit tussen verschillende lader- en voertuigcombinaties valideerde.
+| Standaard | Waarvoor | Onze implementatie |
+|---|---|---|
+| **OCPP 2.0.1** | Lader ↔ backend | Onze DC-laders |
+| **OCPP 1.6J** | Lader ↔ backend | Onze AC-laders |
+| **OCPI 2.2.1** | CPO ↔ eMSP (roaming) | Aanwezig; bij laders bewust uit, zie [roaming](/docs/pandeneigenaren/cpo-roaming-uitgelegd) |
+| **ISO 15118** | Voertuig ↔ lader (o.a. Plug & Charge) | Voertuigherkenning in gebruik; certificaatvariant in ontwikkeling |
+| **IEC 61851** | Veiligheid en signalering op de kabel | Basis van elke CCS-verbinding |
+| **IEC 62196** | Connectoren (Type 2, CCS) | Standaard op al onze laadpunten |
 
-De PnC-implementatie van Stroomlijnen volgt de best practices en interoperabiliteitsrichtlijnen van ElaadNL. Onze laders worden getest aan de hand van de ISO 15118-conformiteittestsuite van ElaadNL voordat ze worden ingezet.
+## Waarom standaarden alleen niet genoeg zijn
 
-### OCPP 2.0.1
-ElaadNL is een stichtend bijdrager aan OCPP via de Open Charge Alliance (OCA). Ze hebben bijgedragen aan de ontwikkeling van OCPP 2.0.1, dat Stroomlijnen gebruikt als standaard laderbeheersprotocol.
+Een veelgehoorde aanname is dat "open standaard" automatisch interoperabiliteit betekent. In de praktijk niet:
 
-We implementeren OCPP 2.0.1-functies zoals aanbevolen in de inzetrichtlijnen van ElaadNL, waaronder:
-- ISO 15118-certificaatbeheer via OCPP
-- Slimme laadprofielen
-- Veilige firmware-updates
-- Ondertekende meterwaarden voor factuurnauwkeurigheid
+- Twee partijen kunnen beide OCPP-compliant zijn en toch verschillen in wat zeimplementeren.
+- De standaard beschrijft berichten, niet het gedrag in randgevallen (wat gebeurt er als een sessie eindigt terwijl de stekker nog zit?).
+- Beveiliging is grotendeels buiten de standaard geregeld.
 
-### Slim Laden & Netintegratie
-Het onderzoek van ElaadNL naar netimpact en slim laden informeert direct onze belastingmanagementstrategie:
+Daarom testen we elke combinatie van lader, firmware en voertuig voordat we iets in bedrijf nemen, en werken we met een eigen testopstelling naast de productieomgeving.
 
-- **OSCP (Open Smart Charging Protocol)** — We gebruiken OSCP-compatibele signalering om netcapaciteitsvoorspellingen te ontvangen van Distributiesysteembeheerders (DSB's)
-- **Dynamische taakverdeling** — Onze algoritmen volgen de aanbevelingen van ElaadNL voor eerlijke vermogensverdeling
-- **Netcongestiebeheer** — Op locaties in netbeperkende gebieden implementeren we de voorgestelde congestiebeheersprofielen van ElaadNL
+## Netbewust laden en GACS
 
-### Vehicle-to-Grid (V2G)
-ElaadNL heeft een van Europa's meest geavanceerde V2G-onderzoeksprogramma's. Hun bevindingen over bidirectionele laadtechnologie, netwerkdiensten en marktmodellen sturen onze V2G-gereedheid:
+ElaadNL onderzoekt al jaren hoe laden het net beïnvloedt en hoe je dat spreidt. Die kennis landt in Nederland onder meer in **GACS** (Generic Adaptive Charging Specification), een specificatie waarmee een netbeheerder of aggregator signalen kan afgeven over beschikbare netcapaciteit.
 
-- Onze laderhardware ondersteunt bidirectionele vermogensstroom
-- We bereiden ons voor op ISO 15118-20 (dat V2G-signalering toevoegt)
-- Ons businessmodel omvat toekomstige V2G-inkomsten voor vlootbeheerders — een concept gevalideerd door het onderzoek van ElaadNL
+Onze energiebeheersystemen zijn in staat om op zulke signalen te reageren — het is dezelfde logica als het per-fase budget dat we al gebruiken. Zie [Wat doet een EMS?](/docs/energie/ems).
 
-### Onderzoek naar Elektrisch Vrachtwagenopladen
-ElaadNL heeft specifiek onderzoek gepubliceerd over de unieke uitdagingen van elektrisch vrachtwagenopladen:
+## Verder lezen
 
-- **Hoogvermogen laden** — Netimpact van 150–400 kW-laders en de noodzaak van lokale opslag of vraagbeheer
-- **Megawatt Charging System (MCS)** — Standaardisatieontwikkeling voor de volgende generatie ultrasnelle vrachtwagenlaadstations
-- **Nacht-depotladen** — Optimalisatiestrategieën voor vlootdepots (direct relevant voor ons theaterlaadmodel)
-- **Onderwegsladen** — Netwerkplanning voor snelweglaadstations
-
-Stroomlijnen verwerkt deze bevindingen in ons locatieontwerp, netaansluitingsplanning en laadmanagement.
-
-## Gedeelde Visie
-
-Zowel ElaadNL als Stroomlijnen geloven in:
-
-1. **Open standaarden** — OCPP, OCPI, ISO 15118 boven propriëtaire protocollen
-2. **Interoperabiliteit** — Elk voertuig moet bij elke lader kunnen laden
-3. **Netvriendelijk laden** — Slim laden dat het net helpt in plaats van belast
-4. **Kennisdeling** — Bevindingen publiceren ten behoeve van de sector
-5. **Nederlands leiderschap** — Nederland als wereldleider in EV-laadinfrastructuur
-
-## Publicaties & Bronnen
-
-Relevante ElaadNL-publicaties:
-
-- [ElaadNL EV Related Protocol Study](https://elaad.nl/research/) — Uitgebreid overzicht van alle EV-laadprotocollen
-- [Dutch EV Charging Outlook](https://elaad.nl/research/) — Jaarlijkse prognose van laadinfrastructuurbehoeften
-- [ISO 15118 Implementation Guide](https://elaad.nl/research/) — Praktische handleiding voor PnC-inzet
-- [OCPP 2.0.1 Application Guide](https://elaad.nl/research/) — Best practices voor CSMS-implementatie
-
-## Betrokken Raken
-
-Als u geïnteresseerd bent in het onderzoek en de standaarden achter EV-laden:
-
-- Bezoek [elaad.nl](https://elaad.nl) voor publicaties en evenementen
-- Volg ElaadNL op [LinkedIn](https://www.linkedin.com/company/elaadnl/) voor updates
-- Woon de jaarlijkse Kennisdag van ElaadNL bij (doorgaans in november)
-- Voor samenwerkingsvragen met Stroomlijnen, neem contact op via [partnerships@stroomlijnen.nl](mailto:partnerships@stroomlijnen.nl)
+- [OCPP-overzicht](/docs/technical/ocpp-overview)
+- [ISO 15118 verdieping](/docs/technical/iso-15118)
+- [Roaming uitgelegd](/docs/pandeneigenaren/cpo-roaming-uitgelegd)
+- [Netcongestie](/docs/energie/netcongestie)

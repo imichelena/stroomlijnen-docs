@@ -1,112 +1,94 @@
 ---
----
 sidebar_position: 6
-title: Power Management and Grid Connection
-description: Explanation of connection power, contracted power, peak shaving, and smart charging for property owners.
-keywords: [connection power, contracted power, peak shaving, smart charging, grid connection, load management]
+title: Capacity management and grid connection
+description: Connection capacity, contracted capacity, per-phase ceilings, peak shaving and when a grid upgrade is really needed.
+keywords: [connection capacity, GTV, contracted capacity, peak shaving, load management, upgrade, kVA]
 ---
 
-# Power Management and Grid Connection
+# Capacity management and grid connection
 
-Before installing charging points, it's essential to understand how your electricity connection works and how charging infrastructure interacts with it.
+Before you install charging points, you need to know how much capacity you have and who uses it. This page explains the concepts and the calculation errors that are often made.
 
-## Two Concepts You Should Know
+## Two numbers, one misunderstanding
 
-### Connection Power
+**Connection capacity** is the physical maximum that your connection can handle: cables, fuses, transformer station. **Contracted transmission capacity (GTV)** is what you have agreed with the grid operator and what you pay for. The GTV is usually lower.
 
-The **connection power** is the physical maximum that your grid connection can handle — determined by the cables and transformer station of your grid operator. This is the absolute upper limit.
-
-**Typical for a theater:** 400–2000 kVA (= 400–2000 kW per phase, depending on size)
-
-### Contracted Power
-
-The **contracted power** is the maximum power for which you have a contract with your grid operator. You pay a fixed fee based on this power. If you structurally consume more, you may face penalties or need to adjust your contract.
-
-The contracted power is usually **lower** than the connection power.
-
-**Typical for a theater:** 150–500 kW
-
----
-
-:::tip Rule of Thumb
-- **Connection power** = what the cables can handle (ceiling)
-- **Contracted power** = what you've paid for (contract)
-- **Current consumption** = what you actually use (varies per hour)
-
-During the day, you typically have a lot of room between your current consumption and your contracted power. You can use this space for charging.
+:::warning kVA is not "kW per phase"
+Connections are expressed in **kVA** across **three phases together**. A connection of 400 kVA is therefore not 400 kW per phase — that would be 1,200 kW, which nobody has. Calculate approximately with the total, and take account of the power factor of your installation.
 :::
 
----
-
-## How a DC Charger Relates to Your Connection
-
-A DC charger draws its power directly and quickly from your connection. A 60 kW DC charger draws 60 kW as long as it's active. That is:
-
-| Charger Type | Power | % of 270 kW contract |
+| Concept | Meaning | Can it be influenced? |
 |---|---|---|
-| AC charger (single-phase) | 3.7–7.4 kW | 1–3% |
-| AC charger (three-phase) | 11–22 kW | 4–8% |
-| DC charger | 50–150 kW | 18–55% |
-| DC fast charger (truck) | 100–350 kW | 37–130% |
+| Connection capacity | Physical maximum | Only with a grid upgrade |
+| GTV | What you may contractually draw | Yes, with the grid operator |
+| Actual consumption | What is being drawn now | Yes, through behaviour and control |
 
-A single 150 kW DC charger on a 270 kW contract takes up more than half of your contract space. That's fine during the day when the theater consumes little — but in the evening during a performance, it can cause problems.
+## Per phase, not just the total
 
-**The solution: peak shaving / load management**
+This is the second frequently made mistake. Your connection consists of **three fuses**. A neatly balanced total can still blow one phase if the load is unevenly distributed.
 
----
+That is why good control works with a **per-phase ceiling**: the tightest phase determines what can be added. Connecting a charging point on one phase while that phase is already heavily loaded is asking for trouble — even if the total appears ample.
 
-## Peak Shaving and Smart Charging
+## How much room do you have?
 
-**Peak shaving** (also known as load management or smart charging) is a system that automatically adjusts the charging power based on the available power at that moment.
-
-### How it Works
-
-1. The system continuously measures the actual power consumption of the building
-2. It calculates how much space is left under your contracted power
-3. The charging point receives exactly as much power as is available — no more
-4. If the hall fills and consumption increases, the charging power is automatically reduced
-5. If consumption decreases (e.g., after a performance), the charging power goes back up
-
-### Result
-
-- **Never** exceeding your contracted power
-- **Maximum charging speed** when possible
-- **No manual action** required
+The only reliable way: looking at your **quarter-hour values** over a longer period.
 
 ```
-Contracted power:     270 kW
-Theater consumption evening:       220 kW
-Available for charging:       50 kW → charging point charges at 50 kW
-
-Theater consumption daytime:      40 kW
-Available for charging:      230 kW → charging point charges at 150 kW (max charger)
+GTV                270 kW
+Gemeten avondpiek  220 kW   →  50 kW ruimte
+Gemeten overdag     40 kW   →  230 kW ruimte
 ```
 
----
+Note what this says: the room is there **at certain moments**, not always. A charging point that continuously demands 150 kW on this connection is a problem in the evening. A charging point that is controlled charges quickly during the day and slowly in the evening — and then it works.
 
-## When is Grid Expansion Necessary?
+## What a charger demands
 
-In most theaters, grid expansion is **not** necessary for a first charging point of 60–150 kW, as long as peak shaving is installed.
+| Type | Capacity | Share of a 270 kW GTV |
+|---|---|---|
+| AC charger, single-phase | 3.7–7.4 kW | 1–3% |
+| AC charger, three-phase | 11–30 kW | 4–11% |
+| DC charger (our standard) | 120 kW (2×60) | up to 44% |
+| DC when expanded | up to 180 kW | up to 67% |
 
-Grid expansion becomes relevant only when you:
-- Want to operate multiple charging points simultaneously (>3 fast chargers)
-- Want to reserve fixed power capacity for charging (e.g., for contract guarantees to carriers)
-- Want to add battery storage (BSS) for extra buffer capacity
+A DC charger does not continuously draw its maximum: the capacity follows the vehicle's charging curve and drops sharply above 60–80% SoC. Nevertheless you must reckon with the maximum for as long as the session runs.
 
-:::note Grid Operator
-Waiting times for grid expansion in the Netherlands are currently 5–10 years in many regions. Battery storage (BSS) can be an alternative to bridge the waiting time. See the [ElaadNL Outlook Logistiek](https://elaadnl.nl) for current figures on grid congestion and charging infrastructure.
+## The solution: controlling instead of upgrading
+
+**Peak shaving / load management** continuously adjusts the charging capacity based on what is left over at that moment:
+
+1. The system measures the building consumption, per phase
+2. It calculates the remaining room under the ceiling
+3. The charging points receive exactly that
+4. If the building consumption rises (the public comes in, the kitchen starts), charging goes down
+5. If it drops again, charging goes up
+
+The result: you do not exceed your GTV, you charge as fast as possible, and no manual action is needed. See [What does an EMS do?](/en/docs/energie/ems).
+
+## When is an upgrade really needed?
+
+Rarely for a first charging point. An upgrade becomes relevant if:
+
+- you structurally want to charge more than there is room for, even with control
+- you want to supply guaranteed capacity to third parties (contractually)
+- you want to run multiple heavy charging points at the same time without a battery
+
+:::note Waiting times
+Applying for an upgrade means a study and a queue at the grid operator. In busy areas that ranges from months to several years, and sometimes there is no date yet. Do not count on it as plan A. A battery can bridge the waiting time — see [Battery storage](/en/docs/energie/ess).
 :::
 
----
+## Battery as buffer
 
-## Battery Storage as a Buffer
+An ESS changes the arithmetic: the system can deliver more than the connection permits, because the battery steps in at peak moments and refills during quiet hours.
 
-A Battery Storage System (BSS) charges when your power consumption is low and supplies that energy back to the charging points during peak moments. This allows for higher charging powers without exceeding your grid connection.
-
-| Scenario | Without BSS | With BSS |
+| | Without battery | With battery |
 |---|---|---|
-| Available daytime | 230 kW | 230 kW + buffer |
-| Available evening | 50 kW | 50 kW + buffer from BSS |
-| Max. charging power evening | 50 kW | 150 kW (from BSS) |
+| Available during the day | 230 kW | 230 kW + buffer |
+| Available in the evening | 50 kW | 50 kW + buffer |
+| Condition | — | The battery must be charged; calculate with the usable capacity, not with the datasheet |
 
----
+## Further reading
+
+- [Grid congestion](/en/docs/energie/netcongestie)
+- [Battery storage](/en/docs/energie/ess)
+- [What does an EMS do?](/en/docs/energie/ems)
+- [Energy budgets and reservations](/en/docs/energie/energiebudget)

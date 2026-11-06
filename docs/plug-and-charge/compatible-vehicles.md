@@ -1,92 +1,41 @@
 ---
 sidebar_position: 3
-title: Compatibele Voertuigen
-description: Welke elektrische vrachtwagens, bestelwagens en personenwagens Plug & Charge ondersteunen bij Stroomlijnen-laadstations.
-keywords: [compatibele voertuigen, Plug and Charge, elektrische vrachtwagens, ISO 15118, Volvo, DAF, Mercedes, Scania, MAN]
+title: Welke voertuigen kunnen dit?
+description: Waar compatibiliteit van afhangt, hoe u het voor uw voertuig controleert, en waarom wij geen vaste merkenlijst publiceren.
+keywords: [compatibiliteit, CCS2, ISO 15118, Plug and Charge voertuigen, EVCCID, merken]
 ---
 
-# Compatibele Voertuigen
+# Welke voertuigen kunnen dit?
 
-Plug & Charge-compatibiliteit hangt af van de ondersteuning van het voertuig voor **ISO 15118-2** met contractcertificaatverwerking. Hieronder staat de huidige status voor voertuigen die veel worden gezien op Stroomlijnen-locaties.
+**Kunnen laden** en **automatisch herkend worden** zijn verschillende vragen. Een passende stekker is geen garantie voor automatische herkenning of voor een geslaagde laadsessie.
 
-:::info Bijgewerkt maart 2026
-Compatibiliteit evolueert snel. We werken deze pagina bij naarmate OEM's nieuwe firmware en modellen uitbrengen. Als uw voertuig niet vermeld staat, [neem contact met ons op](mailto:info@stroomlijnen.nl).
-:::
+## Laden met een kabel
 
-## Elektrische Vrachtwagens
+Voor onze DC-laders is CCS Combo 2 de relevante aansluiting. Controleer ook de elektrische specificaties, voertuigondersteuning en toegang op de locatie. Voor AC-laden met Type 2 gelden andere voorwaarden; de hier beschreven DC-aanmelding bewijst geen AC-compatibiliteit.
 
-| Fabrikant | Model | PnC-ondersteuning | Opmerkingen |
-|-------------|-------|:-----------:|-------|
-| **Volvo** | FH Electric | ✅ | Via Volvo Connect. Volledige PnC vanaf firmware v3.2+ |
-| **Volvo** | FM Electric | ✅ | Via Volvo Connect. Zelfde platform als FH Electric |
-| **Volvo** | FE Electric | ✅ | Via Volvo Connect |
-| **Volvo** | FL Electric | ✅ | Via Volvo Connect |
-| **DAF** | XF Electric | ✅ | Via DAF Connect. Vereist activering door vlootbeheerder |
-| **DAF** | XD Electric | ✅ | Via DAF Connect |
-| **DAF** | XB Electric | ✅ | Via DAF Connect |
-| **Mercedes-Benz** | eActros 600 | ✅ | Via Fleetboard. PnC beschikbaar vanaf Q4 2025 |
-| **Mercedes-Benz** | eActros 300 | ✅ | Via Fleetboard |
-| **Mercedes-Benz** | eEconic | ⚠️ | PnC via OTA-update verwacht Q2 2026 |
-| **Scania** | BEV R-serie | ✅ | Via Scania Fleet Management. Firmware 2025.3+ |
-| **Scania** | BEV P-serie | ✅ | Via Scania Fleet Management |
-| **MAN** | eTGX | ✅ | Via RIO-platform. Volledige PnC vanaf eind 2025 |
-| **MAN** | eTGS | ✅ | Via RIO-platform |
-| **MAN** | eTGL/eTGM | ⚠️ | PnC-uitrol in uitvoering, raadpleeg dealer |
-| **Renault Trucks** | E-Tech T | ⚠️ | ISO 15118-2-hardware aanwezig, PnC-activering via OTA verwacht H1 2026 |
-| **Renault Trucks** | E-Tech D | ⚠️ | Zelfde status als E-Tech T |
-| **Ford Trucks** | F-MAX Electric | ❌ | ISO 15118 nog niet ondersteund. Alleen RFID/app |
-| **IVECO** | S-eWay | ⚠️ | PnC aangekondigd voor modellen van 2026 |
+## Automatische herkenning
 
-### Legenda
+De huidige herkenning gebruikt **EVCCID: het MAC-adres van de voertuigcommunicatiecontroller**, niet het VIN. Voor gebruik moet:
 
-- ✅ **Ondersteund** — PnC werkt vandaag bij Stroomlijnen-laders
-- ⚠️ **Binnenkort** — Hardware geschikt, software-update in afwachting
-- ❌ **Niet ondersteund** — Gebruik RFID-pas of app
+- de lader de functie ondersteunen;
+- het voertuig een bruikbare, bij volgend gebruik herkenbare EVCCID leveren;
+- die identifier via de [aanmeldprocedure](/docs/plug-and-charge/setup-guide) aan het juiste account zijn gekoppeld;
+- de accounthouder afzonderlijk toestemming hebben gegeven en die toestemming nog geldig zijn.
 
-## Elektrische Bestelwagens
+Een CCS-aansluiting, een ingevuld VIN of een vermelding dat het voertuig ISO 15118 ondersteunt bewijst niet dat deze MAC-gebaseerde herkenning werkt. Certificaatgebaseerde Plug & Charge is een andere techniek.
 
-| Fabrikant | Model | PnC-ondersteuning | Opmerkingen |
-|-------------|-------|:-----------:|-------|
-| **Mercedes-Benz** | eSprinter | ✅ | ISO 15118-2 vanaf modeljaar 2025 |
-| **Mercedes-Benz** | eVito | ✅ | ISO 15118-2 vanaf modeljaar 2025 |
-| **Volvo** | EM90 | ✅ | Via Volvo Connect |
-| **Ford** | E-Transit | ⚠️ | Hardware geschikt, PnC-activering verschilt per markt |
-| **MAN** | eTGE | ⚠️ | Beperkte PnC-ondersteuning, raadpleeg dealer |
-| **Renault** | Master E-Tech | ❌ | Alleen RFID/app |
-| **VW** | ID. Buzz Cargo | ⚠️ | PnC via VW-backend, vereist Volkswagen We Charge-contract |
-| **Fiat** | E-Ducato | ❌ | Geen ISO 15118-ondersteuning |
-| **Maxus** | eDeliver 7 | ❌ | Geen ISO 15118-ondersteuning |
+## Per voertuig controleren
 
-## Personenwagens (CCS DC)
+Voertuiguitvoering en software kunnen het gedrag beïnvloeden. Daarom staat hier geen universele merkenlijst of garantie voor alle moderne EV's. Controleer het concrete voertuig op een geschikte lader: lukt het uitlezen tijdens de aanmelding, is de registratie bevestigd en werkt herkenning bij later aansluiten na goedkeuring?
 
-Hoewel Stroomlijnen-laders zijn ontworpen voor bedrijfsvoertuigen, kunnen personenwagens met CCS-stekkers ook laden bij onze stations. PnC-ondersteuning:
+Bij vragen geeft u merk, model, bouwjaar, kenteken, locatie en de schermmelding door aan uw accountmanager. Een VIN kan nuttige voertuigmetadata zijn, maar vervangt deze test of de EVCCID-registratie niet. Er is geen vaste doorlooptijd voor zo'n onderzoek toegezegd.
 
-| Fabrikant | PnC-ondersteuning | Opmerkingen |
-|-------------|:-----------:|-------|
-| **BMW** | ✅ | i4, iX, i5, i7 — via BMW Charging |
-| **Mercedes-Benz** | ✅ | EQS, EQE, EQA, EQB — via Mercedes me Charge |
-| **Porsche** | ✅ | Taycan, Macan Electric — via Porsche Charging Service |
-| **Audi** | ✅ | e-tron GT, Q6 e-tron, Q8 e-tron — via myAudi |
-| **VW** | ⚠️ | ID.-serie — via Volkswagen We Charge, uitrol gaande |
-| **Hyundai/Kia** | ⚠️ | Ioniq 5/6, EV6/9 — PnC verschilt per markt en firmware |
-| **Tesla** | ❌ | Gebruikt eigen Supercharger PnC, CCS PnC niet ondersteund |
-| **Stellantis-merken** | ❌ | Geen ISO 15118 PnC op huidige modellen |
+## Als automatisch starten niet lukt
 
-:::tip
-Zelfs zonder PnC kunnen alle voertuigen met een **CCS Combo 2**-stekker laden bij Stroomlijnen-locaties via een RFID-pas of de Stroomlijnen-app. PnC verwijdert simpelweg de noodzaak voor handmatige authenticatie.
-:::
+Volg de instructies op de lader. Gebruik een aangeboden en toegestane RFID- of QR-optie als die beschikbaar is. Die alternatieven garanderen geen start bij een communicatieprobleem, laadstoring of ontbrekende laadrechten.
 
-## Uw Voertuig Controleren
+## Verder lezen
 
-1. **Controleer uw OEM-portaal** — Volvo Connect, DAF Connect, Fleetboard, RIO of Scania Fleet Management toont "Plug & Charge" of "ISO 15118"-instellingen
-2. **Controleer de firmwareversie** — Zorg dat uw voertuig de nieuwste firmware heeft (zie [merkspecifieke handleidingen](./brand-guides/volvo-trucks))
-3. **Neem contact op met uw dealer** — Zij kunnen ISO 15118-mogelijkheid bevestigen en certificaten installeren indien nodig
-4. **Neem contact op met Stroomlijnen** — We kunnen compatibiliteit controleren wanneer u registreert in ons portaal
-
-## Uw Voertuig Staat Niet Vermeld?
-
-Als uw vrachtwagen of bestelwagen niet vermeld staat, kan het toch werken. Nieuwe modellen en firmware-updates worden regelmatig uitgebracht. Neem contact met ons op via [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl) met het merk, model en VIN van uw voertuig, dan zullen we het onderzoeken.
-
----
-
-**Volgende:** [Installatiehandleiding →](./setup-guide)
+- [Wat is Plug & Charge?](/docs/plug-and-charge/what-is-pnc)
+- [Instellen](/docs/plug-and-charge/setup-guide)
+- [Probleemoplossing](/docs/plug-and-charge/troubleshooting)

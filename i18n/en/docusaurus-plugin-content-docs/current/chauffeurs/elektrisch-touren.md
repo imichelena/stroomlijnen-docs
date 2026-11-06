@@ -1,32 +1,31 @@
 ---
----
 sidebar_position: 1
-title: Electric Touring — What You Need to Know
-description: Practical guide for drivers going on tour with an electric vehicle. From range to load management on the road.
+title: Electric touring — what you need to know
+description: Practical guide for drivers going on tour with an electric vehicle. From range to charging management en route.
 keywords: [electric touring, driver, range, OBC, charging strategy, fast charger, truck, van]
 ---
 
-# Electric Touring — What You Need to Know
+# Electric touring — what you need to know
 
-A practical guide for drivers going on tour with an electric vehicle. The core rule is simple: **charge when you're stationary, not while driving**.
+A practical guide for drivers going on tour with an electric vehicle. The core rule is simple: **charge when you are standing still, not when you are driving**.
 
 ---
 
-## The Vehicle
+## The vehicle
 
-### Range Determines Everything
+### Range determines everything
 
-The range of your vehicle determines whether you can travel from A to B without stopping. Some general rules for the Netherlands:
+The range of your vehicle determines whether you can get from A to B without a stop. A few rules of thumb for the Netherlands:
 
-- **Passenger car with large battery pack** (e.g., 77+ kWh): from Utrecht, you can reach almost any theater and return on a single charge
-- **Van**: this is virtually impossible with most models on a single charge — charging on the road is unavoidable
-- **Truck**: depends on route and load, but charging at the theater is crucial
+- **Passenger car with a large battery pack** (e.g. 77+ kWh): from Utrecht you can reach virtually every theatre and back on a single charge
+- **Delivery van**: with most models this is virtually impossible on a single charge — charging en route is unavoidable
+- **Truck**: depending on route and load, but charging at the theatre is crucial
 
-### WLTP Range vs. Reality
+### WLTP range vs. reality
 
-The official WLTP range is based on mixed use and is not a good measure for constant highway driving.
+The official WLTP range is based on mixed use and is not a good measure for constant motorway driving.
 
-| Speed | Consumption compared to WLTP | Effective range |
+| Speed | Consumption relative to WLTP | Effective range |
 |---|---|---|
 | 90 km/h | ~100% | WLTP range achievable |
 | 100 km/h | ~110% | ~10% less range |
@@ -35,15 +34,15 @@ The official WLTP range is based on mixed use and is not a good measure for cons
 **Practical example (Kia e-Soul, WLTP 452 km):**
 - At 90 km/h: ~450 km achievable
 - At 120 km/h: ~300 km in practice
-- Rule of thumb at average 100 km/h: count on ~330 km
+- Rule of thumb at an average of 100 km/h: reckon on ~330 km
 
-Temperature and wind reduce the range further. Always calculate with a margin.
+Temperature and wind reduce the range further. Always allow a margin.
 
-### The OBC — On Board Charger
+### The OBC — on board charger
 
-The **OBC (On Board Charger)** is the vehicle's built-in charger. This determines how fast you can charge at a regular AC charging pole. It is the slowest part of the chain.
+The **OBC (On Board Charger)** is the vehicle's built-in charger. It determines how fast you can charge at an ordinary AC charging point. It is the slowest link in the chain.
 
-| OBC power | Time to fully charge 60 kWh |
+| OBC capacity | Time to charge 60 kWh fully |
 |---|---|
 | 3 kW | ~20 hours |
 | 7 kW | ~8.5 hours |
@@ -51,110 +50,108 @@ The **OBC (On Board Charger)** is the vehicle's built-in charger. This determine
 | 22 kW | ~2.75 hours |
 
 :::warning
-An 11 kW OBC charges at a maximum of 11 kW, even if the charging pole can deliver more. The OBC is the limiting factor when charging with AC.
+An 11 kW OBC charges at a maximum of 11 kW, even if the charging point can deliver more. The OBC is the limiting factor with AC charging.
 :::
 
-Almost all vehicles with a B driver's license (passenger cars, vans) have a limited OBC — this was already the case with diesel (three-phase power for construction), but it's even more relevant with electric vehicles.
+Virtually all vehicles covered by a B licence (passenger cars, delivery vans) have a limited OBC — this was already the case with diesel (three-phase power for load-in), but with electric it is all the more relevant.
 
 ---
 
 ## Chargers
 
-### AC Chargers (Public Poles, Home Charger)
+### AC chargers (public posts, home charger)
 
 AC chargers supply alternating current to the vehicle — the OBC converts this to DC for the battery.
 
-- **Power:** 3.7–22 kW (depending on pole and OBC)
-- **Locations:** public charging poles on the street, at companies, in theaters
-- **Price:** relatively low (€0.25–€0.45/kWh)
-- **Disadvantage:** slow, and more and more poles limit charging power during evening congestion (16:00–22:00) or don't deliver anything at all
+- **Capacity:** 3.7–22 kW (depending on the post and the OBC)
+- **Locations:** public charging posts on the street, at businesses, in theatres
+- **Price:** relatively low — as an indication, reckon on €0,30–€0,50/kWh, strongly dependent on the network and the payment method
+- **Drawback:** slow, and more and more posts limit the charging capacity during evening congestion (16:00–22:00) or deliver nothing at all during that time
 
-:::warning Evening Congestion
-Many public charging poles limit the charging power or stop completely between 16:00 and 22:00 due to grid congestion. If you count on a full battery in the morning, but the pole has hardly charged for 6 hours — you'll be in for a surprise.
+:::warning Evening peak
+In many places the grid is most heavily loaded between roughly 16:00 and 22:00. Some public charging posts then reduce the charging capacity, and at the occasional post charging stops temporarily. So do not blindly assume you will have a full battery in the morning: check the charging session before you go to sleep, or choose a post where you have certainty.
 :::
 
-:::note Charging Pole Blockers
-At many charging poles, fines now apply if you stay parked after the battery is full. Set a notification in your app.
+:::note Charging post blockers
+At many charging posts, fines now apply if you stay parked after the battery is full. Set a notification in your app.
 :::
 
-### DC Chargers (Fast Chargers)
+### DC chargers (fast chargers)
 
-DC chargers convert the power themselves and charge the battery directly — without OBC. Much faster.
+DC chargers convert the current themselves and charge the battery directly — without the OBC. Much faster.
 
-- **Power:** 20–350+ kW
-- **Price:** up to 4× the price of an AC pole (€0.60–€0.90/kWh on public fast chargers)
-- **Locations for passenger cars/vans:** Fastned, Shell Recharge, Allego, etc.
-- **Locations for trucks:** ~100 public charging sites in the Netherlands (findable via [Chargemap](https://chargemap.com) or [Truckcharging by Volvo](https://truckscharging.com))
+- **Capacity:** 20–350+ kW
+- **Price:** considerably higher than AC — public fast chargers are indicatively between €0,50 and €0,90/kWh, depending on the network and whether you pay with a card from a third party
+- **Locations for passenger cars/delivery vans:** Fastned, Shell Recharge, Allego, etc.
+- **Locations for trucks:** a growing number of truck charging plazas in the Netherlands — find them via [Chargemap](https://chargemap.com) or [Truckcharging by Volvo](https://truckscharging.com)
 
-:::warning Trucks Not Allowed at Regular Fast Chargers
-Trucks are not welcome at Fastned, Shell Recharge, and similar consumer fast chargers. They are limited to special truck charging sites.
+:::warning Regular fast chargers are usually not an option for a truck
+Most public fast chargers are designed for passenger cars: tight bays, low cable holders and no drive-through possibility. With a truck you often physically cannot get to them, even if it is not formally prohibited. Reckon on dedicated truck charging plazas and check in advance whether you can get there with your combination.
 :::
 
-### Bringing Your Own Charger
+### Bringing your own charger
 
-Bringing your own charger (mobile charging cable or wallbox) is a smart option — you can be sure you can charge if there's a three-phase power point available.
+Bringing your own charger (mobile charging cable or wallbox) is a smart option — you then know for certain that you can charge if a three-phase power point is available.
 
-**Note when using three-phase power connections:**
-- A 32A cable/plug can only deliver that power in peaks, but only **25A continuously** (net ~15 kW continuous charging)
-- A 63A cable provides double the capacity (~30 kW continuous)
-- Cable length and thickness determine whether you can achieve full power — heavy cables over long distances lose power
+**Note with three-phase connections:**
+- A 32A cable/plug can only handle that capacity at peak, but only **25A continuously** (net ~15 kW continuous charging)
+- A 63A cable gives double the capacity (~30 kW continuous)
+- Cable length and thickness determine whether you can achieve the full capacity — heavy cables over a large distance lose capacity
 
-Not all loading and unloading areas at theaters have three-phase power nearby. Check this in advance.
+Not all loading and unloading areas at theatres have three-phase power nearby. Check this in advance.
 
 ---
 
-## Driving Behavior
+## Driving behaviour
 
-### Regenerative Braking
+### Regenerative braking
 
-Most electric vehicles can recover energy when braking (regenerative braking). The motor acts as a dynamo and charges the battery when decelerating.
+Most electric vehicles can recover energy when braking (regenerative braking). The motor acts as a dynamo and charges the battery while decelerating.
 
-- You **can't coast anymore** — the vehicle brakes as soon as you release the gas pedal
-- This takes some getting used to, but it significantly increases your range with every exit or speed reduction
-- Your brake pads wear out much less
+- You can **no longer coast** — the vehicle brakes as soon as you release the accelerator
+- This takes some getting used to, but yields significant range at every exit or reduction in speed
+- Your brakes barely wear
 
-**Tip:** Learn to drive with one pedal. With every exit or traffic jam, you gain free range.
+**Tip:** Learn to drive with one pedal. At every exit or traffic jam you gain range for free.
 
 ---
 
-## Charging Strategy on the Road
+## Charging strategy en route
 
 The ideal strategy for a touring driver:
 
 ```
-Home base       → Depart with a full battery
+Home base         → Leave with a full battery
         ↓
-Theater/location  → Charge during setup/performance/teardown
+Theatre/venue     → Charging during get-in / show / get-out
         ↓
-Home base       → Possibly recharge at home
+Home base         → Top up at home if needed
 ```
 
-If the range for the single trip is not sufficient:
+If the range is not sufficient for the single journey:
 
-- Choose a vehicle with **high DC charging speed (>100 kW)** — this makes a 15-minute fast charge stop possible instead of 45 minutes
-- Find fast chargers on your route via [Chargemap](https://chargemap.com), [ABRP](https://abetterrouteplanner.com), or [PlugShare](https://www.plugshare.com)
-
----
-
-## Trucks: Special Considerations
-
-For trucks, there are additional limitations:
-
-- **Driving regulations:** combining charging with technical work is legally problematic if the driver has to wait at the charger. At theaters that cannot charge, a **dedicated driver** is necessary.
-- **No access to consumer fast chargers** — look for special truck charging sites
-- **Charging at the theater**: not always possible and not everywhere is there a connection near the loading dock
+- Choose a vehicle with a **high DC charging speed (>100 kW)** — that makes a fast charging stop of 15 minutes possible instead of 45 minutes
+- Find fast chargers on the route via [Chargemap](https://chargemap.com), [ABRP](https://abetterrouteplanner.com) or [PlugShare](https://www.plugshare.com)
 
 ---
 
-## Conclusions at a Glance
+## Trucks: specific points for attention
 
-- **Charge when you're stationary** — at home and at the theater. Charging on the road counts towards your working day.
-- **Range > charging speed** if you can charge at every location
-- **Charging speed > range** if you can't avoid stops on the road — then you want >100 kW DC
-- **Evening congestion** (16:00–22:00): public poles can surprisingly deliver very little
-- **Bring your own charger** is smart — independent of available infrastructure
+Additional restrictions apply to trucks:
+
+- **Driving hours legislation:** combining charging with technician work is legally problematic if the driver has to wait at the charger. At theatres that cannot charge, a **dedicated driver** is needed.
+- **Regular fast chargers are usually physically unusable** — look for truck charging plazas
+- **Charging at the theatre**: not always possible, and not everywhere is there a connection near the loading dock
+
+---
+
+## Conclusions at a glance
+
+- **Charge when you are standing still** — at home and at the theatre. Charging en route adds to your working day.
+- **Range > charging speed** if you can charge everywhere on site
+- **Charging speed > range** if you cannot avoid intermediate stops en route — then you want >100 kW DC
+- **Evening congestion** (16:00–22:00): public posts can deliver surprisingly little
+- **Bringing your own charger** is smart — independent of the available infrastructure
 - **Fast chargers are expensive** — use them only when really necessary
-- **Trucks**: look for charging sites, not regular fast chargers
-- **Truck + no theater charger** = dedicated driver needed (driving regulations)
-
----
+- **Trucks**: look for charging plazas, not regular fast chargers
+- **Truck + no theatre charger** = dedicated driver needed (driving hours legislation)

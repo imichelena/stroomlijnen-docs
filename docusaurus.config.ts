@@ -21,15 +21,30 @@ const config: Config = {
   onBrokenAnchors: 'warn',
 
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
   },
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['en', 'nl'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
+        searchBarShortcut: true,
+        searchBarShortcutHint: true,
+        searchBarPosition: 'right',
+      },
+    ],
+  ],
 
-  markdown: {
-    mermaid: true,
-  },
-  themes: ['@docusaurus/theme-mermaid'],
+  clientModules: [require.resolve('./src/clientModules/reading.js')],
 
   headTags: [
     {
@@ -59,18 +74,10 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'nl',
-    locales: ['nl', 'en', 'es', 'de', 'fr', 'pt', 'it', 'pl', 'sv', 'zh'],
+    locales: ['nl', 'en'],
     localeConfigs: {
       nl: { label: 'Nederlands', htmlLang: 'nl-NL' },
       en: { label: 'English', htmlLang: 'en-GB' },
-      es: { label: 'Español', htmlLang: 'es-ES' },
-      de: { label: 'Deutsch', htmlLang: 'de-DE' },
-      fr: { label: 'Français', htmlLang: 'fr-FR' },
-      pt: { label: 'Português', htmlLang: 'pt-BR' },
-      it: { label: 'Italiano', htmlLang: 'it-IT' },
-      pl: { label: 'Polski', htmlLang: 'pl-PL' },
-      sv: { label: 'Svenska', htmlLang: 'sv-SE' },
-      zh: { label: '中文', htmlLang: 'zh-CN' },
     },
   },
 
@@ -80,7 +87,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/imichelena/stroomlijnen-docs/tree/main/',
           showLastUpdateTime: true,
         },
         blog: {
@@ -92,7 +98,6 @@ const config: Config = {
             description: 'Insights on electric fleet charging, Plug & Charge, and EV infrastructure',
             copyright: `Copyright © ${new Date().getFullYear()} Stroomlijnen B.V.`,
           },
-          editUrl: 'https://github.com/imichelena/stroomlijnen-docs/tree/main/',
           blogTitle: 'Stroomlijnen Blog',
           blogDescription: 'Insights on electric fleet charging, Plug & Charge, and EV infrastructure in the Netherlands and Europe.',
           blogSidebarCount: 10,
@@ -102,7 +107,7 @@ const config: Config = {
           onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/fonts.css', './src/css/custom.css', './src/css/editorial.css'],
         },
         sitemap: {
           lastmod: 'date',
@@ -123,9 +128,19 @@ const config: Config = {
       { property: 'og:site_name', content: 'Stroomlijnen Knowledge Base' },
     ],
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: false,
-      respectPrefersColorScheme: false,
+      respectPrefersColorScheme: true,
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: false,
+      },
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
     },
     navbar: {
       title: '',
@@ -141,7 +156,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Documentation',
+          label: 'Documentatie',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
@@ -150,7 +165,7 @@ const config: Config = {
         },
         {
           href: 'https://docs.stroomlijnen.nl/blog/rss.xml',
-          label: '📡 RSS',
+          label: 'RSS',
           position: 'right',
         },
         {
@@ -164,16 +179,16 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentation',
+          title: 'Documentatie',
           items: [
-            { label: 'Getting Started', to: '/docs/getting-started/intro' },
+            { label: 'Aan de slag', to: '/docs/getting-started/intro' },
             { label: 'Plug & Charge', to: '/docs/plug-and-charge/what-is-pnc' },
-            { label: 'Fleet Management', to: '/docs/fleet-management/overview' },
-            { label: 'Technical', to: '/docs/technical/ocpp-overview' },
+            { label: 'Klantportaal', to: '/docs/klantportaal/overview' },
+            { label: 'Technisch', to: '/docs/technical/ocpp-overview' },
           ],
         },
         {
-          title: 'Resources',
+          title: 'Meer',
           items: [
             { label: 'FAQ', to: '/docs/faq' },
             { label: 'Blog', to: '/blog' },
@@ -181,11 +196,11 @@ const config: Config = {
           ],
         },
         {
-          title: 'Company',
+          title: 'Bedrijf',
           items: [
-            { label: 'Stroomlijnen.nu', href: 'https://stroomlijnen.nl' },
+            { label: 'stroomlijnen.nl', href: 'https://stroomlijnen.nl' },
             { label: 'LinkedIn', href: 'https://www.linkedin.com/company/stroomlijnen' },
-            { label: 'Contact', href: 'mailto:info@stroomlijnen.nl' },
+            { label: 'Contact', href: 'https://stroomlijnen.nl/contact' },
           ],
         },
       ],

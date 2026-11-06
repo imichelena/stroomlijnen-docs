@@ -1,76 +1,95 @@
 ---
 sidebar_position: 8
 title: AC- en DC-laders uitgelegd
-description: Verschil tussen wisselstroom (AC) en gelijkstroom (DC) laden — techniek, vermogen, kosten en toepassingen.
-keywords: [AC lader, DC lader, wisselstroom, gelijkstroom, laadvermogen, CCS2, Type 2, laadpaal types]
+description: Het verschil tussen wisselstroom en gelijkstroom laden, wat het betekent voor laadtijd en kosten, en hoe u kiest.
+keywords: [AC lader, DC lader, wisselstroom, gelijkstroom, CCS2, Type 2, laadvermogen, MCS]
 ---
 
 # AC- en DC-laders uitgelegd
 
-Er zijn twee fundamenteel verschillende manieren om een elektrisch voertuig op te laden: via wisselstroom (AC) of via gelijkstroom (DC). Het verschil zit in waar de omzetting plaatsvindt.
+Er zijn twee manieren om een elektrisch voertuig te laden, en het verschil zit op één plek: **waar de omzetting van wisselstroom naar gelijkstroom gebeurt.**
 
 ## Het principe
 
-Elektriciteit in het net is altijd wisselstroom (AC). Batterijen slaan gelijkstroom (DC) op. Er moet dus ergens een omzetting plaatsvinden.
+Het net levert **wisselstroom (AC)**. Een batterij slaat **gelijkstroom (DC)** op. Ergens moet dus worden omgezet.
 
-- **AC-lader:** de omzetting van AC naar DC gebeurt **in het voertuig** (via de boordlader)
-- **DC-lader:** de omzetting vindt plaats **in de laadpaal** — het voertuig ontvangt direct DC
+- **AC-laden** — de omzetting gebeurt **in het voertuig**, in de boordlader (OBC)
+- **DC-laden** — de omzetting gebeurt **in de lader**; het voertuig krijgt direct gelijkstroom
+
+Daaruit volgt alles wat verder verschillend is.
 
 ## Vergelijking
 
 | Kenmerk | AC-lader | DC-lader |
 |---|---|---|
-| Omzetting | In voertuig (boordlader) | In laadpaal |
-| Vermogen | 3,7–22 kW | 22–350+ kW |
-| Laadtijd (truck 300 kWh) | 14–80 uur | 1–6 uur |
-| Aanschafprijs paal | €500–€3.000 | €15.000–€80.000 |
-| Installatiekosten | Laag | Hoog |
-| Connector (vrachtwagen) | Type 2 (AC) | CCS2 (DC) |
-| Geschikt voor nachtladen | ✅ Ja | ✅ Ja |
-| Geschikt voor snelladen overdag | ❌ Nee | ✅ Ja |
+| Waar de omzetting zit | In het voertuig (boordlader) | In de laadpaal |
+| Vermogen | 3,7–43 kW | 20 kW tot 350+ kW |
+| Wat de snelheid bepaalt | De **boordlader** van het voertuig | De **lader** én wat het voertuig aankan |
+| Laadtijd (truck, 300 kWh bruikbaar) | ca. 8–80 uur, afhankelijk van de OBC | ca. 1–5 uur, afhankelijk van voertuig en lader |
+| Aanschafprijs laadpunt | Enkele honderden tot enkele duizenden euro's | Vanaf circa € 10.000 tot ver boven € 50.000 |
+| Installatie | Relatief eenvoudig | Zwaarder: bekabeling, beveiliging, netcapaciteit |
+| Connector (Europa) | Type 2 | CCS Combo 2 |
+| Geschikt voor nacht-/verblijfladen | Ja | Ja |
+| Geschikt voor snel bijladen | Nee | Ja |
 
-## AC-laders
-
-AC-laders leveren wisselstroom aan het voertuig. De ingebouwde boordlader van het voertuig bepaalt de maximale laadsnelheid — niet de paal. Een paal van 22 kW laadt een voertuig met een boordlader van 11 kW maximaal op 11 kW.
-
-**Toepassingen bij theaters:**
-- Personenwagens van medewerkers
-- Bestelwagens die de hele nacht staan
-- Als aanvulling op DC-laders voor langere verblijven
-
-**Voordeel:** Goedkoop, eenvoudig te installeren, laag vermogensprofiel (minder impact op netaansluiting)
-
-**Nadeel:** Te langzaam voor vrachtwagens met beperkte verblijfstijd
-
-## DC-laders
-
-DC-laders leveren gelijkstroom direct aan de batterij, waarbij de omzetting in de laadpaal zit. Het maximale laadvermogen wordt bepaald door het minimum van paalvermogen en voertuigcapaciteit.
-
-**Toepassingen bij theaters:**
-- Elektrische vrachtwagens bij het laaddok
-- Bussen
-- Snelladen van bestelauto's
-
-**Voordeel:** Snel, geschikt voor vrachtwagens, professionele betrouwbaarheid
-
-**Nadeel:** Hogere aanschaf- en installatiekosten, hoger vermogensprofiel (vraagt om loadmanagement)
-
-## Aanbevolen vermogen per voertuigtype
-
-| Voertuigtype | Verblijfsduur | Aanbevolen ladertype | Vermogen |
-|---|---|---|---|
-| Personenwagen | 2–8 uur | AC | 11–22 kW |
-| Bestelwagen | 8–12 uur | AC of lichte DC | 22–50 kW |
-| Lichte truck (7,5T) | 8–12 uur | DC | 50–100 kW |
-| Zware truck (40T) | 8–12 uur | DC | 100–150 kW |
-| Snel doorladen (pauze) | 30–90 min | DC snellader | 150–350 kW |
-
-:::note Verblijfsduur bij theaters
-Trucks bij theaters staan doorgaans **8–12 uur** tijdens opbouw, voorstelling en afbouw. Een DC-lader van 60–100 kW is in de meeste gevallen voldoende voor een volledige laadcyclus.
+:::note De prijsrange is enorm — en dat is informatie
+Voor een 60 kW DC-lader bestaan offertes van rond de € 50.000 (Europees, inclusief installatie en service) en inkoopprijzen van enkele duizenden euro's (directe import uit Azië, exclusief transport, inklaring en inbedrijfname). Dat verschil is geen "afzetterij": het zit in marge, certificering, service, garantie en wie het risico draagt als er iets stukgaat. Vergelijk dus nooit alleen het getal op de offerte.
 :::
 
-## Toekomstige standaard: MCS
+## De boordlader is de bottleneck bij AC
 
-Voor de zwaarste vrachtwagens (40T+) wordt het **Megawatt Charging System (MCS)** de nieuwe standaard. Dit levert vermogens tot 3,75 MW, wat een laadtijd van 30–45 minuten mogelijk maakt voor de grootste batterijpakketten. MCS wordt verwacht tussen 2025 en 2028 uitgerold te worden langs Europese hoofdcorridors.
+Dit verrast veel mensen. Een AC-laadpunt van 22 kW levert geen 22 kW aan een voertuig met een 11 kW boordlader — het levert 11 kW. De paal past zich aan het voertuig aan, niet andersom.
 
-Bron: [CharIN MCS specificatie](https://www.charin.global)
+| OBC-vermogen | Tijd voor 60 kWh (theoretisch) |
+|---|---|
+| 3,7 kW | ~16 uur |
+| 7,4 kW | ~8 uur |
+| 11 kW | ~5,5 uur |
+| 22 kW | ~2,75 uur |
+
+In de praktijk komt daar tijd bij: laadverliezen, een laadcurve die afvlakt, en de temperatuur van de accu.
+
+## AC is niet "slecht"
+
+AC-laden is langzamer maar heeft echte voordelen:
+
+- **goedkoper** in aanschaf en installatie
+- **lichter voor het net** — minder piekvermogen nodig
+- **beter voor de accu** bij langdurig stilstaan
+- **meer laadpunten voor hetzelfde vermogen** — met 30 kW kun je drie AC-punten van 11 kW plaatsen in plaats van één DC-punt
+
+Voor een hotelgast die een nacht blijft, is AC prima. Voor een vrachtwagen die om 23:00 weg moet, is het dat niet.
+
+## DC is niet altijd sneller
+
+Twee dingen bepalen de werkelijke laadsnelheid bij DC:
+
+1. **Het maximum van het voertuig** — een truck met 150 kW maximum laadt niet sneller op een 350 kW-lader
+2. **De laadcurve** — boven 60–80% SoC zakt het vermogen bij vrijwel elk voertuig in
+
+Een 120 kW-lader is voor veel tourneedagen ruim voldoende: 400 kWh in 10 uur vraagt gemiddeld 40 kW.
+
+## Hoe u kiest
+
+| Situatie | Aanbeveling |
+|---|---|
+| Voertuig staat een nacht of werkdag stil | **AC** (of lichte DC), 11–30 kW |
+| Voertuig staat 4–10 uur en moet daarna vol zijn | **DC**, 50–120 kW |
+| Voertuig staat kort en moet snel door | **DC**, 150 kW+ |
+| Veel voertuigen tegelijk, beperkt vermogen | **Meerdere AC-punten met slimme verdeling**, of DC met energiebeheer |
+| Bestelbussen van een vloot | Vaak **AC** 's nachts, met één DC voor uitzonderingen |
+
+Belangrijker dan AC of DC: **hoeveel vermogen is er op welk moment beschikbaar**. Zie [Netcongestie](/docs/energie/netcongestie) en [Vermogensbeheer](/docs/pandeneigenaren/vermogensbeheer).
+
+## Wat er nog aankomt: MCS
+
+Voor de zwaarste vrachtwagens (40 ton, grote accupakketten) wordt **MCS (Megawatt Charging System)** de volgende standaard, met vermogens tot 3,75 MW. Uitrol langs Europese corridors is gaande maar nog beperkt, en het vraagt aanzienlijk meer van de netaansluiting dan CCS.
+
+Voor een theater of hotel is MCS voorlopig niet relevant; voor een logistieke hub langs een corridor kan het dat op termijn wel zijn. Zie [CharIN](https://www.charin.global) voor de standaard.
+
+## Verder lezen
+
+- [Vermogensbeheer](/docs/pandeneigenaren/vermogensbeheer)
+- [Netcongestie](/docs/energie/netcongestie)
+- [Wat doet een EMS?](/docs/energie/ems)
+- [OCPP-overzicht](/docs/technical/ocpp-overview)

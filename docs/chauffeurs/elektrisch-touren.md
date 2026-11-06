@@ -65,11 +65,11 @@ AC-laders leveren wisselstroom aan het voertuig — de OBC zet dit om naar DC vo
 
 - **Vermogen:** 3,7–22 kW (afhankelijk van paal én OBC)
 - **Locaties:** openbare laadpalen op straat, bij bedrijven, in theaters
-- **Prijs:** relatief laag (€0,25–€0,45/kWh)
+- **Prijs:** relatief laag — reken indicatief op €0,30–€0,50/kWh, sterk afhankelijk van netwerk en betaalmethode
 - **Nadeel:** langzaam, en steeds meer palen beperken het laadvermogen tijdens avondcongestie (16:00–22:00 uur) of leveren dan helemaal niets
 
-:::warning Avondcongestie
-Veel openbare laadpalen beperken het laadvermogen of stoppen volledig tussen 16:00 en 22:00 uur vanwege netcongestie. Als je rekent op een volle accu 's morgens vroeg, maar de paal heeft 6 uur nauwelijks geladen — dan sta je voor een verrassing.
+:::warning Avondpiek
+Op veel plekken is het net tussen ruwweg 16:00 en 22:00 het zwaarst belast. Sommige openbare laadpalen verlagen dan het laadvermogen, en bij een enkele paal stopt het laden tijdelijk. Reken er dus niet blind op dat je 's ochtends een volle accu hebt: controleer de laadsessie voordat je gaat slapen, of kies een paal waar je zekerheid over hebt.
 :::
 
 :::note Laadpaalklevers
@@ -81,12 +81,12 @@ Bij veel laadpalen gelden inmiddels boetes als je blijft staan nadat de accu vol
 DC-laders zetten de stroom zelf om en laden direct op de batterij — zonder OBC. Veel sneller.
 
 - **Vermogen:** 20–350+ kW
-- **Prijs:** tot 4× de prijs van een AC-paal (€0,60–€0,90/kWh op publieke snelladers)
+- **Prijs:** fors hoger dan AC — publieke snelladers zitten indicatief tussen €0,50 en €0,90/kWh, afhankelijk van netwerk en of je met een pas van een derde partij betaalt
 - **Locaties voor personenwagens/bestelwagens:** Fastned, Shell Recharge, Allego, etc.
-- **Locaties voor vrachtwagens:** ~100 openbare laadpleinen in Nederland (te vinden via [Chargemap](https://chargemap.com) of [Truckcharging van Volvo](https://truckscharging.com))
+- **Locaties voor vrachtwagens:** een groeiend aantal vrachtwagenlaadpleinen in Nederland — te vinden via [Chargemap](https://chargemap.com) of [Truckcharging van Volvo](https://truckscharging.com)
 
-:::warning Vrachtwagens mogen niet bij reguliere snelladers
-Vrachtwagens zijn niet welkom bij Fastned, Shell Recharge en vergelijkbare consumentsnelladers. Zij zijn aangewezen op speciale vrachtwagen-laadpleinen.
+:::warning Reguliere snelladers zijn meestal geen optie voor een vrachtwagen
+De meeste publieke snelladers zijn ontworpen voor personenauto's: krappe vakken, lage kabelhouders en geen doorrijdmogelijkheid. Met een vrachtwagen kom je er fysiek vaak niet bij, ook als het formeel niet verboden is. Reken op speciale vrachtwagenlaadpleinen en check vooraf of je er met jouw combinatie terecht kunt.
 :::
 
 ### Eigen lader meenemen
@@ -140,7 +140,7 @@ Als de range voor de enkele reis niet toereikend is:
 Voor vrachtwagens gelden extra beperkingen:
 
 - **Rijdenwet:** combineren van laden met technikerwerk is wettelijk problematisch als de chauffeur moet wachten bij de lader. Bij theaters die niet kunnen laden is een **dedicated chauffeur** nodig.
-- **Geen toegang tot consumentsnelladers** — zoek specifieke vrachtwagen-laadpleinen
+- **Reguliere snelladers zijn fysiek meestal onbruikbaar** — zoek vrachtwagenlaadpleinen
 - **Laden in het theater**: niet altijd mogelijk en niet overal is er een aansluiting in de buurt van het laaddok
 
 ---

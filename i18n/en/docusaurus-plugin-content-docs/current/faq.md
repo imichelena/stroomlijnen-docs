@@ -1,95 +1,113 @@
 ---
----
 sidebar_position: 100
-title: FAQ
-description: Frequently asked questions about Stroomlijnen electric truck charging — Plug & Charge, rates, RFID, fleet management, and more.
-keywords: [FAQ, frequently asked questions, EV charging, Plug and Charge, fleet charging, RFID, pricing]
+title: Frequently asked questions
+description: Answers to the questions we get most often about charging with Stroomlijnen — technology, costs, roaming, Plug & Charge and power.
+keywords: [FAQ, frequently asked questions, charging, tariffs, roaming, Plug and Charge, grid congestion]
 ---
 
-# Frequently Asked Questions
+# Frequently asked questions
 
 ## General
 
-### 1. What is Stroomlijnen?
-Stroomlijnen is a Dutch Charge Point Operator (CPO) and e-Mobility Service Provider (eMSP) specializing in high-power DC charging for electric trucks. We install charging infrastructure at theaters, logistics hubs, and strategic locations throughout the Netherlands.
+### What is Stroomlijnen?
+A Dutch Charge Point Operator (CPO) and e-Mobility Service Provider (eMSP). We install charging infrastructure at sites with a large electricity connection — theatres, cultural institutions, hotels and businesses — and manage the power at those sites. See [What is Stroomlijnen?](/en/docs/getting-started/intro).
 
-### 2. Why theaters?
-Theaters have large electrical connections (for lighting, sound, and stage installations), parking spaces accessible to trucks (for deliveries of stage sets), and are available at night when trucks typically charge. A logical combination — we utilize existing infrastructure that would otherwise remain unused at night.
+### Why theatres in particular?
+Theatres have a large connection that is largely unused during the day, room for a lorry, and a building peak in the evening — exactly the profile that suits charging. In addition, the cultural sector has to switch to electric first because of the zero-emission zones.
 
-### 3. Which vehicles can charge at Stroomlijnen?
-Any vehicle with a **CCS Combo 2** plug can charge at our DC stations. This includes electric trucks, vans, buses, and passenger cars. Our chargers deliver up to 400 kW, but adapt to the maximum power the vehicle can handle.
+### Do you only work with theatres?
+No. The same approach works for hotels (charging as a room facility) and businesses (vehicle fleet on own premises, within the existing connection).
 
-### 4. Where are Stroomlijnen chargers located?
-Primarily in the Netherlands, with expansion planned to Belgium and Germany. View our [charger map](./locations/finding-charger) for all current locations.
+### Can passenger cars charge with you?
+Passenger cars with CCS Combo 2 may be suitable for our DC chargers; check vehicle compatibility and site access. Our charging locations are, however, designed for commercial vehicles: more spacious bays, higher cable holders.
 
-### 5. Can passenger cars use your chargers?
-Yes. Although our chargers are designed and positioned for commercial vehicles, any CCS-equipped car can also charge. Note that truck bays may have higher curbs or a different layout than a regular charging station for passenger cars.
+### How much power does a charger deliver?
+Our DC charger is **120 kW**, configurable as 1×120 kW or 2×60 kW, modularly expandable to 180 kW. Our AC charger is 30 kW. See [Our chargers](/en/docs/getting-started/intro#our-chargers).
+
+### Do you also deliver 350 or 400 kW?
+Not as a standard product. For most touring days, 120 kW is more than enough (400 kWh in 10 hours = 40 kW on average). At larger sites we scale up with additional units or modules. Figures of 350–400 kW that you encounter elsewhere are usually the sum of several units or a different type of installation.
+
+## Charging
+
+### How do I start a session?
+Follow the display. Automatic starting requires a usable EVCCID, approved registration and valid charging permissions. Use an offered and authorised RFID or QR option as an alternative. See [Your first charging session](/en/docs/getting-started/first-session).
+
+### Why does my session not start automatically?
+Check EVCCID enrolment, separate account-owner approval, permission validity and vehicle communication. Entering a VIN is not a solution for missing recognition. See [Troubleshooting](/en/docs/plug-and-charge/troubleshooting).
+
+### My charging session stops and does not restart. Is that a fault?
+No. If a session ends while the cable is still connected (battery full, or stopped remotely), a new one does not start automatically. Unplug the cable and plug it in again, or start explicitly.
+
+### Why does my vehicle charge more slowly than expected?
+A cold battery, a high charge level (above ~80%), a maximum in the vehicle itself, or little power available at the site at that moment. See [Honestly slow](/en/docs/energie/ems#honestly-slow).
+
+### Can I charge with a card from another provider?
+As a rule, no: roaming is deliberately switched off on our chargers because of the costs. See [Roaming](/en/docs/pandeneigenaren/cpo-roaming-uitgelegd).
 
 ## Plug & Charge
 
-### 6. What is Plug & Charge?
-Plug & Charge means your truck automatically authenticates and starts charging as soon as you plug in — no card, no app, no action from the driver. It uses ISO 15118 digital certificates built into the vehicle. See [What is Plug & Charge?](./plug-and-charge/what-is-pnc) for more details.
+### What is Plug & Charge?
+Plugging in and charging without a card or app. See [What is Plug & Charge?](/en/docs/plug-and-charge/what-is-pnc).
 
-### 7. Is Plug & Charge secure?
-Yes — even safer than RFID cards. PnC uses TLS mutual authentication and digital certificates (the same technology as online banking). Certificates are linked to the vehicle's VIN and stored in a hardware security module, making cloning extremely difficult.
+### Does that work with ISO 15118 certificates?
+Current recognition at supported DC chargers uses **EVCCID: the MAC address of the vehicle communication controller**, not the VIN and not an ISO 15118 contract certificate. Those technologies are not the same.
 
-### 8. Which trucks support Plug & Charge?
-Most major electric truck manufacturers now support PnC: Volvo, DAF, Mercedes-Benz, Scania, and MAN. See our [list of compatible vehicles](./plug-and-charge/compatible-vehicles) for full details.
+### Do I need to install anything in the vehicle?
+You do not request a contract certificate for this enrolment procedure. Use an account-linked card on the charger screen and connect only when prompted; the charger captures the EVCCID. The vehicle must support that recognition. See [Setup](/en/docs/plug-and-charge/setup-guide).
 
-### 9. How long does it take to set up Plug & Charge?
-About 15 minutes of portal configuration, then 1–24 hours for certificate installation in the vehicle (depending on the manufacturer). See the [setup guide](./plug-and-charge/setup-guide).
+### How long does it take before a vehicle works?
+From **Begin** on the charger screen, enrolment has 5 minutes. Capture can take up to 3 minutes, within that overall deadline. Recording happens automatically after capture; the account owner must then approve separately. This is not a promise that charging will be possible within that time.
 
-### 10. Can I use Plug & Charge AND RFID at the same time?
-Yes. PnC and RFID can coexist. If PnC fails for any reason, the driver can always fall back to tapping the RFID card. The charger first attempts PnC; if PnC does not authenticate within 15 seconds, it requests an RFID card.
+## Costs
 
-## Rates and Billing
+### What does charging cost?
+A fixed tariff per kWh per site, laid down in your agreement. No start-up costs per session, no time-based costs. You can find tariffs in your agreement or request them from your account manager — not in this knowledge base, because they differ per site and per year.
 
-### 11. What does charging cost?
-Fleet customers receive a contractual €/kWh rate. There are no session fees or time-based costs — you only pay for consumed energy. Contact us for a fleet price quote.
+### How does invoicing work?
+Monthly invoices with session details, as PDF in the portal. See [Invoicing](/en/docs/klantportaal/invoicing).
 
-### 12. How does billing work?
-Monthly invoices with detailed session data, available as PDF, CSV, or UBL XML. Invoices are generated on the 1st of each month. See [Billing](./fleet-management/invoicing) for details.
+### Can I get a subsidy?
+For charging infrastructure at businesses there is SPRILA (RVO). Note: for an investment above € 25,000, the application must be submitted **before** the order is placed. See [Subsidies](/en/docs/pandeneigenaren/subsidies).
 
-### 13. Do you offer volume discounts?
-Yes. Fleets that exceed monthly energy thresholds qualify for tiered rates. Contact your account manager or email [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl) for details.
+## Power and energy
 
-### 14. Can roaming users charge at Stroomlijnen?
-Yes, via our Hubject and OCPI roaming connections. Users with charging cards from other providers can tap and charge. Roaming rates may differ from direct fleet rates.
+### What is grid congestion and does it affect me?
+The electricity grid is full in many areas, which means reinforcement takes a long time or is not possible. That is why we work with smart control and, where necessary, a battery. See [Grid congestion](/en/docs/energie/netcongestie).
 
-## RFID Cards
+### What does an EMS do?
+It continuously measures the building's consumption, calculates the headroom under your connection and distributes it across the charging points. See [What does an EMS do?](/en/docs/energie/ems).
 
-### 15. How do I get RFID cards?
-Order through the [My Fleet portal](./getting-started/rfid-cards) or contact your account manager. Cards are shipped within 3 working days and require activation.
+### What is an energy budget?
+An agreement about how much a vehicle, person or department may charge — per day, week or month. See [Energy budgets](/en/docs/energie/energiebudget).
 
-### 16. What if an RFID card is lost or stolen?
-Deactivate the card immediately via My Fleet → RFID Cards → select the card → Deactivate. The card is blocked on all Stroomlijnen chargers within seconds. Order a replacement through the portal.
+### Do you have batteries?
+Yes, as a buffer to allow more charging than the connection permits and to flatten building peaks. See [Battery storage](/en/docs/energie/ess).
 
-### 17. Can one RFID card work on multiple vehicles?
-Yes. RFID cards are linked to your fleet account, not a specific vehicle. Each card assigned to your fleet can start a charging session on any charger for any of your vehicles.
+### Can you also feed back to the grid (V2G)?
+Not today. Bidirectional charging is future functionality; we do not claim it as something that is possible now.
 
-## Technical
+## Portal and data
 
-### 18. Which OCPP version do your chargers use?
-All new chargers use **OCPP 2.0.1**. Some older installations use OCPP 1.6-J. Both are fully supported by our CSMS. See [OCPP Overview](./technical/ocpp-overview).
+### Where do I log in?
+At [portal.stroomlijnen.nl](https://portal.stroomlijnen.nl). There is no self-registration; you receive access during onboarding. See [Customer Portal](/en/docs/klantportaal/overview).
 
-### 19. Do you support smart charging / load balancing?
-Yes. Our CSMS dynamically distributes power across chargers at each location based on grid capacity, vehicle priority, and time-of-day optimization. See [OCPP Overview → Smart Charging](./technical/ocpp-overview#smart-charging).
+### Is there an app?
+Drivers can start with a QR code. There is no Stroomlijnen app in the app stores; if you see one mentioned somewhere, that is no longer correct.
 
-### 20. Can I integrate charging data with my fleet management system?
-Yes. We offer a REST API with real-time webhooks for session data, vehicle management, and billing. SDKs available for Python, JavaScript, and C#. See [API & Integration](./technical/integration).
+### Is there an API?
+No public API with documentation and self-service keys. You can export CSV, and a link is possible on request. See [Integrations and data export](/en/docs/technical/integration).
 
-## Support
+### How long is my data retained?
+Session data remains available for your records for as long as you are a customer, and invoices are retained in accordance with the statutory retention period. On departure, request an export.
 
-### How do I report a faulty charger?
-- **App:** Help → Report Issue → select the charger
-- **Phone:** Support number is on each charger
-- **Email:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
-- **Include:** Charger ID (format: `NL*STM*E...`), time, and description of the issue
+## Faults
 
-### How do I contact Stroomlijnen?
-- **General questions:** [info@stroomlijnen.nl](mailto:info@stroomlijnen.nl)
-- **Fleet sales:** [sales@stroomlijnen.nl](mailto:sales@stroomlijnen.nl)
-- **Technical support:** [support@stroomlijnen.nl](mailto:support@stroomlijnen.nl)
-- **Technical integration:** [technical@stroomlijnen.nl](mailto:technical@stroomlijnen.nl)
+### How do I report a fault?
+With the site, number on the charger, time, registration number and the text on the display — via your account manager or [stroomlijnen.nl/contact](https://stroomlijnen.nl/contact). See [Reporting faults](/en/docs/locations/site-guide#reporting-faults).
 
----
+### The charger is offline. Can you see that?
+Yes, we can see whether a charger is online and which faults have occurred. A report with the time is therefore often enough to resolve it remotely.
+
+## Anything else not found?
+
+The pages above cover most of it. For specific questions: [stroomlijnen.nl/contact](https://stroomlijnen.nl/contact) or your account manager.

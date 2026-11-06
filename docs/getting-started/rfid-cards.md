@@ -1,108 +1,75 @@
 ---
 sidebar_position: 3
 title: RFID-passen
-description: Hoe u RFID-laadpassen bestelt, activeert en beheert voor uw elektrische vloot bij Stroomlijnen.
-keywords: [RFID card, charging card, NL*STM, fleet charging, activate card]
+description: Hoe laadpassen bij Stroomlijnen werken, hoe u ze aanvraagt, aan een voertuig of persoon koppelt en weer blokkeert.
+keywords: [RFID-pas, laadpas, NL*STM, pas aanvragen, pas blokkeren, Klantportaal]
 ---
 
 # RFID-passen
 
-RFID (Radio Frequency Identification) passen zijn de traditionele manier om te authenticeren bij een laadstation. Tik uw pas, begin met laden — eenvoudig en betrouwbaar.
+Een RFID-pas is de eenvoudigste terugvaloptie: tikken en laden. Bij Stroomlijnen gebruikt u een pas vooral als **reserve** naast automatische voertuigherkenning, of voor voertuigen die (nog) niet automatisch herkend kunnen worden.
 
-## Hoe RFID-laadpassen Werken
+## Hoe het werkt
 
-Elke pas bevat een unieke identificatiecode (een **token** of **UID**) die is gekoppeld aan uw vlootaccount. Wanneer u de pas op de lezer van een lader tikt:
+Elke pas heeft een unieke identificatie (de **UID**). Bij het tikken:
 
-1. De lader leest de UID van de pas
-2. Stuurt die via OCPP naar de Stroomlijnen-backend
-3. Ons systeem controleert: is deze pas geldig? Bij welke vloot hoort hij?
-4. Als geldig → start het laden. De sessie wordt gefactureerd aan het vlootaccount.
+1. De lader leest de UID.
+2. De lader vraagt via OCPP aan onze backend of deze pas mag laden.
+3. Onze backend controleert of de pas actief is en bij welke organisatie hij hoort.
+4. Is de pas geldig, dan start de sessie en wordt de energie op dat account geboekt.
 
-Dit werkt op elke Stroomlijnen-locatie en bij **roamingpartner-laders** door heel Europa — de pas draagt uw NL\*STM eMSP-identiteit.
+De pas is een **betaalmiddel, geen sleutel**: hij zegt alleen *wie* er laadt, niet *of* het voertuig mag laden. De kosten komen op de factuur van de organisatie waar de pas bij hoort.
 
-## Passen Bestellen
+## Een pas aanvragen
 
-### Nieuwe Vlootregistratie
-Wanneer u uw vloot registreert, kunt u passen rechtstreeks via het portaal bestellen:
+Passen vraagt u aan via het [Klantportaal](/docs/klantportaal/overview) of via uw accountmanager. U geeft aan hoeveel passen u nodig heeft en waar ze naartoe moeten. Wij sturen ze vervolgens op.
 
-1. Ga naar **Mijn Vloot → RFID-passen**
-2. Klik op **Passen bestellen**
-3. Geef het benodigde aantal passen op
-4. Voer het verzendadres in
-5. Passen arriveren binnen 3–5 werkdagen
+Heeft u nog geen toegang tot het portaal? Vraag uw accountmanager om de eerste passen bij de onboarding mee te leveren.
 
-### Extra Passen
-Meer nodig? Zelfde procedure. U kunt op elk moment extra passen bestellen.
-
-### Prijs
-- Passen worden gratis verstrekt bij uw vlootabonnement
-- Vervanging bij verlies: gratis (eerste twee per jaar), €5 per pas daarna
-
-## Een Pas Activeren
-
-Passen worden **voorgeactiveerd** geleverd en zijn al gekoppeld aan uw vloot. U dient echter:
-
-1. Naar **Mijn Vloot → RFID-passen** in het portaal te gaan
-2. Te controleren of de nieuwe passen in uw lijst verschijnen
-3. **Elke pas aan een bestuurder toe te wijzen** (optioneel maar aanbevolen — helpt bij het bijhouden van sessies)
-4. De pas te testen bij een lader
-
-:::tip
-Wijs passen toe aan specifieke bestuurders. Zo tonen uw laadrapportages welke bestuurder welke pas heeft gebruikt, wat de kostentoedeling per vloot veel eenvoudiger maakt.
+:::note Aantallen en kosten
+De voorwaarden rond aantallen, kosten en vervanging staan in uw overeenkomst — die verschillen per pakket. Er staan hier bewust geen bedragen, omdat ze per klant en per jaar kunnen afwijken. Uw actuele voorwaarden vindt u in het Klantportaal onder **Account**.
 :::
 
-## Passen Beheren
+## Een pas koppelen
 
-### Een Pas Deactiveren
-Als een pas verloren is of een bestuurder het bedrijf verlaat:
-1. Ga naar **Mijn Vloot → RFID-passen**
-2. Zoek de pas (op nummer of bestuurdernaam)
-3. Klik op **Deactiveren**
-4. De pas werkt onmiddellijk niet meer op alle laders
+Een pas is pas bruikbaar als hij bekend is bij ons **en** gekoppeld is aan uw organisatie.
 
-### Een Pas Opnieuw Activeren
-Die "verloren" pas toch teruggevonden? U kunt hem op dezelfde manier opnieuw activeren.
+1. Open in het Klantportaal het onderdeel voor laadpassen (uw accountmanager wijst u waar dat staat).
+2. Controleer of de nieuwe pas in de lijst staat (dit kan even duren na levering).
+3. Koppel de pas aan een **voertuig** of aan een **persoon**:
+   - **Aan een voertuig** — de sessie wordt altijd aan dat voertuig toegeschreven. Handig als één auto door meerdere mensen wordt gereden.
+   - **Aan een persoon** — de sessie volgt de persoon, ongeacht in welke auto hij of zij rijdt.
+4. Test de pas bij een lader.
 
-### Pasgroepen
-Voor grotere vloten kunt u passen in groepen organiseren:
-- **Per voertuig** — één pas per vrachtwagen
-- **Per bestuurder** — persoonlijke passen die op elk voertuig werken
-- **Per afdeling** — aparte facturering per bedrijfseenheid
+Door passen consequent toe te wijzen, klopt uw rapportage: u ziet per voertuig of per persoon wat er geladen is.
 
-## Verloren of Gestolen Passen
+## Een pas blokkeren
 
-1. **Deactiveer onmiddellijk** in het portaal (of bel ons)
-2. De pas wordt binnen 60 seconden ongeldig op alle verbonden laders
-3. Bestel een vervanging
-4. Eventuele kosten vóór deactivering verschijnen op uw gebruikelijke factuur
+Bij verlies, diefstal of vertrek van een medewerker:
 
-:::caution
-Deactiveer verloren passen zo snel mogelijk. Tot die tijd kan iedereen met de pas laden op uw account. We verwerken deactivering binnen 60 seconden — maar u moet het initiatief nemen.
+1. Open in het Klantportaal het overzicht van laadpassen.
+2. Zoek de pas en zet hem op **geblokkeerd**.
+
+Een geblokkeerde pas kan niet meer starten. Wat al geladen is vóór het blokkeren, blijft gewoon op de factuur staan.
+
+:::warning Blokkeer bij verlies altijd meteen
+Tot het moment van blokkeren kan iedereen met de pas laden op uw account. Blokkeren is direct en onomkeerbaar in de zin dat u de pas opnieuw moet aanmelden als hij teruggevonden wordt — dat is precies de bedoeling.
 :::
 
-## RFID versus Plug & Charge
+## Pas of automatische herkenning?
 
-| Functie | RFID-pas | Plug & Charge |
-|---------|-----------|---------------|
-| Insteltijd | Passen bestellen, aan bestuurders toewijzen | VIN registreren, certificaat installeren |
-| Actie bestuurder | Pas tikken voor/na laden | Gewoon inpluggen |
-| Werkt bij meerdere vloten | Pas volgt de bestuurder | Certificaat volgt het voertuig |
-| Verliesrisico | Pas kan kwijtraken/gestolen worden | Niets fysiek te verliezen |
-| Roaming | Werkt overal | Groeit, maar nog niet universeel |
-| Terugvaloptie | Werkt altijd | RFID nodig als terugval |
+| | RFID-pas | Automatische voertuigherkenning |
+|---|---|---|
+| Nodig bij de lader | Pas tikken | Niets doen |
+| Wat het identificeert | De pas (en dus de persoon of het voertuig waaraan hij hangt) | Het voertuig zelf |
+| Kwijt te raken | Ja | Nee |
+| Werkt bij andermans laadnet | Alleen als er een roamingkoppeling is (bij ons standaard uit, zie [roaming](/docs/pandeneigenaren/cpo-roaming-uitgelegd)) | Nee, alleen bij ons |
+| Geschikt als terugvaloptie | Ja, altijd | Nee, als het voertuig niet herkend wordt is er niets |
 
-**Onze aanbeveling:** Stel Plug & Charge in voor het gemak, houd RFID-passen als reserveoptie. Riem én bretels.
+**Advies:** gebruik automatische herkenning waar het kan en houd een pas per voertuig of per chauffeur als terugvaloptie. Zo hoeft niemand te wachten als de herkenning een keer niet lukt.
 
-## Technische Details
+## Volgende stappen
 
-- **Pastechnologie:** MIFARE DESFire EV2 (versleuteld, veilig)
-- **Frequentie:** 13,56 MHz (NFC)
-- **Standaard:** ISO 14443
-- **UID-formaat:** 14 hexadecimale tekens
-- **Branding:** Stroomlijnen-logo met NL\*STM-identificatie
-
-## Volgende Stappen
-
-- [Stel Plug & Charge in](/docs/plug-and-charge/setup-guide) naast uw RFID-passen
-- [Beheer uw bestuurders](/docs/fleet-management/driver-management)
-- [Uw facturen begrijpen](/docs/fleet-management/invoicing)
+- [Plug & Charge instellen](/docs/plug-and-charge/setup-guide)
+- [Voertuigen beheren](/docs/klantportaal/vehicles)
+- [Uw facturen begrijpen](/docs/klantportaal/invoicing)

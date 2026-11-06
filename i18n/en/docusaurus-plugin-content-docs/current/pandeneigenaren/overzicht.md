@@ -1,71 +1,78 @@
 ---
----
 sidebar_position: 1
-title: Installing Charging Points — for Property Owners
-description: Why theaters and cultural venues are ideal charging locations for electric trucks, and what Stroomlijnen takes care of for you.
-keywords: [EV charging, theater, charging station, property owner, CPO, SPRILA]
+title: Installing charging points at your location
+description: Why locations with a large connection are interesting for charging, and what is involved in installation and operation.
+keywords: [charging point installation, theatre, hotel, property owner, CPO, grid connection]
 ---
 
-# Installing Charging Points at Your Location
+# Installing charging points at your location
 
-Stroomlijnen helps theaters, festivals, and cultural venues install and operate charging infrastructure for electric trucks and vans. You have the space and connection — we take care of the rest.
+You have space, a large electricity connection and a car park that stands empty for part of the day. We make sure charging can happen there — and that the building does not suffer for it.
 
-## Why Your Location is Suitable
+## Why your location is interesting
 
-Theaters and cultural venues have something that most charging locations don't: **large electrical connections with underutilized capacity during the day**.
+A charging point needs two things that are scarce: **space** and **capacity**.
 
-Your connection is dimensioned for evening peak loads — when the audience arrives and the production technology is fully operational. During the day, the building is in use, but energy consumption is significantly lower. You can use this spare capacity on your connection for charging — without additional network costs.
+Buildings such as theatres, hotels and commercial premises have both. Your connection is dimensioned for your peak — for a theatre the evening, for a hotel the morning and the restaurant, for a business the working day. Outside that peak, capacity sits idle.
 
-At the same time, electric trucks from touring productions and companies need exactly that power: 8 to 10 hours of charging while technicians work.
+That is exactly where charging fits:
 
-:::tip The Logic in a Row
-**Theaters** have excess capacity on their connections during the day.<br/>
-**Electric trucks** stand still at the loading dock during the day.<br/>
-**Charging points** connect these two — and generate passive income for you.
-:::
+| | Situation |
+|---|---|
+| **Connection** | Large enough for the building peak, largely unused during the day |
+| **Vehicles** | Stand still for hours while they could be charging |
+| **Costs** | You pay the standing charge anyway, even if you do not use the capacity |
 
-## Why This is Urgent
+## What has changed in the market
 
-More and more Dutch cities are introducing zero-emission zones. Diesel trucks are being banned from city centers. Companies and transport companies are switching to electric — and their trucks need a charging point along the way.
+When we started, the story was simple: a charging point at a theatre, so that a touring production could charge. That is still the core, but the playing field has become wider:
 
-**A theater without a charging point will soon be left out of the tour schedule.** Production managers plan routes along theaters where their truck can charge. This is not future music — it's already happening.
+- **The grid is full.** Upgrading is often no longer an option within an acceptable timeframe. See [Grid congestion](/en/docs/energie/netcongestie).
+- **That is why it is no longer "installing a charger" but "managing capacity".** An EMS that controls the building and the chargers together is no longer an extra, it is the precondition.
+- **A battery becomes part of the design**, not a separate addition. See [Battery storage](/en/docs/energie/ess).
+- **Budgets are being calculated with.** Who may charge how much, and when — that is an agreement, not a button.
 
-## What Stroomlijnen Takes Care of for You
+## What we arrange
 
-If you choose Stroomlijnen as your CPO, we will take care of:
+For installation and operation:
 
-- **Installation** — from location research to the first charging session
-- **SPRILA subsidy application** — we guide the application at RVO
-- **Remote management** — troubleshooting, updates, and monitoring without your intervention
-- **Invoicing** — automatic, with monthly reporting
-- **Dashboard** — you see in real-time how much has been charged and what you have earned
+- **Advice and analysis** based on your own consumption data (quarter-hour values), not on an assumption
+- **Supply and installation** of the charging points, in consultation with your installer
+- **Energy management** that keeps charging within your connection
+- **Remote management** — monitoring, faults, updates
+- **Invoicing** to the users, and remittance of your share
+- **ERE registration** for the cultural sector (via Het Cultuurfonds)
+- **Support with subsidy**, where applicable
 
-You don't have to do anything. The charging station is there, charges trucks, and you receive your share monthly.
+## What you arrange yourself
 
-## Passive Income — Calculation Example
+Be clear about this — this is not a "you do nothing" story:
 
-| Scenario | Calculation | Revenue |
-|---|---|---|
-| 1 truck × 10 hours × 60 kW | 600 kWh × €0.10 | **€ 60 per session** |
-| 100 sessions per year | 100 × €60 | **€ 6,000 / year** |
-| 200 sessions per year | 200 × €60 | **€ 12,000 / year** |
+| Item | Who |
+|---|---|
+| Electrical installation and connection in the building | **You**, via your own installer |
+| Permission from the building owner (in the case of rental) | **You** |
+| Insurance and notification to the insurer | **You**, with our documentation |
+| Access to the site and the charging spaces | **You** |
+| Decision on tariff and target group | **Together** |
 
-* Rates are indicative and depend on your contract form. See [Revenue Model and Rates](./verdienmodel) for details.
+See [From decision to first charging session](/en/docs/pandeneigenaren/installatie) for the full process.
 
-## Subsidy — SPRILA
+## Calculating with your own data
 
-The **SPRILA scheme** (Netherlands Enterprise Agency) subsidizes publicly accessible charging infrastructure for heavy transport. In most cases, this scheme covers a significant part of the hardware and installation costs.
+An important difference from a standard provider: we do not start with a package but with **your figures**. Your quarter-hour data shows how much room there really is, and when.
 
-:::warning Important
-Always submit the subsidy application **before** you incur costs or enter into obligations. Stroomlijnen guides you through the application process.
-:::
+Two examples from practice to show how differently that can turn out:
 
-## Read More
+- A location with a **connection of 156 kW and a measured peak of 175 kW** — so it sits structurally above its contract. There, the first gain is to be had from smoothing, and only afterwards from charging.
+- A location with a **connection of 60 kW and a measured peak of 33 kW** — there, room is left over at night, and more is possible than the owner thought.
 
-- [Revenue Model and Rates](./verdienmodel)
-- [From Decision to First Charging Session](./installatie)
-- [Choosing a CPO](./cpo-kiezen)
-- [Convincing Municipality and Insurer](./gemeente-verzekeraar)
-- [Asset Management and Grid Connection](./vermogensbeheer)
+The same question, two opposite answers. That is why an analysis beforehand is not a sales conversation but the first real piece of work.
 
----
+## Further reading
+
+- [Revenue model](/en/docs/pandeneigenaren/verdienmodel)
+- [From decision to first charging session](/en/docs/pandeneigenaren/installatie)
+- [Capacity management and grid connection](/en/docs/pandeneigenaren/vermogensbeheer)
+- [Choosing a CPO](/en/docs/pandeneigenaren/cpo-kiezen)
+- [Subsidies](/en/docs/pandeneigenaren/subsidies)

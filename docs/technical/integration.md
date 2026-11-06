@@ -1,180 +1,57 @@
 ---
 sidebar_position: 4
-title: API & Integratie
-description: Overzicht van de Stroomlijnen REST API voor integratie met vlootbeheersystemen — sessies, voertuigen, webhooks.
-keywords: [laad-API, vloot-API, integratie, REST API, webhooks, OCPI, vlootbeheersysteemintegratie]
+title: Koppelingen en data-export
+description: Hoe u laadgegevens uit het Klantportaal haalt, wat er met CSV kan en welke koppelingen (OCPI, API) op aanvraag mogelijk zijn.
+keywords: [API, koppeling, export, CSV, OCPI, integratie, boekhouding, ERP]
 ---
 
-# API & Integratie
+# Koppelingen en data-export
 
-Voor vloten die laadgegevens van Stroomlijnen willen integreren in hun eigen beheersystemen.
+Uw laadgegevens zijn van u. Er zijn drie niveaus waarop u ze kunt gebruiken, van simpel naar technisch.
 
-## REST API Overzicht
+## 1. Exporteren uit het Klantportaal
 
-Onze API biedt programmatische toegang tot alle vlootbeheerfuncties:
+Het eenvoudigste en voor de meeste organisaties toereikende antwoord:
 
-**Basis-URL:** `https://api.stroomlijnen.nl/v1`
-**Authenticatie:** Bearer-token (API-sleutel via portaal → Instellingen → API)
-**Formaat:** JSON
-**Snelheidslimiet:** 100 verzoeken/minuut
+- **Sessies** — filter op periode, voertuig of locatie en download als **CSV**
+- **Facturen** — downloaden als PDF, met de sessiedetails erbij
+- **Tarieven** — inzien per locatie en per tarief
 
-## Eindpunten
+Dat dekt boekhouding, kostenplaatsen en de meeste rapportagevragen. Zie [Sessies](/docs/klantportaal/sessions) en [Facturering](/docs/klantportaal/invoicing).
 
-### Sessies
+## 2. Koppelingen op aanvraag
 
-```
-GET /sessions                    — Sessies ophalen (gepagineerd, filterbaar)
-GET /sessions/{id}               — Sessiedetail opvragen
-GET /sessions/{id}/meter-values  — Gedetailleerde meterreadings opvragen
-```
+Voor structurele integratie met een ERP, vlootmanagementsysteem of boekhoudpakket zijn er mogelijkheden, maar die zijn **maatwerk en geen selfservice**:
 
-**Filters:**
-- `?from=2026-03-01&to=2026-03-31` — datumbereik
-- `?vehicle=XX-123-YY` — op kenteken
-- `?location=theater-carre` — op locatie-slug
-- `?status=completed` — op status (active, completed, failed)
-- `?auth_method=plug_and_charge` — op authenticatiemethode
+| Koppeling | Waarvoor | Status |
+|---|---|---|
+| **OCPI** (CPO ↔ eMSP) | Roaming: dat een andere eMSP bij ons kan laden, of wij bij hen | Technisch aanwezig (OCPI 2.2.1); bij onze laders bewust uit, op verzoek bilateraal aan te zetten |
+| **OCPI publicatie** | Uw laadpunten zichtbaar maken in publieke kaarten en databanken | In voorbereiding |
+| **Maatwerk-API** | Uw systeem leest sessies of schrijft voertuigen | Op aanvraag, per klant |
 
-**Antwoord:**
-```json
-{
-  "id": "STM-2026-03-001234",
-  "vehicle": {
-    "vin": "YV2E4C1A1RB123456",
-    "license_plate": "XX-123-YY",
-    "nickname": "Truck 14"
-  },
-  "location": {
-    "name": "Theater Carré, Amsterdam",
-    "evse_id": "NL*STM*E001234*1"
-  },
-  "start_time": "2026-03-23T08:14:00+01:00",
-  "end_time": "2026-03-23T10:47:00+01:00",
-  "energy_kwh": 187.4,
-  "max_power_kw": 148.2,
-  "avg_power_kw": 73.8,
-  "auth_method": "plug_and_charge",
-  "cost": {
-    "total": 18.74,
-    "currency": "EUR",
-    "tariff": "fleet-standard",
-    "breakdown": {
-      "energy": 18.74,
-      "time": 0,
-      "idle": 0
-    }
-  },
-  "status": "completed"
-}
-```
+:::warning Geen openbare API met publieke documentatie
+Er bestaat op dit moment **geen** openbare REST-API met documentatie, sleutels en snelheidslimieten die u zelf kunt aanzetten. Als u die elders heeft zien staan: dat klopt niet meer. Vraag een koppeling aan via uw accountmanager; we bespreken dan wat er nodig is en of het past.
+:::
 
-### Voertuigen
+## 3. Wat OCPI wel en niet is
 
-```
-GET    /vehicles         — Vlootvoertuigen ophalen
-POST   /vehicles         — Voertuig toevoegen
-GET    /vehicles/{vin}   — Voertuigdetail opvragen
-PATCH  /vehicles/{vin}   — Voertuig bijwerken
-DELETE /vehicles/{vin}   — Voertuig verwijderen
-```
+OCPI is het protocol voor **roaming** tussen partijen, niet voor "geef mij mijn data". Het is geen vervanging voor een export of een rapportagekoppeling. Zie [Roaming uitgelegd](/docs/pandeneigenaren/cpo-roaming-uitgelegd).
 
-### Bestuurders
+## Wat u van een export kunt verwachten
 
-```
-GET    /drivers          — Bestuurders ophalen
-POST   /drivers          — Bestuurder toevoegen
-GET    /drivers/{id}     — Bestuurdersdetail opvragen
-PATCH  /drivers/{id}     — Bestuurder bijwerken
-DELETE /drivers/{id}     — Bestuurder deactiveren
-```
+Een sessie-export bevat per sessie in ieder geval:
 
-### Locaties
+- datum en tijd van start en einde
+- locatie en laadpunt (EVSE-ID)
+- voertuig (kenteken en/of VIN, voor zover bekend)
+- geleverde energie in kWh
+- gebruikt tarief en kosten
+- wijze van authenticatie (automatische herkenning, pas, QR)
 
-```
-GET /locations           — Alle beschikbare locaties ophalen
-GET /locations/{id}      — Locatiedetail met laderstatus
-```
+Wat er **niet** in staat: gegevens die het voertuig niet deelt. Deaccu-status (SoC) wordt lang niet door alle voertuigen doorgegeven; als die ontbreekt is dat geen fout in de export.
 
-### Facturen
+## Verder lezen
 
-```
-GET /invoices            — Facturen ophalen
-GET /invoices/{id}       — Factuurdetail opvragen
-GET /invoices/{id}/pdf   — PDF downloaden
-GET /invoices/{id}/csv   — CSV downloaden (sessiegegevens)
-```
-
-## Webhooks
-
-Ontvang realtime meldingen voor gebeurtenissen:
-
-### Instellen
-1. Ga naar **Portaal → Instellingen → Webhooks**
-2. Voeg uw eindpunt-URL toe
-3. Selecteer te ontvangen gebeurtenissen
-4. We sturen een testgebeurtenis ter verificatie
-
-### Beschikbare Gebeurtenissen
-
-| Gebeurtenis | Trigger | Payload |
-|-------|---------|---------|
-| `session.started` | Nieuwe laadsessie begint | Sessieobject |
-| `session.updated` | Sessiegegevens bijgewerkt (elke 60s tijdens laden) | Sessieobject |
-| `session.completed` | Sessie eindigt normaal | Sessieobject met eindgegevens |
-| `session.failed` | Sessie mislukt (auth, vermogen, fout) | Sessieobject met fout |
-| `vehicle.alert` | Certificaat bijna verlopen, passprobleem, enz. | Meldingsobject |
-| `invoice.created` | Nieuwe factuur beschikbaar | Factuuroverzicht |
-
-### Webhookformaat
-```json
-{
-  "event": "session.completed",
-  "timestamp": "2026-03-23T10:47:00Z",
-  "data": { /* gebeurtenisspecifieke payload */ }
-}
-```
-
-**Herhalingsbeleid:** 3 pogingen met exponentiële vertraging (10s, 60s, 300s). Als alle mislukken, wordt de gebeurtenis gelogd en beschikbaar gesteld via de API voor handmatig ophalen.
-
-## OCPI-integratie
-
-Voor eMSP/CPO-naar-CPO-integratie ondersteunen we **OCPI 2.2.1**:
-- **Locatiesmodule** — realtime laderbeschikbaarheid
-- **Sessiesmodule** — live sessiegegevens
-- **CDR-module** — Charge Detail Records
-- **Tarievenmodule** — actuele prijzen
-- **Commandosmodule** — op afstand starten/stoppen
-
-Neem contact met ons op voor OCPI-eindpuntgegevens en integratietests.
-
-## SDK's & Voorbeelden
-
-We verstrekken voorbeelden in gangbare programmeertalen:
-
-```python
-# Python-voorbeeld
-import requests
-
-API_KEY = "uw_api_sleutel_hier"
-BASE = "https://api.stroomlijnen.nl/v1"
-headers = {"Authorization": f"Bearer {API_KEY}"}
-
-# Laatste 10 sessies ophalen
-sessions = requests.get(f"{BASE}/sessions?limit=10", headers=headers)
-for s in sessions.json()["data"]:
-    print(f"{s['vehicle']['nickname']}: {s['energy_kwh']} kWh bij {s['location']['name']}")
-```
-
-## Snelheidslimieten & Quota's
-
-| Plan | Snelheidslimiet | Webhookgebeurtenissen | Gegevensbewaring |
-|------|-----------|----------------|----------------|
-| Standaard | 100 verz./min | 1.000/dag | 12 maanden |
-| Professioneel | 500 verz./min | 10.000/dag | 24 maanden |
-| Enterprise | 2.000 verz./min | Onbeperkt | 36 maanden |
-
-## Ondersteuning
-
-- **API-problemen:** [api-support@stroomlijnen.nl](mailto:api-support@stroomlijnen.nl)
-- **Statuspagina:** [status.stroomlijnen.nl](https://status.stroomlijnen.nl)
-- **Wijzigingslog:** API-wijzigingen worden 30 dagen van tevoren aangekondigd per e-mail
+- [Sessies](/docs/klantportaal/sessions)
+- [Facturering](/docs/klantportaal/invoicing)
+- [Roaming uitgelegd](/docs/pandeneigenaren/cpo-roaming-uitgelegd)

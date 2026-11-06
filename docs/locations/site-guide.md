@@ -1,93 +1,85 @@
 ---
 sidebar_position: 2
 title: Locatiegids
-description: Wat u kunt verwachten op een Stroomlijnen-laadlocatie — indeling, apparatuur, veiligheidsinformatie en voorzieningen voor bestuurders.
-keywords: [charging site, site layout, charger equipment, driver amenities, safety]
+description: Wat u aantreft op een Stroomlijnen-laadlocatie — aankomst, apparatuur, aansluiten, veiligheid en het melden van storingen.
+keywords: [laadlocatie, CCS2, laadpaal bediening, veiligheid, noodstop, storing melden]
 ---
 
 # Locatiegids
 
-Deze gids beschrijft wat u aantreft op een typische Stroomlijnen-laadlocatie en hoe u er uw weg vindt.
+Wat u op een typische Stroomlijnen-locatie aantreft, en hoe u er laadt zonder problemen.
 
-## Aankomst op een Locatie
+## Aankomst
 
-### Bewegwijzering
-Let op de blauwe Stroomlijnen-borden bij de ingang. EV-laadvakken zijn gemarkeerd met:
-- Vloermarkering (blauwe lijnen of geschilderde EV-symbolen)
-- Vaknummerborden (overeenkomend met de EVSE-ID's in de app)
-- Richtingspijlen voor doorrijvakken
+Laadplekken zijn te herkennen aan de laders zelf en aan de belijning van het vak. Op locaties met een slagboom of hek regelt de locatiebeheerder de toegang; wij voorzien niet in toegangspassen voor hekken.
 
-### Parkeren
-- **Vrachtwagenvakken** zijn duidelijk gescheiden van personenautovakken
-- Doorrijopstellingen waar mogelijk — geen achteruitrijden nodig
-- Als de locatie een slagboom of hek heeft, gebruik uw RFID-pas of app om binnen te komen
+Praktisch:
 
-## Laderuitrusting
+- **Rij tot het vak en kijk waar de kabel het beste uitkomt.** Bij een doorrij-opstelling hoeft u niet achteruit.
+- **Let op de hoogte en de ruimte.** Vrachtwagenvakken zijn ruimer, maar niet elke locatie is voor elke combinatie geschikt.
+- **Parkeer één voertuig per laadpunt.**
 
-### DC-snelladers
-Onze primaire laders voor bedrijfsvoertuigen:
-- **Vermogen:** 150 kW – 400 kW per connector
-- **Connector:** CCS Combo 2 (Europese standaard)
-- **Kabel:** Vloeistofgekoeld, 5m+ bereik
-- **Display:** Touchscreen met sessiestatus, vermogen, energie, SoC
+## De laders
 
-### Hoe Aan te Sluiten
+| Kenmerk | DC-snellader | AC-lader |
+|---|---|---|
+| Type | HGL ENC-DCL120B | HGL ENC-DCX030A |
+| Vermogen | 120 kW (1×120 of 2×60), uitbreidbaar tot 180 kW | 30 kW |
+| Connector | 2× CCS Combo 2 | Type 2 |
+| Protocol | OCPP 2.0.1 | OCPP 1.6J |
+| Gebruik | Laden in uren, snelle aanvulling | Langdurig stilstaan |
 
-1. **Parkeer** in het aangewezen EV-vak, bestuurderskant naar de lader
-2. **Open** de CCS-laadklep van het voertuig
-3. **Til** de CCS-connector uit de houder van de lader
-4. **Steek** stevig in de CCS-aansluiting van het voertuig totdat u de klik hoort/voelt
-5. **Authenticeer** — PnC start automatisch; voor RFID, tik uw pas op de lezer; voor de app, scan de QR-code
-6. **Wacht** tot het laderdisplay "Laden..." toont met oplopende kW
+De DC-lader is modulair: valt er een vermogensmodule uit, dan blijven de andere werken. Dat is de reden dat een defect soms niet betekent dat u niet kunt laden, maar dat het langzamer gaat.
 
-### Ontkoppelen
+## Aansluiten
 
-1. **Stop** de sessie — tik RFID-pas opnieuw, druk op Stop in de app, of gebruik de stopknop op de lader
-2. **Wacht** tot de lader bevestigt dat de sessie is beëindigd en de connector ontgrendeld is
-3. **Verwijder** de CCS-connector en hang hem terug in de houder
-4. **Sluit** de laadklep van het voertuig
-5. **Verlaat** het vak zodat het vrij is voor andere voertuigen
+1. **Parkeer** in het vak.
+2. **Open** de laadklep van het voertuig.
+3. **Pak** de CCS-connector uit de houder.
+4. **Steek** hem in tot u een klik voelt. Niet forceren.
+5. **Authenticeer** — bij automatische herkenning: niets doen. Anders: pas tikken of QR scannen.
+6. **Controleer** op het display dat het laden begint en dat het vermogen oploopt.
+
+## Ontkoppelen
+
+1. **Stop** de sessie — pas tikken, in de app stoppen, of de stopknop op de lader.
+2. **Wacht** tot de lader bevestigt en de connector ontgrendelt.
+3. **Verwijder** de connector en hang hem terug in de houder.
+4. **Sluit** de laadklep en rijd weg, zodat het vak vrijkomt.
 
 :::caution
-Forceer de CCS-connector nooit terwijl de sessie actief is. De connector vergrendelt tijdens het laden voor de veiligheid. Stop altijd eerst de sessie.
+De connector vergrendelt zodra de sessie loopt. Trek nooit aan de kabel om te stoppen — stop eerst de sessie.
 :::
 
-## Veiligheidsinformatie
+## Veiligheid
 
-- **Noodstop** — Rode knop op elke lader, schakelt direct de stroom uit
-- **Brandblusser** — Aanwezig op elke locatie, geschikt voor elektrische branden
-- **Alarmnummer** — Vermeld op elke lader, plus standaard 112
-- **Niet roken** — Het gehele laadgebied is een rookvrije zone
-- **Blijf in het voertuig of de wachtruimte** tijdens onweer
+- **Noodstop** — elke lader heeft een noodstop die de stroom direct afschakelt. Gebruik hem bij rook, brand, vonken of een beknelde kabel.
+- **Brandbeveiliging** — de laadinstallatie is gekoppeld aan de brandmeldinstallatie van het gebouw, zodat bij een brandmelding de laadstroom wordt afgeschakeld.
+- **Geen brandbare spullen** in of bij het laadvak.
+- **Beschadigde kabel of connector** — niet gebruiken, melden.
+- **Niet roken** in het laadgebied.
+- **Bij onweer** — aansluiten kan, maar blijf niet naast de installatie staan.
 
-### Kabelveiligheid
-- Laad niet met een zichtbaar beschadigde kabel — meld dit via de app of bel de ondersteuning
-- Houd het laadgebied vrij van struikelgevaar
-- Rij niet over laadkabels
+## Storingen melden
 
-## Voorzieningen voor Bestuurders
+Meld met deze gegevens:
 
-Voorzieningen variëren per locatietype:
+1. **Locatie** en **nummer op de lader**
+2. **Tijdstip**
+3. **Wat er gebeurde** en de **tekst op het display**
+4. **Kenteken** van het voertuig
 
-### Theaterlocaties
-- Café of restaurant vaak op de locatie of op loopafstand
-- Openbaar WiFi beschikbaar op de meeste theaterlocaties
-- Openbare toiletten tijdens openingstijden van het theater
+Melden kan via uw accountmanager of via [stroomlijnen.nl/contact](https://stroomlijnen.nl/contact). Bij spoed (bijvoorbeeld een beknelde kabel of rook) geldt het algemene alarmnummer; gebruik daarna de noodstop.
 
-### Logistieke Hubs
-- Rustruimten voor bestuurders met zitgelegenheid
-- Toiletten
-- Automaten of eetgelegenheden in de buurt
+Wij zien aan onze kant ook of een lader online is en welke fouten er zijn opgetreden, dus een melding met tijdstip is vaak genoeg om het op afstand op te lossen.
 
-### Alle Locaties
-- Gratis WiFi (netwerk: "Stroomlijnen-Guest")
-- Overdekte looproute waar mogelijk
-- 24/7 goed verlicht
+## Voorzieningen
 
-## Problemen Melden
+Wat er verder op een locatie aanwezig is — toilet, koffie, wachtruimte — verschilt per gebouw en wordt door de locatie beheerd, niet door ons. Er is geen eigen WiFi-netwerk van Stroomlijnen. Wat wél overal geldt: de laadinstallatie is 24/7 bereikbaar en verlicht voor zover de locatie dat toelaat.
 
-Als er iets niet klopt op een locatie:
-- **Laderstoring** — Meld via de app (Help → Probleem melden) of bel het ondersteuningsnummer op de lader
-- **Veiligheidsprobleem** — Gebruik de noodstopknop als het urgent is, bel daarna de ondersteuning
-- **Netheid/toegang** — Meld via de app
-- **Verbetervoorstel** — E-mail [feedback@stroomlijnen.nl](mailto:feedback@stroomlijnen.nl)
+## Verder lezen
+
+- [Laadetiquette](/docs/locations/etiquette)
+- [Uw eerste laadsessie](/docs/getting-started/first-session)
+- [Probleemoplossing](/docs/plug-and-charge/troubleshooting)
+- [Netwerkvereisten](/docs/technical/network-requirements)

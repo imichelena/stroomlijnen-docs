@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Managing Grid Congestion on Dutch Distribution Networks | Stroomlijnen Docs</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-container": "#778bad",
+            "outline": "#74777e",
+            "inverse-surface": "#2d3133",
+            "on-secondary-fixed-variant": "#004d66",
+            "primary": "#000d21",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#334766",
+            "primary-container": "#0c2340",
+            "primary-fixed": "#d5e3ff",
+            "surface-container-highest": "#e0e3e6",
+            "on-error": "#ffffff",
+            "surface-container-low": "#f1f4f7",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#b3c7ec",
+            "tertiary-container": "#182700",
+            "secondary-fixed-dim": "#6fd2ff",
+            "on-secondary": "#ffffff",
+            "on-surface": "#181c1e",
+            "tertiary-fixed": "#b8f649",
+            "outline-variant": "#c4c6ce",
+            "on-tertiary-fixed-variant": "#354e00",
+            "secondary-fixed": "#c0e8ff",
+            "surface-variant": "#e0e3e6",
+            "on-background": "#181c1e",
+            "on-secondary-fixed": "#001f2b",
+            "tertiary-fixed-dim": "#9dd82c",
+            "surface": "#f7fafd",
+            "background": "#f7fafd",
+            "on-tertiary-container": "#699800",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-container": "#00516b",
+            "surface-bright": "#f7fafd",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#131f00",
+            "surface-container": "#ebeef1",
+            "surface-dim": "#d7dadd",
+            "surface-tint": "#4b5f7f",
+            "inverse-primary": "#b3c7ec",
+            "secondary-container": "#3fc9fe",
+            "inverse-on-surface": "#eef1f4",
+            "surface-container-high": "#e5e8eb",
+            "tertiary": "#070f00",
+            "on-primary-fixed": "#031c38",
+            "on-surface-variant": "#44474d",
+            "secondary": "#006686",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter-desktop": "2rem",
+            "margin-desktop": "2rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter", "sans-serif"],
+            "headline-sm": ["Archivo", "sans-serif"],
+            "headline-xl-mobile": ["Archivo", "sans-serif"],
+            "headline-xl": ["Archivo", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "headline-md": ["Archivo", "sans-serif"],
+            "headline-lg": ["Archivo", "sans-serif"],
+            "headline-lg-mobile": ["Archivo", "sans-serif"],
+            "code-sm": ["JetBrains Mono", "monospace"],
+            "code-md": ["JetBrains Mono", "monospace"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "code-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "code-md": ["13.5px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c4c6ce;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar (Shared Component Anchor) -->
+<header class="w-full px-space-md flex items-center justify-between border-b border-surface-container-highest dark:border-outline-variant bg-surface-container-lowest dark:bg-surface text-primary dark:text-primary-fixed docked full-width top sticky z-50 h-14">
+<!-- Brand & Version -->
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-2.5" href="#">
+<img alt="Stroomlijnen Logo" class="h-7 w-7 object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VNJeGYuZuWVtsmj87NTi76tpZXrsAg93DZrPELSzVJ2xjgxNIM6nH6gAhbIzq3b6aOWrdkhhr8zMeV0gTsc4ml39pNM6fAvSRPjzdkDlT3CxUD1cTRuQjEfrD-NWzI_ra2ck8v_cChBAEWF4bxVQAJung2z-yKcdFKqn2DLrELMSUy6FQZpvla4cGf9RYtpdukqW0KNTqr-wSe-1eqAIZYBgSCzpa4bgeG2xz2S-HRbfMzEucCUaMWGfuY"/>
+<span class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed font-semibold tracking-tight">Stroomlijnen</span>
+</a>
+<span class="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded border border-surface-container-highest bg-surface-container-low font-code-sm text-code-sm text-on-surface-variant">
+        v2.4 (Netbeheerder)
+      </span>
+</div>
+<!-- Search Bar Center-Left -->
+<div class="hidden md:flex items-center flex-1 max-w-md mx-6">
+<div class="relative w-full">
+<span class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[16px]">search</span>
+</span>
+<input class="w-full h-8 pl-8 pr-12 bg-surface-container-low border border-surface-container-highest rounded text-body-sm font-body-sm text-on-surface placeholder:text-outline cursor-pointer focus:outline-none focus:border-secondary" placeholder="Search knowledge base, protocols, error codes..." readonly="" type="text"/>
+<span class="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
+<kbd class="px-1.5 py-0.5 border border-outline-variant bg-surface-container-lowest rounded text-[10px] font-code-sm text-outline">⌘K</kbd>
+</span>
+</div>
+</div>
+<!-- Navigation Links & Trailing Actions -->
+<div class="flex items-center gap-4">
+<nav class="hidden lg:flex items-center space-x-1 font-body-md text-body-md">
+<!-- Active Tab: Knowledge Base -->
+<a class="px-2.5 py-1 text-primary dark:text-primary-fixed font-semibold border-b-2 border-secondary transition-colors duration-150 ease-in-out" href="#">
+          Knowledge Base
+        </a>
+<a class="px-2.5 py-1 text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150 ease-in-out" href="#">
+          API Reference
+        </a>
+<a class="px-2.5 py-1 text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150 ease-in-out" href="#">
+          Hardware Registry
+        </a>
+<a class="px-2.5 py-1 text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150 ease-in-out" href="#">
+          Grid Compliance
+        </a>
+</nav>
+<div class="flex items-center gap-1.5 border-l border-surface-container-highest pl-3">
+<!-- Trailing Language Toggle Action -->
+<button class="px-2 py-1 border border-surface-container-highest rounded bg-surface-container-lowest hover:bg-surface-container text-body-sm font-label-md text-on-surface flex items-center gap-1 transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[15px]" data-icon="translate">translate</span>
+<span>NL / EN</span>
+</button>
+<!-- Trailing Theme Toggle Action -->
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant transition-colors duration-150" title="Theme" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Reading Progress Bar (Pinned beneath header: 38%) -->
+<div class="sticky top-14 z-40 w-full h-[2px] bg-surface-container-highest">
+<div class="h-full bg-secondary transition-all" style="width: 38%;"></div>
+</div>
+<!-- Primary 3-Column Documentation Layout -->
+<div class="max-w-[1536px] mx-auto flex w-full">
+<!-- Column 1: Left Navigation Sidebar (Shared Component Anchor) -->
+<aside class="w-[280px] h-[calc(100vh-3.625rem)] sticky top-[3.625rem] left-0 overflow-y-auto custom-scroll border-r border-surface-container-highest dark:border-outline-variant bg-surface-container-low dark:bg-surface flex-shrink-0 hidden md:flex flex-col justify-between p-space-md">
+<div>
+<!-- Sidebar Brand Header -->
+<div class="pb-3 border-b border-surface-container-highest mb-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed font-semibold">Stroomlijnen Spec</span>
+<span class="text-[10px] font-code-sm text-secondary bg-secondary-fixed/50 px-1 py-0.5 rounded">v2.4</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">v2.4 Netbeheerder Release</p>
+</div>
+<!-- Category Tree (7 tabs as per anchor) -->
+<nav class="space-y-1 font-body-sm text-body-sm">
+<!-- 1. Getting started -->
+<div>
+<button class="w-full flex items-center justify-between text-left py-1.5 px-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded transition-colors duration-150">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="rocket_launch">rocket_launch</span>
+<span>Getting started</span>
+</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<!-- 2. Energy & power (Expanded & Active) -->
+<div class="pt-0.5">
+<button class="w-full flex items-center justify-between text-left py-1.5 px-2 text-primary font-semibold hover:bg-surface-container rounded transition-colors duration-150">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="bolt">bolt</span>
+<span>Energy &amp; power</span>
+</span>
+<span class="material-symbols-outlined text-[14px]">expand_less</span>
+</button>
+<!-- Nested Items with hairline vertical guide -->
+<div class="ml-4 pl-2.5 border-l border-surface-container-highest space-y-1 mt-1">
+<a class="block py-1 text-on-surface-variant hover:text-primary transition-colors text-body-sm" href="#">
+                Overview
+              </a>
+<a class="block py-1 text-on-surface-variant hover:text-primary transition-colors text-body-sm" href="#">
+                Dynamic load balancing
+              </a>
+<!-- Active Page Link as per mandate -->
+<a class="block py-1 -ml-[11px] border-l-2 border-secondary bg-surface-container dark:bg-surface-container-high text-primary dark:text-primary-fixed font-semibold pl-2 text-body-sm rounded-r" href="#article-top">
+                Grid congestion management
+              </a>
+<a class="block py-1 text-on-surface-variant hover:text-primary transition-colors text-body-sm" href="#">
+                Curtailment agreements
+              </a>
+<a class="block py-1 text-on-surface-variant hover:text-primary transition-colors text-body-sm" href="#">
+                Substation telecontrol
+              </a>
+</div>
+</div>
+<!-- 3. Plug & Charge -->
+<div>
+<button class="w-full flex items-center justify-between text-left py-1.5 px-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded transition-colors duration-150">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="electric_car">electric_car</span>
+<span>Plug &amp; Charge (ISO 15118)</span>
+</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<!-- 4. Customer portal -->
+<div>
+<button class="w-full flex items-center justify-between text-left py-1.5 px-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded transition-colors duration-150">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="dashboard">dashboard</span>
+<span>Customer portal</span>
+</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<!-- 5. Site owners -->
+<div>
+<button class="w-full flex items-center justify-between text-left py-1.5 px-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded transition-colors duration-150">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="domain">domain</span>
+<span>Site owners</span>
+</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<!-- 6. Drivers -->
+<div>
+<button class="w-full flex items-center justify-between text-left py-1.5 px-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded transition-colors duration-150">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="badge">badge</span>
+<span>Drivers</span>
+</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<!-- 7. Technical specs -->
+<div>
+<button class="w-full flex items-center justify-between text-left py-1.5 px-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded transition-colors duration-150">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal">terminal</span>
+<span>Technical specs</span>
+</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+</nav>
+</div>
+<!-- Sidebar Footer -->
+<div class="pt-4 border-t border-surface-container-highest mt-6 space-y-2.5">
+<a class="w-full flex items-center justify-center gap-1.5 py-1.5 px-2 bg-surface-container-lowest border border-surface-container-highest hover:bg-surface-container rounded font-body-sm text-body-sm text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[15px]" data-icon="code">code</span>
+<span>GitHub Source</span>
+</a>
+<div class="flex items-center justify-between text-[11px] font-label-md px-1 text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#84BD00] animate-pulse"></span>
+<span>Netbeheerder: Nominal</span>
+</span>
+<a class="text-secondary hover:underline flex items-center gap-0.5" href="#">
+<span class="material-symbols-outlined text-[12px]" data-icon="check_circle">check_circle</span>
+<span>Status</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Column 2: Center Article Column (Strict 66ch measure) -->
+<main class="flex-1 min-w-0 px-4 sm:px-8 lg:px-12 py-10 bg-surface-container-lowest" id="article-top">
+<div class="mx-auto transition-all duration-200" id="prose-column" style="max-width: 66ch;">
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-1.5 font-label-md text-label-md text-outline mb-4">
+<a class="hover:text-primary transition-colors" href="#">Knowledge Base</a>
+<span class="material-symbols-outlined text-[13px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Energy &amp; power</a>
+<span class="material-symbols-outlined text-[13px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Grid congestion management</span>
+</nav>
+<!-- Article Header -->
+<header class="pb-6 border-b border-surface-container-highest">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-secondary/30 bg-secondary-fixed/20 text-on-secondary-fixed-variant font-code-sm text-code-sm font-medium tracking-wide mb-3">
+<span>ENERGY &amp; POWER</span>
+<span class="text-outline">/</span>
+<span>GRID INTERFACE</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight mb-3">
+            Managing Grid Congestion on Dutch Distribution Networks
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-4">
+            A guide to telemetry integration, capacity limitation orders, and real-time curtailment with regional Netbeheerders (Liander, Enexis, Stedin).
+          </p>
+<!-- Metadata Row -->
+<div class="flex flex-wrap items-center gap-y-1 gap-x-3 text-body-sm font-body-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>Updated: 14 Oct 2024</span>
+</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">groups</span>
+<span>Stroomlijnen Grid Integration Team</span>
+</span>
+<span>•</span>
+<span class="text-on-surface font-medium">Audience: CPO Engineers &amp; Energy Planners</span>
+</div>
+</header>
+<!-- Compact Reading Toolbar -->
+<div class="flex items-center justify-between py-2.5 px-3 bg-surface-container-low border-b border-surface-container-highest text-body-sm font-body-sm my-6 rounded">
+<!-- Left items -->
+<div class="flex items-center gap-2 sm:gap-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container-lowest border border-surface-container-highest rounded text-[11px] font-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>7 min read</span>
+</span>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">bookmark</span>
+<span class="hidden sm:inline">Save</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">link</span>
+<span class="hidden sm:inline">Copy link</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">print</span>
+<span class="hidden sm:inline">Print</span>
+</button>
+</div>
+<!-- Right item: Reading settings interactive panel -->
+<div class="relative">
+<button class="flex items-center gap-1 px-2 py-0.5 rounded border border-surface-container-highest bg-surface-container-lowest hover:bg-surface text-primary font-label-md text-label-md transition-colors" id="reading-toggle" type="button">
+<span class="material-symbols-outlined text-[15px]">text_fields</span>
+<span>Settings</span>
+</button>
+<!-- Reading Settings Floating Dropdown Panel -->
+<div class="absolute right-0 top-8 z-30 w-64 bg-surface-container-lowest border border-surface-container-highest rounded p-3 shadow-[0_4px_16px_-2px_rgba(12,35,64,0.08)]" id="reading-panel">
+<div class="text-[11px] font-code-sm font-semibold text-outline uppercase tracking-wider mb-2">Reading Experience</div>
+<!-- Font Size -->
+<div class="mb-2.5">
+<div class="flex justify-between text-body-sm mb-1 text-on-surface">
+<span>Font size</span>
+<span class="font-code-sm text-[11px] text-outline" id="font-indicator">Default (16px)</span>
+</div>
+<div class="grid grid-cols-2 gap-1">
+<button class="px-2 py-1 text-xs border border-secondary bg-surface-container text-primary font-medium rounded text-center" id="font-default-btn">Standard</button>
+<button class="px-2 py-1 text-xs border border-surface-container-highest hover:bg-surface-container rounded text-on-surface-variant text-center" id="font-large-btn">Large</button>
+</div>
+</div>
+<!-- Measure Toggle -->
+<div class="mb-2.5">
+<div class="flex justify-between text-body-sm mb-1 text-on-surface">
+<span>Column measure</span>
+<span class="font-code-sm text-[11px] text-outline" id="measure-indicator">66ch</span>
+</div>
+<div class="grid grid-cols-2 gap-1">
+<button class="px-2 py-1 text-xs border border-secondary bg-surface-container text-primary font-medium rounded text-center" id="measure-standard-btn">66ch</button>
+<button class="px-2 py-1 text-xs border border-surface-container-highest hover:bg-surface-container rounded text-on-surface-variant text-center" id="measure-wide-btn">80ch</button>
+</div>
+</div>
+<!-- Focus Mode Toggle -->
+<div class="pt-2 border-t border-surface-container-highest flex items-center justify-between">
+<span class="text-body-sm text-on-surface">Focus mode</span>
+<input class="rounded border-surface-container-highest text-secondary focus:ring-0 cursor-pointer" id="focus-toggle" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Article Prose Section -->
+<article class="space-y-6 text-on-surface font-body-md text-body-md leading-[1.75]">
+<p id="sec-overview">
+            In the Netherlands, physical transformer saturation and distribution grid bottlenecks managed by regional distribution system operators (DSOs—specifically <strong>Liander</strong>, <strong>Enexis</strong>, and <strong>Stedin</strong>) have made unconditional grid connections rare for heavy fast-charging depots and fleet hubs. Transmission transmission system operator <strong>TenneT</strong> enforces localized strict feed-in and take-off margins across high-voltage feed points.
+          </p>
+<p>
+            To accommodate high-power commercial electric transport charging without triggering local feeder tripping, Charge Point Operators (CPOs) must implement deterministic telemetry links capable of reacting instantaneously to dynamic network curtailment orders.
+          </p>
+<!-- Technical Callout Box -->
+<div class="p-3.5 bg-surface-container-low border border-surface-container-highest border-l-[3px] border-l-secondary rounded" id="sec-regulatory">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary mt-0.5 text-[18px]">info</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider block mb-1">
+                  Statutory Netcode Compliance
+                </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Under the updated <em>Netcode Elektriciteit (ACM Besluit 2023/184)</em>, all non-firm charging sites over 100 kW must respond to Capacity Limitation Orders (CapLO) within <strong>15.0 seconds</strong> of receiving telecontrol dispatch payloads. Failure to shed downstream load results in automated substation circuit opening by netbeheerder switchgear.
+                </p>
+</div>
+</div>
+</div>
+<!-- Section H2: Regional DSO Dispatch Protocols -->
+<section class="pt-4" id="sec-protocols">
+<h2 class="font-headline-lg text-headline-lg text-primary font-semibold tracking-tight pb-2 border-b border-surface-container-highest mb-4">
+              Regional DSO Dispatch Protocols
+            </h2>
+<p class="mb-4">
+              Grid congestion management operates on a dual-plane telemetry architecture. Day-ahead and intraday flexibility scheduling is brokered through the pan-operator <strong>GOPACS</strong> clearing platform, while emergency physical network security orders rely on direct telecontrol telemetry lines directly routed into on-premise depot edge gateways.
+            </p>
+<p class="mb-4">
+              When a netbeheerder flags an active bottleneck at a medium-voltage substation feeder, dispatch signals propagate according to the matrix detailed below:
+            </p>
+<!-- Specification Table -->
+<div class="overflow-x-auto my-6 border border-surface-container-highest rounded" id="sec-table">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-surface-container-highest font-code-sm text-code-sm text-on-surface-variant">
+<th class="py-2.5 px-3 font-semibold">Signal Type</th>
+<th class="py-2.5 px-3 font-semibold">Protocol / Format</th>
+<th class="py-2.5 px-3 font-semibold">Latency Req.</th>
+<th class="py-2.5 px-3 font-semibold">Fallback Default</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest font-body-sm text-body-sm">
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 px-3 font-code-sm font-semibold text-primary">Emergency Curtailment (CapLO)</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-code-sm">IEC 60870-5-104</td>
+<td class="py-2.5 px-3 text-secondary font-code-sm font-medium">&lt; 5.0 seconds</td>
+<td class="py-2.5 px-3 text-on-surface-variant">Throttle to 6A safe minimum</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 px-3 font-code-sm font-semibold text-primary">Day-Ahead Congestion Bid</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-code-sm">GOPACS XML / REST v2</td>
+<td class="py-2.5 px-3 text-on-surface font-code-sm">15-minute intervals</td>
+<td class="py-2.5 px-3 text-on-surface-variant">Scheduled profile retention</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 px-3 font-code-sm font-semibold text-primary">Dynamic Capacity Window</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-code-sm">OpenADR 2.0b EiEvent</td>
+<td class="py-2.5 px-3 text-secondary font-code-sm font-medium">&lt; 15.0 seconds</td>
+<td class="py-2.5 px-3 text-on-surface-variant">Cluster ceiling enforcement</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 px-3 font-code-sm font-semibold text-primary">Phase Imbalance Alert</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-code-sm">Modbus TCP / SunSpec</td>
+<td class="py-2.5 px-3 text-error font-code-sm font-semibold">&lt; 1.0 second</td>
+<td class="py-2.5 px-3 text-on-surface-variant">Automated phase-rotation cut</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section H2: Firmware-Level Curtailment Hierarchy -->
+<section class="pt-4" id="sec-hierarchy">
+<h2 class="font-headline-lg text-headline-lg text-primary font-semibold tracking-tight pb-2 border-b border-surface-container-highest mb-4">
+              Firmware-Level Curtailment Hierarchy
+            </h2>
+<p class="mb-4">
+              When edge nodes receive multi-source limits simultaneously, the internal dispatch engine must evaluate charging quotas through a three-tier hardline priority pipeline:
+            </p>
+<ul class="space-y-3 pl-2">
+<li class="flex items-start gap-2.5">
+<span class="flex-shrink-0 w-5 h-5 rounded bg-primary text-on-primary font-code-sm text-[11px] flex items-center justify-center font-bold mt-0.5">1</span>
+<div>
+<strong class="text-primary font-semibold">Tier 1: Emergency Physical Cutoff (DSO CapLO)</strong>
+<p class="text-on-surface-variant font-body-sm mt-0.5">Overrides all active commercial sessions. Executes instantaneous shedding down to guaranteed circuit ceiling or cold disconnect to prevent thermal runaway of the local transformer step-down.</p>
+</div>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="flex-shrink-0 w-5 h-5 rounded bg-surface-container-highest text-primary font-code-sm text-[11px] flex items-center justify-center font-bold mt-0.5">2</span>
+<div>
+<strong class="text-primary font-semibold">Tier 2: Contractual Firm Capacity Envelope (CBC / TDBC)</strong>
+<p class="text-on-surface-variant font-body-sm mt-0.5">Governed by the dynamic Capacity-Based Contract agreed with Stedin or Liander. Dynamic shedding allocates available amperes proportionally across connectors via OCPP 2.0.1 <code>SetChargingProfile</code>.</p>
+</div>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="flex-shrink-0 w-5 h-5 rounded bg-surface-container-highest text-primary font-code-sm text-[11px] flex items-center justify-center font-bold mt-0.5">3</span>
+<div>
+<strong class="text-primary font-semibold">Tier 3: User Scheduled Charging &amp; Fleet SLA Priorities</strong>
+<p class="text-on-surface-variant font-body-sm mt-0.5">Fleet depot schedules, VIP priority passes, and SOC-based balancing. Operates entirely strictly within the residual ceiling remaining after Tiers 1 and 2 are satisfied.</p>
+</div>
+</li>
+</ul>
+</section>
+<!-- Section H2: Dispatch Payload Example -->
+<section class="pt-4" id="sec-payload">
+<h2 class="font-headline-lg text-headline-lg text-primary font-semibold tracking-tight pb-2 border-b border-surface-container-highest mb-4">
+              Dispatch Payload Example
+            </h2>
+<p class="mb-4">
+              The following payload illustrates a validated <code>CapLO_DispatchEvent</code> distributed via the regional Netbeheerder telecontrol endpoint over TLS 1.3:
+            </p>
+<!-- Code Display & Terminal Block -->
+<div class="rounded border border-[#1E293B] bg-[#0A1628] overflow-hidden my-4">
+<!-- Code Header -->
+<div class="flex items-center justify-between px-3 py-1.5 bg-[#0F2038] border-b border-[#1E293B]">
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-code-sm text-secondary-fixed">JSON</span>
+<span class="text-outline-variant text-[11px] font-code-sm">caplo-dispatch-event.json</span>
+</div>
+<button class="text-outline-variant hover:text-on-primary text-[11px] font-code-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<!-- Syntax block -->
+<pre class="p-3.5 text-code-md font-code-md text-surface-container-lowest overflow-x-auto leading-relaxed"><code>{
+  <span class="text-secondary-container">"eventType"</span>: <span class="text-[#84BD00]">"CapLO_LimitationSignal"</span>,
+  <span class="text-secondary-container">"gridOperatorEan"</span>: <span class="text-[#84BD00]">"871685900000012345"</span>,
+  <span class="text-secondary-container">"feederSubstationId"</span>: <span class="text-[#84BD00]">"NL-LIAN-TRAFO-AMS-04"</span>,
+  <span class="text-secondary-container">"timestampUtc"</span>: <span class="text-[#84BD00]">"2024-10-14T14:32:00.000Z"</span>,
+  <span class="text-secondary-container">"executionDeadlineMs"</span>: <span class="text-[#c0e8ff]">15000</span>,
+  <span class="text-secondary-container">"curtailmentParameters"</span>: {
+    <span class="text-secondary-container">"activeLimitType"</span>: <span class="text-[#84BD00]">"AMPERE_CEILING_PER_PHASE"</span>,
+    <span class="text-secondary-container">"maxCurrentL1"</span>: <span class="text-[#c0e8ff]">16.0</span>,
+    <span class="text-secondary-container">"maxCurrentL2"</span>: <span class="text-[#c0e8ff]">16.0</span>,
+    <span class="text-secondary-container">"maxCurrentL3"</span>: <span class="text-[#c0e8ff]">16.0</span>,
+    <span class="text-secondary-container">"validDurationMinutes"</span>: <span class="text-[#c0e8ff]">45</span>
+  },
+  <span class="text-secondary-container">"signatureSha256"</span>: <span class="text-[#84BD00]">"a8f7b5...3e29c0"</span>
+}</code></pre>
+</div>
+</section>
+<!-- Section H2: Fallback & Failsafe Behaviors -->
+<section class="pt-4" id="sec-failsafe">
+<h2 class="font-headline-lg text-headline-lg text-primary font-semibold tracking-tight pb-2 border-b border-surface-container-highest mb-4">
+              Fallback &amp; Failsafe Behaviors
+            </h2>
+<p>
+              In cases where continuous heartbeat telemetry with the regional DSO endpoint drops for longer than <strong>45 consecutive seconds</strong> (the Netbeheerder Watchdog Timeout), edge charging controllers must autonomously revert to the pre-contracted emergency floor without external prompting.
+            </p>
+<p class="mt-3">
+              Standard commercial configurations throttle all active AC connectors to 6 Amperes single-phase and cap DC fast charging stations at a maximum draw of 25 kW aggregated across the main point of delivery (Overdrachtspunt).
+            </p>
+</section>
+</article>
+<!-- Article Footer / Feedback & Pagination -->
+<footer class="mt-12 pt-8 border-t border-surface-container-highest">
+<!-- Feedback Widget -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 bg-surface-container-low rounded border border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-primary">Was this article helpful?</span>
+<button class="px-2.5 py-1 text-xs border border-surface-container-highest hover:bg-surface-container-lowest bg-surface-container-lowest rounded text-on-surface font-medium transition-colors" type="button">Yes</button>
+<button class="px-2.5 py-1 text-xs border border-surface-container-highest hover:bg-surface-container-lowest bg-surface-container-lowest rounded text-on-surface font-medium transition-colors" type="button">No</button>
+</div>
+<a class="inline-flex items-center gap-1 text-body-sm text-secondary hover:underline" href="#">
+<span class="material-symbols-outlined text-[15px]" data-icon="edit">edit</span>
+<span>Propose changes on GitHub</span>
+</a>
+</div>
+<!-- Pagination Controls -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+<a class="p-3.5 border border-surface-container-highest rounded hover:border-secondary transition-colors group" href="#">
+<span class="text-[11px] font-code-sm text-outline block mb-0.5">← PREVIOUS • ENERGY &amp; POWER</span>
+<span class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors font-medium">Dynamic Load Balancing (DLB)</span>
+</a>
+<a class="p-3.5 border border-surface-container-highest rounded hover:border-secondary transition-colors text-right group" href="#">
+<span class="text-[11px] font-code-sm text-outline block mb-0.5">NEXT • ENERGY &amp; POWER →</span>
+<span class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors font-medium">Capacity Curtailment Agreements (CBC)</span>
+</a>
+</div>
+</footer>
+</div>
+</main>
+<!-- Column 3: Right Sticky Table of Contents (240px) -->
+<aside class="w-[240px] h-[calc(100vh-3.625rem)] sticky top-[3.625rem] right-0 overflow-y-auto custom-scroll border-l border-surface-container-highest dark:border-outline-variant bg-surface-container-lowest p-space-md hidden xl:flex flex-col justify-between flex-shrink-0" id="toc-sidebar">
+<div>
+<h3 class="font-code-sm text-[11px] font-semibold text-outline uppercase tracking-wider mb-3">
+          On This Page
+        </h3>
+<!-- Headings Navigation Links -->
+<nav class="space-y-1.5 font-body-sm text-body-sm border-l border-surface-container-highest pl-2">
+<a class="block py-0.5 text-on-surface-variant hover:text-primary transition-colors" href="#sec-overview">
+            Overview &amp; Context
+          </a>
+<a class="block py-0.5 text-on-surface-variant hover:text-primary transition-colors" href="#sec-regulatory">
+            Regulatory obligations
+          </a>
+<!-- Active State Indicator -->
+<a class="block py-0.5 -ml-[9px] border-l-2 border-secondary pl-2 text-primary font-semibold text-secondary" href="#sec-protocols">
+            DSO Dispatch Protocols
+          </a>
+<a class="block py-0.5 text-on-surface-variant hover:text-primary transition-colors" href="#sec-table">
+            Signal Specifications
+          </a>
+<a class="block py-0.5 text-on-surface-variant hover:text-primary transition-colors" href="#sec-hierarchy">
+            Curtailment Hierarchy
+          </a>
+<a class="block py-0.5 text-on-surface-variant hover:text-primary transition-colors" href="#sec-payload">
+            Dispatch Payload Example
+          </a>
+<a class="block py-0.5 text-on-surface-variant hover:text-primary transition-colors" href="#sec-failsafe">
+            Fallback &amp; Failsafe
+          </a>
+</nav>
+</div>
+<!-- Quick Actions Container -->
+<div class="pt-4 border-t border-surface-container-highest space-y-2">
+<a class="flex items-center gap-1.5 text-[12px] font-body-sm text-outline hover:text-primary transition-colors" href="#article-top">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>Back to top</span>
+</a>
+<a class="flex items-center gap-1.5 text-[12px] font-body-sm text-outline hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[14px]">description</span>
+<span>Export as Markdown</span>
+</a>
+<button class="w-full flex items-center justify-center gap-1.5 py-1.5 px-2 bg-surface-container-low border border-surface-container-highest hover:bg-surface-container rounded text-[12px] font-label-md text-primary transition-colors mt-2" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">smart_toy</span>
+<span>Ask Stroomlijnen AI</span>
+</button>
+</div>
+</aside>
+</div>
+<!-- Inline Script for Reading Toolbar Interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const readingToggle = document.getElementById('reading-toggle');
+      const readingPanel = document.getElementById('reading-panel');
+      const proseColumn = document.getElementById('prose-column');
+      const fontDefaultBtn = document.getElementById('font-default-btn');
+      const fontLargeBtn = document.getElementById('font-large-btn');
+      const fontIndicator = document.getElementById('font-indicator');
+      const measureStandardBtn = document.getElementById('measure-standard-btn');
+      const measureWideBtn = document.getElementById('measure-wide-btn');
+      const measureIndicator = document.getElementById('measure-indicator');
+      const focusToggle = document.getElementById('focus-toggle');
+      const leftSidebar = document.querySelector('aside');
+      const tocSidebar = document.getElementById('toc-sidebar');
+
+      // Toggle Reading Panel
+      readingToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        readingPanel.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!readingPanel.contains(e.target) && !readingToggle.contains(e.target)) {
+          readingPanel.classList.add('hidden');
+        }
+      });
+
+      // Initially show the dropdown panel accessible / open for clear visibility of requested features
+      readingPanel.classList.remove('hidden');
+
+      // Font Size Toggles
+      fontLargeBtn.addEventListener('click', () => {
+        proseColumn.classList.add('text-[18px]');
+        proseColumn.querySelectorAll('p').forEach(p => p.style.fontSize = '18px');
+        fontLargeBtn.className = "px-2 py-1 text-xs border border-secondary bg-surface-container text-primary font-medium rounded text-center";
+        fontDefaultBtn.className = "px-2 py-1 text-xs border border-surface-container-highest hover:bg-surface-container rounded text-on-surface-variant text-center";
+        fontIndicator.textContent = "Large (18px)";
+      });
+
+      fontDefaultBtn.addEventListener('click', () => {
+        proseColumn.classList.remove('text-[18px]');
+        proseColumn.querySelectorAll('p').forEach(p => p.style.fontSize = '');
+        fontDefaultBtn.className = "px-2 py-1 text-xs border border-secondary bg-surface-container text-primary font-medium rounded text-center";
+        fontLargeBtn.className = "px-2 py-1 text-xs border border-surface-container-highest hover:bg-surface-container rounded text-on-surface-variant text-center";
+        fontIndicator.textContent = "Default (16px)";
+      });
+
+      // Measure Toggles
+      measureWideBtn.addEventListener('click', () => {
+        proseColumn.style.maxWidth = '80ch';
+        measureWideBtn.className = "px-2 py-1 text-xs border border-secondary bg-surface-container text-primary font-medium rounded text-center";
+        measureStandardBtn.className = "px-2 py-1 text-xs border border-surface-container-highest hover:bg-surface-container rounded text-on-surface-variant text-center";
+        measureIndicator.textContent = "80ch";
+      });
+
+      measureStandardBtn.addEventListener('click', () => {
+        proseColumn.style.maxWidth = '66ch';
+        measureStandardBtn.className = "px-2 py-1 text-xs border border-secondary bg-surface-container text-primary font-medium rounded text-center";
+        measureWideBtn.className = "px-2 py-1 text-xs border border-surface-container-highest hover:bg-surface-container rounded text-on-surface-variant text-center";
+        measureIndicator.textContent = "66ch";
+      });
+
+      // Focus Mode Toggle (Dims sidebars for undistracted reading)
+      focusToggle.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          leftSidebar.style.opacity = '0.15';
+          tocSidebar.style.opacity = '0.15';
+        } else {
+          leftSidebar.style.opacity = '1';
+          tocSidebar.style.opacity = '1';
+        }
+      });
+    });
+  </script>
+</body></html>
