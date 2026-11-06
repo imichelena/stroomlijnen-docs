@@ -5,6 +5,8 @@ description: What grid congestion is, what contracted transmission capacity (GTV
 keywords: [grid congestion, GTV, contracted capacity, connection capacity, upgrading, waiting time, capacity]
 ---
 
+import { CapacityExplorer } from '@site/src/components/EnergyVisuals';
+
 # Grid congestion — why power is the real problem
 
 Almost everyone who wants to install charge points starts with the chargers. The real question is a different one: **how much power may pass through my connection right now, and who is using it?**
@@ -44,6 +46,12 @@ Daytime              40 kW   →  230 kW headroom
 Exactly that daytime gap is where a truck standing at the loading dock for 8–10 hours fits. So you do not need to buy extra power; you need to make it available **at the right moment**.
 
 And that is the entire reason an EMS exists: to measure that gap continuously and keep charging within it. See [What does an EMS do?](/en/docs/energie/ems).
+
+### See how headroom changes
+
+Change the building demand in this example. Charging uses only the power available within the configured limit.
+
+<CapacityExplorer locale="en" />
 
 ## Four ways to deal with a full grid
 

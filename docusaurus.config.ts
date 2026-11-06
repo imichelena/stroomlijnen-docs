@@ -158,14 +158,8 @@ const config: Config = {
           position: 'left',
           label: 'Documentatie',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
           type: 'localeDropdown',
-          position: 'right',
-        },
-        {
-          href: 'https://docs.stroomlijnen.nl/blog/rss.xml',
-          label: 'RSS',
           position: 'right',
         },
         {
@@ -191,8 +185,6 @@ const config: Config = {
           title: 'Meer',
           items: [
             { label: 'FAQ', to: '/docs/faq' },
-            { label: 'Blog', to: '/blog' },
-            { label: 'RSS Feed', href: 'https://docs.stroomlijnen.nl/blog/rss.xml' },
           ],
         },
         {

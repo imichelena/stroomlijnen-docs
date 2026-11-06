@@ -5,6 +5,8 @@ description: How a stationary battery makes charging possible that the connectio
 keywords: [ESS, battery storage, peak shaving, buffer, grid congestion, C-rate, SPRILA]
 ---
 
+import { DayFlow } from '@site/src/components/EnergyVisuals';
+
 # Battery storage as a buffer (ESS)
 
 An **ESS (Energy Storage System)** is a stationary battery at your location. It charges when there is headroom and delivers when needed. This increases the effective capacity of your connection without a cable having to go into the ground.
@@ -45,6 +47,12 @@ A battery without good control is an expensive battery pack. The combination is 
 4. The whole remains within the GTV.
 
 So the same battery performs several services: it absorbs the building peak, enables charging and shifts energy to cheap hours. That is precisely the reason to sell the battery not as a standalone product but as part of a single system.
+
+### A working day with storage
+
+Explore three moments at an example site. Generation, charging and storage each follow a different rhythm.
+
+<DayFlow locale="en" />
 
 ## Safety and building integration
 

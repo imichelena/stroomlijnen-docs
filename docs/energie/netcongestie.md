@@ -5,6 +5,8 @@ description: Wat netcongestie is, wat gecontracteerd transportvermogen (GTV) bet
 keywords: [netcongestie, GTV, gecontracteerd vermogen, aansluitvermogen, verzwaren, wachttijd, capaciteit]
 ---
 
+import { CapacityExplorer } from '@site/src/components/EnergyVisuals';
+
 # Netcongestie — waarom vermogen het echte probleem is
 
 Bijna iedereen die laadpunten wil plaatsen, begint bij de laders. De echte vraag is een andere: **hoeveel vermogen mag er op dit moment door mijn aansluiting, en wie gebruikt dat?**
@@ -44,6 +46,12 @@ Overdag             40 kW   →  230 kW ruimte
 Precies in dat overdagse gat past een vrachtwagen die 8–10 uur bij het laaddok staat. U hoeft dus geen vermogen bij te kopen; u moet het **op het juiste moment** beschikbaar maken.
 
 En dat is de hele reden dat een EMS bestaat: dat gat continu meten en het laden er binnen houden. Zie [Wat doet een EMS?](/docs/energie/ems).
+
+### Bekijk hoe de ruimte meebeweegt
+
+Verander het gebouwverbruik in dit voorbeeld. De lader krijgt alleen het vermogen dat binnen het ingestelde plafond past.
+
+<CapacityExplorer locale="nl" />
 
 ## Vier manieren om met een vol net om te gaan
 

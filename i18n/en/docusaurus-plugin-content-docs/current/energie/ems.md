@@ -5,11 +5,19 @@ description: How an energy management system measures, budgets and distributes t
 keywords: [EMS, energy management system, smart charging, load management, power budget, power distribution]
 ---
 
+import { ControlArchitecture } from '@site/src/components/EnergyVisuals';
+
 # What does an EMS do?
 
 An **EMS (energy management system)** is the layer between your meter and your charge points. It continuously measures what the building is consuming, calculates how much is left over, and distributes that across the vehicles that are charging.
 
 Without an EMS, charging is a guess. With an EMS, it is a budget.
+
+## The overall picture
+
+The controller allocates charging power. Electricity flows through cables and the distribution board, not through software.
+
+<ControlArchitecture locale="en" />
 
 ## The core: one budget, continuously measured
 

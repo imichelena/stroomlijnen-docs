@@ -5,11 +5,19 @@ description: Hoe een energiebeheersysteem het vermogen op een locatie meet, begr
 keywords: [EMS, energiebeheersysteem, slim laden, loadmanagement, power budget, vermogensverdeling]
 ---
 
+import { ControlArchitecture } from '@site/src/components/EnergyVisuals';
+
 # Wat doet een EMS?
 
 Een **EMS (energiebeheersysteem)** is de laag tussen uw meter en uw laadpunten. Het meet continu wat het gebouw verbruikt, berekent hoeveel er nog over is, en verdeelt dat over de voertuigen die staan te laden.
 
 Zonder EMS is laden een gok. Met EMS is het een begroting.
+
+## Eerst het overzicht
+
+De regelaar verdeelt het laadbudget. Het elektrische vermogen loopt door de kabels en de verdeler, niet door de software.
+
+<ControlArchitecture locale="nl" />
 
 ## De kern: één budget, continu gemeten
 

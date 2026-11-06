@@ -5,6 +5,8 @@ description: Hoe een stationaire batterij laden mogelijk maakt dat de aansluitin
 keywords: [ESS, batterijopslag, peakshaving, buffer, netcongestie, C-waarde, SPRILA]
 ---
 
+import { DayFlow } from '@site/src/components/EnergyVisuals';
+
 # Batterijopslag als buffer (ESS)
 
 Een **ESS (Energy Storage System)** is een stationaire batterij op uw locatie. Hij laadt wanneer er ruimte over is en levert wanneer het nodig is. Daarmee wordt de effectieve capaciteit van uw aansluiting groter zonder dat er een kabel de grond in hoeft.
@@ -45,6 +47,12 @@ Een batterij zonder goede aansturing is een dure accu. De combinatie is wat werk
 4. Het geheel blijft binnen het GTV.
 
 Dezelfde batterij doet dus meerdere diensten: hij vangt de gebouwpiek op, maakt laden mogelijk en verplaatst energie naar goedkope uren. Dat is precies de reden om de batterij niet als los product te verkopen maar als onderdeel van één systeem.
+
+### Een werkdag met opslag
+
+Volg drie momenten op een voorbeeldlocatie. Bekijk hoe opwek, laden en opslag elk een ander ritme hebben.
+
+<DayFlow locale="nl" />
 
 ## Veiligheid en gebouwintegratie
 
